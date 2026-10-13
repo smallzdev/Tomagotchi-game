@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://cojs1vpuf8xd4"]
+
+[sub_resource type="Gradient" id="Gradient_7dm0k"]
+colors = PackedColorArray(0, 1, 1, 1, 0.13909006, 0.3063838, 0.46577227, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_y32ns"]
+gradient = SubResource("Gradient_7dm0k")
+
+[node name="Node2D" type="Node2D" unique_id=1775569135]
+
+[node name="BackgrounttextureGradient" type="TextureRect" parent="." unique_id=1978952920]
+offset_right = 1157.0
+offset_bottom = 652.0
+texture = SubResource("GradientTexture2D_y32ns")
+
+[node name="menuTitle" type="Label" parent="BackgrounttextureGradient" unique_id=86922963]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 6.0
+offset_right = 1156.0
+offset_bottom = 119.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 82
+text = "Credits"
+horizontal_alignment = 1

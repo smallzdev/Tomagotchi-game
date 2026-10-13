@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://bki82bxn7t1sh"]
+
+[sub_resource type="Gradient" id="Gradient_7dm0k"]
+colors = PackedColorArray(0, 1, 1, 1, 0.13909006, 0.3063838, 0.46577227, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_d1cif"]
+gradient = SubResource("Gradient_7dm0k")
+
+[node name="Node2D" type="Node2D" unique_id=111207536]
+
+[node name="backgroundGradient" type="TextureRect" parent="." unique_id=732252075]
+offset_right = 1157.0
+offset_bottom = 652.0
+texture = SubResource("GradientTexture2D_d1cif")
