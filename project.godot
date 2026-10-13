@@ -11,8 +11,8 @@ config_version=5
 [application]
 
 config/name="Tomagotchi"
+run/main_scene="uid://cfy5n37l1sa1h"
 config/features=PackedStringArray("4.7", "Mobile")
-config/icon="res://icon.svg"
 
 [display]
 

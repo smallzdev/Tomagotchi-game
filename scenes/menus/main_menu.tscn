@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://cfy5n37l1sa1h"]
 
+[ext_resource type="Script" uid="uid://w1qvlpajcum3" path="res://scripts/main_menu_buttons.gd" id="1_xqga4"]
+
 [sub_resource type="Gradient" id="Gradient_vue75"]
 colors = PackedColorArray(0, 1, 1, 1, 0.13909006, 0.3063838, 0.46577227, 1)
 
@@ -23,15 +25,18 @@ theme_override_font_sizes/font_size = 100
 text = "Tamagotchi Game"
 horizontal_alignment = 1
 
-[node name="Button" type="Button" parent="." unique_id=1577812978]
+[node name="playButton" type="Button" parent="." unique_id=1577812978]
+unique_name_in_owner = true
 offset_left = 416.0
 offset_top = 293.0
 offset_right = 728.0
 offset_bottom = 438.0
 theme_override_font_sizes/font_size = 100
 text = "Play"
+script = ExtResource("1_xqga4")
 
-[node name="Button2" type="Button" parent="." unique_id=1151906000]
+[node name="creditsButton" type="Button" parent="." unique_id=1151906000]
+unique_name_in_owner = true
 offset_left = 225.0
 offset_top = 534.0
 offset_right = 430.0
@@ -39,7 +44,8 @@ offset_bottom = 611.0
 theme_override_font_sizes/font_size = 50
 text = "Credits"
 
-[node name="Button4" type="Button" parent="." unique_id=430854732]
+[node name="settingsButton" type="Button" parent="." unique_id=430854732]
+unique_name_in_owner = true
 offset_left = 474.0
 offset_top = 534.0
 offset_right = 676.0
@@ -47,7 +53,7 @@ offset_bottom = 611.0
 theme_override_font_sizes/font_size = 50
 text = "Settings"
 
-[node name="Button6" type="Button" parent="." unique_id=420032364]
+[node name="placeholderButton" type="Button" parent="." unique_id=420032364]
 offset_left = 720.0
 offset_top = 534.0
 offset_right = 925.0

@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://b3qv5il1vxhm8"]
+
+[ext_resource type="Texture2D" uid="uid://dy1dwj583kuyx" path="res://Resources/InUse/ReusedAssets/Restart.png" id="1_del6v"]
+[ext_resource type="Script" uid="uid://dhismqn5ngu3j" path="res://scripts/menu_button.gd" id="2_erjg3"]
+
+[sub_resource type="Gradient" id="Gradient_7dm0k"]
+colors = PackedColorArray(0, 1, 1, 1, 0.13909006, 0.3063838, 0.46577227, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_iqt6j"]
+gradient = SubResource("Gradient_7dm0k")
+
+[node name="Node2D" type="Node2D" unique_id=1316291652]
+
+[node name="backgroundGradient" type="TextureRect" parent="." unique_id=373277597]
+offset_right = 1157.0
+offset_bottom = 652.0
+texture = SubResource("GradientTexture2D_iqt6j")
+
+[node name="menuTitle" type="Label" parent="." unique_id=1078803653]
+offset_left = 1.0
+offset_top = 6.0
+offset_right = 1156.0
+offset_bottom = 119.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 82
+text = "Settings"
+horizontal_alignment = 1
+
+[node name="menuButton" type="Button" parent="." unique_id=2113629410]
+unique_name_in_owner = true
+offset_left = 946.0
+offset_top = 552.0
+offset_right = 1035.0
+offset_bottom = 588.0
+scale = Vector2(2, 2)
+theme_override_font_sizes/font_size = 20
+text = "Menu"
+icon = ExtResource("1_del6v")
+script = ExtResource("2_erjg3")
