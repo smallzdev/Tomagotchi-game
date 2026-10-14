@@ -22,7 +22,7 @@ offset_right = 1153.0
 offset_bottom = 224.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 100
-text = "Tamagotchi Game"
+text = "Pet Tamagotchi"
 horizontal_alignment = 1
 
 [node name="playButton" type="Button" parent="." unique_id=1577812978]

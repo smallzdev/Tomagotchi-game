@@ -1,0 +1,107 @@
+[gd_scene format=3 uid="uid://886x8xj8qyty"]
+
+[ext_resource type="Texture2D" uid="uid://dy1dwj583kuyx" path="res://Resources/InUse/ReusedAssets/Restart.png" id="1_r40by"]
+[ext_resource type="Script" uid="uid://c2im2yn0mlcar" path="res://scenes/menus/pets_menu.gd" id="2_v7mvi"]
+[ext_resource type="Texture2D" uid="uid://tlvriaji08jr" path="res://Resources/InUse/ReusedAssets/cat.png" id="3_i76b6"]
+
+[sub_resource type="Gradient" id="Gradient_7dm0k"]
+colors = PackedColorArray(0, 1, 1, 1, 0.13909006, 0.3063838, 0.46577227, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_es1s5"]
+gradient = SubResource("Gradient_7dm0k")
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ehm21"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_i76b6")
+}],
+"loop": 1,
+"name": &"cat",
+"speed": 5.0
+}]
+
+[node name="Node2D" type="Node2D" unique_id=1670576886]
+
+[node name="backgroundGradient" type="TextureRect" parent="." unique_id=606695694]
+offset_right = 1157.0
+offset_bottom = 652.0
+texture = SubResource("GradientTexture2D_es1s5")
+
+[node name="Panel" type="Panel" parent="." unique_id=1786754777]
+offset_left = 270.0
+offset_top = 127.0
+offset_right = 929.0
+offset_bottom = 565.0
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="Panel" unique_id=1871318336]
+texture_filter = 1
+position = Vector2(56, 100)
+scale = Vector2(3.5, 3.5)
+sprite_frames = SubResource("SpriteFrames_ehm21")
+animation = &"cat"
+
+[node name="Label" type="Label" parent="Panel" unique_id=799426517]
+layout_mode = 0
+offset_left = 180.0
+offset_top = 2.0
+offset_right = 469.0
+offset_bottom = 39.0
+theme_override_font_sizes/font_size = 27
+text = "Click on a Pet to Equip"
+
+[node name="Label2" type="Label" parent="Panel" unique_id=747393168]
+layout_mode = 0
+offset_left = 43.0
+offset_top = 144.0
+offset_right = 70.0
+offset_bottom = 167.0
+text = "Cat"
+horizontal_alignment = 1
+
+[node name="backButton" type="Button" parent="." unique_id=1573037775]
+unique_name_in_owner = true
+offset_left = 946.0
+offset_top = 552.0
+offset_right = 1035.0
+offset_bottom = 588.0
+scale = Vector2(2, 2)
+theme_override_font_sizes/font_size = 20
+text = "Back"
+icon = ExtResource("1_r40by")
+script = ExtResource("2_v7mvi")
+
+[node name="menuTitle" type="Label" parent="." unique_id=151105245]
+offset_left = 1.0
+offset_top = 6.0
+offset_right = 1156.0
+offset_bottom = 119.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 82
+text = "Pet Inventory"
+horizontal_alignment = 1
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1624845440]
+texture_filter = 1
+position = Vector2(129, 310)
+scale = Vector2(8, 8)
+sprite_frames = SubResource("SpriteFrames_ehm21")
+animation = &"cat"
+
+[node name="Label" type="Label" parent="." unique_id=622613827]
+offset_left = 24.0
+offset_top = 150.0
+offset_right = 247.0
+offset_bottom = 205.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+text = "[Pet Name]"
+
+[node name="Label2" type="Label" parent="." unique_id=692220823]
+offset_left = 60.0
+offset_top = 418.0
+offset_right = 190.0
+offset_bottom = 453.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 25
+text = "[Equipped]"

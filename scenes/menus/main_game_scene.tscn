@@ -2,12 +2,25 @@
 
 [ext_resource type="Texture2D" uid="uid://dy1dwj583kuyx" path="res://Resources/InUse/ReusedAssets/Restart.png" id="1_582wh"]
 [ext_resource type="Script" uid="uid://dhismqn5ngu3j" path="res://scripts/menu_button.gd" id="2_ttbmu"]
+[ext_resource type="Script" uid="uid://dfum1py7ro6qt" path="res://scenes/menus/main_game_buttons.gd" id="3_2yd1b"]
+[ext_resource type="Texture2D" uid="uid://tlvriaji08jr" path="res://Resources/InUse/ReusedAssets/cat.png" id="3_pgmow"]
 
 [sub_resource type="Gradient" id="Gradient_ttbmu"]
 colors = PackedColorArray(0, 1, 1, 1, 0.13909006, 0.3063838, 0.46577227, 1)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_d1cif"]
 gradient = SubResource("Gradient_ttbmu")
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_stm8k"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_pgmow")
+}],
+"loop": 1,
+"name": &"cat",
+"speed": 5.0
+}]
 
 [node name="Node2D" type="Node2D" unique_id=111207536]
 
@@ -27,3 +40,58 @@ theme_override_font_sizes/font_size = 20
 text = "Menu"
 icon = ExtResource("1_582wh")
 script = ExtResource("2_ttbmu")
+
+[node name="petsButton" type="Button" parent="." unique_id=639940516]
+unique_name_in_owner = true
+offset_left = 944.0
+offset_top = 464.0
+offset_right = 1033.0
+offset_bottom = 500.0
+scale = Vector2(2, 2)
+theme_override_font_sizes/font_size = 20
+text = "Pets"
+icon = ExtResource("1_582wh")
+script = ExtResource("3_2yd1b")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1383893210]
+texture_filter = 1
+position = Vector2(528, 332)
+scale = Vector2(12, 12)
+sprite_frames = SubResource("SpriteFrames_stm8k")
+animation = &"cat"
+
+[node name="foodButton" type="Button" parent="." unique_id=1158770600]
+unique_name_in_owner = true
+offset_left = 345.0
+offset_top = 528.0
+offset_right = 430.0
+offset_bottom = 585.0
+theme_override_font_sizes/font_size = 35
+text = "food"
+
+[node name="waterButton" type="Button" parent="." unique_id=689959799]
+unique_name_in_owner = true
+offset_left = 463.0
+offset_top = 528.0
+offset_right = 569.0
+offset_bottom = 585.0
+theme_override_font_sizes/font_size = 35
+text = "water"
+
+[node name="energyButton" type="Button" parent="." unique_id=514014471]
+unique_name_in_owner = true
+offset_left = 600.0
+offset_top = 528.0
+offset_right = 724.0
+offset_bottom = 585.0
+theme_override_font_sizes/font_size = 35
+text = "energy"
+
+[node name="Label" type="Label" parent="." unique_id=1332177370]
+offset_left = 373.0
+offset_top = 92.0
+offset_right = 697.0
+offset_bottom = 175.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 60
+text = "[Pet Name]"
