@@ -14,6 +14,10 @@ config/name="Tomagotchi"
 run/main_scene="uid://cfy5n37l1sa1h"
 config/features=PackedStringArray("4.7", "Mobile")
 
+[autoload]
+
+Global="*uid://bhbgpi43x1ogj"
+
 [display]
 
 window/stretch/mode="canvas_items"
