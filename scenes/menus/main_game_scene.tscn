@@ -5,6 +5,7 @@
 [ext_resource type="Script" uid="uid://dfum1py7ro6qt" path="res://scenes/menus/main_game_buttons.gd" id="3_2yd1b"]
 [ext_resource type="Texture2D" uid="uid://tlvriaji08jr" path="res://Resources/InUse/ReusedAssets/cat.png" id="3_pgmow"]
 [ext_resource type="Script" uid="uid://dmqw6rtj7oams" path="res://scenes/menus/pet_sprite.gd" id="5_qmn8o"]
+[ext_resource type="Texture2D" uid="uid://bglbjo6m1ylc" path="res://Resources/InUse/TamagotchiCustomAssets/waterbar.png" id="6_m1d2h"]
 
 [sub_resource type="Gradient" id="Gradient_ttbmu"]
 colors = PackedColorArray(0, 1, 1, 1, 0.13909006, 0.3063838, 0.46577227, 1)
@@ -25,6 +26,70 @@ animations = [{
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_udkci"]
 size = Vector2(22.75, 22.333332)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qh74j"]
+atlas = ExtResource("6_m1d2h")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5i6rg"]
+atlas = ExtResource("6_m1d2h")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2fgaq"]
+atlas = ExtResource("6_m1d2h")
+region = Rect2(0, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ova7b"]
+atlas = ExtResource("6_m1d2h")
+region = Rect2(64, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a5mcm"]
+atlas = ExtResource("6_m1d2h")
+region = Rect2(128, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j57ku"]
+atlas = ExtResource("6_m1d2h")
+region = Rect2(0, 128, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lqljm"]
+atlas = ExtResource("6_m1d2h")
+region = Rect2(64, 128, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k65ab"]
+atlas = ExtResource("6_m1d2h")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_udkci"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qh74j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5i6rg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2fgaq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ova7b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a5mcm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j57ku")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lqljm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k65ab")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="Node2D" type="Node2D" unique_id=111207536]
 
@@ -113,7 +178,7 @@ offset_top = 151.0
 offset_right = 272.0
 offset_bottom = 436.0
 
-[node name="Label" type="Label" parent="statsPannel" unique_id=1530413468]
+[node name="statPanelTitle" type="Label" parent="statsPannel" unique_id=1530413468]
 layout_mode = 0
 offset_right = 214.0
 offset_bottom = 46.0
@@ -124,13 +189,67 @@ horizontal_alignment = 1
 [node name="statTextLabel" type="Label" parent="statsPannel" unique_id=2085236276]
 unique_name_in_owner = true
 layout_mode = 0
-offset_left = 3.0
-offset_top = 60.0
-offset_right = 90.0
-offset_bottom = 83.0
+offset_left = 8.0
+offset_top = 176.0
+offset_right = 124.0
+offset_bottom = 277.0
 text = "Food: [N/A]
 Water: [N/A]
 Energy: [N/A]
 Love: [N/A]"
+
+[node name="waterStatBar" type="AnimatedSprite2D" parent="statsPannel" unique_id=1337594819]
+unique_name_in_owner = true
+texture_filter = 1
+position = Vector2(88, 74)
+scale = Vector2(3, 3)
+sprite_frames = SubResource("SpriteFrames_udkci")
+
+[node name="waterStatText" type="Label" parent="statsPannel" unique_id=728545345]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 166.0
+offset_top = 54.0
+offset_right = 206.0
+offset_bottom = 77.0
+text = "[N/A]"
+
+[node name="waterStatTitle" type="Label" parent="statsPannel" unique_id=1583367783]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 8.0
+offset_top = 54.0
+offset_right = 159.0
+offset_bottom = 77.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Water"
+horizontal_alignment = 1
+
+[node name="energyStatBar" type="AnimatedSprite2D" parent="statsPannel" unique_id=2001448620]
+unique_name_in_owner = true
+texture_filter = 1
+position = Vector2(88, 102)
+scale = Vector2(3, 3)
+sprite_frames = SubResource("SpriteFrames_udkci")
+
+[node name="energyStatText" type="Label" parent="statsPannel" unique_id=578847163]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 166.0
+offset_top = 82.0
+offset_right = 206.0
+offset_bottom = 105.0
+text = "[N/A]"
+
+[node name="energyStatTitle" type="Label" parent="statsPannel" unique_id=307671032]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 8.0
+offset_top = 82.0
+offset_right = 158.0
+offset_bottom = 105.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Energy"
+horizontal_alignment = 1
 
 [connection signal="input_event" from="Area2D" to="Area2D" method="petting_love"]

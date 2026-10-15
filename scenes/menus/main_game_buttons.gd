@@ -2,6 +2,8 @@ extends Button
 
 var petsMenu = preload("res://scenes/menus/pets.tscn")
 @onready var statText = %statTextLabel
+@onready var waterStatText = %waterStatText
+@onready var waterStatBar = %waterStatBar
 
 func _ready() -> void:
 	# button variables
@@ -62,3 +64,25 @@ func statUpdate():
 	Water: " + str(Global.water) + "
 	Energy: " + str(Global.energy) + "
 	Love: " + str(Global.love)
+	waterStatText.text = str(Global.water)
+	
+	# progress bar things
+	if Global.water > 86:
+		waterStatBar.frame = 0
+	if Global.water > 72 and Global.water < 86:
+		waterStatBar.frame = 1
+	if Global.water > 58 and Global.water < 72:
+		waterStatBar.frame = 2
+	if Global.water > 44 and Global.water < 58:
+		waterStatBar.frame = 3
+	if Global.water > 30 and Global.water < 44:
+		waterStatBar.frame = 4
+	if Global.water > 1 and Global.water < 30:
+		waterStatBar.frame = 5
+	if Global.water <= 12:
+		waterStatBar.frame = 6
+	if Global.water < 6:
+		waterStatBar.frame = 7
+		
+# ughghghg im mathed out. If you edit make sure to test
+# because the slightest mistake breaks it.
