@@ -4,6 +4,8 @@ var petsMenu = preload("res://scenes/menus/pets.tscn")
 @onready var statText = %statTextLabel
 @onready var waterStatText = %waterStatText
 @onready var waterStatBar = %waterStatBar
+@onready var energyStatText = %energyStatText
+@onready var energyStatBar = %energyStatBar
 
 func _ready() -> void:
 	# button variables
@@ -65,8 +67,11 @@ func statUpdate():
 	Energy: " + str(Global.energy) + "
 	Love: " + str(Global.love)
 	waterStatText.text = str(Global.water)
+	energyStatText.text = str(Global.energy)
 	
 	# progress bar things
+	
+	# water
 	if Global.water > 86:
 		waterStatBar.frame = 0
 	if Global.water > 72 and Global.water < 86:
@@ -83,6 +88,24 @@ func statUpdate():
 		waterStatBar.frame = 6
 	if Global.water < 6:
 		waterStatBar.frame = 7
+	
+	# energy
+	if Global.energy > 86:
+		energyStatBar.frame = 0
+	if Global.energy > 72 and Global.energy < 86:
+		energyStatBar.frame = 1
+	if Global.energy > 58 and Global.energy < 72:
+		energyStatBar.frame = 2
+	if Global.energy > 44 and Global.energy < 58:
+		energyStatBar.frame = 3
+	if Global.energy > 30 and Global.energy < 44:
+		energyStatBar.frame = 4
+	if Global.energy > 1 and Global.energy < 30:
+		energyStatBar.frame = 5
+	if Global.energy <= 12:
+		energyStatBar.frame = 6
+	if Global.energy < 6:
+		energyStatBar.frame = 7
 		
 # ughghghg im mathed out. If you edit make sure to test
 # because the slightest mistake breaks it.
