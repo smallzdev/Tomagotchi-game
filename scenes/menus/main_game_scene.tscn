@@ -95,3 +95,29 @@ offset_bottom = 175.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 60
 text = "[Pet Name]"
+
+[node name="statsPannel" type="Panel" parent="." unique_id=760876519]
+offset_left = 58.0
+offset_top = 151.0
+offset_right = 272.0
+offset_bottom = 436.0
+
+[node name="Label" type="Label" parent="statsPannel" unique_id=1530413468]
+layout_mode = 0
+offset_right = 214.0
+offset_bottom = 46.0
+theme_override_font_sizes/font_size = 33
+text = "Stats"
+horizontal_alignment = 1
+
+[node name="statTextLabel" type="Label" parent="statsPannel" unique_id=2085236276]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 3.0
+offset_top = 60.0
+offset_right = 90.0
+offset_bottom = 83.0
+text = "Food: [N/A]
+Water: [N/A]
+Energy: [N/A]
+Love: [N/A]"
