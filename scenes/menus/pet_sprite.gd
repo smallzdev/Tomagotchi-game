@@ -1,5 +1,7 @@
 extends Area2D
 
+@onready var petSprite = %PetSprite
+
 # stat label
 @onready var statText = %statTextLabel
 @onready var waterStatText = %waterStatText
@@ -34,6 +36,9 @@ func petting_love(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 		elif Global.love > 90 and Global.love <= 100:
 			Global.love = 100
 			statUpdate()
+			
+		if Global.pet == 4:
+			petSprite.animation = 1
 		
 # when editing make sure to also update in main_game_buttons.gd	
 func statUpdate():

@@ -19,13 +19,19 @@ var petsMenu = preload("res://scenes/menus/pets.tscn")
 
 func _ready() -> void:
 	# button variables
+	
+	# menu buttons
 	var petsButton = %petsButton
+	var catadexButton = %catadexButton
+	
+	# food, water, energy
 	var foodButton = %foodButton
 	var waterButton = %waterButton
 	var energyButton = %energyButton
 	
 	# when clicked it runs the functions
 	petsButton.pressed.connect(petsButton_pressed)
+	catadexButton.pressed.connect(catadexButton_pressed)
 	foodButton.pressed.connect(foodButton_pressed)
 	waterButton.pressed.connect(waterButton_pressed)
 	energyButton.pressed.connect(energyButton_pressed)
@@ -35,6 +41,9 @@ func _ready() -> void:
 # changes menu to the pet inventory thing
 func petsButton_pressed():
 	get_tree().change_scene_to_packed(petsMenu)
+
+func catadexButton_pressed():
+	get_tree().change_scene_to_file("res://scenes/menus/catadex.tscn")
 
 # Food, water, and energy
 # got the if statements written, now just needa fill it
@@ -51,6 +60,10 @@ func foodButton_pressed():
 	elif Global.food >= 100:
 		print("food is more than 100")
 		Global.food = 100
+		
+	# ill update to look cleaner later.
+	if Global.pet == 4:
+		petSprite.frame = 2
 	statUpdate()
 	
 func waterButton_pressed():

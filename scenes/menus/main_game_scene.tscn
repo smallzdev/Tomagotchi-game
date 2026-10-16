@@ -4,8 +4,11 @@
 [ext_resource type="Script" uid="uid://dhismqn5ngu3j" path="res://scripts/menu_button.gd" id="2_ttbmu"]
 [ext_resource type="Script" uid="uid://dfum1py7ro6qt" path="res://scenes/menus/main_game_buttons.gd" id="3_2yd1b"]
 [ext_resource type="Texture2D" uid="uid://tlvriaji08jr" path="res://Resources/InUse/ReusedAssets/cat.png" id="3_pgmow"]
+[ext_resource type="Texture2D" uid="uid://dwb4yjhxf0cu4" path="res://Resources/InUse/TamagotchiCustomAssets/food.png" id="4_3qooa"]
+[ext_resource type="Texture2D" uid="uid://dw61i515yloun" path="res://Resources/InUse/TamagotchiCustomAssets/water.png" id="5_06yng"]
 [ext_resource type="Texture2D" uid="uid://c4yyj5gwsqovb" path="res://Resources/InUse/ReusedAssets/cat3.png" id="5_a5mcm"]
 [ext_resource type="Script" uid="uid://dmqw6rtj7oams" path="res://scenes/menus/pet_sprite.gd" id="5_qmn8o"]
+[ext_resource type="Texture2D" uid="uid://bgp28b4ho7xhv" path="res://Resources/InUse/TamagotchiCustomAssets/energy.png" id="6_36xus"]
 [ext_resource type="Texture2D" uid="uid://b3kknikmix4mx" path="res://Resources/InUse/TamagotchiCustomAssets/pets/Ghost.png" id="6_j57ku"]
 [ext_resource type="Texture2D" uid="uid://bglbjo6m1ylc" path="res://Resources/InUse/TamagotchiCustomAssets/waterbar.png" id="6_m1d2h"]
 [ext_resource type="Texture2D" uid="uid://cym1hx6fs3wcd" path="res://Resources/InUse/TamagotchiCustomAssets/energybar.png" id="6_qh74j"]
@@ -65,7 +68,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_hbt6a")
 }],
-"loop": 1,
+"loop": 0,
 "name": &"ghost",
 "speed": 5.0
 }, {
@@ -345,9 +348,9 @@ texture = SubResource("GradientTexture2D_d1cif")
 
 [node name="menuButton" type="Button" parent="." unique_id=77331852]
 unique_name_in_owner = true
-offset_left = 946.0
+offset_left = 897.0
 offset_top = 552.0
-offset_right = 1035.0
+offset_right = 1020.0
 offset_bottom = 588.0
 scale = Vector2(2, 2)
 theme_override_font_sizes/font_size = 20
@@ -357,9 +360,9 @@ script = ExtResource("2_ttbmu")
 
 [node name="petsButton" type="Button" parent="." unique_id=639940516]
 unique_name_in_owner = true
-offset_left = 944.0
+offset_left = 897.0
 offset_top = 464.0
-offset_right = 1033.0
+offset_right = 1019.0
 offset_bottom = 500.0
 scale = Vector2(2, 2)
 theme_override_font_sizes/font_size = 20
@@ -367,32 +370,53 @@ text = "Pets"
 icon = ExtResource("1_582wh")
 script = ExtResource("3_2yd1b")
 
+[node name="catadexButton" type="Button" parent="." unique_id=1773348621]
+unique_name_in_owner = true
+offset_left = 897.0
+offset_top = 378.0
+offset_right = 1020.0
+offset_bottom = 414.0
+scale = Vector2(2, 2)
+theme_override_font_sizes/font_size = 20
+text = "Catadex"
+icon = ExtResource("1_582wh")
+script = ExtResource("3_2yd1b")
+
 [node name="foodButton" type="Button" parent="." unique_id=1158770600]
 unique_name_in_owner = true
-offset_left = 345.0
+texture_filter = 1
+offset_left = 285.0
 offset_top = 528.0
-offset_right = 430.0
+offset_right = 426.0
 offset_bottom = 585.0
 theme_override_font_sizes/font_size = 35
 text = "food"
+icon = ExtResource("4_3qooa")
+expand_icon = true
 
-[node name="waterButton" type="Button" parent="." unique_id=689959799]
+[node name="waterButton" type="Button" parent="." unique_id=2079921341]
 unique_name_in_owner = true
-offset_left = 463.0
+texture_filter = 1
+offset_left = 443.0
 offset_top = 528.0
-offset_right = 569.0
+offset_right = 604.0
 offset_bottom = 585.0
 theme_override_font_sizes/font_size = 35
 text = "water"
+icon = ExtResource("5_06yng")
+expand_icon = true
 
-[node name="energyButton" type="Button" parent="." unique_id=514014471]
+[node name="energyButton" type="Button" parent="." unique_id=2012273327]
 unique_name_in_owner = true
-offset_left = 600.0
+texture_filter = 1
+offset_left = 618.0
 offset_top = 528.0
-offset_right = 724.0
+offset_right = 795.0
 offset_bottom = 585.0
 theme_override_font_sizes/font_size = 35
 text = "energy"
+icon = ExtResource("6_36xus")
+expand_icon = true
 
 [node name="petSpriteTitle" type="Label" parent="." unique_id=1332177370]
 unique_name_in_owner = true
@@ -413,7 +437,7 @@ script = ExtResource("5_qmn8o")
 unique_name_in_owner = true
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_stm8k")
-animation = &"ginger cat"
+animation = &"ghost"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=853786905]
 position = Vector2(-1.375, 1.166666)
