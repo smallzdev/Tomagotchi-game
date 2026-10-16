@@ -1,7 +1,10 @@
 [gd_scene format=3 uid="uid://bgmjlyypq88w3"]
 
+[ext_resource type="Texture2D" uid="uid://c4yyj5gwsqovb" path="res://Resources/InUse/ReusedAssets/cat3.png" id="1_aauko"]
 [ext_resource type="Texture2D" uid="uid://tlvriaji08jr" path="res://Resources/InUse/ReusedAssets/cat.png" id="1_tx3pw"]
+[ext_resource type="Texture2D" uid="uid://b3kknikmix4mx" path="res://Resources/InUse/TamagotchiCustomAssets/pets/Ghost.png" id="2_8qd64"]
 [ext_resource type="Texture2D" uid="uid://dy1dwj583kuyx" path="res://Resources/InUse/ReusedAssets/Restart.png" id="2_u7asp"]
+[ext_resource type="Texture2D" uid="uid://d07p48kd873f4" path="res://Resources/InUse/ReusedAssets/greycat.png" id="3_8qd64"]
 [ext_resource type="Script" uid="uid://dk15jiylhoknc" path="res://scenes/menus/catadex.gd" id="3_u7asp"]
 
 [sub_resource type="Gradient" id="Gradient_7dm0k"]
@@ -10,14 +13,70 @@ colors = PackedColorArray(0, 1, 1, 1, 0.13909006, 0.3063838, 0.46577227, 1)
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_sd2ac"]
 gradient = SubResource("Gradient_7dm0k")
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_uld33"]
+atlas = ExtResource("2_8qd64")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t15ec"]
+atlas = ExtResource("2_8qd64")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jjdlx"]
+atlas = ExtResource("2_8qd64")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xbeds"]
+atlas = ExtResource("2_8qd64")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w7v3h"]
+atlas = ExtResource("2_8qd64")
+region = Rect2(0, 64, 32, 32)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_cgke2"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_aauko")
+}],
+"loop": 1,
+"name": &"cat3",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uld33")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t15ec")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jjdlx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xbeds")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w7v3h")
+}],
+"loop": 1,
+"name": &"ghost",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("1_tx3pw")
 }],
 "loop": 1,
-"name": &"cat",
+"name": &"ginger cat",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_8qd64")
+}],
+"loop": 1,
+"name": &"grey cat",
 "speed": 5.0
 }]
 
@@ -59,15 +118,62 @@ texture_filter = 1
 position = Vector2(57, 57)
 scale = Vector2(3.5, 3.5)
 sprite_frames = SubResource("SpriteFrames_cgke2")
-animation = &"cat"
+animation = &"ginger cat"
 
 [node name="CatadexItem1Label" type="Label" parent="Panel" unique_id=673493784]
 layout_mode = 0
-offset_left = 44.0
-offset_top = 101.0
-offset_right = 71.0
-offset_bottom = 124.0
-text = "Cat"
+offset_top = 100.0
+offset_right = 113.0
+offset_bottom = 123.0
+text = "Ginger Cat"
+horizontal_alignment = 1
+
+[node name="CatadexItem2" type="AnimatedSprite2D" parent="Panel" unique_id=1575242589]
+texture_filter = 1
+position = Vector2(160, 57)
+scale = Vector2(3.5, 3.5)
+sprite_frames = SubResource("SpriteFrames_cgke2")
+animation = &"grey cat"
+
+[node name="CatadexItem2Label" type="Label" parent="Panel" unique_id=375415547]
+layout_mode = 0
+offset_left = 103.0
+offset_top = 100.0
+offset_right = 216.0
+offset_bottom = 123.0
+text = "Grey Cat"
+horizontal_alignment = 1
+
+[node name="CatadexItem3" type="AnimatedSprite2D" parent="Panel" unique_id=1759795685]
+texture_filter = 1
+position = Vector2(263, 57)
+scale = Vector2(3.5, 3.5)
+sprite_frames = SubResource("SpriteFrames_cgke2")
+animation = &"cat3"
+
+[node name="CatadexItem3Label" type="Label" parent="Panel" unique_id=1636244200]
+layout_mode = 0
+offset_left = 206.0
+offset_top = 100.0
+offset_right = 319.0
+offset_bottom = 123.0
+text = "Idk Wat breed"
+horizontal_alignment = 1
+
+[node name="CatadexItem4" type="AnimatedSprite2D" parent="Panel" unique_id=1335325590]
+texture_filter = 1
+position = Vector2(370, 57)
+scale = Vector2(3.5, 3.5)
+sprite_frames = SubResource("SpriteFrames_cgke2")
+animation = &"ghost"
+
+[node name="CatadexItem3Label2" type="Label" parent="Panel" unique_id=1627055397]
+layout_mode = 0
+offset_left = 313.0
+offset_top = 100.0
+offset_right = 426.0
+offset_bottom = 123.0
+text = "Ghost"
 horizontal_alignment = 1
 
 [node name="backButton" type="Button" parent="." unique_id=1054623189]

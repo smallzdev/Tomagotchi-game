@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://tlvriaji08jr" path="res://Resources/InUse/ReusedAssets/cat.png" id="3_pgmow"]
 [ext_resource type="Texture2D" uid="uid://c4yyj5gwsqovb" path="res://Resources/InUse/ReusedAssets/cat3.png" id="5_a5mcm"]
 [ext_resource type="Script" uid="uid://dmqw6rtj7oams" path="res://scenes/menus/pet_sprite.gd" id="5_qmn8o"]
+[ext_resource type="Texture2D" uid="uid://b3kknikmix4mx" path="res://Resources/InUse/TamagotchiCustomAssets/pets/Ghost.png" id="6_j57ku"]
 [ext_resource type="Texture2D" uid="uid://bglbjo6m1ylc" path="res://Resources/InUse/TamagotchiCustomAssets/waterbar.png" id="6_m1d2h"]
 [ext_resource type="Texture2D" uid="uid://cym1hx6fs3wcd" path="res://Resources/InUse/TamagotchiCustomAssets/energybar.png" id="6_qh74j"]
 [ext_resource type="Texture2D" uid="uid://veamcifa4ohd" path="res://Resources/InUse/TamagotchiCustomAssets/hungerbar.png" id="7_2fgaq"]
@@ -18,6 +19,26 @@ colors = PackedColorArray(0, 1, 1, 1, 0.13909006, 0.3063838, 0.46577227, 1)
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_d1cif"]
 gradient = SubResource("Gradient_ttbmu")
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_ntfif"]
+atlas = ExtResource("6_j57ku")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a7r6p"]
+atlas = ExtResource("6_j57ku")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m4sqa"]
+atlas = ExtResource("6_j57ku")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ie12p"]
+atlas = ExtResource("6_j57ku")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hbt6a"]
+atlas = ExtResource("6_j57ku")
+region = Rect2(0, 64, 32, 32)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_stm8k"]
 animations = [{
 "frames": [{
@@ -26,6 +47,26 @@ animations = [{
 }],
 "loop": 1,
 "name": &"cat3",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ntfif")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a7r6p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m4sqa")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ie12p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hbt6a")
+}],
+"loop": 1,
+"name": &"ghost",
 "speed": 5.0
 }, {
 "frames": [{

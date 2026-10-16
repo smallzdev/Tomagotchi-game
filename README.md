@@ -22,4 +22,5 @@ This is the first week of starting the project, the theme this week is "Cinnamon
 2. Updating stat bars.
 3. Working food, energy, and water buttons.
 4. The ability to click you're pet (pat it) and get more love stats.
-5. More!
+5. Spooky Ghost pet :0
+

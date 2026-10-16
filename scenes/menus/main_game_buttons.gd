@@ -83,6 +83,9 @@ func petDetection():
 	if Global.pet == 3:
 		petSprite.animation = "cat3"
 		petSpriteNameText.text = "I forget the breed cat"
+	if Global.pet == 4:
+		petSprite.animation = "ghost"
+		petSpriteNameText.text = "Ghost"
 
 # when updating, make sure to also update pet_sprite.gd
 # as it uses this same function
