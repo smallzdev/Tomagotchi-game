@@ -71,7 +71,21 @@ func energyButton_pressed():
 		Global.water = 100
 	statUpdate()
 		
-# when calls, updates the text.
+
+# Pet detecting thing.
+func petDetection():
+	if Global.pet == 1:
+		petSpriteNameText.text = "Ginger Cat"
+		petSprite.animation = "ginger cat"
+	if Global.pet == 2:
+		petSpriteNameText.text = "Grey Cat"
+		petSprite.animation = "grey cat"
+	if Global.pet == 3:
+		petSprite.animation = "cat3"
+		petSpriteNameText.text = "I forget the breed cat"
+
+# when updating, make sure to also update pet_sprite.gd
+# as it uses this same function
 func statUpdate():
 	statText.text = "Food: " + str(Global.food) + "
 	Water: " + str(Global.water) + "
@@ -159,10 +173,3 @@ func statUpdate():
 		
 # ughghghg im mathed out. If you edit make sure to test
 # because the slightest mistake breaks it.
-
-# Pet detecting thing.
-func petDetection():
-	if Global.pet == 1:
-		petSpriteNameText.text = "Ginger Cat"
-		petSprite.animation = "ginger cat"
-		

@@ -15,3 +15,11 @@ Every week we write another section in the readme explaining what we've done tha
 <br>
 ## Week 1 - Cinnamon
 This is the first week of starting the project, the theme this week is "Cinnamon".
+
+**Features added:**
+
+1. Main, credits, settings (only scene really), catadex, main game menu, and (maybe) more menus!
+2. Updating stat bars.
+3. Working food, energy, and water buttons.
+4. The ability to click you're pet (pat it) and get more love stats.
+5. More!
