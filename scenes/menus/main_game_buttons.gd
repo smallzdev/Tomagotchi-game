@@ -1,11 +1,21 @@
 extends Button
 
 var petsMenu = preload("res://scenes/menus/pets.tscn")
+
+# stat bars and text
 @onready var statText = %statTextLabel
 @onready var waterStatText = %waterStatText
 @onready var waterStatBar = %waterStatBar
 @onready var energyStatText = %energyStatText
 @onready var energyStatBar = %energyStatBar
+@onready var foodStatText = %foodStatText
+@onready var foodStatBar = %foodStatBar
+@onready var loveStatText = %loveStatText
+@onready var loveStatBar = %loveStatBar
+
+# Pet sprite and title
+@onready var petSprite = %PetSprite
+@onready var petSpriteNameText = %petSpriteTitle
 
 func _ready() -> void:
 	# button variables
@@ -20,6 +30,7 @@ func _ready() -> void:
 	waterButton.pressed.connect(waterButton_pressed)
 	energyButton.pressed.connect(energyButton_pressed)
 	statUpdate()
+	petDetection()
 	
 # changes menu to the pet inventory thing
 func petsButton_pressed():
@@ -68,8 +79,11 @@ func statUpdate():
 	Love: " + str(Global.love)
 	waterStatText.text = str(Global.water)
 	energyStatText.text = str(Global.energy)
+	foodStatText.text = str(Global.food)
+	loveStatText.text = str(Global.love)
 	
 	# progress bar things
+	# don't worry, ill try and clean it up soon
 	
 	# water
 	if Global.water > 86:
@@ -107,5 +121,48 @@ func statUpdate():
 	if Global.energy < 6:
 		energyStatBar.frame = 7
 		
+	# food
+	if Global.food > 86:
+		foodStatBar.frame = 0
+	if Global.food > 72 and Global.food < 86:
+		foodStatBar.frame = 1
+	if Global.food > 58 and Global.food < 72:
+		foodStatBar.frame = 2
+	if Global.food > 44 and Global.food < 58:
+		foodStatBar.frame = 3
+	if Global.food > 30 and Global.food < 44:
+		foodStatBar.frame = 4
+	if Global.food > 1 and Global.food < 30:
+		foodStatBar.frame = 5
+	if Global.food <= 12:
+		foodStatBar.frame = 6
+	if Global.food < 6:
+		foodStatBar.frame = 7
+		
+	# love
+	if Global.love > 86:
+		loveStatBar.frame = 0
+	if Global.love > 72 and Global.love < 86:
+		loveStatBar.frame = 1
+	if Global.love > 58 and Global.love < 72:
+		loveStatBar.frame = 2
+	if Global.love > 44 and Global.love < 58:
+		loveStatBar.frame = 3
+	if Global.love > 30 and Global.love < 44:
+		loveStatBar.frame = 4
+	if Global.love > 1 and Global.love < 30:
+		loveStatBar.frame = 5
+	if Global.love <= 12:
+		loveStatBar.frame = 6
+	if Global.love < 6:
+		loveStatBar.frame = 7
+		
 # ughghghg im mathed out. If you edit make sure to test
 # because the slightest mistake breaks it.
+
+# Pet detecting thing.
+func petDetection():
+	if Global.pet == 1:
+		petSpriteNameText.text = "Ginger Cat"
+		petSprite.animation = "ginger cat"
+		
