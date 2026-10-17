@@ -1,8 +1,13 @@
 [gd_scene format=3 uid="uid://886x8xj8qyty"]
 
+[ext_resource type="Texture2D" uid="uid://c4yyj5gwsqovb" path="res://Resources/InUse/ReusedAssets/cat3.png" id="1_cwyod"]
 [ext_resource type="Texture2D" uid="uid://dy1dwj583kuyx" path="res://Resources/InUse/ReusedAssets/Restart.png" id="1_r40by"]
+[ext_resource type="Texture2D" uid="uid://b3kknikmix4mx" path="res://Resources/InUse/TamagotchiCustomAssets/pets/Ghost.png" id="2_2knbp"]
 [ext_resource type="Script" uid="uid://c2im2yn0mlcar" path="res://scripts/pets_menu.gd" id="3_ehm21"]
 [ext_resource type="Texture2D" uid="uid://tlvriaji08jr" path="res://Resources/InUse/ReusedAssets/cat.png" id="3_i76b6"]
+[ext_resource type="Texture2D" uid="uid://d07p48kd873f4" path="res://Resources/InUse/ReusedAssets/greycat.png" id="4_f54ji"]
+[ext_resource type="Texture2D" uid="uid://bss1sxgy0cdx1" path="res://Resources/InUse/TamagotchiCustomAssets/pets/goldfish.png" id="4_y4cg6"]
+[ext_resource type="Texture2D" uid="uid://dfer5a36n2qsn" path="res://Resources/InUse/TamagotchiCustomAssets/pets/pumpin.png" id="6_u5fce"]
 
 [sub_resource type="Gradient" id="Gradient_i76b6"]
 colors = PackedColorArray(0, 1, 1, 1, 0.13909006, 0.3063838, 0.46577227, 1)
@@ -10,16 +15,76 @@ colors = PackedColorArray(0, 1, 1, 1, 0.13909006, 0.3063838, 0.46577227, 1)
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_es1s5"]
 gradient = SubResource("Gradient_i76b6")
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_y4cg6"]
+atlas = ExtResource("2_2knbp")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7pubi"]
+atlas = ExtResource("4_y4cg6")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4272l"]
+atlas = ExtResource("6_u5fce")
+region = Rect2(0, 0, 32, 32)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_ehm21"]
 animations = [{
+"frames": [],
+"loop": 1,
+"name": &"blank",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_cwyod")
+}],
+"loop": 1,
+"name": &"cat3",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y4cg6")
+}],
+"loop": 1,
+"name": &"ghost",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("3_i76b6")
 }],
 "loop": 1,
-"name": &"cat",
+"name": &"ginger cat",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7pubi")
+}],
+"loop": 1,
+"name": &"goldfish",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_f54ji")
+}],
+"loop": 1,
+"name": &"grey cat",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4272l")
+}],
+"loop": 1,
+"name": &"pumpkin",
 "speed": 5.0
 }]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_stm8k"]
+size = Vector2(86.5, 89)
 
 [node name="Node2D" type="Node2D" unique_id=1670576886]
 
@@ -31,15 +96,48 @@ texture = SubResource("GradientTexture2D_es1s5")
 [node name="Panel" type="Panel" parent="." unique_id=1786754777]
 offset_left = 270.0
 offset_top = 127.0
-offset_right = 929.0
-offset_bottom = 565.0
+offset_right = 923.0
+offset_bottom = 575.0
 
-[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="Panel" unique_id=1871318336]
+[node name="Area2D" type="Area2D" parent="Panel" unique_id=849678404]
+
+[node name="PetLabel1" type="Label" parent="Panel/Area2D" unique_id=747393168]
+offset_left = 43.0
+offset_top = 144.0
+offset_right = 70.0
+offset_bottom = 167.0
+horizontal_alignment = 1
+
+[node name="PetSprite1" type="AnimatedSprite2D" parent="Panel/Area2D" unique_id=1871318336]
 texture_filter = 1
 position = Vector2(56, 100)
 scale = Vector2(3.5, 3.5)
 sprite_frames = SubResource("SpriteFrames_ehm21")
-animation = &"cat"
+animation = &"blank"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Panel/Area2D" unique_id=1586585496]
+position = Vector2(54, 99)
+shape = SubResource("RectangleShape2D_stm8k")
+
+[node name="Area2D2" type="Area2D" parent="Panel" unique_id=696430025]
+
+[node name="PetLabel2" type="Label" parent="Panel/Area2D2" unique_id=1842924606]
+offset_left = 130.0
+offset_top = 144.0
+offset_right = 157.0
+offset_bottom = 167.0
+horizontal_alignment = 1
+
+[node name="PetSprite2" type="AnimatedSprite2D" parent="Panel/Area2D2" unique_id=1063083016]
+texture_filter = 1
+position = Vector2(143, 100)
+scale = Vector2(3.5, 3.5)
+sprite_frames = SubResource("SpriteFrames_ehm21")
+animation = &"blank"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Panel/Area2D2" unique_id=1713970857]
+position = Vector2(142.75, 99)
+shape = SubResource("RectangleShape2D_stm8k")
 
 [node name="Label" type="Label" parent="Panel" unique_id=799426517]
 layout_mode = 0
@@ -50,14 +148,401 @@ offset_bottom = 39.0
 theme_override_font_sizes/font_size = 27
 text = "Click on a Pet to Equip"
 
-[node name="Label2" type="Label" parent="Panel" unique_id=747393168]
+[node name="Button" type="Button" parent="Panel" unique_id=797801535]
 layout_mode = 0
-offset_left = 43.0
+offset_left = 536.0
+offset_top = 407.0
+offset_right = 636.0
+offset_bottom = 438.0
+text = "Next Page >"
+
+[node name="Button2" type="Button" parent="Panel" unique_id=1298449307]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 404.0
+offset_right = 146.0
+offset_bottom = 435.0
+text = "< Previous Page"
+
+[node name="Area2D3" type="Area2D" parent="Panel" unique_id=639546250]
+
+[node name="PetLabel3" type="Label" parent="Panel/Area2D3" unique_id=922007463]
+offset_left = 217.0
 offset_top = 144.0
-offset_right = 70.0
+offset_right = 244.0
 offset_bottom = 167.0
-text = "Cat"
 horizontal_alignment = 1
+
+[node name="PetSprite3" type="AnimatedSprite2D" parent="Panel/Area2D3" unique_id=335745622]
+texture_filter = 1
+position = Vector2(230, 100)
+scale = Vector2(3.5, 3.5)
+sprite_frames = SubResource("SpriteFrames_ehm21")
+animation = &"blank"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Panel/Area2D3" unique_id=770216072]
+position = Vector2(229, 100)
+shape = SubResource("RectangleShape2D_stm8k")
+
+[node name="Area2D4" type="Area2D" parent="Panel" unique_id=681257340]
+
+[node name="PetLabel4" type="Label" parent="Panel/Area2D4" unique_id=1508876455]
+offset_left = 304.0
+offset_top = 144.0
+offset_right = 331.0
+offset_bottom = 167.0
+horizontal_alignment = 1
+
+[node name="PetSprite4" type="AnimatedSprite2D" parent="Panel/Area2D4" unique_id=476041715]
+texture_filter = 1
+position = Vector2(316.99988, 100)
+scale = Vector2(3.5, 3.5)
+sprite_frames = SubResource("SpriteFrames_ehm21")
+animation = &"blank"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Panel/Area2D4" unique_id=1239063415]
+position = Vector2(317, 100)
+shape = SubResource("RectangleShape2D_stm8k")
+
+[node name="Area2D5" type="Area2D" parent="Panel" unique_id=1393599030]
+
+[node name="PetSprite5" type="AnimatedSprite2D" parent="Panel/Area2D5" unique_id=1706576864]
+texture_filter = 1
+position = Vector2(403.99994, 100)
+scale = Vector2(3.5, 3.5)
+sprite_frames = SubResource("SpriteFrames_ehm21")
+animation = &"blank"
+
+[node name="PetLabel5" type="Label" parent="Panel/Area2D5" unique_id=72623577]
+offset_left = 391.0
+offset_top = 144.0
+offset_right = 418.0
+offset_bottom = 167.0
+horizontal_alignment = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Panel/Area2D5" unique_id=1224499592]
+position = Vector2(404, 100)
+shape = SubResource("RectangleShape2D_stm8k")
+
+[node name="Area2D6" type="Area2D" parent="Panel" unique_id=6458623]
+
+[node name="PetLabel6" type="Label" parent="Panel/Area2D6" unique_id=107814899]
+offset_left = 478.0
+offset_top = 144.0
+offset_right = 505.0
+offset_bottom = 167.0
+horizontal_alignment = 1
+
+[node name="PetSprite6" type="AnimatedSprite2D" parent="Panel/Area2D6" unique_id=2103811036]
+texture_filter = 1
+position = Vector2(490.99988, 100)
+scale = Vector2(3.5, 3.5)
+sprite_frames = SubResource("SpriteFrames_ehm21")
+animation = &"blank"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Panel/Area2D6" unique_id=2104514095]
+position = Vector2(491, 100)
+shape = SubResource("RectangleShape2D_stm8k")
+
+[node name="Area2D7" type="Area2D" parent="Panel" unique_id=858898978]
+
+[node name="PetLabel7" type="Label" parent="Panel/Area2D7" unique_id=874156790]
+offset_left = 566.0001
+offset_top = 144.0
+offset_right = 593.0001
+offset_bottom = 167.0
+horizontal_alignment = 1
+
+[node name="PetSprite7" type="AnimatedSprite2D" parent="Panel/Area2D7" unique_id=1738622637]
+texture_filter = 1
+position = Vector2(578.9999, 100)
+scale = Vector2(3.5, 3.5)
+sprite_frames = SubResource("SpriteFrames_ehm21")
+animation = &"blank"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Panel/Area2D7" unique_id=517264756]
+position = Vector2(579, 100)
+shape = SubResource("RectangleShape2D_stm8k")
+
+[node name="Area2D8" type="Area2D" parent="Panel" unique_id=795091390]
+
+[node name="PetLabel8" type="Label" parent="Panel/Area2D8" unique_id=1003969453]
+offset_left = 43.0
+offset_top = 254.0
+offset_right = 70.0
+offset_bottom = 277.0
+horizontal_alignment = 1
+
+[node name="PetSprite8" type="AnimatedSprite2D" parent="Panel/Area2D8" unique_id=510877782]
+texture_filter = 1
+position = Vector2(56, 210)
+scale = Vector2(3.5, 3.5)
+sprite_frames = SubResource("SpriteFrames_ehm21")
+animation = &"blank"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Panel/Area2D8" unique_id=1122590030]
+position = Vector2(56, 210)
+shape = SubResource("RectangleShape2D_stm8k")
+
+[node name="Area2D9" type="Area2D" parent="Panel" unique_id=412371742]
+
+[node name="PetSprite9" type="AnimatedSprite2D" parent="Panel/Area2D9" unique_id=1794594538]
+texture_filter = 1
+position = Vector2(143, 210)
+scale = Vector2(3.5, 3.5)
+sprite_frames = SubResource("SpriteFrames_ehm21")
+animation = &"blank"
+
+[node name="PetLabel9" type="Label" parent="Panel/Area2D9" unique_id=1481782909]
+offset_left = 130.0
+offset_top = 254.0
+offset_right = 157.0
+offset_bottom = 277.0
+horizontal_alignment = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Panel/Area2D9" unique_id=1820965029]
+position = Vector2(143, 210)
+shape = SubResource("RectangleShape2D_stm8k")
+
+[node name="Area2D10" type="Area2D" parent="Panel" unique_id=1099495560]
+
+[node name="PetSprite10" type="AnimatedSprite2D" parent="Panel/Area2D10" unique_id=2137895432]
+texture_filter = 1
+position = Vector2(230, 210)
+scale = Vector2(3.5, 3.5)
+sprite_frames = SubResource("SpriteFrames_ehm21")
+animation = &"blank"
+
+[node name="PetLabel10" type="Label" parent="Panel/Area2D10" unique_id=452407762]
+offset_left = 217.0
+offset_top = 254.0
+offset_right = 244.0
+offset_bottom = 277.0
+horizontal_alignment = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Panel/Area2D10" unique_id=1433536580]
+position = Vector2(230, 210)
+shape = SubResource("RectangleShape2D_stm8k")
+
+[node name="Area2D11" type="Area2D" parent="Panel" unique_id=257555061]
+
+[node name="PetSprite11" type="AnimatedSprite2D" parent="Panel/Area2D11" unique_id=777718581]
+texture_filter = 1
+position = Vector2(316.99994, 210)
+scale = Vector2(3.5, 3.5)
+sprite_frames = SubResource("SpriteFrames_ehm21")
+animation = &"blank"
+
+[node name="PetLabel11" type="Label" parent="Panel/Area2D11" unique_id=593379328]
+offset_left = 304.0
+offset_top = 254.0
+offset_right = 331.0
+offset_bottom = 277.0
+horizontal_alignment = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Panel/Area2D11" unique_id=711325267]
+position = Vector2(317, 210)
+shape = SubResource("RectangleShape2D_stm8k")
+
+[node name="Area2D12" type="Area2D" parent="Panel" unique_id=955258604]
+
+[node name="PetSprite12" type="AnimatedSprite2D" parent="Panel/Area2D12" unique_id=730127818]
+texture_filter = 1
+position = Vector2(403.99994, 210)
+scale = Vector2(3.5, 3.5)
+sprite_frames = SubResource("SpriteFrames_ehm21")
+animation = &"blank"
+
+[node name="PetLabel12" type="Label" parent="Panel/Area2D12" unique_id=1572769365]
+offset_left = 391.0
+offset_top = 254.0
+offset_right = 418.0
+offset_bottom = 277.0
+horizontal_alignment = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Panel/Area2D12" unique_id=396726999]
+position = Vector2(404, 210)
+shape = SubResource("RectangleShape2D_stm8k")
+
+[node name="Area2D13" type="Area2D" parent="Panel" unique_id=568110576]
+
+[node name="PetSprite13" type="AnimatedSprite2D" parent="Panel/Area2D13" unique_id=1346626467]
+texture_filter = 1
+position = Vector2(490.99988, 210)
+scale = Vector2(3.5, 3.5)
+sprite_frames = SubResource("SpriteFrames_ehm21")
+animation = &"blank"
+
+[node name="PetLabel13" type="Label" parent="Panel/Area2D13" unique_id=856775952]
+offset_left = 478.0
+offset_top = 254.0
+offset_right = 505.0
+offset_bottom = 277.0
+horizontal_alignment = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Panel/Area2D13" unique_id=1298275341]
+position = Vector2(491, 210)
+shape = SubResource("RectangleShape2D_stm8k")
+
+[node name="Area2D14" type="Area2D" parent="Panel" unique_id=1706588338]
+
+[node name="PetSprite14" type="AnimatedSprite2D" parent="Panel/Area2D14" unique_id=539687702]
+texture_filter = 1
+position = Vector2(578.9999, 210)
+scale = Vector2(3.5, 3.5)
+sprite_frames = SubResource("SpriteFrames_ehm21")
+animation = &"blank"
+
+[node name="PetLabel14" type="Label" parent="Panel/Area2D14" unique_id=19930656]
+offset_left = 566.0001
+offset_top = 254.0
+offset_right = 593.0001
+offset_bottom = 277.0
+horizontal_alignment = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Panel/Area2D14" unique_id=928729734]
+position = Vector2(579, 210)
+shape = SubResource("RectangleShape2D_stm8k")
+
+[node name="Area2D15" type="Area2D" parent="Panel" unique_id=1470557483]
+
+[node name="PetSprite15" type="AnimatedSprite2D" parent="Panel/Area2D15" unique_id=2062850526]
+texture_filter = 1
+position = Vector2(56, 320)
+scale = Vector2(3.5, 3.5)
+sprite_frames = SubResource("SpriteFrames_ehm21")
+animation = &"blank"
+
+[node name="PetLabel15" type="Label" parent="Panel/Area2D15" unique_id=1482535214]
+offset_left = 43.0
+offset_top = 364.00003
+offset_right = 70.0
+offset_bottom = 387.00003
+horizontal_alignment = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Panel/Area2D15" unique_id=554839183]
+position = Vector2(56, 320)
+shape = SubResource("RectangleShape2D_stm8k")
+
+[node name="Area2D16" type="Area2D" parent="Panel" unique_id=284185274]
+
+[node name="PetSprite16" type="AnimatedSprite2D" parent="Panel/Area2D16" unique_id=493273246]
+texture_filter = 1
+position = Vector2(143, 320)
+scale = Vector2(3.5, 3.5)
+sprite_frames = SubResource("SpriteFrames_ehm21")
+animation = &"blank"
+
+[node name="PetLabel16" type="Label" parent="Panel/Area2D16" unique_id=1203527688]
+offset_left = 130.0
+offset_top = 364.00003
+offset_right = 157.0
+offset_bottom = 387.00003
+horizontal_alignment = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Panel/Area2D16" unique_id=134134060]
+position = Vector2(143, 320)
+shape = SubResource("RectangleShape2D_stm8k")
+
+[node name="Area2D17" type="Area2D" parent="Panel" unique_id=1041511128]
+
+[node name="PetSprite17" type="AnimatedSprite2D" parent="Panel/Area2D17" unique_id=1573401041]
+texture_filter = 1
+position = Vector2(230, 320)
+scale = Vector2(3.5, 3.5)
+sprite_frames = SubResource("SpriteFrames_ehm21")
+animation = &"blank"
+
+[node name="PetLabel17" type="Label" parent="Panel/Area2D17" unique_id=155692692]
+offset_left = 217.0
+offset_top = 364.00003
+offset_right = 244.0
+offset_bottom = 387.00003
+horizontal_alignment = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Panel/Area2D17" unique_id=238403496]
+position = Vector2(230, 320)
+shape = SubResource("RectangleShape2D_stm8k")
+
+[node name="Area2D18" type="Area2D" parent="Panel" unique_id=737182961]
+
+[node name="PetLabel18" type="Label" parent="Panel/Area2D18" unique_id=5384068]
+offset_left = 304.0
+offset_top = 364.00003
+offset_right = 331.0
+offset_bottom = 387.00003
+horizontal_alignment = 1
+
+[node name="PetSprite18" type="AnimatedSprite2D" parent="Panel/Area2D18" unique_id=616283986]
+texture_filter = 1
+position = Vector2(316.99994, 320)
+scale = Vector2(3.5, 3.5)
+sprite_frames = SubResource("SpriteFrames_ehm21")
+animation = &"blank"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Panel/Area2D18" unique_id=63266051]
+position = Vector2(317, 320)
+shape = SubResource("RectangleShape2D_stm8k")
+
+[node name="Area2D19" type="Area2D" parent="Panel" unique_id=1245438390]
+
+[node name="PetSprite19" type="AnimatedSprite2D" parent="Panel/Area2D19" unique_id=886134173]
+texture_filter = 1
+position = Vector2(403.99994, 320)
+scale = Vector2(3.5, 3.5)
+sprite_frames = SubResource("SpriteFrames_ehm21")
+animation = &"blank"
+
+[node name="PetLabel19" type="Label" parent="Panel/Area2D19" unique_id=520921464]
+offset_left = 391.0
+offset_top = 364.00003
+offset_right = 418.0
+offset_bottom = 387.00003
+horizontal_alignment = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Panel/Area2D19" unique_id=49884588]
+position = Vector2(404, 320)
+shape = SubResource("RectangleShape2D_stm8k")
+
+[node name="Area2D20" type="Area2D" parent="Panel" unique_id=1782287803]
+
+[node name="PetSprite20" type="AnimatedSprite2D" parent="Panel/Area2D20" unique_id=874963585]
+texture_filter = 1
+position = Vector2(490.99988, 320)
+scale = Vector2(3.5, 3.5)
+sprite_frames = SubResource("SpriteFrames_ehm21")
+animation = &"blank"
+
+[node name="PetLabel20" type="Label" parent="Panel/Area2D20" unique_id=719504]
+offset_left = 478.0
+offset_top = 364.00003
+offset_right = 505.0
+offset_bottom = 387.00003
+horizontal_alignment = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Panel/Area2D20" unique_id=1734053274]
+position = Vector2(491, 320)
+shape = SubResource("RectangleShape2D_stm8k")
+
+[node name="Area2D21" type="Area2D" parent="Panel" unique_id=1272708034]
+
+[node name="PetSprite21" type="AnimatedSprite2D" parent="Panel/Area2D21" unique_id=838752106]
+texture_filter = 1
+position = Vector2(578.9999, 320)
+scale = Vector2(3.5, 3.5)
+sprite_frames = SubResource("SpriteFrames_ehm21")
+animation = &"blank"
+
+[node name="PetLabel21" type="Label" parent="Panel/Area2D21" unique_id=559641196]
+offset_left = 566.0001
+offset_top = 364.00003
+offset_right = 593.0001
+offset_bottom = 387.00003
+horizontal_alignment = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Panel/Area2D21" unique_id=432187308]
+position = Vector2(579, 320)
+shape = SubResource("RectangleShape2D_stm8k")
 
 [node name="menuTitle" type="Label" parent="." unique_id=151105245]
 offset_left = 1.0
@@ -74,7 +559,7 @@ texture_filter = 1
 position = Vector2(129, 310)
 scale = Vector2(8, 8)
 sprite_frames = SubResource("SpriteFrames_ehm21")
-animation = &"cat"
+animation = &"ginger cat"
 
 [node name="Label" type="Label" parent="." unique_id=622613827]
 offset_left = 24.0

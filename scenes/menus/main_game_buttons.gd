@@ -1,7 +1,5 @@
 extends Button
 
-var petsMenu = preload("res://scenes/menus/pets.tscn")
-
 # stat bars and text
 @onready var statText = %statTextLabel
 @onready var waterStatText = %waterStatText
@@ -41,7 +39,7 @@ func _ready() -> void:
 	
 # changes menu to the pet inventory thing
 func petsButton_pressed():
-	get_tree().change_scene_to_packed(petsMenu)
+	get_tree().change_scene_to_file("res://scenes/menus/pets.tscn")
 
 func catadexButton_pressed():
 	get_tree().change_scene_to_file("res://scenes/menus/catadex.tscn")
