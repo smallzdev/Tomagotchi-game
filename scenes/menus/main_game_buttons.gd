@@ -35,6 +35,7 @@ func _ready() -> void:
 	foodButton.pressed.connect(foodButton_pressed)
 	waterButton.pressed.connect(waterButton_pressed)
 	energyButton.pressed.connect(energyButton_pressed)
+	print(petSpriteNameText)
 	statUpdate()
 	petDetection()
 	
@@ -64,6 +65,10 @@ func foodButton_pressed():
 	# ill update to look cleaner later.
 	if Global.pet == 4:
 		petSprite.frame = 2
+		await get_tree().create_timer(2).timeout
+		petSprite.frame = 4
+		await get_tree().create_timer(1).timeout
+		petSprite.frame = 0
 	statUpdate()
 	
 func waterButton_pressed():
@@ -90,13 +95,13 @@ func petDetection():
 	if Global.pet == 1:
 		petSpriteNameText.text = "Ginger Cat"
 		petSprite.animation = "ginger cat"
-	if Global.pet == 2:
+	elif Global.pet == 2:
 		petSpriteNameText.text = "Grey Cat"
 		petSprite.animation = "grey cat"
-	if Global.pet == 3:
+	elif Global.pet == 3:
 		petSprite.animation = "cat3"
 		petSpriteNameText.text = "I forget the breed cat"
-	if Global.pet == 4:
+	elif Global.pet == 4:
 		petSprite.animation = "ghost"
 		petSpriteNameText.text = "Ghost"
 

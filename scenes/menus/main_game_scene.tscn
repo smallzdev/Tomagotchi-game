@@ -15,6 +15,8 @@
 [ext_resource type="Texture2D" uid="uid://veamcifa4ohd" path="res://Resources/InUse/TamagotchiCustomAssets/hungerbar.png" id="7_2fgaq"]
 [ext_resource type="Texture2D" uid="uid://d07p48kd873f4" path="res://Resources/InUse/ReusedAssets/greycat.png" id="7_j57ku"]
 [ext_resource type="Texture2D" uid="uid://b3567lnjgiuse" path="res://Resources/InUse/TamagotchiCustomAssets/lovebar.png" id="8_ova7b"]
+[ext_resource type="Texture2D" uid="uid://bss1sxgy0cdx1" path="res://Resources/InUse/TamagotchiCustomAssets/pets/goldfish.png" id="11_06yng"]
+[ext_resource type="Texture2D" uid="uid://dfer5a36n2qsn" path="res://Resources/InUse/TamagotchiCustomAssets/pets/pumpin.png" id="13_36xus"]
 
 [sub_resource type="Gradient" id="Gradient_ttbmu"]
 colors = PackedColorArray(0, 1, 1, 1, 0.13909006, 0.3063838, 0.46577227, 1)
@@ -40,6 +42,46 @@ region = Rect2(32, 32, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hbt6a"]
 atlas = ExtResource("6_j57ku")
+region = Rect2(0, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r5dus"]
+atlas = ExtResource("11_06yng")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f4qny"]
+atlas = ExtResource("11_06yng")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k8ipf"]
+atlas = ExtResource("11_06yng")
+region = Rect2(0, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_himol"]
+atlas = ExtResource("11_06yng")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_svsbc"]
+atlas = ExtResource("11_06yng")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j8k6w"]
+atlas = ExtResource("13_36xus")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o0wps"]
+atlas = ExtResource("13_36xus")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bfp3r"]
+atlas = ExtResource("13_36xus")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t7ow1"]
+atlas = ExtResource("13_36xus")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g5p0q"]
+atlas = ExtResource("13_36xus")
 region = Rect2(0, 64, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_stm8k"]
@@ -82,10 +124,50 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_r5dus")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f4qny")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k8ipf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_himol")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_svsbc")
+}],
+"loop": 1,
+"name": &"goldfish",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": ExtResource("7_j57ku")
 }],
 "loop": 1,
 "name": &"grey cat",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j8k6w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o0wps")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bfp3r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t7ow1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g5p0q")
+}],
+"loop": 1,
+"name": &"pumpkin",
 "speed": 5.0
 }]
 
@@ -437,7 +519,7 @@ script = ExtResource("5_qmn8o")
 unique_name_in_owner = true
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_stm8k")
-animation = &"ghost"
+animation = &"ginger cat"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=853786905]
 position = Vector2(-1.375, 1.166666)
