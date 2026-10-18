@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://d4ewa7p8u6mj3"]
+
+[ext_resource type="PackedScene" uid="uid://j3no4jg45khj" path="res://scenes/egg.tscn" id="1_5ckdq"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_7y0v6"]
+specular_color = Color(0.95686275, 0.95686275, 0.95686275, 1)
+
+[node name="gacha" type="Node2D" unique_id=1081423538]
+
+[node name="BackgroundTextureGradient" type="TextureRect" parent="." unique_id=1876431007]
+offset_right = 1157.0
+offset_bottom = 652.0
+texture = SubResource("CanvasTexture_7y0v6")
+
+[node name="egg" parent="." unique_id=781582821 instance=ExtResource("1_5ckdq")]
+position = Vector2(582, 349)

@@ -1,6 +1,6 @@
 extends Button
 
-@onready var mainGameScene = preload("res://scenes/menus/main_game_scene.tscn")
+@onready var gacha = preload("res://scenes/gacha.tscn")
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	var playButton = %playButton
@@ -11,7 +11,7 @@ func _ready() -> void:
 	settingsButton.pressed.connect(settings_button_pressed)
 	
 func play_button_pressed():
-	get_tree().change_scene_to_packed(mainGameScene)
+	get_tree().change_scene_to_packed(gacha)
 
 func credits_button_pressed():
 	get_tree().change_scene_to_file("res://scenes/menus/credits.tscn")

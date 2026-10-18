@@ -27,4 +27,5 @@ animations = [{
 script = ExtResource("1_34461")
 
 [node name="eggsprite" type="AnimatedSprite2D" parent="." unique_id=177515424]
+unique_name_in_owner = true
 sprite_frames = SubResource("SpriteFrames_xrivr")
