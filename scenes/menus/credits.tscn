@@ -2,6 +2,11 @@
 
 [ext_resource type="FontFile" uid="uid://dyibl4resr8wn" path="res://Resources/font/augiepixel.ttf" id="1_b2mra"]
 [ext_resource type="Script" uid="uid://dhismqn5ngu3j" path="res://scripts/menu_button.gd" id="2_iiqlc"]
+[ext_resource type="Script" uid="uid://k3a23bkfgaec" path="res://scenes/menus/credits.gd" id="3_b2mra"]
+[ext_resource type="Script" uid="uid://c1cjk5jwxxk4v" path="res://scenes/menus/rainbowcredits/actualcredits.gd" id="4_xlnvo"]
+[ext_resource type="Script" uid="uid://cjppbsxne0wk2" path="res://scenes/menus/rainbowcredits/actualcredits_2.gd" id="5_h70dw"]
+[ext_resource type="Script" uid="uid://o4bpwvnm4dck" path="res://scenes/menus/rainbowcredits/actualcredits_3.gd" id="6_q5tt2"]
+[ext_resource type="Script" uid="uid://cw8yqhkwsy0qq" path="res://scenes/menus/rainbowcredits/actualcredits_4.gd" id="7_wr0bx"]
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_yrcfj"]
 specular_color = Color(0.95686275, 0.95686275, 0.95686275, 1)
@@ -44,6 +49,7 @@ offset_bottom = 652.0
 texture = SubResource("CanvasTexture_yrcfj")
 
 [node name="menuTitle" type="Label" parent="." unique_id=86922963]
+visible = false
 offset_left = 1.0
 offset_top = 55.0
 offset_right = 1156.0
@@ -70,6 +76,7 @@ text = "menu"
 script = ExtResource("2_iiqlc")
 
 [node name="creditsLabel" type="Label" parent="." unique_id=1460375826]
+visible = false
 offset_left = 5.0
 offset_top = 202.0
 offset_right = 1149.0
@@ -84,3 +91,81 @@ Font: Gus Ruben
 Icons: Pixel Adventure by Pixel Frog"
 horizontal_alignment = 1
 autowrap_mode = 2
+
+[node name="credits" type="RichTextLabel" parent="." unique_id=1376701009]
+offset_left = 362.0
+offset_top = 54.0
+offset_right = 834.0
+offset_bottom = 199.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("1_b2mra")
+theme_override_font_sizes/normal_font_size = 150
+bbcode_enabled = true
+text = "credits"
+script = ExtResource("3_b2mra")
+
+[node name="rainbowcredits" type="Node2D" parent="." unique_id=408892374]
+
+[node name="actualcredits" type="RichTextLabel" parent="rainbowcredits" unique_id=1253056813]
+offset_left = 298.0
+offset_top = 202.0
+offset_right = 856.0
+offset_bottom = 263.0
+theme_override_colors/default_color = Color(0.30588236, 0.28627452, 0.2784314, 1)
+theme_override_fonts/normal_font = ExtResource("1_b2mra")
+theme_override_font_sizes/normal_font_size = 56
+bbcode_enabled = true
+text = "Game: Smallz, Victoria"
+horizontal_alignment = 1
+script = ExtResource("4_xlnvo")
+
+[node name="actualcredits2" type="RichTextLabel" parent="rainbowcredits" unique_id=1716802646]
+offset_left = 300.0
+offset_top = 261.0
+offset_right = 858.0
+offset_bottom = 322.0
+theme_override_colors/default_color = Color(0.30588236, 0.28627452, 0.2784314, 1)
+theme_override_fonts/normal_font = ExtResource("1_b2mra")
+theme_override_font_sizes/normal_font_size = 56
+bbcode_enabled = true
+text = "Art: Smallz, Victoria"
+horizontal_alignment = 1
+script = ExtResource("5_h70dw")
+
+[node name="actualcredits3" type="RichTextLabel" parent="rainbowcredits" unique_id=411973272]
+offset_left = 298.0
+offset_top = 377.0
+offset_right = 856.0
+offset_bottom = 438.0
+theme_override_colors/default_color = Color(0.30588236, 0.28627452, 0.2784314, 1)
+theme_override_fonts/normal_font = ExtResource("1_b2mra")
+theme_override_font_sizes/normal_font_size = 56
+bbcode_enabled = true
+text = "Font: Gus Ruben"
+horizontal_alignment = 1
+script = ExtResource("6_q5tt2")
+
+[node name="actualcredits4" type="RichTextLabel" parent="rainbowcredits" unique_id=1474519655]
+offset_left = 109.0
+offset_top = 434.0
+offset_right = 1044.0
+offset_bottom = 495.0
+theme_override_colors/default_color = Color(0.30588236, 0.28627452, 0.2784314, 1)
+theme_override_fonts/normal_font = ExtResource("1_b2mra")
+theme_override_font_sizes/normal_font_size = 56
+bbcode_enabled = true
+text = "Icons: Pixel Adventure by Pixel Frog"
+horizontal_alignment = 1
+script = ExtResource("7_wr0bx")
+
+[connection signal="mouse_entered" from="credits" to="credits" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="credits" to="menuButton" method="_on_rich_text_label_mouse_exited"]
+[connection signal="mouse_exited" from="credits" to="credits" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="rainbowcredits/actualcredits" to="rainbowcredits/actualcredits" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="rainbowcredits/actualcredits" to="rainbowcredits/actualcredits" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="rainbowcredits/actualcredits2" to="rainbowcredits/actualcredits2" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="rainbowcredits/actualcredits2" to="rainbowcredits/actualcredits2" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="rainbowcredits/actualcredits3" to="rainbowcredits/actualcredits3" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="rainbowcredits/actualcredits3" to="rainbowcredits/actualcredits3" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="rainbowcredits/actualcredits4" to="rainbowcredits/actualcredits4" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="rainbowcredits/actualcredits4" to="rainbowcredits/actualcredits4" method="_on_mouse_exited"]
