@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://b4s0mtt30pc3t"]
+
+[node name="menuparticle" type="Node2D" unique_id=977681208]
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="." unique_id=44468877]
+position = Vector2(-2, -340)
+amount = 10
+speed_scale = 0.4
+emission_shape = 3
+emission_rect_extents = Vector2(575, 1)
+scale_amount_max = 8.0
+color = Color(0.98212, 0.42279482, 0.4510572, 1)
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1694152744]
