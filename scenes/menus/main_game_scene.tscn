@@ -22,6 +22,45 @@
 [sub_resource type="CanvasTexture" id="CanvasTexture_sy1ir"]
 specular_color = Color(0.95686275, 0.95686275, 0.95686275, 1)
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ahvjs"]
+bg_color = Color(0.38431373, 0.38431373, 0.38431373, 0)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(0.30588236, 0.28627452, 0.2784314, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+corner_detail = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_r20aw"]
+bg_color = Color(0.16818258, 0.15563756, 0.15061828, 1)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(0.16862746, 0.15686275, 0.14901961, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+corner_detail = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xgfuv"]
+bg_color = Color(0.30588236, 0.28627452, 0.2784314, 1)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(0.30588236, 0.28627452, 0.2784314, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+corner_detail = 1
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_krc6o"]
 bg_color = Color(0.38431373, 0.38431373, 0.38431373, 0)
 border_width_left = 8
@@ -491,36 +530,39 @@ offset_right = 1157.0
 offset_bottom = 652.0
 texture = SubResource("CanvasTexture_sy1ir")
 
-[node name="menuButton" type="Button" parent="." unique_id=77331852]
-unique_name_in_owner = true
-offset_left = 897.0
-offset_top = 552.0
-offset_right = 1020.0
-offset_bottom = 588.0
-scale = Vector2(2, 2)
-theme_override_font_sizes/font_size = 20
-text = "Menu"
-icon = ExtResource("1_582wh")
-script = ExtResource("2_ttbmu")
-
 [node name="petsButton" type="Button" parent="." unique_id=639940516]
 unique_name_in_owner = true
-offset_left = 897.0
-offset_top = 464.0
-offset_right = 1019.0
-offset_bottom = 500.0
+offset_left = 895.0
+offset_top = 110.0
+offset_right = 1017.0
+offset_bottom = 146.0
 scale = Vector2(2, 2)
 theme_override_font_sizes/font_size = 20
 text = "Pets"
 icon = ExtResource("1_582wh")
 script = ExtResource("3_2yd1b")
 
+[node name="menuButton" type="Button" parent="." unique_id=172539096]
+unique_name_in_owner = true
+offset_left = 929.0
+offset_top = 537.0
+offset_right = 1107.0
+offset_bottom = 607.0
+theme_override_colors/font_color = Color(0.30588236, 0.28627452, 0.2784314, 1)
+theme_override_fonts/font = ExtResource("4_ymjn7")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_ahvjs")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_r20aw")
+theme_override_styles/hover = SubResource("StyleBoxFlat_xgfuv")
+text = "menu"
+script = ExtResource("2_ttbmu")
+
 [node name="catadexButton" type="Button" parent="." unique_id=1773348621]
 unique_name_in_owner = true
-offset_left = 897.0
-offset_top = 378.0
-offset_right = 1020.0
-offset_bottom = 414.0
+offset_left = 892.0
+offset_top = 24.0
+offset_right = 1015.0
+offset_bottom = 60.0
 scale = Vector2(2, 2)
 theme_override_font_sizes/font_size = 20
 text = "Catadex"
@@ -580,52 +622,60 @@ expand_icon = true
 
 [node name="petSpriteTitle" type="Label" parent="." unique_id=1332177370]
 unique_name_in_owner = true
-offset_left = 447.0
-offset_top = 92.0
-offset_right = 740.0
-offset_bottom = 150.0
+offset_left = 463.0
+offset_top = 134.0
+offset_right = 756.0
+offset_bottom = 192.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("4_ymjn7")
 theme_override_font_sizes/font_size = 60
 text = "[Pet Name]"
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1667564025]
-position = Vector2(528, 332)
+position = Vector2(582, 334)
 scale = Vector2(12, 12)
 script = ExtResource("5_qmn8o")
 
 [node name="PetSprite" type="AnimatedSprite2D" parent="Area2D" unique_id=1383893210]
 unique_name_in_owner = true
 texture_filter = 1
-position = Vector2(6.166667, -0.8333334)
+position = Vector2(3.5833335, -0.4166667)
 sprite_frames = SubResource("SpriteFrames_stm8k")
 animation = &"ginger cat"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=853786905]
-position = Vector2(4.791667, 0.33333266)
+position = Vector2(2.2083335, 0.74999934)
 shape = SubResource("RectangleShape2D_udkci")
 
 [node name="statsPannel" type="Panel" parent="." unique_id=760876519]
-offset_left = 89.0
+offset_left = 62.0
 offset_top = 182.0
-offset_right = 303.0
-offset_bottom = 467.0
+offset_right = 314.0
+offset_bottom = 483.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_krc6o")
 
 [node name="statPanelTitle" type="Label" parent="statsPannel" unique_id=1530413468]
 layout_mode = 0
-offset_right = 214.0
-offset_bottom = 46.0
-theme_override_font_sizes/font_size = 33
+offset_left = 36.0
+offset_top = 12.0
+offset_right = 215.0
+offset_bottom = 53.0
+theme_override_colors/font_color = Color(0.30588236, 0.28627452, 0.2784314, 1)
+theme_override_fonts/font = ExtResource("4_ymjn7")
+theme_override_font_sizes/font_size = 42
 text = "Stats"
 horizontal_alignment = 1
 
 [node name="statTextLabel" type="Label" parent="statsPannel" unique_id=2085236276]
 unique_name_in_owner = true
 layout_mode = 0
-offset_left = 8.0
-offset_top = 176.0
-offset_right = 124.0
-offset_bottom = 277.0
+offset_left = 22.0
+offset_top = 174.0
+offset_right = 164.0
+offset_bottom = 279.0
+theme_override_colors/font_color = Color(0.30588236, 0.28627452, 0.2784314, 1)
+theme_override_fonts/font = ExtResource("4_ymjn7")
+theme_override_font_sizes/font_size = 25
 text = "Food: [N/A]
 Water: [N/A]
 Energy: [N/A]
@@ -634,7 +684,7 @@ Love: [N/A]"
 [node name="waterStatBar" type="AnimatedSprite2D" parent="statsPannel" unique_id=1337594819]
 unique_name_in_owner = true
 texture_filter = 1
-position = Vector2(88, 74)
+position = Vector2(99, 75)
 scale = Vector2(3, 3)
 sprite_frames = SubResource("SpriteFrames_udkci")
 animation = &"water"
@@ -642,19 +692,22 @@ animation = &"water"
 [node name="waterStatText" type="Label" parent="statsPannel" unique_id=728545345]
 unique_name_in_owner = true
 layout_mode = 0
-offset_left = 166.0
-offset_top = 54.0
-offset_right = 206.0
-offset_bottom = 77.0
+offset_left = 178.0
+offset_top = 59.0
+offset_right = 230.0
+offset_bottom = 82.0
+theme_override_colors/font_color = Color(0.30588236, 0.28627452, 0.2784314, 1)
+theme_override_fonts/font = ExtResource("4_ymjn7")
+theme_override_font_sizes/font_size = 22
 text = "[N/A]"
 
 [node name="waterStatTitle" type="Label" parent="statsPannel" unique_id=1583367783]
 unique_name_in_owner = true
 layout_mode = 0
-offset_left = 8.0
-offset_top = 54.0
-offset_right = 159.0
-offset_bottom = 77.0
+offset_left = 19.0
+offset_top = 55.0
+offset_right = 170.0
+offset_bottom = 78.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Water"
 horizontal_alignment = 1
@@ -662,7 +715,7 @@ horizontal_alignment = 1
 [node name="energyStatBar" type="AnimatedSprite2D" parent="statsPannel" unique_id=2001448620]
 unique_name_in_owner = true
 texture_filter = 1
-position = Vector2(88, 102)
+position = Vector2(99, 105)
 scale = Vector2(3, 3)
 sprite_frames = SubResource("SpriteFrames_udkci")
 animation = &"energy"
@@ -670,19 +723,22 @@ animation = &"energy"
 [node name="energyStatText" type="Label" parent="statsPannel" unique_id=578847163]
 unique_name_in_owner = true
 layout_mode = 0
-offset_left = 166.0
-offset_top = 82.0
-offset_right = 206.0
-offset_bottom = 105.0
+offset_left = 177.0
+offset_top = 88.0
+offset_right = 229.0
+offset_bottom = 112.0
+theme_override_colors/font_color = Color(0.30588236, 0.28627452, 0.2784314, 1)
+theme_override_fonts/font = ExtResource("4_ymjn7")
+theme_override_font_sizes/font_size = 22
 text = "[N/A]"
 
 [node name="energyStatTitle" type="Label" parent="statsPannel" unique_id=307671032]
 unique_name_in_owner = true
 layout_mode = 0
-offset_left = 8.0
-offset_top = 82.0
-offset_right = 158.0
-offset_bottom = 105.0
+offset_left = 19.0
+offset_top = 85.0
+offset_right = 169.0
+offset_bottom = 108.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Energy"
 horizontal_alignment = 1
@@ -690,7 +746,7 @@ horizontal_alignment = 1
 [node name="foodStatBar" type="AnimatedSprite2D" parent="statsPannel" unique_id=699376840]
 unique_name_in_owner = true
 texture_filter = 1
-position = Vector2(88, 131.00002)
+position = Vector2(99, 134.00002)
 scale = Vector2(3, 3)
 sprite_frames = SubResource("SpriteFrames_udkci")
 animation = &"food"
@@ -698,19 +754,22 @@ animation = &"food"
 [node name="foodStatText" type="Label" parent="statsPannel" unique_id=2107660022]
 unique_name_in_owner = true
 layout_mode = 0
-offset_left = 166.0
-offset_top = 111.0
-offset_right = 206.0
-offset_bottom = 134.0
+offset_left = 178.0
+offset_top = 116.0
+offset_right = 230.0
+offset_bottom = 139.0
+theme_override_colors/font_color = Color(0.30588236, 0.28627452, 0.2784314, 1)
+theme_override_fonts/font = ExtResource("4_ymjn7")
+theme_override_font_sizes/font_size = 22
 text = "[N/A]"
 
 [node name="foodStatTitle" type="Label" parent="statsPannel" unique_id=849067975]
 unique_name_in_owner = true
 layout_mode = 0
-offset_left = 8.0
-offset_top = 111.0
-offset_right = 158.0
-offset_bottom = 134.0
+offset_left = 19.0
+offset_top = 114.0
+offset_right = 169.0
+offset_bottom = 137.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Food"
 horizontal_alignment = 1
@@ -718,7 +777,7 @@ horizontal_alignment = 1
 [node name="loveStatBar" type="AnimatedSprite2D" parent="statsPannel" unique_id=1587895008]
 unique_name_in_owner = true
 texture_filter = 1
-position = Vector2(88, 160.00002)
+position = Vector2(98, 163.00002)
 scale = Vector2(3, 3)
 sprite_frames = SubResource("SpriteFrames_udkci")
 animation = &"love"
@@ -726,19 +785,22 @@ animation = &"love"
 [node name="loveStatText" type="Label" parent="statsPannel" unique_id=1063038298]
 unique_name_in_owner = true
 layout_mode = 0
-offset_left = 166.0
-offset_top = 140.0
-offset_right = 206.0
-offset_bottom = 163.0
+offset_left = 177.0
+offset_top = 145.0
+offset_right = 229.0
+offset_bottom = 168.0
+theme_override_colors/font_color = Color(0.30588236, 0.28627452, 0.2784314, 1)
+theme_override_fonts/font = ExtResource("4_ymjn7")
+theme_override_font_sizes/font_size = 22
 text = "[N/A]"
 
 [node name="loveStatTitle" type="Label" parent="statsPannel" unique_id=1807830144]
 unique_name_in_owner = true
 layout_mode = 0
-offset_left = 8.0
-offset_top = 140.0
-offset_right = 158.0
-offset_bottom = 163.0
+offset_left = 18.0
+offset_top = 143.0
+offset_right = 168.0
+offset_bottom = 166.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Love"
 horizontal_alignment = 1

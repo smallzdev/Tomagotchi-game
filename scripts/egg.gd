@@ -4,6 +4,7 @@ var collected = false
 var holdsec = 0
 #var randomint 
 @onready var eggsprite = %eggsprite
+@onready var maingame = preload("res://scenes/menus/main_game_scene.tscn")
 
 func _ready() -> void:
 	eggsprite.play("default")
@@ -22,7 +23,9 @@ func _process(delta) -> void:
 			var randomint = randi_range(1, 100)
 			if randomint <= 75: 
 				print("2")
+				get_tree().change_scene_to_packed(maingame)
 			else: 
 				print("1")
+				get_tree().change_scene_to_packed(maingame)
 	else:
 		holdsec=0
