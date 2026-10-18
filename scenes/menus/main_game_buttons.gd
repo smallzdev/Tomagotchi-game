@@ -15,7 +15,13 @@ extends Button
 @onready var petSprite = %PetSprite
 @onready var petSpriteNameText = %petSpriteTitle
 
-func _ready() -> void:
+func petsButton_pressed():
+	get_tree().call_deferred("change_scene_to_file", "res://scenes/menus/pets.tscn")
+
+func catadexButton_pressed():
+	get_tree().call_deferred("change_scene_to_file", "res://scenes/menus/catadex.tscn")
+
+func _ready():
 	# button variables
 	
 	# menu buttons
@@ -36,13 +42,6 @@ func _ready() -> void:
 	print(petSpriteNameText)
 	statUpdate()
 	petDetection()
-	
-# changes menu to the pet inventory thing
-func petsButton_pressed():
-	get_tree().change_scene_to_file("res://scenes/menus/pets.tscn")
-
-func catadexButton_pressed():
-	get_tree().change_scene_to_file("res://scenes/menus/catadex.tscn")
 
 # Food, water, and energy
 # got the if statements written, now just needa fill it
@@ -61,12 +60,12 @@ func foodButton_pressed():
 		Global.food = 100
 		
 	# ill update to look cleaner later.
-	if Global.pet == 4:
-		petSprite.frame = 2
-		await get_tree().create_timer(2).timeout
-		petSprite.frame = 4
-		await get_tree().create_timer(1).timeout
-		petSprite.frame = 0
+	## if Global.pet == 4:
+		## petSprite.frame = 2
+		## await get_tree().create_timer(2).timeout
+		## petSprite.frame = 4
+		## await get_tree().create_timer(1).timeout
+		## petSprite.frame = 0
 	statUpdate()
 	
 func waterButton_pressed():

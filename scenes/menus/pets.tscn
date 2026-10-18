@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://c4yyj5gwsqovb" path="res://Resources/InUse/ReusedAssets/cat3.png" id="1_cwyod"]
 [ext_resource type="Texture2D" uid="uid://dy1dwj583kuyx" path="res://Resources/InUse/ReusedAssets/Restart.png" id="1_r40by"]
+[ext_resource type="Script" uid="uid://cn5wggncqfifm" path="res://scenes/menus/pet_equip.gd" id="1_y4cg6"]
 [ext_resource type="Texture2D" uid="uid://b3kknikmix4mx" path="res://Resources/InUse/TamagotchiCustomAssets/pets/Ghost.png" id="2_2knbp"]
 [ext_resource type="Script" uid="uid://c2im2yn0mlcar" path="res://scripts/pets_menu.gd" id="3_ehm21"]
 [ext_resource type="Texture2D" uid="uid://tlvriaji08jr" path="res://Resources/InUse/ReusedAssets/cat.png" id="3_i76b6"]
@@ -100,6 +101,7 @@ offset_right = 923.0
 offset_bottom = 575.0
 
 [node name="Area2D" type="Area2D" parent="Panel" unique_id=849678404]
+script = ExtResource("1_y4cg6")
 
 [node name="PetLabel1" type="Label" parent="Panel/Area2D" unique_id=747393168]
 offset_left = 43.0
@@ -590,3 +592,5 @@ theme_override_font_sizes/font_size = 20
 text = "Back"
 icon = ExtResource("1_r40by")
 script = ExtResource("3_ehm21")
+
+[connection signal="input_event" from="Panel/Area2D" to="Panel/Area2D" method="_on_petsprite1_equip_event"]
