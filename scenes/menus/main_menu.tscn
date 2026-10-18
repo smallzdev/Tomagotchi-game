@@ -3,6 +3,7 @@
 [ext_resource type="FontFile" uid="uid://dyibl4resr8wn" path="res://Resources/font/augiepixel.ttf" id="1_ovrgc"]
 [ext_resource type="Script" uid="uid://w1qvlpajcum3" path="res://scripts/main_menu_buttons.gd" id="1_xqga4"]
 [ext_resource type="PackedScene" uid="uid://b4s0mtt30pc3t" path="res://scenes/menuparticle.tscn" id="3_2o76q"]
+[ext_resource type="Script" uid="uid://cohdwuxwwv7nl" path="res://scenes/menus/title.gd" id="4_6bivr"]
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_pfrlc"]
 specular_color = Color(0.95686275, 0.95686275, 0.95686275, 1)
@@ -45,6 +46,7 @@ offset_bottom = 652.0
 texture = SubResource("CanvasTexture_pfrlc")
 
 [node name="GameTitle" type="Label" parent="." unique_id=243813748]
+visible = false
 offset_left = 1.0
 offset_top = 87.0
 offset_right = 1153.0
@@ -110,3 +112,18 @@ text = "/"
 
 [node name="menuparticle" parent="." unique_id=977681208 instance=ExtResource("3_2o76q")]
 position = Vector2(580, 328)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=581295972]
+offset_left = 232.0
+offset_top = 72.0
+offset_right = 932.0
+offset_bottom = 218.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("1_ovrgc")
+theme_override_font_sizes/normal_font_size = 150
+bbcode_enabled = true
+text = "hatchapet"
+script = ExtResource("4_6bivr")
+
+[connection signal="mouse_entered" from="RichTextLabel" to="RichTextLabel" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="RichTextLabel" to="RichTextLabel" method="_on_mouse_exited"]
