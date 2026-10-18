@@ -28,6 +28,19 @@ corner_radius_bottom_right = 5
 corner_radius_bottom_left = 5
 corner_detail = 1
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xlnvo"]
+bg_color = Color(0.16818258, 0.15563756, 0.15061828, 1)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(0.16862746, 0.15686275, 0.14901961, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+corner_detail = 1
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_b2mra"]
 bg_color = Color(0.30588236, 0.28627452, 0.2784314, 1)
 border_width_left = 8
@@ -71,6 +84,7 @@ theme_override_colors/font_color = Color(0.30588236, 0.28627452, 0.2784314, 1)
 theme_override_fonts/font = ExtResource("1_b2mra")
 theme_override_font_sizes/font_size = 50
 theme_override_styles/normal = SubResource("StyleBoxFlat_iiqlc")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_xlnvo")
 theme_override_styles/hover = SubResource("StyleBoxFlat_b2mra")
 text = "menu"
 script = ExtResource("2_iiqlc")

@@ -20,7 +20,7 @@ func _process(delta) -> void:
 			eggsprite.play("cracked")
 			await get_tree().create_timer(2.0).timeout
 			var randomint = randi_range(1, 100)
-			if randomint <= 50: 
+			if randomint <= 75: 
 				print("2")
 			else: 
 				print("1")

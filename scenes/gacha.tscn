@@ -1,9 +1,14 @@
 [gd_scene format=3 uid="uid://d4ewa7p8u6mj3"]
 
 [ext_resource type="PackedScene" uid="uid://j3no4jg45khj" path="res://scenes/egg.tscn" id="1_5ckdq"]
+[ext_resource type="FontFile" uid="uid://dyibl4resr8wn" path="res://Resources/font/augiepixel.ttf" id="2_7y0v6"]
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_7y0v6"]
 specular_color = Color(0.95686275, 0.95686275, 0.95686275, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_pvtck"]
+font_size = 120
+font_color = Color(0, 0, 0, 1)
 
 [node name="gacha" type="Node2D" unique_id=1081423538]
 
@@ -13,4 +18,14 @@ offset_bottom = 652.0
 texture = SubResource("CanvasTexture_7y0v6")
 
 [node name="egg" parent="." unique_id=781582821 instance=ExtResource("1_5ckdq")]
-position = Vector2(582, 349)
+position = Vector2(580, 425)
+
+[node name="Label" type="Label" parent="." unique_id=669717406]
+offset_left = 203.0
+offset_top = 64.0
+offset_right = 936.0
+offset_bottom = 299.0
+theme_override_fonts/font = ExtResource("2_7y0v6")
+text = "hold [e] for 5 
+secs to hatch!"
+label_settings = SubResource("LabelSettings_pvtck")

@@ -5,6 +5,7 @@
 [ext_resource type="Script" uid="uid://dfum1py7ro6qt" path="res://scenes/menus/main_game_buttons.gd" id="3_2yd1b"]
 [ext_resource type="Texture2D" uid="uid://tlvriaji08jr" path="res://Resources/InUse/ReusedAssets/cat.png" id="3_pgmow"]
 [ext_resource type="Texture2D" uid="uid://dwb4yjhxf0cu4" path="res://Resources/InUse/TamagotchiCustomAssets/food.png" id="4_3qooa"]
+[ext_resource type="FontFile" uid="uid://dyibl4resr8wn" path="res://Resources/font/augiepixel.ttf" id="4_ymjn7"]
 [ext_resource type="Texture2D" uid="uid://dw61i515yloun" path="res://Resources/InUse/TamagotchiCustomAssets/water.png" id="5_06yng"]
 [ext_resource type="Texture2D" uid="uid://c4yyj5gwsqovb" path="res://Resources/InUse/ReusedAssets/cat3.png" id="5_a5mcm"]
 [ext_resource type="Script" uid="uid://dmqw6rtj7oams" path="res://scenes/menus/pet_sprite.gd" id="5_qmn8o"]
@@ -18,11 +19,73 @@
 [ext_resource type="Texture2D" uid="uid://bss1sxgy0cdx1" path="res://Resources/InUse/TamagotchiCustomAssets/pets/goldfish.png" id="11_06yng"]
 [ext_resource type="Texture2D" uid="uid://dfer5a36n2qsn" path="res://Resources/InUse/TamagotchiCustomAssets/pets/pumpin.png" id="13_36xus"]
 
-[sub_resource type="Gradient" id="Gradient_ttbmu"]
-colors = PackedColorArray(0, 1, 1, 1, 0.13909006, 0.3063838, 0.46577227, 1)
+[sub_resource type="CanvasTexture" id="CanvasTexture_sy1ir"]
+specular_color = Color(0.95686275, 0.95686275, 0.95686275, 1)
 
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_d1cif"]
-gradient = SubResource("Gradient_ttbmu")
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_krc6o"]
+bg_color = Color(0.38431373, 0.38431373, 0.38431373, 0)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(0.30588236, 0.28627452, 0.2784314, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+corner_detail = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sy1ir"]
+bg_color = Color(0.16818258, 0.15563756, 0.15061828, 1)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(0.16862746, 0.15686275, 0.14901961, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+corner_detail = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ymjn7"]
+bg_color = Color(0.30588236, 0.28627452, 0.2784314, 1)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(0.30588236, 0.28627452, 0.2784314, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+corner_detail = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nry7q"]
+bg_color = Color(0.16818258, 0.15563756, 0.15061828, 1)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(0.16862746, 0.15686275, 0.14901961, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+corner_detail = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_51xs6"]
+bg_color = Color(0.16818258, 0.15563756, 0.15061828, 1)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(0.16862746, 0.15686275, 0.14901961, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+corner_detail = 1
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ntfif"]
 atlas = ExtResource("6_j57ku")
@@ -426,7 +489,7 @@ animations = [{
 [node name="backgroundGradient" type="TextureRect" parent="." unique_id=732252075]
 offset_right = 1157.0
 offset_bottom = 652.0
-texture = SubResource("GradientTexture2D_d1cif")
+texture = SubResource("CanvasTexture_sy1ir")
 
 [node name="menuButton" type="Button" parent="." unique_id=77331852]
 unique_name_in_owner = true
@@ -467,11 +530,16 @@ script = ExtResource("3_2yd1b")
 [node name="foodButton" type="Button" parent="." unique_id=1158770600]
 unique_name_in_owner = true
 texture_filter = 1
-offset_left = 285.0
-offset_top = 528.0
-offset_right = 426.0
-offset_bottom = 585.0
+offset_left = 324.0
+offset_top = 530.0
+offset_right = 465.0
+offset_bottom = 587.0
+theme_override_colors/font_color = Color(0.30588236, 0.28627452, 0.2784314, 1)
+theme_override_fonts/font = ExtResource("4_ymjn7")
 theme_override_font_sizes/font_size = 35
+theme_override_styles/normal = SubResource("StyleBoxFlat_krc6o")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_sy1ir")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ymjn7")
 text = "food"
 icon = ExtResource("4_3qooa")
 expand_icon = true
@@ -479,11 +547,16 @@ expand_icon = true
 [node name="waterButton" type="Button" parent="." unique_id=2079921341]
 unique_name_in_owner = true
 texture_filter = 1
-offset_left = 443.0
-offset_top = 528.0
-offset_right = 604.0
-offset_bottom = 585.0
+offset_left = 500.0
+offset_top = 530.0
+offset_right = 661.0
+offset_bottom = 587.0
+theme_override_colors/font_color = Color(0.30588236, 0.28627452, 0.2784314, 1)
+theme_override_fonts/font = ExtResource("4_ymjn7")
 theme_override_font_sizes/font_size = 35
+theme_override_styles/normal = SubResource("StyleBoxFlat_krc6o")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_nry7q")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ymjn7")
 text = "water"
 icon = ExtResource("5_06yng")
 expand_icon = true
@@ -491,22 +564,28 @@ expand_icon = true
 [node name="energyButton" type="Button" parent="." unique_id=2012273327]
 unique_name_in_owner = true
 texture_filter = 1
-offset_left = 618.0
+offset_left = 682.0
 offset_top = 528.0
-offset_right = 795.0
+offset_right = 859.0
 offset_bottom = 585.0
+theme_override_colors/font_color = Color(0.30588236, 0.28627452, 0.2784314, 1)
+theme_override_fonts/font = ExtResource("4_ymjn7")
 theme_override_font_sizes/font_size = 35
+theme_override_styles/normal = SubResource("StyleBoxFlat_krc6o")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_51xs6")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ymjn7")
 text = "energy"
 icon = ExtResource("6_36xus")
 expand_icon = true
 
 [node name="petSpriteTitle" type="Label" parent="." unique_id=1332177370]
 unique_name_in_owner = true
-offset_left = 373.0
+offset_left = 447.0
 offset_top = 92.0
-offset_right = 697.0
-offset_bottom = 175.0
+offset_right = 740.0
+offset_bottom = 150.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_ymjn7")
 theme_override_font_sizes/font_size = 60
 text = "[Pet Name]"
 
@@ -518,18 +597,19 @@ script = ExtResource("5_qmn8o")
 [node name="PetSprite" type="AnimatedSprite2D" parent="Area2D" unique_id=1383893210]
 unique_name_in_owner = true
 texture_filter = 1
+position = Vector2(6.166667, -0.8333334)
 sprite_frames = SubResource("SpriteFrames_stm8k")
 animation = &"ginger cat"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=853786905]
-position = Vector2(-1.375, 1.166666)
+position = Vector2(4.791667, 0.33333266)
 shape = SubResource("RectangleShape2D_udkci")
 
 [node name="statsPannel" type="Panel" parent="." unique_id=760876519]
-offset_left = 58.0
-offset_top = 151.0
-offset_right = 272.0
-offset_bottom = 436.0
+offset_left = 89.0
+offset_top = 182.0
+offset_right = 303.0
+offset_bottom = 467.0
 
 [node name="statPanelTitle" type="Label" parent="statsPannel" unique_id=1530413468]
 layout_mode = 0

@@ -10,3 +10,24 @@ var love = 0
 
 # equipped pet number.
 var pet = 2
+
+# trying to figure out oop ;-;
+var raritygacha = [
+	{"rarity": "common", "chance": 75},
+	{"rarity": "legendary", "chance": 25}
+]
+
+
+# need change to .tscn files after made
+var characterpools = {
+	"common": [
+		"Ginger Cat",
+		"Goldfish",
+		"Grey Cat",
+		"Pumpkin"
+	],
+	
+	"legendary": [
+		"Ghost"
+	]
+}
