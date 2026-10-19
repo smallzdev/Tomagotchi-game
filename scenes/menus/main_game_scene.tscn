@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bki82bxn7t1sh"]
 
 [ext_resource type="Texture2D" uid="uid://dy1dwj583kuyx" path="res://Resources/InUse/ReusedAssets/Restart.png" id="1_582wh"]
+[ext_resource type="Texture2D" uid="uid://chddrjeae3fxo" path="res://Resources/InUse/TamagotchiCustomAssets/pinkpaw.png" id="1_sy1ir"]
 [ext_resource type="Script" uid="uid://dhismqn5ngu3j" path="res://scripts/menu_button.gd" id="2_ttbmu"]
 [ext_resource type="Script" uid="uid://dfum1py7ro6qt" path="res://scenes/menus/main_game_buttons.gd" id="3_2yd1b"]
 [ext_resource type="Texture2D" uid="uid://tlvriaji08jr" path="res://Resources/InUse/ReusedAssets/cat.png" id="3_pgmow"]
@@ -21,6 +22,19 @@
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_sy1ir"]
 specular_color = Color(0.95686275, 0.95686275, 0.95686275, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_iojj0"]
+bg_color = Color(0.38431373, 0.38431373, 0.38431373, 0)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.30588236, 0.28627452, 0.2784314, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+corner_detail = 1
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ahvjs"]
 bg_color = Color(0.38431373, 0.38431373, 0.38431373, 0)
@@ -532,14 +546,15 @@ texture = SubResource("CanvasTexture_sy1ir")
 
 [node name="petsButton" type="Button" parent="." unique_id=639940516]
 unique_name_in_owner = true
-offset_left = 895.0
-offset_top = 110.0
-offset_right = 1017.0
-offset_bottom = 146.0
-scale = Vector2(2, 2)
+texture_filter = 1
+offset_left = 1011.00006
+offset_top = 17.0
+offset_right = 1051.0
+offset_bottom = 57.0
+scale = Vector2(3, 3)
 theme_override_font_sizes/font_size = 20
-text = "Pets"
-icon = ExtResource("1_582wh")
+theme_override_styles/normal = SubResource("StyleBoxFlat_iojj0")
+icon = ExtResource("1_sy1ir")
 script = ExtResource("3_2yd1b")
 
 [node name="menuButton" type="Button" parent="." unique_id=172539096]
@@ -559,10 +574,10 @@ script = ExtResource("2_ttbmu")
 
 [node name="catadexButton" type="Button" parent="." unique_id=1773348621]
 unique_name_in_owner = true
-offset_left = 892.0
-offset_top = 24.0
-offset_right = 1015.0
-offset_bottom = 60.0
+offset_left = 886.0
+offset_top = 156.0
+offset_right = 1009.0
+offset_bottom = 192.0
 scale = Vector2(2, 2)
 theme_override_font_sizes/font_size = 20
 text = "Catadex"

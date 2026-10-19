@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://j3no4jg45khj" path="res://scenes/egg.tscn" id="1_5ckdq"]
 [ext_resource type="FontFile" uid="uid://dyibl4resr8wn" path="res://Resources/font/augiepixel.ttf" id="2_7y0v6"]
+[ext_resource type="PackedScene" uid="uid://dvt8savpbwuri" path="res://scenes/camera_2d.tscn" id="3_pvtck"]
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_7y0v6"]
 specular_color = Color(0.95686275, 0.95686275, 0.95686275, 1)
@@ -18,7 +19,7 @@ offset_bottom = 652.0
 texture = SubResource("CanvasTexture_7y0v6")
 
 [node name="egg" parent="." unique_id=781582821 instance=ExtResource("1_5ckdq")]
-position = Vector2(580, 425)
+position = Vector2(552, 436)
 
 [node name="Label" type="Label" parent="." unique_id=669717406]
 offset_left = 203.0
@@ -29,3 +30,19 @@ theme_override_fonts/font = ExtResource("2_7y0v6")
 text = "hold [e] for 5 
 secs to hatch!"
 label_settings = SubResource("LabelSettings_pvtck")
+
+[node name="Camera2D" parent="." unique_id=545306824 instance=ExtResource("3_pvtck")]
+unique_name_in_owner = true
+position = Vector2(575, 323)
+
+[node name="timer" type="Label" parent="." unique_id=1707088213]
+unique_name_in_owner = true
+offset_left = 628.0
+offset_top = 290.0
+offset_right = 925.0
+offset_bottom = 338.0
+theme_override_colors/font_color = Color(0.30588236, 0.28627452, 0.2784314, 1)
+theme_override_fonts/font = ExtResource("2_7y0v6")
+theme_override_font_sizes/font_size = 50
+text = "5 seconds left!"
+horizontal_alignment = 1

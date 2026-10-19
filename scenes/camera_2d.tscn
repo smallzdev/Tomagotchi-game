@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://dvt8savpbwuri"]
+
+[ext_resource type="Script" uid="uid://bt81ph8qpqb14" path="res://camerashake.gd" id="1_qnfst"]
+
+[node name="Camera2D" type="Camera2D" unique_id=545306824]
+script = ExtResource("1_qnfst")
