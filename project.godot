@@ -17,6 +17,7 @@ config/features=PackedStringArray("4.7", "Mobile")
 [autoload]
 
 Global="*uid://bhbgpi43x1ogj"
+PetsUnlocked="*uid://djpxn67q31r5a"
 
 [display]
 

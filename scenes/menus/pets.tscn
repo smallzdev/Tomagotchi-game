@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://d07p48kd873f4" path="res://Resources/InUse/ReusedAssets/greycat.png" id="4_f54ji"]
 [ext_resource type="Texture2D" uid="uid://bss1sxgy0cdx1" path="res://Resources/InUse/TamagotchiCustomAssets/pets/goldfish.png" id="4_y4cg6"]
 [ext_resource type="Texture2D" uid="uid://dfer5a36n2qsn" path="res://Resources/InUse/TamagotchiCustomAssets/pets/pumpin.png" id="6_u5fce"]
+[ext_resource type="Texture2D" uid="uid://bwnu12weboyh4" path="res://Resources/InUse/TamagotchiCustomAssets/pets/penguin.png" id="7_u5fce"]
 
 [sub_resource type="Gradient" id="Gradient_i76b6"]
 colors = PackedColorArray(0, 1, 1, 1, 0.13909006, 0.3063838, 0.46577227, 1)
@@ -23,6 +24,26 @@ region = Rect2(0, 0, 32, 32)
 [sub_resource type="AtlasTexture" id="AtlasTexture_7pubi"]
 atlas = ExtResource("4_y4cg6")
 region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l0in3"]
+atlas = ExtResource("7_u5fce")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rkuql"]
+atlas = ExtResource("7_u5fce")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qtxby"]
+atlas = ExtResource("7_u5fce")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hgu4i"]
+atlas = ExtResource("7_u5fce")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_82277"]
+atlas = ExtResource("7_u5fce")
+region = Rect2(0, 64, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4272l"]
 atlas = ExtResource("6_u5fce")
@@ -77,6 +98,26 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_l0in3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rkuql")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qtxby")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hgu4i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_82277")
+}],
+"loop": 1,
+"name": &"penguin",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_4272l")
 }],
 "loop": 1,
@@ -104,10 +145,11 @@ offset_bottom = 575.0
 script = ExtResource("1_y4cg6")
 
 [node name="PetLabel1" type="Label" parent="Panel/Area2D" unique_id=747393168]
-offset_left = 43.0
-offset_top = 144.0
-offset_right = 70.0
-offset_bottom = 167.0
+offset_left = 11.0
+offset_top = 143.0
+offset_right = 99.0
+offset_bottom = 166.0
+text = "Ginger Cat"
 horizontal_alignment = 1
 
 [node name="PetSprite1" type="AnimatedSprite2D" parent="Panel/Area2D" unique_id=1871318336]
@@ -115,7 +157,7 @@ texture_filter = 1
 position = Vector2(56, 100)
 scale = Vector2(3.5, 3.5)
 sprite_frames = SubResource("SpriteFrames_ehm21")
-animation = &"blank"
+animation = &"ginger cat"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Panel/Area2D" unique_id=1586585496]
 position = Vector2(54, 99)
@@ -124,10 +166,11 @@ shape = SubResource("RectangleShape2D_stm8k")
 [node name="Area2D2" type="Area2D" parent="Panel" unique_id=696430025]
 
 [node name="PetLabel2" type="Label" parent="Panel/Area2D2" unique_id=1842924606]
-offset_left = 130.0
+offset_left = 99.0
 offset_top = 144.0
-offset_right = 157.0
+offset_right = 186.0
 offset_bottom = 167.0
+text = "Grey Cat"
 horizontal_alignment = 1
 
 [node name="PetSprite2" type="AnimatedSprite2D" parent="Panel/Area2D2" unique_id=1063083016]
@@ -135,7 +178,7 @@ texture_filter = 1
 position = Vector2(143, 100)
 scale = Vector2(3.5, 3.5)
 sprite_frames = SubResource("SpriteFrames_ehm21")
-animation = &"blank"
+animation = &"grey cat"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Panel/Area2D2" unique_id=1713970857]
 position = Vector2(142.75, 99)
@@ -169,10 +212,11 @@ text = "< Previous Page"
 [node name="Area2D3" type="Area2D" parent="Panel" unique_id=639546250]
 
 [node name="PetLabel3" type="Label" parent="Panel/Area2D3" unique_id=922007463]
-offset_left = 217.0
+offset_left = 185.0
 offset_top = 144.0
-offset_right = 244.0
+offset_right = 274.0
 offset_bottom = 167.0
+text = "Cat 3"
 horizontal_alignment = 1
 
 [node name="PetSprite3" type="AnimatedSprite2D" parent="Panel/Area2D3" unique_id=335745622]
@@ -180,7 +224,7 @@ texture_filter = 1
 position = Vector2(230, 100)
 scale = Vector2(3.5, 3.5)
 sprite_frames = SubResource("SpriteFrames_ehm21")
-animation = &"blank"
+animation = &"cat3"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Panel/Area2D3" unique_id=770216072]
 position = Vector2(229, 100)
@@ -189,18 +233,19 @@ shape = SubResource("RectangleShape2D_stm8k")
 [node name="Area2D4" type="Area2D" parent="Panel" unique_id=681257340]
 
 [node name="PetLabel4" type="Label" parent="Panel/Area2D4" unique_id=1508876455]
-offset_left = 304.0
+offset_left = 272.0
 offset_top = 144.0
-offset_right = 331.0
+offset_right = 361.0
 offset_bottom = 167.0
+text = "Goldfish"
 horizontal_alignment = 1
 
 [node name="PetSprite4" type="AnimatedSprite2D" parent="Panel/Area2D4" unique_id=476041715]
 texture_filter = 1
 position = Vector2(316.99988, 100)
-scale = Vector2(3.5, 3.5)
+scale = Vector2(3.2, 3.2)
 sprite_frames = SubResource("SpriteFrames_ehm21")
-animation = &"blank"
+animation = &"goldfish"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Panel/Area2D4" unique_id=1239063415]
 position = Vector2(317, 100)
@@ -213,13 +258,14 @@ texture_filter = 1
 position = Vector2(403.99994, 100)
 scale = Vector2(3.5, 3.5)
 sprite_frames = SubResource("SpriteFrames_ehm21")
-animation = &"blank"
+animation = &"ghost"
 
 [node name="PetLabel5" type="Label" parent="Panel/Area2D5" unique_id=72623577]
-offset_left = 391.0
+offset_left = 361.0
 offset_top = 144.0
-offset_right = 418.0
+offset_right = 450.0
 offset_bottom = 167.0
+text = "Ghost"
 horizontal_alignment = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Panel/Area2D5" unique_id=1224499592]
@@ -229,10 +275,11 @@ shape = SubResource("RectangleShape2D_stm8k")
 [node name="Area2D6" type="Area2D" parent="Panel" unique_id=6458623]
 
 [node name="PetLabel6" type="Label" parent="Panel/Area2D6" unique_id=107814899]
-offset_left = 478.0
-offset_top = 144.0
-offset_right = 505.0
-offset_bottom = 167.0
+offset_left = 448.0
+offset_top = 143.0
+offset_right = 537.0
+offset_bottom = 166.0
+text = "Pumpkin"
 horizontal_alignment = 1
 
 [node name="PetSprite6" type="AnimatedSprite2D" parent="Panel/Area2D6" unique_id=2103811036]
@@ -240,7 +287,7 @@ texture_filter = 1
 position = Vector2(490.99988, 100)
 scale = Vector2(3.5, 3.5)
 sprite_frames = SubResource("SpriteFrames_ehm21")
-animation = &"blank"
+animation = &"pumpkin"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Panel/Area2D6" unique_id=2104514095]
 position = Vector2(491, 100)
@@ -249,18 +296,19 @@ shape = SubResource("RectangleShape2D_stm8k")
 [node name="Area2D7" type="Area2D" parent="Panel" unique_id=858898978]
 
 [node name="PetLabel7" type="Label" parent="Panel/Area2D7" unique_id=874156790]
-offset_left = 566.0001
+offset_left = 535.0
 offset_top = 144.0
-offset_right = 593.0001
+offset_right = 623.0
 offset_bottom = 167.0
+text = "Penguin"
 horizontal_alignment = 1
 
 [node name="PetSprite7" type="AnimatedSprite2D" parent="Panel/Area2D7" unique_id=1738622637]
 texture_filter = 1
 position = Vector2(578.9999, 100)
-scale = Vector2(3.5, 3.5)
+scale = Vector2(3.2, 3.2)
 sprite_frames = SubResource("SpriteFrames_ehm21")
-animation = &"blank"
+animation = &"penguin"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Panel/Area2D7" unique_id=517264756]
 position = Vector2(579, 100)
@@ -556,14 +604,16 @@ theme_override_font_sizes/font_size = 82
 text = "Pet Inventory"
 horizontal_alignment = 1
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1624845440]
+[node name="EquippedPetSprite" type="AnimatedSprite2D" parent="." unique_id=1624845440]
+unique_name_in_owner = true
 texture_filter = 1
 position = Vector2(129, 310)
 scale = Vector2(8, 8)
 sprite_frames = SubResource("SpriteFrames_ehm21")
 animation = &"ginger cat"
 
-[node name="Label" type="Label" parent="." unique_id=622613827]
+[node name="PetNameLabel" type="Label" parent="." unique_id=622613827]
+unique_name_in_owner = true
 offset_left = 24.0
 offset_top = 150.0
 offset_right = 247.0
@@ -572,7 +622,7 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 40
 text = "[Pet Name]"
 
-[node name="Label2" type="Label" parent="." unique_id=692220823]
+[node name="EquippedStatusLabel" type="Label" parent="." unique_id=692220823]
 offset_left = 60.0
 offset_top = 418.0
 offset_right = 190.0
