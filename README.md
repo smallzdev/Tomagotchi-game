@@ -27,23 +27,23 @@ Week one release [here!](https://vick-st3r.itch.io/hatchapet-week-one)
 
 This is the first week of starting the project, the theme this week is "Cinnamon".
 
-![image](https://github.com/smallzdev/godot-thirdspace/blob/main/screenshots/week5.PNG)
+![image](https://github.com/smallzdev/Tomagotchi-game/blob/main/screenshots/week5.PNG)
 
 Here is our main menu! If you hover over the title, it turns rainbow!! It also has rainbow sprinkles/confetti :D
 
-![image](https://github.com/smallzdev/godot-thirdspace/blob/main/screenshots/week5again.PNG)
+![image](https://github.com/smallzdev/Tomagotchi-game/blob/main/screenshots/week5again.PNG)
 
 The credits page! Hover over the title and names - it turns rainbow!!
 
 I'm super proud how the menu screens turned out - I learned how to style them and add hover + click animations 
 
-![image](https://github.com/smallzdev/godot-thirdspace/blob/main/screenshots/week5egg.PNG)
+![image](https://github.com/smallzdev/Tomagotchi-game/blob/main/screenshots/week5egg.PNG)
 
 After clicking play - you have to hold for 5 seconds to hatch your egg
 
 There's a camera shake and a countdown!
 
-![image](https://github.com/smallzdev/godot-thirdspace/blob/main/screenshots/week5main.PNG)
+![image](https://github.com/smallzdev/Tomagotchi-game/blob/main/screenshots/week5main.PNG)
 
 Here's the main part of the game. Currently there's not much, but you can tend to your pet. In future weeks, we look forward to adding some sort of mini game to actually feed your pet (?) Whether it be a game to get the food with currency or feeding your pet - we will have to see! 
 
