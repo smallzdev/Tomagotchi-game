@@ -1,6 +1,5 @@
 [gd_scene format=3 uid="uid://bki82bxn7t1sh"]
 
-[ext_resource type="Texture2D" uid="uid://dy1dwj583kuyx" path="res://Resources/InUse/ReusedAssets/Restart.png" id="1_582wh"]
 [ext_resource type="Texture2D" uid="uid://chddrjeae3fxo" path="res://Resources/InUse/TamagotchiCustomAssets/pinkpaw.png" id="1_sy1ir"]
 [ext_resource type="Script" uid="uid://dhismqn5ngu3j" path="res://scripts/menu_button.gd" id="2_ttbmu"]
 [ext_resource type="Script" uid="uid://dfum1py7ro6qt" path="res://scenes/menus/main_game_buttons.gd" id="3_2yd1b"]
@@ -10,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://dw61i515yloun" path="res://Resources/InUse/TamagotchiCustomAssets/water.png" id="5_06yng"]
 [ext_resource type="Texture2D" uid="uid://c4yyj5gwsqovb" path="res://Resources/InUse/ReusedAssets/cat3.png" id="5_a5mcm"]
 [ext_resource type="Script" uid="uid://dmqw6rtj7oams" path="res://scenes/menus/pet_sprite.gd" id="5_qmn8o"]
+[ext_resource type="Texture2D" uid="uid://b03x77etxhbg6" path="res://Resources/InUse/TamagotchiCustomAssets/catadex.png" id="5_sy1ir"]
 [ext_resource type="Texture2D" uid="uid://bgp28b4ho7xhv" path="res://Resources/InUse/TamagotchiCustomAssets/energy.png" id="6_36xus"]
 [ext_resource type="Texture2D" uid="uid://b3kknikmix4mx" path="res://Resources/InUse/TamagotchiCustomAssets/pets/Ghost.png" id="6_j57ku"]
 [ext_resource type="Texture2D" uid="uid://bglbjo6m1ylc" path="res://Resources/InUse/TamagotchiCustomAssets/waterbar.png" id="6_m1d2h"]
@@ -30,10 +30,10 @@ border_width_top = 4
 border_width_right = 4
 border_width_bottom = 4
 border_color = Color(0.30588236, 0.28627452, 0.2784314, 1)
-corner_radius_top_left = 5
-corner_radius_top_right = 5
-corner_radius_bottom_right = 5
-corner_radius_bottom_left = 5
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
 corner_detail = 1
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ahvjs"]
@@ -547,10 +547,10 @@ texture = SubResource("CanvasTexture_sy1ir")
 [node name="petsButton" type="Button" parent="." unique_id=639940516]
 unique_name_in_owner = true
 texture_filter = 1
-offset_left = 1011.00006
-offset_top = 17.0
-offset_right = 1051.0
-offset_bottom = 57.0
+offset_left = 983.00006
+offset_top = 29.0
+offset_right = 1023.00006
+offset_bottom = 69.0
 scale = Vector2(3, 3)
 theme_override_font_sizes/font_size = 20
 theme_override_styles/normal = SubResource("StyleBoxFlat_iojj0")
@@ -574,14 +574,15 @@ script = ExtResource("2_ttbmu")
 
 [node name="catadexButton" type="Button" parent="." unique_id=1773348621]
 unique_name_in_owner = true
-offset_left = 886.0
-offset_top = 156.0
-offset_right = 1009.0
-offset_bottom = 192.0
-scale = Vector2(2, 2)
+texture_filter = 1
+offset_left = 980.0
+offset_top = 165.0
+offset_right = 1022.5
+offset_bottom = 205.0
+scale = Vector2(3, 3)
 theme_override_font_sizes/font_size = 20
-text = "Catadex"
-icon = ExtResource("1_582wh")
+theme_override_styles/normal = SubResource("StyleBoxFlat_iojj0")
+icon = ExtResource("5_sy1ir")
 script = ExtResource("3_2yd1b")
 
 [node name="foodButton" type="Button" parent="." unique_id=1158770600]
@@ -637,10 +638,10 @@ expand_icon = true
 
 [node name="petSpriteTitle" type="Label" parent="." unique_id=1332177370]
 unique_name_in_owner = true
-offset_left = 463.0
-offset_top = 134.0
-offset_right = 756.0
-offset_bottom = 192.0
+offset_left = 508.0
+offset_top = 136.0
+offset_right = 897.0
+offset_bottom = 194.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("4_ymjn7")
 theme_override_font_sizes/font_size = 60
