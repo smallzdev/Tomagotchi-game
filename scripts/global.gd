@@ -12,9 +12,9 @@ var love = 0
 var pet = 2
 
 # pets and if they're owned
-var pet1owned = false
-var pet2owned = false
-var pet3owned = false
+var pet1owned = true
+var pet2owned = true
+var pet3owned = true
 var pet4owned = false
 var pet5owned = false
 var pet6owned = false
