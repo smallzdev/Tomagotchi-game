@@ -12,12 +12,14 @@ var love = 0
 var pet = 2
 
 # pets and if they're owned
+# currently, they're all true for testing purposes.
 var pet1owned = true
 var pet2owned = true
 var pet3owned = true
-var pet4owned = false
-var pet5owned = false
-var pet6owned = false
+var pet4owned = true
+var pet5owned = true
+var pet6owned = true
+var pet7owned = true
 
 # trying to figure out oop ;-;
 var raritygacha = [
