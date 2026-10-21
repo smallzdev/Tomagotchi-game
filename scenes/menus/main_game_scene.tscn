@@ -19,6 +19,7 @@
 [ext_resource type="Texture2D" uid="uid://b3567lnjgiuse" path="res://Resources/InUse/TamagotchiCustomAssets/lovebar.png" id="8_ova7b"]
 [ext_resource type="Texture2D" uid="uid://bss1sxgy0cdx1" path="res://Resources/InUse/TamagotchiCustomAssets/pets/goldfish.png" id="11_06yng"]
 [ext_resource type="Texture2D" uid="uid://dfer5a36n2qsn" path="res://Resources/InUse/TamagotchiCustomAssets/pets/pumpin.png" id="13_36xus"]
+[ext_resource type="Texture2D" uid="uid://bwnu12weboyh4" path="res://Resources/InUse/TamagotchiCustomAssets/pets/penguin.png" id="15_krc6o"]
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_sy1ir"]
 specular_color = Color(0.95686275, 0.95686275, 0.95686275, 1)
@@ -180,6 +181,26 @@ region = Rect2(0, 32, 32, 32)
 atlas = ExtResource("11_06yng")
 region = Rect2(32, 0, 32, 32)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_6mka6"]
+atlas = ExtResource("15_krc6o")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bu8kb"]
+atlas = ExtResource("15_krc6o")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j3ad5"]
+atlas = ExtResource("15_krc6o")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ffx4o"]
+atlas = ExtResource("15_krc6o")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u1njg"]
+atlas = ExtResource("15_krc6o")
+region = Rect2(0, 64, 32, 32)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_j8k6w"]
 atlas = ExtResource("13_36xus")
 region = Rect2(0, 0, 32, 32)
@@ -264,6 +285,26 @@ animations = [{
 }],
 "loop": 1,
 "name": &"grey cat",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6mka6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bu8kb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j3ad5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ffx4o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u1njg")
+}],
+"loop": 1,
+"name": &"penguin",
 "speed": 5.0
 }, {
 "frames": [{
@@ -638,14 +679,15 @@ expand_icon = true
 
 [node name="petSpriteTitle" type="Label" parent="." unique_id=1332177370]
 unique_name_in_owner = true
-offset_left = 508.0
-offset_top = 136.0
-offset_right = 897.0
-offset_bottom = 194.0
+offset_left = 418.0
+offset_top = 90.0
+offset_right = 807.0
+offset_bottom = 148.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("4_ymjn7")
 theme_override_font_sizes/font_size = 60
 text = "[Pet Name]"
+horizontal_alignment = 1
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1667564025]
 position = Vector2(582, 334)

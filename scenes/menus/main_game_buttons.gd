@@ -88,6 +88,7 @@ func energyButton_pressed():
 		
 
 # Pet detecting thing.
+# hopefully gonna make this cleaner soon
 func petDetection():
 	if Global.pet == 1:
 		petSpriteNameText.text = "Ginger Cat"
@@ -99,8 +100,17 @@ func petDetection():
 		petSprite.animation = "cat3"
 		petSpriteNameText.text = "I forget the breed cat"
 	elif Global.pet == 4:
+		petSprite.animation = "goldfish"
+		petSpriteNameText.text = "Goldfish"
+	elif Global.pet == 5:
 		petSprite.animation = "ghost"
-		petSpriteNameText.text = "Ghost"
+		petSpriteNameText.text = "ghost"
+	elif Global.pet == 6:
+		petSprite.animation = "pumpkin"
+		petSpriteNameText.text = "Pumpkin"
+	elif Global.pet == 7:
+		petSprite.animation = "penguin"
+		petSpriteNameText.text = "Penguin"
 
 # when updating, make sure to also update pet_sprite.gd
 # as it uses this same function
