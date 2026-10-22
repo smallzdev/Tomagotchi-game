@@ -20,6 +20,7 @@ var pet4owned = true
 var pet5owned = true
 var pet6owned = true
 var pet7owned = true
+var pet8owned = false
 
 # trying to figure out oop ;-;
 var raritygacha = [

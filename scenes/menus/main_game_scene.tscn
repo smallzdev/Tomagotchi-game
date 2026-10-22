@@ -17,6 +17,7 @@
 [ext_resource type="Texture2D" uid="uid://veamcifa4ohd" path="res://Resources/InUse/TamagotchiCustomAssets/hungerbar.png" id="7_2fgaq"]
 [ext_resource type="Texture2D" uid="uid://d07p48kd873f4" path="res://Resources/InUse/ReusedAssets/greycat.png" id="7_j57ku"]
 [ext_resource type="Texture2D" uid="uid://b3567lnjgiuse" path="res://Resources/InUse/TamagotchiCustomAssets/lovebar.png" id="8_ova7b"]
+[ext_resource type="Texture2D" uid="uid://brliyf6hrxhwa" path="res://Resources/InUse/TamagotchiCustomAssets/pets/babychicken.png" id="10_nry7q"]
 [ext_resource type="Texture2D" uid="uid://bss1sxgy0cdx1" path="res://Resources/InUse/TamagotchiCustomAssets/pets/goldfish.png" id="11_06yng"]
 [ext_resource type="Texture2D" uid="uid://dfer5a36n2qsn" path="res://Resources/InUse/TamagotchiCustomAssets/pets/pumpin.png" id="13_36xus"]
 [ext_resource type="Texture2D" uid="uid://bwnu12weboyh4" path="res://Resources/InUse/TamagotchiCustomAssets/pets/penguin.png" id="15_krc6o"]
@@ -141,6 +142,26 @@ corner_radius_bottom_right = 5
 corner_radius_bottom_left = 5
 corner_detail = 1
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_82hyy"]
+atlas = ExtResource("10_nry7q")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i88p3"]
+atlas = ExtResource("10_nry7q")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lpka4"]
+atlas = ExtResource("10_nry7q")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rl3m3"]
+atlas = ExtResource("10_nry7q")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ouxco"]
+atlas = ExtResource("10_nry7q")
+region = Rect2(0, 64, 32, 32)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_ntfif"]
 atlas = ExtResource("6_j57ku")
 region = Rect2(0, 0, 32, 32)
@@ -223,6 +244,26 @@ region = Rect2(0, 64, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_stm8k"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_82hyy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i88p3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lpka4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rl3m3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ouxco")
+}],
+"loop": 1,
+"name": &"baby chicken",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("5_a5mcm")

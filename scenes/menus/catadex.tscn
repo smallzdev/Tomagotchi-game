@@ -6,14 +6,21 @@
 [ext_resource type="Texture2D" uid="uid://dy1dwj583kuyx" path="res://Resources/InUse/ReusedAssets/Restart.png" id="2_u7asp"]
 [ext_resource type="FontFile" uid="uid://dyibl4resr8wn" path="res://Resources/font/augiepixel.ttf" id="2_w7v3h"]
 [ext_resource type="Texture2D" uid="uid://d07p48kd873f4" path="res://Resources/InUse/ReusedAssets/greycat.png" id="3_8qd64"]
+[ext_resource type="Texture2D" uid="uid://brliyf6hrxhwa" path="res://Resources/InUse/TamagotchiCustomAssets/pets/babychicken.png" id="3_raeda"]
 [ext_resource type="Script" uid="uid://dk15jiylhoknc" path="res://scripts/catadex.gd" id="3_u7asp"]
 [ext_resource type="Texture2D" uid="uid://bss1sxgy0cdx1" path="res://Resources/InUse/TamagotchiCustomAssets/pets/goldfish.png" id="4_jjdlx"]
+[ext_resource type="Texture2D" uid="uid://cver2k8bbuv20" path="res://Resources/InUse/TamagotchiCustomAssets/pets/Outlines/babychicken-outline.png" id="4_k6lqr"]
 [ext_resource type="Texture2D" uid="uid://bwnu12weboyh4" path="res://Resources/InUse/TamagotchiCustomAssets/pets/penguin.png" id="6_xbeds"]
 [ext_resource type="Texture2D" uid="uid://dfer5a36n2qsn" path="res://Resources/InUse/TamagotchiCustomAssets/pets/pumpin.png" id="7_w7v3h"]
 [ext_resource type="Script" uid="uid://b7ptc850pmdcq" path="res://scripts/catadex_buttons.gd" id="10_xbeds"]
+[ext_resource type="Texture2D" uid="uid://cipqnn24ybwx3" path="res://Resources/InUse/TamagotchiCustomAssets/pets/Outlines/?.png" id="11_cg3yn"]
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_e7wif"]
 specular_color = Color(0.95686275, 0.95686275, 0.95686275, 1)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cjw6g"]
+atlas = ExtResource("3_raeda")
+region = Rect2(0, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_uld33"]
 atlas = ExtResource("2_8qd64")
@@ -59,22 +66,6 @@ region = Rect2(32, 0, 32, 32)
 atlas = ExtResource("6_xbeds")
 region = Rect2(0, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_cjw6g"]
-atlas = ExtResource("6_xbeds")
-region = Rect2(32, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_acxwf"]
-atlas = ExtResource("6_xbeds")
-region = Rect2(0, 32, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_abrlc"]
-atlas = ExtResource("6_xbeds")
-region = Rect2(32, 32, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_tinwy"]
-atlas = ExtResource("6_xbeds")
-region = Rect2(0, 64, 32, 32)
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_sd6y8"]
 atlas = ExtResource("7_w7v3h")
 region = Rect2(0, 0, 32, 32)
@@ -97,6 +88,17 @@ region = Rect2(0, 64, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_cgke2"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cjw6g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_k6lqr")
+}],
+"loop": 1,
+"name": &"baby chicken",
+"speed": 5.0
+}, {
 "frames": [],
 "loop": 1,
 "name": &"blank",
@@ -171,16 +173,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_v1pex")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_cjw6g")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_acxwf")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_abrlc")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_tinwy")
+"texture": ExtResource("11_cg3yn")
 }],
 "loop": 1,
 "name": &"penguin",
@@ -371,9 +364,9 @@ horizontal_alignment = 1
 [node name="CatadexItem8" type="AnimatedSprite2D" parent="Panel" unique_id=855480349]
 texture_filter = 1
 position = Vector2(781, 58)
-scale = Vector2(3.5, 3.5)
+scale = Vector2(3.2, 3.2)
 sprite_frames = SubResource("SpriteFrames_cgke2")
-animation = &"blank"
+animation = &"baby chicken"
 
 [node name="CatadexItem8Label" type="Label" parent="Panel" unique_id=176317555]
 layout_mode = 0
@@ -381,6 +374,9 @@ offset_left = 724.0
 offset_top = 101.0
 offset_right = 837.0
 offset_bottom = 124.0
+theme_override_fonts/font = ExtResource("2_w7v3h")
+theme_override_font_sizes/font_size = 18
+text = "Baby Chicken"
 horizontal_alignment = 1
 
 [node name="backButton" type="Button" parent="." unique_id=1054623189]

@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://b3kknikmix4mx" path="res://Resources/InUse/TamagotchiCustomAssets/pets/Ghost.png" id="2_2knbp"]
 [ext_resource type="FontFile" uid="uid://dyibl4resr8wn" path="res://Resources/font/augiepixel.ttf" id="2_qtxby"]
 [ext_resource type="Script" uid="uid://c2im2yn0mlcar" path="res://scripts/pets_menu.gd" id="3_ehm21"]
+[ext_resource type="Texture2D" uid="uid://brliyf6hrxhwa" path="res://Resources/InUse/TamagotchiCustomAssets/pets/babychicken.png" id="3_hgu4i"]
 [ext_resource type="Texture2D" uid="uid://tlvriaji08jr" path="res://Resources/InUse/ReusedAssets/cat.png" id="3_i76b6"]
 [ext_resource type="Texture2D" uid="uid://d07p48kd873f4" path="res://Resources/InUse/ReusedAssets/greycat.png" id="4_f54ji"]
 [ext_resource type="Texture2D" uid="uid://bss1sxgy0cdx1" path="res://Resources/InUse/TamagotchiCustomAssets/pets/goldfish.png" id="4_y4cg6"]
@@ -18,6 +19,26 @@
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_rkuql"]
 specular_color = Color(0.95686275, 0.95686275, 0.95686275, 1)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_82277"]
+atlas = ExtResource("3_hgu4i")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nh0jh"]
+atlas = ExtResource("3_hgu4i")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7es7a"]
+atlas = ExtResource("3_hgu4i")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8yq4b"]
+atlas = ExtResource("3_hgu4i")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nnuhk"]
+atlas = ExtResource("3_hgu4i")
+region = Rect2(0, 64, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_y4cg6"]
 atlas = ExtResource("2_2knbp")
@@ -37,6 +58,26 @@ region = Rect2(0, 0, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ehm21"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_82277")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nh0jh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7es7a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8yq4b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nnuhk")
+}],
+"loop": 1,
+"name": &"baby chicken",
+"speed": 5.0
+}, {
 "frames": [],
 "loop": 1,
 "name": &"blank",
@@ -349,18 +390,23 @@ shape = SubResource("RectangleShape2D_stm8k")
 script = ExtResource("1_y4cg6")
 
 [node name="PetLabel8" type="Label" parent="Panel/Area2D8" unique_id=1003969453]
-offset_left = 43.0
+unique_name_in_owner = true
+offset_left = 8.0
 offset_top = 254.0
-offset_right = 70.0
+offset_right = 105.0
 offset_bottom = 277.0
+theme_override_fonts/font = ExtResource("2_qtxby")
+theme_override_font_sizes/font_size = 18
+text = "Baby Chicken"
 horizontal_alignment = 1
 
 [node name="PetSprite8" type="AnimatedSprite2D" parent="Panel/Area2D8" unique_id=510877782]
+unique_name_in_owner = true
 texture_filter = 1
 position = Vector2(56, 210)
-scale = Vector2(3.5, 3.5)
+scale = Vector2(3.2, 3.2)
 sprite_frames = SubResource("SpriteFrames_ehm21")
-animation = &"blank"
+animation = &"baby chicken"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Panel/Area2D8" unique_id=1122590030]
 position = Vector2(56, 210)
@@ -692,11 +738,12 @@ text = "Back"
 icon = ExtResource("1_r40by")
 script = ExtResource("3_ehm21")
 
-[connection signal="input_event" from="Panel/Area2D" to="Panel/Area2D" method="_on_petsprite1_equip_event"]
 [connection signal="input_event" from="Panel/Area2D" to="Panel/Area2D" method="_on_petsprite2_equipped"]
+[connection signal="input_event" from="Panel/Area2D" to="Panel/Area2D" method="_on_petsprite1_equip_event"]
 [connection signal="input_event" from="Panel/Area2D2" to="Panel/Area2D2" method="_on_spritepet2_equipped"]
 [connection signal="input_event" from="Panel/Area2D3" to="Panel/Area2D" method="_on_petsprite3_equipped"]
 [connection signal="input_event" from="Panel/Area2D4" to="Panel/Area2D" method="_on_pet4_equipped"]
 [connection signal="input_event" from="Panel/Area2D5" to="Panel/Area2D" method="_on_pet5_equipped"]
 [connection signal="input_event" from="Panel/Area2D6" to="Panel/Area2D6" method="_on_pet6_equipped"]
 [connection signal="input_event" from="Panel/Area2D7" to="Panel/Area2D" method="_on_pet7_equipped"]
+[connection signal="input_event" from="Panel/Area2D8" to="Panel/Area2D" method="_on_pet8_equipped"]
