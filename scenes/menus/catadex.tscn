@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://tlvriaji08jr" path="res://Resources/InUse/ReusedAssets/cat.png" id="1_tx3pw"]
 [ext_resource type="Texture2D" uid="uid://b3kknikmix4mx" path="res://Resources/InUse/TamagotchiCustomAssets/pets/Ghost.png" id="2_8qd64"]
 [ext_resource type="Texture2D" uid="uid://dy1dwj583kuyx" path="res://Resources/InUse/ReusedAssets/Restart.png" id="2_u7asp"]
+[ext_resource type="FontFile" uid="uid://dyibl4resr8wn" path="res://Resources/font/augiepixel.ttf" id="2_w7v3h"]
 [ext_resource type="Texture2D" uid="uid://d07p48kd873f4" path="res://Resources/InUse/ReusedAssets/greycat.png" id="3_8qd64"]
 [ext_resource type="Script" uid="uid://dk15jiylhoknc" path="res://scripts/catadex.gd" id="3_u7asp"]
 [ext_resource type="Texture2D" uid="uid://bss1sxgy0cdx1" path="res://Resources/InUse/TamagotchiCustomAssets/pets/goldfish.png" id="4_jjdlx"]
@@ -11,11 +12,8 @@
 [ext_resource type="Texture2D" uid="uid://dfer5a36n2qsn" path="res://Resources/InUse/TamagotchiCustomAssets/pets/pumpin.png" id="7_w7v3h"]
 [ext_resource type="Script" uid="uid://b7ptc850pmdcq" path="res://scripts/catadex_buttons.gd" id="10_xbeds"]
 
-[sub_resource type="Gradient" id="Gradient_7dm0k"]
-colors = PackedColorArray(0, 1, 1, 1, 0.13909006, 0.3063838, 0.46577227, 1)
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_sd2ac"]
-gradient = SubResource("Gradient_7dm0k")
+[sub_resource type="CanvasTexture" id="CanvasTexture_e7wif"]
+specular_color = Color(0.95686275, 0.95686275, 0.95686275, 1)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_uld33"]
 atlas = ExtResource("2_8qd64")
@@ -212,10 +210,10 @@ animations = [{
 [node name="Node2D" type="Node2D" unique_id=293050761]
 script = ExtResource("3_u7asp")
 
-[node name="backgroundGradient" type="TextureRect" parent="." unique_id=325099038]
+[node name="backgroundGradient" type="TextureRect" parent="." unique_id=817769923]
 offset_right = 1157.0
 offset_bottom = 652.0
-texture = SubResource("GradientTexture2D_sd2ac")
+texture = SubResource("CanvasTexture_e7wif")
 
 [node name="menuTitle" type="Label" parent="." unique_id=1187824986]
 offset_left = 1.0
@@ -223,6 +221,7 @@ offset_top = 6.0
 offset_right = 1156.0
 offset_bottom = 119.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_w7v3h")
 theme_override_font_sizes/font_size = 82
 text = "Catadex :3"
 horizontal_alignment = 1
@@ -233,7 +232,8 @@ offset_top = 121.0
 offset_right = 1155.0
 offset_bottom = 186.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 20
+theme_override_fonts/font = ExtResource("2_w7v3h")
+theme_override_font_sizes/font_size = 28
 text = "Not just cats though! This menu shows you every pet you've owned. Even if you let one go, it'll still show up here. You gotta collect them all~!"
 autowrap_mode = 2
 
@@ -255,6 +255,8 @@ layout_mode = 0
 offset_top = 100.0
 offset_right = 113.0
 offset_bottom = 123.0
+theme_override_fonts/font = ExtResource("2_w7v3h")
+theme_override_font_sizes/font_size = 18
 text = "Ginger Cat"
 horizontal_alignment = 1
 
@@ -271,6 +273,8 @@ offset_left = 103.0
 offset_top = 100.0
 offset_right = 216.0
 offset_bottom = 123.0
+theme_override_fonts/font = ExtResource("2_w7v3h")
+theme_override_font_sizes/font_size = 18
 text = "Grey Cat"
 horizontal_alignment = 1
 
@@ -287,6 +291,8 @@ offset_left = 206.0
 offset_top = 100.0
 offset_right = 319.0
 offset_bottom = 123.0
+theme_override_fonts/font = ExtResource("2_w7v3h")
+theme_override_font_sizes/font_size = 18
 text = "Cat3"
 horizontal_alignment = 1
 
@@ -303,6 +309,8 @@ offset_left = 313.0
 offset_top = 100.0
 offset_right = 426.0
 offset_bottom = 123.0
+theme_override_fonts/font = ExtResource("2_w7v3h")
+theme_override_font_sizes/font_size = 18
 text = "Goldfish"
 horizontal_alignment = 1
 
@@ -319,6 +327,8 @@ offset_left = 411.0
 offset_top = 101.0
 offset_right = 524.0
 offset_bottom = 124.0
+theme_override_fonts/font = ExtResource("2_w7v3h")
+theme_override_font_sizes/font_size = 18
 text = "Ghost"
 horizontal_alignment = 1
 
@@ -335,6 +345,8 @@ offset_left = 514.0
 offset_top = 101.0
 offset_right = 627.0
 offset_bottom = 124.0
+theme_override_fonts/font = ExtResource("2_w7v3h")
+theme_override_font_sizes/font_size = 18
 text = "Pumpkin"
 horizontal_alignment = 1
 
@@ -351,6 +363,8 @@ offset_left = 617.0
 offset_top = 101.0
 offset_right = 730.0
 offset_bottom = 124.0
+theme_override_fonts/font = ExtResource("2_w7v3h")
+theme_override_font_sizes/font_size = 18
 text = "Penguin"
 horizontal_alignment = 1
 

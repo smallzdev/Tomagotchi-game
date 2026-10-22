@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://dy1dwj583kuyx" path="res://Resources/InUse/ReusedAssets/Restart.png" id="1_r40by"]
 [ext_resource type="Script" uid="uid://cn5wggncqfifm" path="res://scripts/pet_equip.gd" id="1_y4cg6"]
 [ext_resource type="Texture2D" uid="uid://b3kknikmix4mx" path="res://Resources/InUse/TamagotchiCustomAssets/pets/Ghost.png" id="2_2knbp"]
+[ext_resource type="FontFile" uid="uid://dyibl4resr8wn" path="res://Resources/font/augiepixel.ttf" id="2_qtxby"]
 [ext_resource type="Script" uid="uid://c2im2yn0mlcar" path="res://scripts/pets_menu.gd" id="3_ehm21"]
 [ext_resource type="Texture2D" uid="uid://tlvriaji08jr" path="res://Resources/InUse/ReusedAssets/cat.png" id="3_i76b6"]
 [ext_resource type="Texture2D" uid="uid://d07p48kd873f4" path="res://Resources/InUse/ReusedAssets/greycat.png" id="4_f54ji"]
@@ -15,11 +16,8 @@
 [ext_resource type="Texture2D" uid="uid://bcavxfx2el72s" path="res://Resources/InUse/TamagotchiCustomAssets/pets/Outlines/fish-outline.png" id="8_qtxby"]
 [ext_resource type="Texture2D" uid="uid://pf78d14ebxut" path="res://Resources/InUse/TamagotchiCustomAssets/pets/Outlines/pumpin-shadow.png" id="12_hgu4i"]
 
-[sub_resource type="Gradient" id="Gradient_i76b6"]
-colors = PackedColorArray(0, 1, 1, 1, 0.13909006, 0.3063838, 0.46577227, 1)
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_es1s5"]
-gradient = SubResource("Gradient_i76b6")
+[sub_resource type="CanvasTexture" id="CanvasTexture_rkuql"]
+specular_color = Color(0.95686275, 0.95686275, 0.95686275, 1)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_y4cg6"]
 atlas = ExtResource("2_2knbp")
@@ -127,10 +125,10 @@ size = Vector2(86.5, 89)
 
 [node name="Node2D" type="Node2D" unique_id=1670576886]
 
-[node name="backgroundGradient" type="TextureRect" parent="." unique_id=606695694]
+[node name="backgroundGradient" type="TextureRect" parent="." unique_id=548306773]
 offset_right = 1157.0
 offset_bottom = 652.0
-texture = SubResource("GradientTexture2D_es1s5")
+texture = SubResource("CanvasTexture_rkuql")
 
 [node name="Panel" type="Panel" parent="." unique_id=1786754777]
 offset_left = 270.0
@@ -148,6 +146,8 @@ offset_left = 11.0
 offset_top = 143.0
 offset_right = 99.0
 offset_bottom = 166.0
+theme_override_fonts/font = ExtResource("2_qtxby")
+theme_override_font_sizes/font_size = 18
 text = "Ginger Cat"
 horizontal_alignment = 1
 
@@ -172,6 +172,8 @@ offset_left = 99.0
 offset_top = 144.0
 offset_right = 186.0
 offset_bottom = 167.0
+theme_override_fonts/font = ExtResource("2_qtxby")
+theme_override_font_sizes/font_size = 18
 text = "Grey Cat"
 horizontal_alignment = 1
 
@@ -189,11 +191,12 @@ shape = SubResource("RectangleShape2D_stm8k")
 
 [node name="Label" type="Label" parent="Panel" unique_id=799426517]
 layout_mode = 0
-offset_left = 180.0
-offset_top = 2.0
-offset_right = 469.0
-offset_bottom = 39.0
-theme_override_font_sizes/font_size = 27
+offset_left = 6.0
+offset_top = 1.0
+offset_right = 654.0
+offset_bottom = 38.0
+theme_override_fonts/font = ExtResource("2_qtxby")
+theme_override_font_sizes/font_size = 38
 text = "Click on a Pet to Equip"
 
 [node name="Button" type="Button" parent="Panel" unique_id=797801535]
@@ -221,6 +224,8 @@ offset_left = 185.0
 offset_top = 144.0
 offset_right = 274.0
 offset_bottom = 167.0
+theme_override_fonts/font = ExtResource("2_qtxby")
+theme_override_font_sizes/font_size = 18
 text = "Cat 3"
 horizontal_alignment = 1
 
@@ -245,6 +250,8 @@ offset_left = 272.0
 offset_top = 144.0
 offset_right = 361.0
 offset_bottom = 167.0
+theme_override_fonts/font = ExtResource("2_qtxby")
+theme_override_font_sizes/font_size = 18
 text = "Goldfish"
 horizontal_alignment = 1
 
@@ -277,6 +284,8 @@ offset_left = 361.0
 offset_top = 144.0
 offset_right = 450.0
 offset_bottom = 167.0
+theme_override_fonts/font = ExtResource("2_qtxby")
+theme_override_font_sizes/font_size = 18
 text = "Ghost"
 horizontal_alignment = 1
 
@@ -293,6 +302,8 @@ offset_left = 448.0
 offset_top = 143.0
 offset_right = 537.0
 offset_bottom = 166.0
+theme_override_fonts/font = ExtResource("2_qtxby")
+theme_override_font_sizes/font_size = 18
 text = "Pumpkin"
 horizontal_alignment = 1
 
@@ -317,6 +328,8 @@ offset_left = 535.0
 offset_top = 144.0
 offset_right = 623.0
 offset_bottom = 167.0
+theme_override_fonts/font = ExtResource("2_qtxby")
+theme_override_font_sizes/font_size = 18
 text = "Penguin"
 horizontal_alignment = 1
 
@@ -632,6 +645,7 @@ offset_top = 6.0
 offset_right = 1156.0
 offset_bottom = 119.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_qtxby")
 theme_override_font_sizes/font_size = 82
 text = "Pet Inventory"
 horizontal_alignment = 1
@@ -651,7 +665,8 @@ offset_top = 150.0
 offset_right = 247.0
 offset_bottom = 205.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 40
+theme_override_fonts/font = ExtResource("2_qtxby")
+theme_override_font_sizes/font_size = 50
 text = "[Pet Name]"
 horizontal_alignment = 1
 
@@ -661,7 +676,8 @@ offset_top = 418.0
 offset_right = 190.0
 offset_bottom = 453.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 25
+theme_override_fonts/font = ExtResource("2_qtxby")
+theme_override_font_sizes/font_size = 34
 text = "[Equipped]"
 
 [node name="backButton" type="Button" parent="." unique_id=1823302101]
