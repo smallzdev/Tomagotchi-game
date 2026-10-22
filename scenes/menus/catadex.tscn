@@ -5,11 +5,11 @@
 [ext_resource type="Texture2D" uid="uid://b3kknikmix4mx" path="res://Resources/InUse/TamagotchiCustomAssets/pets/Ghost.png" id="2_8qd64"]
 [ext_resource type="Texture2D" uid="uid://dy1dwj583kuyx" path="res://Resources/InUse/ReusedAssets/Restart.png" id="2_u7asp"]
 [ext_resource type="Texture2D" uid="uid://d07p48kd873f4" path="res://Resources/InUse/ReusedAssets/greycat.png" id="3_8qd64"]
-[ext_resource type="Script" uid="uid://dk15jiylhoknc" path="res://scenes/menus/catadex.gd" id="3_u7asp"]
+[ext_resource type="Script" uid="uid://dk15jiylhoknc" path="res://scripts/catadex.gd" id="3_u7asp"]
 [ext_resource type="Texture2D" uid="uid://bss1sxgy0cdx1" path="res://Resources/InUse/TamagotchiCustomAssets/pets/goldfish.png" id="4_jjdlx"]
 [ext_resource type="Texture2D" uid="uid://bwnu12weboyh4" path="res://Resources/InUse/TamagotchiCustomAssets/pets/penguin.png" id="6_xbeds"]
 [ext_resource type="Texture2D" uid="uid://dfer5a36n2qsn" path="res://Resources/InUse/TamagotchiCustomAssets/pets/pumpin.png" id="7_w7v3h"]
-[ext_resource type="Script" uid="uid://b7ptc850pmdcq" path="res://scenes/menus/catadex_buttons.gd" id="10_xbeds"]
+[ext_resource type="Script" uid="uid://b7ptc850pmdcq" path="res://scripts/catadex_buttons.gd" id="10_xbeds"]
 
 [sub_resource type="Gradient" id="Gradient_7dm0k"]
 colors = PackedColorArray(0, 1, 1, 1, 0.13909006, 0.3063838, 0.46577227, 1)

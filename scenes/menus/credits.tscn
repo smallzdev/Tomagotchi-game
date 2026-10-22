@@ -2,7 +2,7 @@
 
 [ext_resource type="FontFile" uid="uid://dyibl4resr8wn" path="res://Resources/font/augiepixel.ttf" id="1_b2mra"]
 [ext_resource type="Script" uid="uid://dhismqn5ngu3j" path="res://scripts/menu_button.gd" id="2_iiqlc"]
-[ext_resource type="Script" uid="uid://k3a23bkfgaec" path="res://scenes/menus/credits.gd" id="3_b2mra"]
+[ext_resource type="Script" uid="uid://k3a23bkfgaec" path="res://scripts/credits.gd" id="3_b2mra"]
 [ext_resource type="Script" uid="uid://c1cjk5jwxxk4v" path="res://scenes/menus/rainbowcredits/actualcredits.gd" id="4_xlnvo"]
 [ext_resource type="Script" uid="uid://cjppbsxne0wk2" path="res://scenes/menus/rainbowcredits/actualcredits_2.gd" id="5_h70dw"]
 [ext_resource type="Script" uid="uid://o4bpwvnm4dck" path="res://scenes/menus/rainbowcredits/actualcredits_3.gd" id="6_q5tt2"]
@@ -54,7 +54,7 @@ corner_radius_bottom_right = 5
 corner_radius_bottom_left = 5
 corner_detail = 1
 
-[node name="Node2D" type="Node2D" unique_id=1775569135]
+[node name="Node2D2" type="Node2D" unique_id=1775569135]
 
 [node name="BackgrounttextureGradient" type="TextureRect" parent="." unique_id=1978952920]
 offset_right = 1157.0

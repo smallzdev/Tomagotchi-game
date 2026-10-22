@@ -3,7 +3,7 @@
 [ext_resource type="FontFile" uid="uid://dyibl4resr8wn" path="res://Resources/font/augiepixel.ttf" id="1_ovrgc"]
 [ext_resource type="Script" uid="uid://w1qvlpajcum3" path="res://scripts/main_menu_buttons.gd" id="1_xqga4"]
 [ext_resource type="PackedScene" uid="uid://b4s0mtt30pc3t" path="res://scenes/menuparticle.tscn" id="3_2o76q"]
-[ext_resource type="Script" uid="uid://cohdwuxwwv7nl" path="res://scenes/menus/title.gd" id="4_6bivr"]
+[ext_resource type="Script" uid="uid://cohdwuxwwv7nl" path="res://scripts/title.gd" id="4_6bivr"]
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_pfrlc"]
 specular_color = Color(0.95686275, 0.95686275, 0.95686275, 1)
@@ -64,7 +64,7 @@ corner_radius_bottom_right = 5
 corner_radius_bottom_left = 5
 corner_detail = 1
 
-[node name="Node2D" type="Node2D" unique_id=791225175]
+[node name="Node2D2" type="Node2D" unique_id=791225175]
 
 [node name="BackgroundTextureGradient" type="TextureRect" parent="." unique_id=171579694]
 offset_right = 1157.0
