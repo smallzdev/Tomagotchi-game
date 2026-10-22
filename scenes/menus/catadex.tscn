@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://bss1sxgy0cdx1" path="res://Resources/InUse/TamagotchiCustomAssets/pets/goldfish.png" id="4_jjdlx"]
 [ext_resource type="Texture2D" uid="uid://bwnu12weboyh4" path="res://Resources/InUse/TamagotchiCustomAssets/pets/penguin.png" id="6_xbeds"]
 [ext_resource type="Texture2D" uid="uid://dfer5a36n2qsn" path="res://Resources/InUse/TamagotchiCustomAssets/pets/pumpin.png" id="7_w7v3h"]
+[ext_resource type="Script" uid="uid://b7ptc850pmdcq" path="res://scenes/menus/catadex_buttons.gd" id="10_xbeds"]
 
 [sub_resource type="Gradient" id="Gradient_7dm0k"]
 colors = PackedColorArray(0, 1, 1, 1, 0.13909006, 0.3063838, 0.46577227, 1)
@@ -209,6 +210,7 @@ animations = [{
 }]
 
 [node name="Node2D" type="Node2D" unique_id=293050761]
+script = ExtResource("3_u7asp")
 
 [node name="backgroundGradient" type="TextureRect" parent="." unique_id=325099038]
 offset_right = 1157.0
@@ -295,7 +297,7 @@ scale = Vector2(3.2, 3.2)
 sprite_frames = SubResource("SpriteFrames_cgke2")
 animation = &"goldfish"
 
-[node name="CatadexItem3Label2" type="Label" parent="Panel" unique_id=1627055397]
+[node name="CatadexItem4Label" type="Label" parent="Panel" unique_id=1627055397]
 layout_mode = 0
 offset_left = 313.0
 offset_top = 100.0
@@ -311,7 +313,7 @@ scale = Vector2(3.5, 3.5)
 sprite_frames = SubResource("SpriteFrames_cgke2")
 animation = &"ghost"
 
-[node name="CatadexItem1Label2" type="Label" parent="Panel" unique_id=1437216243]
+[node name="CatadexItem5Label" type="Label" parent="Panel" unique_id=1437216243]
 layout_mode = 0
 offset_left = 411.0
 offset_top = 101.0
@@ -327,7 +329,7 @@ scale = Vector2(3.5, 3.5)
 sprite_frames = SubResource("SpriteFrames_cgke2")
 animation = &"pumpkin"
 
-[node name="CatadexItem2Label2" type="Label" parent="Panel" unique_id=1613837930]
+[node name="CatadexItem6Label" type="Label" parent="Panel" unique_id=1613837930]
 layout_mode = 0
 offset_left = 514.0
 offset_top = 101.0
@@ -343,7 +345,7 @@ scale = Vector2(3.2, 3.2)
 sprite_frames = SubResource("SpriteFrames_cgke2")
 animation = &"penguin"
 
-[node name="CatadexItem3Label3" type="Label" parent="Panel" unique_id=1031048358]
+[node name="CatadexItem7Label" type="Label" parent="Panel" unique_id=1031048358]
 layout_mode = 0
 offset_left = 617.0
 offset_top = 101.0
@@ -359,7 +361,7 @@ scale = Vector2(3.5, 3.5)
 sprite_frames = SubResource("SpriteFrames_cgke2")
 animation = &"blank"
 
-[node name="CatadexItem3Label4" type="Label" parent="Panel" unique_id=176317555]
+[node name="CatadexItem8Label" type="Label" parent="Panel" unique_id=176317555]
 layout_mode = 0
 offset_left = 724.0
 offset_top = 101.0
@@ -377,4 +379,4 @@ scale = Vector2(2, 2)
 theme_override_font_sizes/font_size = 20
 text = "Back"
 icon = ExtResource("2_u7asp")
-script = ExtResource("3_u7asp")
+script = ExtResource("10_xbeds")

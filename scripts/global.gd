@@ -15,7 +15,7 @@ var pet = 2
 # currently, they're all true for testing purposes.
 var pet1owned = true
 var pet2owned = true
-var pet3owned = true
+var pet3owned = false
 var pet4owned = true
 var pet5owned = true
 var pet6owned = true
