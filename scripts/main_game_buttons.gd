@@ -207,8 +207,12 @@ func statUpdate():
 
 
 func _on_5s_timer_timeout() -> void:
-	Global.water -= 5
-	Global.food -= 5
-	Global.love -=5
-	Global.energy -=5
+	if Global.water > 0: 
+		Global.water -= 5
+	if Global.food > 0:
+		Global.food -= 5
+	if Global.love > 0:
+		Global.love -=5
+	if Global.love > 0:
+		Global.energy -=5
 	statUpdate()
