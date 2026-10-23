@@ -42,6 +42,7 @@ func _ready():
 	print(petSpriteNameText)
 	statUpdate()
 	petDetection()
+	spriteAnimation()
 
 # Food, water, and energy
 # got the if statements written, now just needa fill it
@@ -207,12 +208,24 @@ func statUpdate():
 
 
 func _on_5s_timer_timeout() -> void:
+	# decrease variables
 	if Global.water > 0: 
 		Global.water -= 5
 	if Global.food > 0:
 		Global.food -= 5
 	if Global.love > 0:
-		Global.love -=5
-	if Global.love > 0:
-		Global.energy -=5
+		Global.love -= 5
+	if Global.energy > 0:
+		Global.energy -= 5
 	statUpdate()
+	spriteAnimation()
+	
+func spriteAnimation():
+	# sprite animations for anger
+	if Global.water < 20 or Global.love < 20 or Global.energy < 20:
+		petSprite.frame = 3
+		
+	# only if that specific pet has that animation.
+	if Global.pet == 9:
+		if Global.water == 0 or Global.love == 0 or Global.energy == 0:
+			petSprite.frame = 5

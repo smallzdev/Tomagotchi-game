@@ -25,20 +25,26 @@ func petting_love(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 		if Global.love <= 90:
 			Global.love += 10
 			statUpdate()
+			petSprite.frame = 1
+			await get_tree().create_timer(2).timeout
+			petSprite.frame = 0
 			
 # If Global.love is  more than 100, it just sets to 100.
 		elif Global.love > 100:
 			Global.love = 100
 			statUpdate()
+			petSprite.frame = 1
+			await get_tree().create_timer(2).timeout
+			petSprite.frame = 0
 			
 # if the love is more than 90, it just goes to 100 which
 # is the max. If it added 10, itd be over 100.
 		elif Global.love > 90 and Global.love <= 100:
 			Global.love = 100
 			statUpdate()
-			
-		if Global.pet == 4:
-			petSprite.animation = 1
+			petSprite.frame = 1
+			await get_tree().create_timer(2).timeout
+			petSprite.frame = 0
 		
 # when editing make sure to also update in main_game_buttons.gd	
 func statUpdate():

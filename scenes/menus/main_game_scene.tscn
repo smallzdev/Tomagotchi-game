@@ -936,7 +936,7 @@ text = "Love"
 horizontal_alignment = 1
 
 [node name="Timer" type="Timer" parent="." unique_id=451084675]
-wait_time = 5.0
+wait_time = 120.0
 autostart = true
 
 [node name="RarityBackground" type="AnimatedSprite2D" parent="." unique_id=82668997]
