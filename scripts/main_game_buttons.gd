@@ -204,3 +204,11 @@ func statUpdate():
 		
 # ughghghg im mathed out. If you edit make sure to test
 # because the slightest mistake breaks it.
+
+
+func _on_5s_timer_timeout() -> void:
+	Global.water -= 5
+	Global.food -= 5
+	Global.love -=5
+	Global.energy -=5
+	statUpdate()

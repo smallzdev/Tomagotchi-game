@@ -6,4 +6,4 @@ func _ready() -> void:
 	backButton.pressed.connect(back_button_pressed)
 		
 func back_button_pressed():
-	get_tree().call_deffered("change_scene_to_file", "res://scenes/menus/main_game_scene.tscn")
+	get_tree().call_deferred("change_scene_to_file", "res://scenes/menus/main_game_scene.tscn")

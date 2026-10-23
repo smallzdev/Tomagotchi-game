@@ -8,9 +8,10 @@
 [ext_resource type="Script" uid="uid://c2im2yn0mlcar" path="res://scripts/pets_menu.gd" id="3_ehm21"]
 [ext_resource type="Texture2D" uid="uid://brliyf6hrxhwa" path="res://Resources/InUse/TamagotchiCustomAssets/pets/babychicken.png" id="3_hgu4i"]
 [ext_resource type="Texture2D" uid="uid://tlvriaji08jr" path="res://Resources/InUse/ReusedAssets/cat.png" id="3_i76b6"]
+[ext_resource type="Texture2D" uid="uid://cver2k8bbuv20" path="res://Resources/InUse/TamagotchiCustomAssets/pets/Outlines/babychicken-outline.png" id="4_82277"]
 [ext_resource type="Texture2D" uid="uid://d07p48kd873f4" path="res://Resources/InUse/ReusedAssets/greycat.png" id="4_f54ji"]
 [ext_resource type="Texture2D" uid="uid://bss1sxgy0cdx1" path="res://Resources/InUse/TamagotchiCustomAssets/pets/goldfish.png" id="4_y4cg6"]
-[ext_resource type="Texture2D" uid="uid://c880qnqb8oj84" path="res://Resources/InUse/TamagotchiCustomAssets/pets/Outlines/water.png" id="5_7pubi"]
+[ext_resource type="Texture2D" uid="uid://c880qnqb8oj84" path="res://Resources/InUse/TamagotchiCustomAssets/pets/Outlines/cat-outline.png" id="5_7pubi"]
 [ext_resource type="Texture2D" uid="uid://mnyatgeexis1" path="res://Resources/InUse/TamagotchiCustomAssets/pets/Outlines/ghost-outline.png" id="5_rkuql"]
 [ext_resource type="Texture2D" uid="uid://dfer5a36n2qsn" path="res://Resources/InUse/TamagotchiCustomAssets/pets/pumpin.png" id="6_u5fce"]
 [ext_resource type="Texture2D" uid="uid://bwnu12weboyh4" path="res://Resources/InUse/TamagotchiCustomAssets/pets/penguin.png" id="7_u5fce"]
@@ -23,22 +24,6 @@ specular_color = Color(0.95686275, 0.95686275, 0.95686275, 1)
 [sub_resource type="AtlasTexture" id="AtlasTexture_82277"]
 atlas = ExtResource("3_hgu4i")
 region = Rect2(0, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_nh0jh"]
-atlas = ExtResource("3_hgu4i")
-region = Rect2(0, 32, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_7es7a"]
-atlas = ExtResource("3_hgu4i")
-region = Rect2(32, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_8yq4b"]
-atlas = ExtResource("3_hgu4i")
-region = Rect2(32, 32, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_nnuhk"]
-atlas = ExtResource("3_hgu4i")
-region = Rect2(0, 64, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_y4cg6"]
 atlas = ExtResource("2_2knbp")
@@ -63,16 +48,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_82277")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_nh0jh")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_7es7a")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_8yq4b")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_nnuhk")
+"texture": ExtResource("4_82277")
 }],
 "loop": 1,
 "name": &"baby chicken",

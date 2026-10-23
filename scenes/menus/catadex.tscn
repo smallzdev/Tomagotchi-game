@@ -10,10 +10,14 @@
 [ext_resource type="Script" uid="uid://dk15jiylhoknc" path="res://scripts/catadex.gd" id="3_u7asp"]
 [ext_resource type="Texture2D" uid="uid://bss1sxgy0cdx1" path="res://Resources/InUse/TamagotchiCustomAssets/pets/goldfish.png" id="4_jjdlx"]
 [ext_resource type="Texture2D" uid="uid://cver2k8bbuv20" path="res://Resources/InUse/TamagotchiCustomAssets/pets/Outlines/babychicken-outline.png" id="4_k6lqr"]
+[ext_resource type="Texture2D" uid="uid://c880qnqb8oj84" path="res://Resources/InUse/TamagotchiCustomAssets/pets/Outlines/cat-outline.png" id="6_cjw6g"]
 [ext_resource type="Texture2D" uid="uid://bwnu12weboyh4" path="res://Resources/InUse/TamagotchiCustomAssets/pets/penguin.png" id="6_xbeds"]
 [ext_resource type="Texture2D" uid="uid://dfer5a36n2qsn" path="res://Resources/InUse/TamagotchiCustomAssets/pets/pumpin.png" id="7_w7v3h"]
+[ext_resource type="Texture2D" uid="uid://mnyatgeexis1" path="res://Resources/InUse/TamagotchiCustomAssets/pets/Outlines/ghost-outline.png" id="8_acxwf"]
 [ext_resource type="Script" uid="uid://b7ptc850pmdcq" path="res://scripts/catadex_buttons.gd" id="10_xbeds"]
+[ext_resource type="Texture2D" uid="uid://bcavxfx2el72s" path="res://Resources/InUse/TamagotchiCustomAssets/pets/Outlines/fish-outline.png" id="11_abrlc"]
 [ext_resource type="Texture2D" uid="uid://cipqnn24ybwx3" path="res://Resources/InUse/TamagotchiCustomAssets/pets/Outlines/?.png" id="11_cg3yn"]
+[ext_resource type="Texture2D" uid="uid://pf78d14ebxut" path="res://Resources/InUse/TamagotchiCustomAssets/pets/Outlines/pumpin-shadow.png" id="16_tinwy"]
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_e7wif"]
 specular_color = Color(0.95686275, 0.95686275, 0.95686275, 1)
@@ -26,41 +30,9 @@ region = Rect2(0, 0, 32, 32)
 atlas = ExtResource("2_8qd64")
 region = Rect2(0, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_t15ec"]
-atlas = ExtResource("2_8qd64")
-region = Rect2(32, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_jjdlx"]
-atlas = ExtResource("2_8qd64")
-region = Rect2(0, 32, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_xbeds"]
-atlas = ExtResource("2_8qd64")
-region = Rect2(32, 32, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_w7v3h"]
-atlas = ExtResource("2_8qd64")
-region = Rect2(0, 64, 32, 32)
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_pwrv3"]
 atlas = ExtResource("4_jjdlx")
 region = Rect2(0, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_imd05"]
-atlas = ExtResource("4_jjdlx")
-region = Rect2(32, 32, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_raeda"]
-atlas = ExtResource("4_jjdlx")
-region = Rect2(0, 64, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_k6lqr"]
-atlas = ExtResource("4_jjdlx")
-region = Rect2(0, 32, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_cg3yn"]
-atlas = ExtResource("4_jjdlx")
-region = Rect2(32, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_v1pex"]
 atlas = ExtResource("6_xbeds")
@@ -69,22 +41,6 @@ region = Rect2(0, 0, 32, 32)
 [sub_resource type="AtlasTexture" id="AtlasTexture_sd6y8"]
 atlas = ExtResource("7_w7v3h")
 region = Rect2(0, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_u304v"]
-atlas = ExtResource("7_w7v3h")
-region = Rect2(0, 32, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_r6q2l"]
-atlas = ExtResource("7_w7v3h")
-region = Rect2(32, 32, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ctkmf"]
-atlas = ExtResource("7_w7v3h")
-region = Rect2(32, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_4epf4"]
-atlas = ExtResource("7_w7v3h")
-region = Rect2(0, 64, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_cgke2"]
 animations = [{
@@ -107,6 +63,9 @@ animations = [{
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("1_aauko")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_cjw6g")
 }],
 "loop": 1,
 "name": &"cat3",
@@ -117,16 +76,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_uld33")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_t15ec")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_jjdlx")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_xbeds")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_w7v3h")
+"texture": ExtResource("8_acxwf")
 }],
 "loop": 1,
 "name": &"ghost",
@@ -135,6 +85,9 @@ animations = [{
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("1_tx3pw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_cjw6g")
 }],
 "loop": 1,
 "name": &"ginger cat",
@@ -145,16 +98,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_pwrv3")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_imd05")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_raeda")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_k6lqr")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_cg3yn")
+"texture": ExtResource("11_abrlc")
 }],
 "loop": 1,
 "name": &"goldfish",
@@ -163,6 +107,9 @@ animations = [{
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("3_8qd64")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_cjw6g")
 }],
 "loop": 1,
 "name": &"grey cat",
@@ -184,16 +131,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_sd6y8")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_u304v")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_r6q2l")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_ctkmf")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_4epf4")
+"texture": ExtResource("16_tinwy")
 }],
 "loop": 1,
 "name": &"pumpkin",
