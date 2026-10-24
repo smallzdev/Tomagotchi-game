@@ -15,10 +15,10 @@ func play_button_pressed():
 	get_tree().call_deferred("change_scene_to_file", "res://scenes/gacha.tscn")
 
 func credits_button_pressed():
-	get_tree().change_scene_to_file("res://scenes/menus/credits.tscn")
+	get_tree().call_deferred("change_scene_to_file", "res://scenes/menus/credits.tscn")
 	
 func settings_button_pressed():
-	get_tree().change_scene_to_file("res://scenes/menus/settings.tscn")
+	get_tree().call_deferred("change_scene_to_file", "res://scenes/menus/settings.tscn")
 	
 func hardcore_button_pressed():
 	Global.hardcore = true
