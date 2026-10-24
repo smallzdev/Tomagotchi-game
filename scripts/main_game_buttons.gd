@@ -220,12 +220,19 @@ func _on_5s_timer_timeout() -> void:
 	statUpdate()
 	spriteAnimation()
 	
+# WARNING: This function also appears in pet_sprite.gd
+# if editing this, make sure to also copy this code into
+# there too.
 func spriteAnimation():
-	# sprite animations for anger
-	if Global.water < 20 or Global.love < 20 or Global.energy < 20:
+	# sprite animations for angry
+	if Global.water == 0 or Global.love == 0 or Global.energy == 0:
+		petSprite.frame = 5
+	# sprite animations for sad
+	elif Global.water < 20 or Global.love < 20 or Global.energy < 20:
 		petSprite.frame = 3
-		
-	# only if that specific pet has that animation.
-	if Global.pet == 9:
-		if Global.water == 0 or Global.love == 0 or Global.energy == 0:
-			petSprite.frame = 5
+	# sprite animations for "meh"
+	elif Global.water < 50 or Global.love < 50 or Global.enery < 50:
+		petSprite.frame = 4
+	# anything else is happy.
+	elif Global.water > 50 or Global.love > 50 or Global.energy > 50:
+		petSprite.frame = 0

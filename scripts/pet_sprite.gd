@@ -27,7 +27,7 @@ func petting_love(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 			statUpdate()
 			petSprite.frame = 1
 			await get_tree().create_timer(2).timeout
-			petSprite.frame = 0
+			spriteAnimation()
 			
 # If Global.love is  more than 100, it just sets to 100.
 		elif Global.love > 100:
@@ -35,7 +35,7 @@ func petting_love(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 			statUpdate()
 			petSprite.frame = 1
 			await get_tree().create_timer(2).timeout
-			petSprite.frame = 0
+			spriteAnimation()
 			
 # if the love is more than 90, it just goes to 100 which
 # is the max. If it added 10, itd be over 100.
@@ -133,6 +133,23 @@ func statUpdate():
 		loveStatBar.frame = 6
 	if Global.love < 6:
 		loveStatBar.frame = 7
+		
+# WARNING: This function also appears in main_game_buttons.gd
+# if editing this, make sure to also copy this code into
+# there too.
+func spriteAnimation():
+	# sprite animations for angry
+	if Global.water == 0 or Global.love == 0 or Global.energy == 0:
+		petSprite.frame = 5
+	# sprite animations for sad
+	elif Global.water < 20 or Global.love < 20 or Global.energy < 20:
+		petSprite.frame = 3
+	# sprite animations for "meh"
+	elif Global.water < 50 or Global.love < 50 or Global.energy < 50:
+		petSprite.frame = 4
+	# anything else is happy.
+	elif Global.water > 50 or Global.love > 50 or Global.energy > 50:
+		petSprite.frame = 0
 		
 # ughghghg im mathed out. If you edit make sure to test
 # because the slightest mistake breaks it.
