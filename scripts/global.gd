@@ -22,6 +22,9 @@ var pet6owned = true
 var pet7owned = true
 var pet8owned = false
 
+# hardcore mode toggle
+var hardcore = false
+
 # trying to figure out oop ;-;
 var raritygacha = [
 	{"rarity": "common", "chance": 75},

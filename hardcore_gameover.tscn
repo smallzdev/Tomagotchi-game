@@ -1,0 +1,106 @@
+[gd_scene format=3 uid="uid://mynhr4k4kviw"]
+
+[ext_resource type="FontFile" uid="uid://dyibl4resr8wn" path="res://Resources/font/augiepixel.ttf" id="1_kvcsj"]
+[ext_resource type="Script" uid="uid://dhismqn5ngu3j" path="res://scripts/menu_button.gd" id="2_nfs5h"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_1kjw7"]
+specular_color = Color(0.95686275, 0.95686275, 0.95686275, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4doys"]
+bg_color = Color(0.38431373, 0.38431373, 0.38431373, 0)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(0.30588236, 0.28627452, 0.2784314, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+corner_detail = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3bekm"]
+bg_color = Color(0.16818258, 0.15563756, 0.15061828, 1)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(0.16862746, 0.15686275, 0.14901961, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+corner_detail = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jhi4d"]
+bg_color = Color(0.30588236, 0.28627452, 0.2784314, 1)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(0.30588236, 0.28627452, 0.2784314, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+corner_detail = 1
+
+[node name="Node2D" type="Node2D" unique_id=706710299]
+
+[node name="backgroundGradient" type="TextureRect" parent="." unique_id=794715450]
+offset_right = 1157.0
+offset_bottom = 652.0
+texture = SubResource("CanvasTexture_1kjw7")
+
+[node name="menuTitle" type="Label" parent="." unique_id=1077994887]
+offset_left = 3.0
+offset_top = 238.0
+offset_right = 1158.0
+offset_bottom = 351.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_kvcsj")
+theme_override_font_sizes/font_size = 150
+text = "Game over :("
+horizontal_alignment = 1
+
+[node name="Label" type="Label" parent="menuTitle" unique_id=524312810]
+layout_mode = 0
+offset_left = 6.0
+offset_top = -232.0
+offset_right = 1150.0
+offset_bottom = -167.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_kvcsj")
+theme_override_font_sizes/font_size = 31
+text = "You've failed hardcore mode by letting your stats reach 0 for more than 5 secconds. You can always try again, or maybe stick to the normal mode :)"
+autowrap_mode = 2
+
+[node name="menuButton" type="Button" parent="." unique_id=366902797]
+unique_name_in_owner = true
+offset_left = 378.0
+offset_top = 483.0
+offset_right = 556.0
+offset_bottom = 553.0
+theme_override_colors/font_color = Color(0.30588236, 0.28627452, 0.2784314, 1)
+theme_override_fonts/font = ExtResource("1_kvcsj")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_4doys")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_3bekm")
+theme_override_styles/hover = SubResource("StyleBoxFlat_jhi4d")
+text = "menu"
+script = ExtResource("2_nfs5h")
+
+[node name="menuButton3" type="Button" parent="." unique_id=745562849]
+unique_name_in_owner = true
+offset_left = 571.0
+offset_top = 485.0
+offset_right = 749.0
+offset_bottom = 555.0
+theme_override_colors/font_color = Color(0.30588236, 0.28627452, 0.2784314, 1)
+theme_override_fonts/font = ExtResource("1_kvcsj")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_4doys")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_3bekm")
+theme_override_styles/hover = SubResource("StyleBoxFlat_jhi4d")
+text = "replay"
+script = ExtResource("2_nfs5h")

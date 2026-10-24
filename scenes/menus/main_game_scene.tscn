@@ -1103,5 +1103,10 @@ text = "Common"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="HardcoreTimer" type="Timer" parent="." unique_id=662359714]
+wait_time = 2.0
+autostart = true
+
 [connection signal="input_event" from="Area2D" to="Area2D" method="petting_love"]
 [connection signal="timeout" from="Timer" to="petsButton" method="_on_5s_timer_timeout"]
+[connection signal="timeout" from="HardcoreTimer" to="petsButton" method="_on_hardcore_timer_timeout"]

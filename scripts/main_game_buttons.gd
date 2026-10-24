@@ -68,6 +68,7 @@ func foodButton_pressed():
 		## await get_tree().create_timer(1).timeout
 		## petSprite.frame = 0
 	statUpdate()
+	spriteAnimation()
 	
 func waterButton_pressed():
 	if Global.water <= 90:
@@ -77,6 +78,7 @@ func waterButton_pressed():
 	elif Global.water >= 100:
 		Global.water = 100
 	statUpdate()
+	spriteAnimation()
 
 func energyButton_pressed():
 	if Global.energy <= 90:
@@ -86,6 +88,7 @@ func energyButton_pressed():
 	elif Global.water >= 100:
 		Global.water = 100
 	statUpdate()
+	spriteAnimation()
 		
 
 # Pet detecting thing.
@@ -207,18 +210,36 @@ func statUpdate():
 # because the slightest mistake breaks it.
 
 
+# not actually 5s anymore, but i cant be bothered
+# changing the signal name lol.
 func _on_5s_timer_timeout() -> void:
-	# decrease variables
-	if Global.water > 0: 
-		Global.water -= 5
-	if Global.food > 0:
-		Global.food -= 5
-	if Global.love > 0:
-		Global.love -= 5
-	if Global.energy > 0:
-		Global.energy -= 5
-	statUpdate()
-	spriteAnimation()
+	if Global.hardcore == false:
+		# decrease variables
+		if Global.water > 0: 
+			Global.water -= 5
+		if Global.food > 0:
+			Global.food -= 5
+		if Global.love > 0:
+			Global.love -= 5
+		if Global.energy > 0:
+			Global.energy -= 5
+		statUpdate()
+		spriteAnimation()
+
+func _on_hardcore_timer_timeout() -> void:
+	if Global.hardcore == true:
+		# decrease variables
+		if Global.water > 0: 
+			Global.water -= 5
+		if Global.food > 0:
+			Global.food -= 5
+		if Global.love > 0:
+			Global.love -= 5
+		if Global.energy > 0:
+			Global.energy -= 5
+		statUpdate()
+		spriteAnimation()
+
 	
 # WARNING: This function also appears in pet_sprite.gd
 # if editing this, make sure to also copy this code into
@@ -231,7 +252,7 @@ func spriteAnimation():
 	elif Global.water < 20 or Global.love < 20 or Global.energy < 20:
 		petSprite.frame = 3
 	# sprite animations for "meh"
-	elif Global.water < 50 or Global.love < 50 or Global.enery < 50:
+	elif Global.water < 50 or Global.love < 50 or Global.energy < 50:
 		petSprite.frame = 4
 	# anything else is happy.
 	elif Global.water > 50 or Global.love > 50 or Global.energy > 50:
