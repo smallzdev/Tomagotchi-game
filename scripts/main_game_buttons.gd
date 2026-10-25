@@ -243,7 +243,7 @@ func _on_5s_timer_timeout() -> void:
 		statUpdate()
 		spriteAnimation()
 # going to be a 1s timer
-func placeHolderTimerVarUntilVicFinished() -> void:
+func harcore_score_timer() -> void:
 	Global.hardcoreTimer += 1
 	HardcoreTimerLabel.text = "Time: " + str(Global.hardcoreTimer)
 	
@@ -260,11 +260,10 @@ func _on_hardcore_timer_timeout() -> void:
 		if Global.energy > 0:
 			Global.energy -= 5
 		
-		if Global.hardcoreTimer == 1:
-			if Global.food >= 0 or Global.water >= 0 or Global.energy >= 0 or Global.love >= 0:
-				if Global.hardcoreTimer > Global.hardcoreHighScore:
-					Global.hardcoreHighScore = Global.hardcoreTimer
-				get_tree().call_deferred("change_scene_to_file", "res://scenes/menus/hardcore_gameover.tscn")
+		if Global.food >= 0 or Global.water >= 0 or Global.energy >= 0 or Global.love >= 0:
+			if Global.hardcoreTimer > Global.hardcoreHighScore:
+				Global.hardcoreHighScore = Global.hardcoreTimer
+			get_tree().call_deferred("change_scene_to_file", "res://scenes/menus/hardcore_gameover.tscn")
 		statUpdate()
 		spriteAnimation()
 

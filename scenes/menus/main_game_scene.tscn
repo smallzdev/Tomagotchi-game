@@ -926,6 +926,7 @@ corner_detail = 1
 [node name="Node2D" type="Node2D" unique_id=111207536]
 
 [node name="HardcoreScoreTimer" type="Timer" parent="." unique_id=19282952]
+autostart = true
 
 [node name="backgroundGradient" type="TextureRect" parent="." unique_id=732252075]
 offset_right = 1157.0
@@ -1328,6 +1329,7 @@ theme_override_font_sizes/font_size = 32
 text = "You do not have enough grains to 
 feed your pet. Go farm more grains!"
 
+[connection signal="timeout" from="HardcoreScoreTimer" to="petsButton" method="harcore_score_timer"]
 [connection signal="input_event" from="Area2D" to="Area2D" method="petting_love"]
 [connection signal="timeout" from="Timer" to="petsButton" method="_on_5s_timer_timeout"]
 [connection signal="timeout" from="HardcoreTimer" to="petsButton" method="_on_hardcore_timer_timeout"]
