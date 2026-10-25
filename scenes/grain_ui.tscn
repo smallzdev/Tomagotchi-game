@@ -7,7 +7,7 @@
 [sub_resource type="LabelSettings" id="LabelSettings_xrivr"]
 font = ExtResource("3_ov6x4")
 font_size = 82
-outline_size = 8
+outline_size = 12
 outline_color = Color(0, 0, 0, 1)
 
 [node name="grain_ui" type="Control" unique_id=1734086535]

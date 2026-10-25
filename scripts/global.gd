@@ -29,7 +29,7 @@ var hardcore = false
 
 var hatched = false
 
-var grains = 0
+var grains = 10
 
 func add_grains(amount: int) -> void:
 	grains+=amount

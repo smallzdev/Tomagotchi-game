@@ -1,0 +1,68 @@
+[gd_scene format=3 uid="uid://myr5c182tphk"]
+
+[ext_resource type="FontFile" uid="uid://dyibl4resr8wn" path="res://Resources/font/augiepixel.ttf" id="1_kjpqf"]
+[ext_resource type="Script" uid="uid://cimdosnofsva" path="res://scripts/grainbutton.gd" id="2_jjgid"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_mxq25"]
+specular_color = Color(0.95686275, 0.95686275, 0.95686275, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_k3ns2"]
+bg_color = Color(0.38431373, 0.38431373, 0.38431373, 0)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(0.30588236, 0.28627452, 0.2784314, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+corner_detail = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7byxm"]
+bg_color = Color(0.16818258, 0.15563756, 0.15061828, 1)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(0.16862746, 0.15686275, 0.14901961, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+corner_detail = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5q3ck"]
+bg_color = Color(0.30588236, 0.28627452, 0.2784314, 1)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(0.30588236, 0.28627452, 0.2784314, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+corner_detail = 1
+
+[node name="farm" type="Node2D" unique_id=325164807]
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1983118808]
+offset_right = 1157.0
+offset_bottom = 652.0
+texture = SubResource("CanvasTexture_mxq25")
+
+[node name="grainbutton" type="Button" parent="." unique_id=1061738736]
+unique_name_in_owner = true
+offset_left = 419.0
+offset_top = 118.0
+offset_right = 729.0
+offset_bottom = 191.0
+theme_override_colors/font_color = Color(0.30588236, 0.28627452, 0.2784314, 1)
+theme_override_fonts/font = ExtResource("1_kjpqf")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_k3ns2")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_7byxm")
+theme_override_styles/hover = SubResource("StyleBoxFlat_5q3ck")
+text = "grain farm"
+script = ExtResource("2_jjgid")
