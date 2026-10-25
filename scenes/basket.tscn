@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://bkhit85bmmlor"]
+
+[ext_resource type="Script" uid="uid://dyehlt424r4qj" path="res://scripts/basket.gd" id="1_idgsc"]
+[ext_resource type="Texture2D" uid="uid://bffnkslspw1d4" path="res://Resources/InUse/TamagotchiCustomAssets/basket.png.png" id="2_o74ig"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xrivr"]
+size = Vector2(124, 123)
+
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=288225890]
+script = ExtResource("1_idgsc")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1593492181]
+texture_filter = 1
+scale = Vector2(4, 4)
+texture = ExtResource("2_o74ig")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1353628979]
+position = Vector2(0, -0.5)
+shape = SubResource("RectangleShape2D_xrivr")
