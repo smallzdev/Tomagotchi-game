@@ -24,8 +24,11 @@ var pet7owned = true # Pet 7 - "Penguin"
 var pet8owned = false # Pet 8 - "Baby Chicken"
 var pet9owned = true
 
+#hardcore variables
 # hardcore mode toggle
 var hardcore = false
+var hardcoreHighScore = 0
+var hardcoreTimer = 0
 
 var hatched = false
 

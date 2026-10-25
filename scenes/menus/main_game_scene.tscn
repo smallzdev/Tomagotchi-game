@@ -26,6 +26,7 @@
 [ext_resource type="Texture2D" uid="uid://ctjk7wurvnlqb" path="res://Resources/InUse/TamagotchiCustomAssets/colouredtitles.png" id="22_51xs6"]
 [ext_resource type="Script" uid="uid://vkw0s1vjtplq" path="res://scenes/menus/rarity.gd" id="23_ahvjs"]
 [ext_resource type="PackedScene" uid="uid://7s5fj1hnj2b1" path="res://scenes/grain_ui.tscn" id="25_xgfuv"]
+[ext_resource type="Texture2D" uid="uid://oqwl2qoj1ien" path="res://Resources/InUse/TamagotchiCustomAssets/timericon.png" id="27_p82fg"]
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_sy1ir"]
 specular_color = Color(0.95686275, 0.95686275, 0.95686275, 1)
@@ -873,6 +874,8 @@ animations = [{
 
 [node name="Node2D" type="Node2D" unique_id=111207536]
 
+[node name="HardcoreScoreTimer" type="Timer" parent="." unique_id=19282952]
+
 [node name="backgroundGradient" type="TextureRect" parent="." unique_id=732252075]
 offset_right = 1157.0
 offset_bottom = 652.0
@@ -1202,14 +1205,14 @@ vertical_alignment = 1
 wait_time = 2.0
 autostart = true
 
-[node name="HardcoreScoreTimer" type="Timer" parent="." unique_id=1576465864]
+[node name="HardcoreStatTimer" type="Timer" parent="." unique_id=1576465864]
 autostart = true
 
 [node name="HarcoreScoreLabel" type="Label" parent="." unique_id=1696041550]
-offset_left = 27.0
-offset_top = 35.0
-offset_right = 108.0
-offset_bottom = 78.0
+offset_left = 119.0
+offset_top = 34.0
+offset_right = 287.0
+offset_bottom = 77.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("4_ymjn7")
 theme_override_font_sizes/font_size = 44
@@ -1220,6 +1223,14 @@ offset_left = 75.0
 offset_top = 489.0
 offset_right = 75.0
 offset_bottom = 489.0
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1257897123]
+offset_left = 65.0
+offset_top = 30.0
+offset_right = 105.0
+offset_bottom = 70.0
+offset_transform_scale = Vector2(1.5, 1.5)
+texture = ExtResource("27_p82fg")
 
 [connection signal="input_event" from="Area2D" to="Area2D" method="petting_love"]
 [connection signal="timeout" from="Timer" to="petsButton" method="_on_5s_timer_timeout"]
