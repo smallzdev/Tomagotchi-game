@@ -32,7 +32,9 @@ var hardcoreTimer = 0
 
 var hatched = false
 
-var grains = 10
+var gachadonce = false
+
+var grains = 20
 
 func add_grains(amount: int) -> void:
 	grains+=amount

@@ -18,6 +18,12 @@ extends Button
 @onready var petSprite = %PetSprite
 @onready var petSpriteNameText = %petSpriteTitle
 
+#grain label 
+@onready var grainlabel = $"../grain_ui/Label"
+
+#error panel stuff
+@onready var errorpanel = $"../errorpanel"
+
 func petsButton_pressed():
 	get_tree().call_deferred("change_scene_to_file", "res://scenes/menus/pets.tscn")
 
@@ -54,6 +60,10 @@ func _ready():
 # Note: this might be a bit confusing, check
 # pet_sprite.gd file for comments on how it all works.
 func foodButton_pressed():
+	if Global.grains <10: 
+		errorpanel.visible = true
+		%foodButton.disabled = true
+	Global.grains -=5
 	if Global.food <= 90:
 		print("Food is less than 100, at " + str(Global.food))
 		Global.food += 10
@@ -128,6 +138,7 @@ func petDetection():
 # when updating, make sure to also update pet_sprite.gd
 # as it uses this same function
 func statUpdate():
+	grainlabel.text = str(Global.grains)
 	statText.text = "Food: " + str(Global.food) + "
 	Water: " + str(Global.water) + "
 	Energy: " + str(Global.energy) + "
@@ -222,7 +233,7 @@ func _on_5s_timer_timeout() -> void:
 	if Global.hardcore == false:
 		# decrease variables
 		if Global.water > 0: 
-			Global.water -= 5
+			Global.water -= 2
 		if Global.food > 0:
 			Global.food -= 5
 		if Global.love > 0:
@@ -274,3 +285,6 @@ func spriteAnimation():
 	# anything else is happy.
 	elif Global.water > 50 or Global.love > 50 or Global.energy > 50:
 		petSprite.frame = 0
+
+func _on_errorbutton_pressed() -> void:
+	errorpanel.visible = false

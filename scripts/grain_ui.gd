@@ -9,7 +9,7 @@ func _ready() -> void:
 	# on event coin collected
 
 func reset_ui() -> void:
-	label.text = "10"
+	label.text = "20"
 
 func on_event_grain_collected(amount: int) -> void:
 	label.text = str(Global.grains)

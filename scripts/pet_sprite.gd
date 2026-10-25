@@ -18,19 +18,21 @@ extends Area2D
 
 func _ready() -> void:
 	randomize()
-	var gacha = randi_range(1, 100)
-	if gacha <= 75:
-		print("common")
-		Global.pet = [1, 2, 3, 4, 6]
-		var commonrandom = Global.pet.pick_random()
-		Global.pet = commonrandom
-	else:
-		print("legendary")
-		Global.pet = [5, 7, 9]
-		var legendaryrandom = Global.pet.pick_random()
-		Global.pet = legendaryrandom
-	loadEquippedPet()
-	print(Global.pet)
+	if Global.gachadonce == false: 
+		var gacha = randi_range(1, 100)
+		Global.gachadonce = true
+		if gacha <= 75:
+			print("common")
+			Global.pet = [1, 2, 3, 4, 6]
+			var commonrandom = Global.pet.pick_random()
+			Global.pet = commonrandom
+		else:
+			print("legendary")
+			Global.pet = [5, 7, 9]
+			var legendaryrandom = Global.pet.pick_random()
+			Global.pet = legendaryrandom
+		loadEquippedPet()
+		print(Global.pet)
 
 func loadEquippedPet():
 # Pet 1 - Ginger Cat
