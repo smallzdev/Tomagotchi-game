@@ -10,7 +10,6 @@ var holdsec = 0
 
 func _ready() -> void:
 	eggsprite.play("default")
-	randomize()
 	# generates random seed
 
 func _process(delta) -> void:
@@ -24,12 +23,6 @@ func _process(delta) -> void:
 			Global.hatched = true 
 			eggsprite.play("cracked")
 			await get_tree().create_timer(2.0).timeout
-			var randomint = randi_range(1, 100)
-			if randomint <= 75: 
-				print("2")
-				get_tree().change_scene_to_packed(maingame)
-			else: 
-				print("1")
-				get_tree().change_scene_to_packed(maingame)
+			get_tree().change_scene_to_packed(maingame)
 	else:
 		holdsec=0

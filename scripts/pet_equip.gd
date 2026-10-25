@@ -143,7 +143,7 @@ func loadEquippedPet():
 		equippedPetName.text = "Spider"
 		equippedPetSprite.animation - "spider"
 	equippedPetSprite.frame = 0
-# when adding more pets, remember to update this code
+# when adding more pets, remember to update this code + pet_sprite.gd....
 
 # The following code is really REALLY messy, ill fix it
 # shortly in a code cleaning update. For now, I'm mainly

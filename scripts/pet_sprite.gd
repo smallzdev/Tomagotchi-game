@@ -1,6 +1,7 @@
 extends Area2D
 
 @onready var petSprite = %PetSprite
+@onready var petName = $"../petSpriteTitle"
 
 # stat label
 @onready var statText = %statTextLabel
@@ -14,6 +15,60 @@ extends Area2D
 @onready var energyStatBar = %energyStatBar
 @onready var foodStatBar = %foodStatBar
 @onready var loveStatBar = %loveStatBar
+
+func _ready() -> void:
+	randomize()
+	var gacha = randi_range(1, 100)
+	if gacha <= 75:
+		print("common")
+		Global.pet = [1, 2, 3, 4, 5, 6]
+		var commonrandom = Global.pet.pick_random()
+		Global.pet = commonrandom
+	else:
+		print("legendary")
+		Global.pet = [7, 8, 9]
+		var legendaryrandom = Global.pet.pick_random()
+		Global.pet = legendaryrandom
+	loadEquippedPet()
+	print(Global.pet)
+
+func loadEquippedPet():
+# Pet 1 - Ginger Cat
+	if Global.pet == 1:
+		petName.text = "Ginger Cat"
+		petSprite.animation = "ginger cat"
+# Pet 2 - Grey Cat
+	if Global.pet == 2:
+		petName.text = "Grey Cat"
+		petSprite.animation = "grey cat"
+# Pet 3 - Cat3
+	if Global.pet == 3:
+		petName.text = "Cat3"
+		petSprite.animation = "cat3"
+# pet 4 - Goldfish
+	if Global.pet == 4:
+		petName.text = "Goldfish"
+		petSprite.animation = "goldfish"
+# Pet 5 - Ghost
+	if Global.pet == 5:
+		petName.text = "Ghost"
+		petSprite.animation = "ghost"
+# Pet 6 - Pumpkin
+	if Global.pet == 6:
+		petName.text = "Pumpkin"
+		petSprite.animation = "pumpkin"
+# Pet 7 - Penguin
+	if Global.pet == 7:
+		petName.text = "Penguin"
+		petSprite.animation = "penguin"
+# Pet 8 - Baby Chicken
+	if Global.pet == 8:
+		petName.text = "Baby Chicken"
+		petSprite.animation = "baby chicken"
+	if Global.pet == 9:
+		petName.text = "Spider"
+		petSprite.animation - "spider"
+	petSprite.frame = 0
 
 # petting function, so when you click on the cat this runs
 # you may need to expand the collisionshape since it
