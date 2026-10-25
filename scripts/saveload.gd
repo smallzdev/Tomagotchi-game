@@ -16,3 +16,4 @@ func _save():
 func _load():
 	if FileAccess.file_exists(save_location):
 		SaveFileData = ResourceLoader.load(save_location).duplicate(true)
+		print("load")

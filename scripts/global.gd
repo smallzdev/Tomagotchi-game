@@ -13,35 +13,38 @@ var pet = 2
 
 # pets and if they're owned
 # currently, they're all true for testing purposes.
-var pet1owned = true
-var pet2owned = true
-var pet3owned = false
-var pet4owned = true
-var pet5owned = true
-var pet6owned = true
-var pet7owned = true
-var pet8owned = false
+var pet1owned = true # Pet 1 - "Ginger Cat"
+var pet2owned = true # Pet 2 - "Grey Cat"
+var pet3owned = false # Pet 3 - "Cat3" (this is like the one with a brown face)
+var pet4owned = true # Pet 4 - "Goldfish"
+var pet5owned = true # Pet 5 - "Ghost"
+var pet6owned = true # Pet 6 - "Pumpkin"
+var pet7owned = true # Pet 7 - "Penguin"
+var pet8owned = false # Pet 8 - "Baby Chicken"
 
 # hardcore mode toggle
 var hardcore = false
 
-# trying to figure out oop ;-;
-var raritygacha = [
-	{"rarity": "common", "chance": 75},
-	{"rarity": "legendary", "chance": 25}
-]
+var hatched = false
+
+# ok i dont think we need this - v 
+# remove tag if we do
+#var raritygacha = [
+	#{"rarity": "common", "chance": 75},
+	#{"rarity": "legendary", "chance": 25}
+#]
 
 
 # need change to .tscn files after made
-var characterpools = {
-	"common": [
-		"Ginger Cat",
-		"Goldfish",
-		"Grey Cat",
-		"Pumpkin"
-	],
-	
-	"legendary": [
-		"Ghost"
-	]
-}
+#var characterpools = {
+	#"common": [
+		#"Ginger Cat",
+		#"Goldfish",
+		#"Grey Cat",
+		#"Pumpkin"
+	#],
+	#
+	#"legendary": [
+		#"Ghost"
+	#]
+#}
