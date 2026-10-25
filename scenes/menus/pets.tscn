@@ -1,11 +1,9 @@
 [gd_scene format=3 uid="uid://886x8xj8qyty"]
 
 [ext_resource type="Texture2D" uid="uid://c4yyj5gwsqovb" path="res://Resources/InUse/ReusedAssets/cat3.png" id="1_cwyod"]
-[ext_resource type="Texture2D" uid="uid://dy1dwj583kuyx" path="res://Resources/InUse/ReusedAssets/Restart.png" id="1_r40by"]
 [ext_resource type="Script" uid="uid://cn5wggncqfifm" path="res://scripts/pet_equip.gd" id="1_y4cg6"]
 [ext_resource type="Texture2D" uid="uid://b3kknikmix4mx" path="res://Resources/InUse/TamagotchiCustomAssets/pets/Ghost.png" id="2_2knbp"]
 [ext_resource type="FontFile" uid="uid://dyibl4resr8wn" path="res://Resources/font/augiepixel.ttf" id="2_qtxby"]
-[ext_resource type="Script" uid="uid://c2im2yn0mlcar" path="res://scripts/pets_menu.gd" id="3_ehm21"]
 [ext_resource type="Texture2D" uid="uid://brliyf6hrxhwa" path="res://Resources/InUse/TamagotchiCustomAssets/pets/babychicken.png" id="3_hgu4i"]
 [ext_resource type="Texture2D" uid="uid://tlvriaji08jr" path="res://Resources/InUse/ReusedAssets/cat.png" id="3_i76b6"]
 [ext_resource type="Texture2D" uid="uid://cver2k8bbuv20" path="res://Resources/InUse/TamagotchiCustomAssets/pets/Outlines/babychicken-outline.png" id="4_82277"]
@@ -18,7 +16,8 @@
 [ext_resource type="Texture2D" uid="uid://bcavxfx2el72s" path="res://Resources/InUse/TamagotchiCustomAssets/pets/Outlines/fish-outline.png" id="8_qtxby"]
 [ext_resource type="Texture2D" uid="uid://pf78d14ebxut" path="res://Resources/InUse/TamagotchiCustomAssets/pets/Outlines/pumpin-shadow.png" id="12_hgu4i"]
 [ext_resource type="Texture2D" uid="uid://b64t62s47vcjg" path="res://Resources/InUse/TamagotchiCustomAssets/pets/spider.png" id="16_7es7a"]
-[ext_resource type="Texture2D" uid="uid://cipqnn24ybwx3" path="res://Resources/InUse/TamagotchiCustomAssets/pets/Outlines/?.png" id="17_8yq4b"]
+[ext_resource type="Texture2D" uid="uid://cipqnn24ybwx3" path="res://Resources/InUse/TamagotchiCustomAssets/pets/Outlines/questionmark.png" id="17_8yq4b"]
+[ext_resource type="Script" uid="uid://b7ptc850pmdcq" path="res://scripts/catadex_buttons.gd" id="18_nh0jh"]
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_rkuql"]
 specular_color = Color(0.95686275, 0.95686275, 0.95686275, 1)
@@ -156,6 +155,45 @@ animations = [{
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_stm8k"]
 size = Vector2(86.5, 89)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7es7a"]
+bg_color = Color(0.38431373, 0.38431373, 0.38431373, 0)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(0.30588236, 0.28627452, 0.2784314, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+corner_detail = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8yq4b"]
+bg_color = Color(0.16818258, 0.15563756, 0.15061828, 1)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(0.16862746, 0.15686275, 0.14901961, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+corner_detail = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nnuhk"]
+bg_color = Color(0.30588236, 0.28627452, 0.2784314, 1)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(0.30588236, 0.28627452, 0.2784314, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+corner_detail = 1
 
 [node name="Node2D" type="Node2D" unique_id=1670576886]
 
@@ -723,17 +761,20 @@ theme_override_fonts/font = ExtResource("2_qtxby")
 theme_override_font_sizes/font_size = 34
 text = "[Equipped]"
 
-[node name="backButton" type="Button" parent="." unique_id=1823302101]
+[node name="backButton" type="Button" parent="." unique_id=81810436]
 unique_name_in_owner = true
-offset_left = 956.0
-offset_top = 20.0
-offset_right = 1045.0
-offset_bottom = 56.0
-scale = Vector2(2, 2)
-theme_override_font_sizes/font_size = 20
+offset_left = 972.0
+offset_top = 35.0
+offset_right = 1119.0
+offset_bottom = 99.0
+theme_override_colors/font_color = Color(0.30588236, 0.28627452, 0.2784314, 1)
+theme_override_fonts/font = ExtResource("2_qtxby")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_7es7a")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_8yq4b")
+theme_override_styles/hover = SubResource("StyleBoxFlat_nnuhk")
 text = "Back"
-icon = ExtResource("1_r40by")
-script = ExtResource("3_ehm21")
+script = ExtResource("18_nh0jh")
 
 [connection signal="input_event" from="Panel/Area2D" to="Panel/Area2D" method="_on_petsprite2_equipped"]
 [connection signal="input_event" from="Panel/Area2D" to="Panel/Area2D" method="_on_petsprite1_equip_event"]

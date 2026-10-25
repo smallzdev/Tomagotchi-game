@@ -3,7 +3,6 @@
 [ext_resource type="Texture2D" uid="uid://c4yyj5gwsqovb" path="res://Resources/InUse/ReusedAssets/cat3.png" id="1_aauko"]
 [ext_resource type="Texture2D" uid="uid://tlvriaji08jr" path="res://Resources/InUse/ReusedAssets/cat.png" id="1_tx3pw"]
 [ext_resource type="Texture2D" uid="uid://b3kknikmix4mx" path="res://Resources/InUse/TamagotchiCustomAssets/pets/Ghost.png" id="2_8qd64"]
-[ext_resource type="Texture2D" uid="uid://dy1dwj583kuyx" path="res://Resources/InUse/ReusedAssets/Restart.png" id="2_u7asp"]
 [ext_resource type="FontFile" uid="uid://dyibl4resr8wn" path="res://Resources/font/augiepixel.ttf" id="2_w7v3h"]
 [ext_resource type="Texture2D" uid="uid://d07p48kd873f4" path="res://Resources/InUse/ReusedAssets/greycat.png" id="3_8qd64"]
 [ext_resource type="Texture2D" uid="uid://brliyf6hrxhwa" path="res://Resources/InUse/TamagotchiCustomAssets/pets/babychicken.png" id="3_raeda"]
@@ -16,7 +15,7 @@
 [ext_resource type="Texture2D" uid="uid://mnyatgeexis1" path="res://Resources/InUse/TamagotchiCustomAssets/pets/Outlines/ghost-outline.png" id="8_acxwf"]
 [ext_resource type="Script" uid="uid://b7ptc850pmdcq" path="res://scripts/catadex_buttons.gd" id="10_xbeds"]
 [ext_resource type="Texture2D" uid="uid://bcavxfx2el72s" path="res://Resources/InUse/TamagotchiCustomAssets/pets/Outlines/fish-outline.png" id="11_abrlc"]
-[ext_resource type="Texture2D" uid="uid://cipqnn24ybwx3" path="res://Resources/InUse/TamagotchiCustomAssets/pets/Outlines/?.png" id="11_cg3yn"]
+[ext_resource type="Texture2D" uid="uid://cipqnn24ybwx3" path="res://Resources/InUse/TamagotchiCustomAssets/pets/Outlines/questionmark.png" id="11_cg3yn"]
 [ext_resource type="Texture2D" uid="uid://pf78d14ebxut" path="res://Resources/InUse/TamagotchiCustomAssets/pets/Outlines/pumpin-shadow.png" id="16_tinwy"]
 [ext_resource type="Texture2D" uid="uid://b64t62s47vcjg" path="res://Resources/InUse/TamagotchiCustomAssets/pets/spider.png" id="17_acxwf"]
 
@@ -186,6 +185,45 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cjw6g"]
+bg_color = Color(0.38431373, 0.38431373, 0.38431373, 0)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(0.30588236, 0.28627452, 0.2784314, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+corner_detail = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_acxwf"]
+bg_color = Color(0.16818258, 0.15563756, 0.15061828, 1)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(0.16862746, 0.15686275, 0.14901961, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+corner_detail = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_abrlc"]
+bg_color = Color(0.30588236, 0.28627452, 0.2784314, 1)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(0.30588236, 0.28627452, 0.2784314, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+corner_detail = 1
+
 [node name="Node2D" type="Node2D" unique_id=293050761]
 script = ExtResource("3_u7asp")
 
@@ -195,9 +233,9 @@ offset_bottom = 652.0
 texture = SubResource("CanvasTexture_e7wif")
 
 [node name="menuTitle" type="Label" parent="." unique_id=1187824986]
-offset_left = 1.0
-offset_top = 6.0
-offset_right = 1156.0
+offset_left = 389.0
+offset_top = 40.0
+offset_right = 781.0
 offset_bottom = 119.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_w7v3h")
@@ -206,21 +244,21 @@ text = "Catadex :3"
 horizontal_alignment = 1
 
 [node name="Label" type="Label" parent="." unique_id=2147113434]
-offset_left = 11.0
-offset_top = 121.0
-offset_right = 1155.0
-offset_bottom = 186.0
+offset_left = 43.0
+offset_top = 495.0
+offset_right = 1099.0
+offset_bottom = 587.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_w7v3h")
-theme_override_font_sizes/font_size = 28
-text = "Not just cats though! This menu shows you every pet you've owned. Even if you let one go, it'll still show up here. You gotta collect them all~!"
+theme_override_font_sizes/font_size = 38
+text = "This menu shows you every pet you've owned. Not just cats! Even if you let one go, it'll still show up here. You gotta collect them all~!"
 autowrap_mode = 2
 
 [node name="Panel" type="Panel" parent="." unique_id=126362698]
-offset_left = 82.0
-offset_top = 213.0
-offset_right = 1070.0
-offset_bottom = 607.0
+offset_left = 67.0
+offset_top = 122.0
+offset_right = 1055.0
+offset_bottom = 479.0
 
 [node name="CatadexItem1" type="AnimatedSprite2D" parent="Panel" unique_id=2028781693]
 texture_filter = 1
@@ -385,12 +423,15 @@ horizontal_alignment = 1
 
 [node name="backButton" type="Button" parent="." unique_id=1054623189]
 unique_name_in_owner = true
-offset_left = 956.0
-offset_top = 20.0
-offset_right = 1045.0
-offset_bottom = 56.0
-scale = Vector2(2, 2)
-theme_override_font_sizes/font_size = 20
+offset_left = 972.0
+offset_top = 42.0
+offset_right = 1119.0
+offset_bottom = 106.0
+theme_override_colors/font_color = Color(0.30588236, 0.28627452, 0.2784314, 1)
+theme_override_fonts/font = ExtResource("2_w7v3h")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_cjw6g")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_acxwf")
+theme_override_styles/hover = SubResource("StyleBoxFlat_abrlc")
 text = "Back"
-icon = ExtResource("2_u7asp")
 script = ExtResource("10_xbeds")
