@@ -21,12 +21,12 @@ func _ready() -> void:
 	var gacha = randi_range(1, 100)
 	if gacha <= 75:
 		print("common")
-		Global.pet = [1, 2, 3, 4, 5, 6]
+		Global.pet = [1, 2, 3, 4, 6]
 		var commonrandom = Global.pet.pick_random()
 		Global.pet = commonrandom
 	else:
 		print("legendary")
-		Global.pet = [7, 8, 9]
+		Global.pet = [5, 7, 9]
 		var legendaryrandom = Global.pet.pick_random()
 		Global.pet = legendaryrandom
 	loadEquippedPet()
@@ -67,7 +67,7 @@ func loadEquippedPet():
 		petSprite.animation = "baby chicken"
 	if Global.pet == 9:
 		petName.text = "Spider"
-		petSprite.animation - "spider"
+		petSprite.animation = "spider"
 	petSprite.frame = 0
 
 # petting function, so when you click on the cat this runs

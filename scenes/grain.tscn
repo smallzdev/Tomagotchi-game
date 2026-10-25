@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://wq5s6l0n4vas"]
+
+[ext_resource type="Script" uid="uid://buk33ij8ceodc" path="res://scripts/grain.gd" id="1_46e2s"]
+[ext_resource type="Texture2D" uid="uid://2xynay4l8ney" path="res://Resources/InUse/TamagotchiCustomAssets/grain.png.png" id="2_s5qrr"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xrivr"]
+size = Vector2(74, 68.5)
+
+[node name="Grain" type="Node2D" unique_id=768243202]
+script = ExtResource("1_46e2s")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=452878062]
+texture_filter = 1
+scale = Vector2(3, 3)
+texture = ExtResource("2_s5qrr")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=943578556]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1829321011]
+position = Vector2(0, -3.75)
+shape = SubResource("RectangleShape2D_xrivr")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

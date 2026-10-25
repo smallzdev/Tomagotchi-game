@@ -141,7 +141,7 @@ func loadEquippedPet():
 		equippedPetSprite.animation = "baby chicken"
 	if Global.pet == 9:
 		equippedPetName.text = "Spider"
-		equippedPetSprite.animation - "spider"
+		equippedPetSprite.animation = "spider"
 	equippedPetSprite.frame = 0
 # when adding more pets, remember to update this code + pet_sprite.gd....
 

@@ -33,7 +33,7 @@ label_settings = SubResource("LabelSettings_pvtck")
 
 [node name="Camera2D" parent="." unique_id=545306824 instance=ExtResource("3_pvtck")]
 unique_name_in_owner = true
-position = Vector2(575, 323)
+position = Vector2(583, 323)
 
 [node name="timer" type="Label" parent="." unique_id=1707088213]
 unique_name_in_owner = true
