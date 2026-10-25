@@ -232,7 +232,7 @@ func _on_5s_timer_timeout() -> void:
 		statUpdate()
 		spriteAnimation()
 # going to be a 1s timer
-func placeHolderTimerVarUntilVicFinished() -> void:
+func harcore_score_timer() -> void:
 	Global.hardcoreTimer += 1
 	HardcoreTimerLabel.text = "Time: " + str(Global.hardcoreTimer)
 	
