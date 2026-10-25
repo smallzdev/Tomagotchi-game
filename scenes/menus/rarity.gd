@@ -15,7 +15,7 @@ func rarityUpdate():
 	if Global.pet in [1, 2, 3, 4, 6]:
 		rarityLabel.text = "Common"
 		rarityBackground.frame = 0
-	elif Global.pet in [5, 7]:
+	elif Global.pet in [5, 7, 9]:
 		rarityLabel.text = "Legendary"
 		rarityLabel.add_theme_font_size_override("font_size", 34)
 		rarityBackground.frame = 2

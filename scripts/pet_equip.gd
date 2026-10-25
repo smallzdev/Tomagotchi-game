@@ -92,6 +92,17 @@ func _on_pet8_equipped(viewport: Node, event: InputEvent, shape_idx: int) -> voi
 			print("Pet " + str(Global.pet) + " equipped!")
 		else:
 			print("Error, pet 8 is not owned.")
+
+
+func _on_pet9_equipped(viewport: Node, event: InputEvent, shape_idx: int) -> void:
+	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
+		if Global.pet9owned == true:
+			Global.pet = 9
+			loadEquippedPet()
+			print("Pet " + str(Global.pet) + " equipped!")
+		else:
+			print("Error, pet 9 is not owned.")
+
 # end of click to equip pet detection
 
 # loads and displays the current equipped pet
@@ -128,6 +139,9 @@ func loadEquippedPet():
 	if Global.pet == 8:
 		equippedPetName.text = "Baby Chicken"
 		equippedPetSprite.animation = "baby chicken"
+	if Global.pet == 9:
+		equippedPetName.text = "Spider"
+		equippedPetSprite.animation - "spider"
 	equippedPetSprite.frame = 0
 # when adding more pets, remember to update this code
 
@@ -154,6 +168,8 @@ func loadEquippedPet():
 @onready var petSprite7Name = %PetLabel7
 @onready var petSprite8 = %PetSprite8
 @onready var petSprite8Name = %PetLabel8
+@onready var petSprite9 = %PetSprite9
+@onready var petSprite9Label = %PetLabel9
 
 func showOwned():
 	# falses
@@ -181,6 +197,9 @@ func showOwned():
 	if Global.pet8owned == false:
 		petSprite8.frame = 1
 		petSprite8Name.text = "????"
+	if Global.pet9owned == false:
+		petSprite9.frame = 1
+		petSprite9Label.text = "????"
 	
 	# trues
 	if Global.pet1owned == true:
@@ -207,3 +226,6 @@ func showOwned():
 	if Global.pet8owned == true:
 		petSprite8.frame = 0
 		petSprite8Name.text = "Baby Chicken"
+	if Global.pet9owned == true:
+		petSprite9.frame = 0
+		petSprite9Label.text = "Spider"

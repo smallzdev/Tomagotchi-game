@@ -27,6 +27,8 @@ func back_button_pressed():
 @onready var pet7Label = $Panel/CatadexItem7Label
 @onready var pet8Sprite = $Panel/CatadexItem8
 @onready var pet8Label = $Panel/CatadexItem8Label
+@onready var pet9Sprite = $Panel/CatadexItem9
+@onready var pet9Label = $Panel/CatadexItem9Label
 
 # catadex updating variable
 # SooOOOOosoOOoo messy :/
@@ -79,3 +81,9 @@ func catadexUpdate():
 	if Global.pet8owned == false:
 		pet8Label.text = "????"
 		pet8Sprite.frame = 1
+	if Global.pet9owned == true:
+		pet9Label.text = "Spider"
+		pet9Sprite.frame = 0
+	if Global.pet9owned == false:
+		pet9Label.text = "????"
+		pet9Sprite.frame = 1

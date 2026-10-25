@@ -12,7 +12,8 @@ var love = 0
 var pet = 2
 
 # pets and if they're owned
-# currently, they're all true for testing purposes.
+# currently, they're all true except for a few for
+# testing purposes.
 var pet1owned = true
 var pet2owned = true
 var pet3owned = false
@@ -21,6 +22,7 @@ var pet5owned = true
 var pet6owned = true
 var pet7owned = true
 var pet8owned = false
+var pet9owned = true
 
 # hardcore mode toggle
 var hardcore = false
@@ -42,6 +44,8 @@ var characterpools = {
 	],
 	
 	"legendary": [
-		"Ghost"
+		"Ghost",
+		"Penguin",
+		"Spider"
 	]
 }

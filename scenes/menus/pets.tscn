@@ -17,6 +17,8 @@
 [ext_resource type="Texture2D" uid="uid://bwnu12weboyh4" path="res://Resources/InUse/TamagotchiCustomAssets/pets/penguin.png" id="7_u5fce"]
 [ext_resource type="Texture2D" uid="uid://bcavxfx2el72s" path="res://Resources/InUse/TamagotchiCustomAssets/pets/Outlines/fish-outline.png" id="8_qtxby"]
 [ext_resource type="Texture2D" uid="uid://pf78d14ebxut" path="res://Resources/InUse/TamagotchiCustomAssets/pets/Outlines/pumpin-shadow.png" id="12_hgu4i"]
+[ext_resource type="Texture2D" uid="uid://b64t62s47vcjg" path="res://Resources/InUse/TamagotchiCustomAssets/pets/spider.png" id="16_7es7a"]
+[ext_resource type="Texture2D" uid="uid://cipqnn24ybwx3" path="res://Resources/InUse/TamagotchiCustomAssets/pets/Outlines/?.png" id="17_8yq4b"]
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_rkuql"]
 specular_color = Color(0.95686275, 0.95686275, 0.95686275, 1)
@@ -39,6 +41,10 @@ region = Rect2(0, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4272l"]
 atlas = ExtResource("6_u5fce")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nnuhk"]
+atlas = ExtResource("16_7es7a")
 region = Rect2(0, 0, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ehm21"]
@@ -134,6 +140,17 @@ animations = [{
 }],
 "loop": 1,
 "name": &"pumpkin",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nnuhk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_8yq4b")
+}],
+"loop": 1,
+"name": &"spider",
 "speed": 5.0
 }]
 
@@ -392,17 +409,21 @@ shape = SubResource("RectangleShape2D_stm8k")
 script = ExtResource("1_y4cg6")
 
 [node name="PetSprite9" type="AnimatedSprite2D" parent="Panel/Area2D9" unique_id=1794594538]
+unique_name_in_owner = true
 texture_filter = 1
 position = Vector2(143, 210)
 scale = Vector2(3.5, 3.5)
 sprite_frames = SubResource("SpriteFrames_ehm21")
-animation = &"blank"
+animation = &"spider"
 
 [node name="PetLabel9" type="Label" parent="Panel/Area2D9" unique_id=1481782909]
-offset_left = 130.0
+unique_name_in_owner = true
+offset_left = 103.0
 offset_top = 254.0
-offset_right = 157.0
+offset_right = 187.0
 offset_bottom = 277.0
+theme_override_fonts/font = ExtResource("2_qtxby")
+text = "Spider"
 horizontal_alignment = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Panel/Area2D9" unique_id=1820965029]
@@ -723,3 +744,4 @@ script = ExtResource("3_ehm21")
 [connection signal="input_event" from="Panel/Area2D6" to="Panel/Area2D6" method="_on_pet6_equipped"]
 [connection signal="input_event" from="Panel/Area2D7" to="Panel/Area2D" method="_on_pet7_equipped"]
 [connection signal="input_event" from="Panel/Area2D8" to="Panel/Area2D" method="_on_pet8_equipped"]
+[connection signal="input_event" from="Panel/Area2D9" to="Panel/Area2D" method="_on_pet9_equipped"]

@@ -21,6 +21,7 @@
 [ext_resource type="Texture2D" uid="uid://bwoqi4m63v3xe" path="res://Resources/InUse/TamagotchiCustomAssets/pets/ginger-cat-animated.png" id="13_r20aw"]
 [ext_resource type="Texture2D" uid="uid://bwnu12weboyh4" path="res://Resources/InUse/TamagotchiCustomAssets/pets/penguin.png" id="15_krc6o"]
 [ext_resource type="Texture2D" uid="uid://ceymqu0dyfx4y" path="res://Resources/InUse/TamagotchiCustomAssets/pets/grey-animated-cat.png" id="15_xgfuv"]
+[ext_resource type="Texture2D" uid="uid://b64t62s47vcjg" path="res://Resources/InUse/TamagotchiCustomAssets/pets/spider.png" id="18_r20aw"]
 [ext_resource type="Texture2D" uid="uid://ctjk7wurvnlqb" path="res://Resources/InUse/TamagotchiCustomAssets/colouredtitles.png" id="22_51xs6"]
 [ext_resource type="Script" uid="uid://vkw0s1vjtplq" path="res://scenes/menus/rarity.gd" id="23_ahvjs"]
 
@@ -332,6 +333,30 @@ region = Rect2(0, 64, 32, 32)
 atlas = ExtResource("13_36xus")
 region = Rect2(32, 64, 32, 32)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_gclpq"]
+atlas = ExtResource("18_r20aw")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6jm6k"]
+atlas = ExtResource("18_r20aw")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pe0cs"]
+atlas = ExtResource("18_r20aw")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kp4ad"]
+atlas = ExtResource("18_r20aw")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xvjk4"]
+atlas = ExtResource("18_r20aw")
+region = Rect2(0, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o58lg"]
+atlas = ExtResource("18_r20aw")
+region = Rect2(32, 64, 32, 32)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_stm8k"]
 animations = [{
 "frames": [{
@@ -513,6 +538,29 @@ animations = [{
 }],
 "loop": 1,
 "name": &"pumpkin",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gclpq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6jm6k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pe0cs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kp4ad")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xvjk4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o58lg")
+}],
+"loop": 1,
+"name": &"spider",
 "speed": 5.0
 }]
 
@@ -1105,6 +1153,9 @@ vertical_alignment = 1
 
 [node name="HardcoreTimer" type="Timer" parent="." unique_id=662359714]
 wait_time = 2.0
+autostart = true
+
+[node name="HardcoreScoreTimer" type="Timer" parent="." unique_id=1576465864]
 autostart = true
 
 [connection signal="input_event" from="Area2D" to="Area2D" method="petting_love"]

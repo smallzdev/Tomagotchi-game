@@ -118,6 +118,9 @@ func petDetection():
 	elif Global.pet == 8:
 		petSprite.animation = "baby chicken"
 		petSpriteNameText.text = "Baby Chicken"
+	elif Global.pet == 9:
+		petSprite.animation = "spider"
+		petSpriteNameText.text = "Spider"
 
 # when updating, make sure to also update pet_sprite.gd
 # as it uses this same function
