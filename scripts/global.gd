@@ -29,6 +29,13 @@ var hardcore = false
 
 var hatched = false
 
+var grains = 0
+
+func add_grains(amount: int) -> void:
+	grains+=amount
+	print("# grains: ", grains)
+	Eventcontroller.emit_signal("grain_collected", grains)
+
 # ok i dont think we need this - v 
 # remove tag if we do
 #var raritygacha = [

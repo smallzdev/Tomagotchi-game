@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://7s5fj1hnj2b1"]
+
+[ext_resource type="Script" uid="uid://p4muvyem1p3a" path="res://scripts/grain_ui.gd" id="1_wdji7"]
+[ext_resource type="Texture2D" uid="uid://2xynay4l8ney" path="res://Resources/InUse/TamagotchiCustomAssets/grain.png.png" id="2_jjnkw"]
+[ext_resource type="FontFile" uid="uid://dyibl4resr8wn" path="res://Resources/font/augiepixel.ttf" id="3_ov6x4"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_xrivr"]
+font = ExtResource("3_ov6x4")
+font_size = 82
+font_color = Color(0, 0, 0, 1)
+
+[node name="grain_ui" type="Control" unique_id=1734086535]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_wdji7")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=474801516]
+texture_filter = 1
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(3, 3)
+texture = ExtResource("2_jjnkw")
+
+[node name="Label" type="Label" parent="." unique_id=1335033664]
+layout_mode = 0
+offset_left = 122.0
+offset_top = 19.0
+offset_right = 161.0
+offset_bottom = 98.0
+text = "0"
+label_settings = SubResource("LabelSettings_xrivr")

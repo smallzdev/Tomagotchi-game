@@ -1,11 +1,15 @@
 extends Control
 
+@onready var label = %Label
 
-# Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	Eventcontroller.connect("grain_collected", on_event_grain_collected)
+	label.text = str(Global.grains)
+	# whenever coin collected happens: make sure to run 
+	# on event coin collected
 
+func reset_ui() -> void:
+	label.text = "0"
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+func on_event_grain_collected(amount: int) -> void:
+	label.text = str(Global.grains)
