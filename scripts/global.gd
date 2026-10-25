@@ -12,7 +12,8 @@ var love = 0
 var pet = 2
 
 # pets and if they're owned
-# currently, they're all true for testing purposes.
+# currently, they're all true except for a few 
+# for testing purposes.
 var pet1owned = true # Pet 1 - "Ginger Cat"
 var pet2owned = true # Pet 2 - "Grey Cat"
 var pet3owned = false # Pet 3 - "Cat3" (this is like the one with a brown face)
@@ -21,6 +22,7 @@ var pet5owned = true # Pet 5 - "Ghost"
 var pet6owned = true # Pet 6 - "Pumpkin"
 var pet7owned = true # Pet 7 - "Penguin"
 var pet8owned = false # Pet 8 - "Baby Chicken"
+var pet9owned = true
 
 # hardcore mode toggle
 var hardcore = false
@@ -45,6 +47,8 @@ var hatched = false
 	#],
 	#
 	#"legendary": [
-		#"Ghost"
+		#"Ghost",
+		#"Penguin",
+		#"Spider"
 	#]
 #}
