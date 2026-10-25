@@ -1188,6 +1188,16 @@ autostart = true
 [node name="HardcoreScoreTimer" type="Timer" parent="." unique_id=1576465864]
 autostart = true
 
+[node name="HarcoreScoreLabel" type="Label" parent="." unique_id=1696041550]
+offset_left = 27.0
+offset_top = 35.0
+offset_right = 108.0
+offset_bottom = 78.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_ymjn7")
+theme_override_font_sizes/font_size = 44
+text = "Time: N/a"
+
 [connection signal="input_event" from="Area2D" to="Area2D" method="petting_love"]
 [connection signal="timeout" from="Timer" to="petsButton" method="_on_5s_timer_timeout"]
 [connection signal="timeout" from="HardcoreTimer" to="petsButton" method="_on_hardcore_timer_timeout"]
