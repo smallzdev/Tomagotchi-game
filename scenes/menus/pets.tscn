@@ -225,10 +225,10 @@ shape = SubResource("RectangleShape2D_stm8k")
 
 [node name="Label" type="Label" parent="Panel" unique_id=799426517]
 layout_mode = 0
-offset_left = 6.0
-offset_top = 1.0
-offset_right = 654.0
-offset_bottom = 38.0
+offset_left = 15.0
+offset_top = 10.0
+offset_right = 663.0
+offset_bottom = 47.0
 theme_override_fonts/font = ExtResource("2_qtxby")
 theme_override_font_sizes/font_size = 38
 text = "Click on a Pet to Equip"
@@ -683,10 +683,10 @@ position = Vector2(579, 320)
 shape = SubResource("RectangleShape2D_stm8k")
 
 [node name="menuTitle" type="Label" parent="." unique_id=151105245]
-offset_left = 1.0
-offset_top = 6.0
-offset_right = 1156.0
-offset_bottom = 119.0
+offset_left = 3.0
+offset_top = 33.0
+offset_right = 1158.0
+offset_bottom = 146.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_qtxby")
 theme_override_font_sizes/font_size = 82
@@ -696,17 +696,17 @@ horizontal_alignment = 1
 [node name="EquippedPetSprite" type="AnimatedSprite2D" parent="." unique_id=1624845440]
 unique_name_in_owner = true
 texture_filter = 1
-position = Vector2(129, 310)
+position = Vector2(127, 328)
 scale = Vector2(8, 8)
 sprite_frames = SubResource("SpriteFrames_ehm21")
 animation = &"ginger cat"
 
 [node name="PetNameLabel" type="Label" parent="." unique_id=622613827]
 unique_name_in_owner = true
-offset_left = 24.0
-offset_top = 150.0
-offset_right = 247.0
-offset_bottom = 205.0
+offset_left = 22.0
+offset_top = 168.0
+offset_right = 259.0
+offset_bottom = 223.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_qtxby")
 theme_override_font_sizes/font_size = 50
@@ -714,10 +714,10 @@ text = "[Pet Name]"
 horizontal_alignment = 1
 
 [node name="EquippedStatusLabel" type="Label" parent="." unique_id=692220823]
-offset_left = 60.0
-offset_top = 418.0
-offset_right = 190.0
-offset_bottom = 453.0
+offset_left = 58.0
+offset_top = 436.0
+offset_right = 210.0
+offset_bottom = 471.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_qtxby")
 theme_override_font_sizes/font_size = 34

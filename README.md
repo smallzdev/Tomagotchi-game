@@ -19,7 +19,7 @@ Every week we write another section in the readme explaining what we've done tha
 # AI Declaration
 Both of us only used AI to debug a bit of our code and to ask it a few general questions about GoDot. Please note that we are still both very new to game development and Godot! This is our second game :D
 
-## Week 1: Cinnamon
+# Week 1: Cinnamon
 <details open>
 <summary></summary>
 

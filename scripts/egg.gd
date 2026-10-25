@@ -1,6 +1,6 @@
 extends Node2D
 
-var collected = false
+
 var holdsec = 0
 #var randomint 
 @onready var eggsprite = %eggsprite
@@ -14,14 +14,14 @@ func _ready() -> void:
 	# generates random seed
 
 func _process(delta) -> void:
-	if Input.is_action_pressed("interact") and not collected:
+	if Input.is_action_pressed("interact") and not Global.hatched:
 		holdsec += delta
 		eggtimer.text = str(snapped((5-holdsec), 0.1)) + " seconds left!" 
 		camerashake.screen_shake(5, 0.5)
 		#delta is seconds measured with frames
 		#+=1 doesnt work: 60 fps holdsec increase 60 per second
 		if holdsec >= 5:
-			collected = true 
+			Global.hatched = true 
 			eggsprite.play("cracked")
 			await get_tree().create_timer(2.0).timeout
 			var randomint = randi_range(1, 100)
