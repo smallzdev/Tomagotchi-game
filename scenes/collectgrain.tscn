@@ -1,7 +1,9 @@
 [gd_scene format=3 uid="uid://cruya8oy0jnwt"]
 
+[ext_resource type="Script" uid="uid://1pxvxf3n6oxo" path="res://scenes/collectgrain.gd" id="1_4jhex"]
 [ext_resource type="PackedScene" uid="uid://bkhit85bmmlor" path="res://scenes/basket.tscn" id="1_gxq67"]
 [ext_resource type="Texture2D" uid="uid://cp3trgw5n2mge" path="res://Resources/PixelPack copy/Terrain/Terrain (16x16).png" id="2_sbdrl"]
+[ext_resource type="PackedScene" uid="uid://7s5fj1hnj2b1" path="res://scenes/grain_ui.tscn" id="4_4jhex"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_djw0p"]
 texture = ExtResource("2_sbdrl")
@@ -159,6 +161,7 @@ physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_djw0p")
 
 [node name="Node" type="Node" unique_id=1016466632]
+script = ExtResource("1_4jhex")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=724870029]
 position = Vector2(579, 324)
@@ -176,3 +179,7 @@ scale = Vector2(4, 4)
 tile_set = SubResource("TileSet_13qdw")
 format = 2
 layer_0/tile_data = PackedInt32Array(2621440, 393216, 4, 589824, 393216, 4, 589825, 458752, 4, 589826, 458752, 4, 589827, 458752, 4, 589828, 458752, 4, 589829, 458752, 4, 589830, 458752, 4, 589831, 458752, 4, 589832, 458752, 4, 589833, 458752, 4, 589834, 458752, 4, 589835, 458752, 4, 589836, 458752, 4, 589837, 458752, 4, 589838, 458752, 4, 589839, 458752, 4, 589840, 458752, 4, 589841, 524288, 4, 655359, 786432, 5, 589823, 786432, 5, 524287, 786432, 5, 458751, 786432, 5, 393215, 786432, 5, 327679, 786432, 5, 262143, 786432, 5, 196607, 786432, 5, 131071, 786432, 5, 65535, 786432, 5, -1, 786432, 5, -65536, 786432, 5, -65535, 786432, 5, -65534, 786432, 5, -65533, 786432, 5, -65532, 786432, 5, -65531, 786432, 5, -65530, 786432, 5, -65529, 786432, 5, -65528, 786432, 5, -65527, 786432, 5, -65526, 786432, 5, -65525, 786432, 5, -65524, 786432, 5, -65523, 786432, 5, -65522, 786432, 5, -65521, 786432, 5, -65520, 786432, 5, -65519, 786432, 5, -65518, 786432, 5, 18, 786432, 5, 65554, 786432, 5, 131090, 786432, 5, 196626, 786432, 5, 262162, 786432, 5, 327698, 786432, 5, 393234, 786432, 5, 458770, 786432, 5, 524306, 786432, 5, 589842, 786432, 5)
+
+[node name="grain_ui" parent="." unique_id=1734086535 instance=ExtResource("4_4jhex")]
+
+[node name="Timer" type="Timer" parent="." unique_id=1590058882]

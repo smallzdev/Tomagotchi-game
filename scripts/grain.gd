@@ -11,3 +11,6 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body is CharacterBody2D: 
 		Global.add_grains(amount)
 		self.queue_free()
+
+func _process(delta: float) -> void:
+	position.y += 500 * delta
