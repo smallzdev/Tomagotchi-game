@@ -24,6 +24,7 @@
 [ext_resource type="Texture2D" uid="uid://b64t62s47vcjg" path="res://Resources/InUse/TamagotchiCustomAssets/pets/spider.png" id="18_r20aw"]
 [ext_resource type="Texture2D" uid="uid://ctjk7wurvnlqb" path="res://Resources/InUse/TamagotchiCustomAssets/colouredtitles.png" id="22_51xs6"]
 [ext_resource type="Script" uid="uid://vkw0s1vjtplq" path="res://scenes/menus/rarity.gd" id="23_ahvjs"]
+[ext_resource type="Texture2D" uid="uid://oqwl2qoj1ien" path="res://Resources/InUse/TamagotchiCustomAssets/timericon.png" id="25_xgfuv"]
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_sy1ir"]
 specular_color = Color(0.95686275, 0.95686275, 0.95686275, 1)
@@ -1185,18 +1186,30 @@ vertical_alignment = 1
 wait_time = 2.0
 autostart = true
 
-[node name="HardcoreScoreTimer" type="Timer" parent="." unique_id=1576465864]
+[node name="HardcoreDecreaseStatsTimer" type="Timer" parent="." unique_id=1576465864]
 autostart = true
 
 [node name="HarcoreScoreLabel" type="Label" parent="." unique_id=1696041550]
-offset_left = 27.0
+offset_left = 99.0
 offset_top = 35.0
-offset_right = 108.0
+offset_right = 267.0
 offset_bottom = 78.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("4_ymjn7")
 theme_override_font_sizes/font_size = 44
 text = "Time: N/a"
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1158774084]
+texture_filter = 1
+offset_left = 28.0
+offset_top = 22.0
+offset_right = 68.0
+offset_bottom = 62.0
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("25_xgfuv")
+
+[node name="HardcoreScore" type="Timer" parent="." unique_id=169801338]
+autostart = true
 
 [connection signal="input_event" from="Area2D" to="Area2D" method="petting_love"]
 [connection signal="timeout" from="Timer" to="petsButton" method="_on_5s_timer_timeout"]

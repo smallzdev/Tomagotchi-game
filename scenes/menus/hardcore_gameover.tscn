@@ -2,6 +2,7 @@
 
 [ext_resource type="FontFile" uid="uid://dyibl4resr8wn" path="res://Resources/font/augiepixel.ttf" id="1_kvcsj"]
 [ext_resource type="Script" uid="uid://dhismqn5ngu3j" path="res://scripts/menu_button.gd" id="2_nfs5h"]
+[ext_resource type="Script" uid="uid://c53ien0stsk0v" path="res://scenes/menus/hardcore_game_over.gd" id="3_jrs8y"]
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_1kjw7"]
 specular_color = Color(0.95686275, 0.95686275, 0.95686275, 1)
@@ -104,3 +105,15 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_3bekm")
 theme_override_styles/hover = SubResource("StyleBoxFlat_jhi4d")
 text = "replay"
 script = ExtResource("2_nfs5h")
+
+[node name="scoreLabel" type="Label" parent="." unique_id=127619922]
+offset_left = 28.0
+offset_top = 570.0
+offset_right = 206.0
+offset_bottom = 631.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_kvcsj")
+theme_override_font_sizes/font_size = 29
+text = "Score: N/A
+Highscore: N/A"
+script = ExtResource("3_jrs8y")
