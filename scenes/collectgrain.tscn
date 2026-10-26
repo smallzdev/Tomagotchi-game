@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://1pxvxf3n6oxo" path="res://scenes/collectgrain.gd" id="1_4jhex"]
 [ext_resource type="PackedScene" uid="uid://bkhit85bmmlor" path="res://scenes/basket.tscn" id="1_gxq67"]
+[ext_resource type="Texture2D" uid="uid://ddgdw33smj2q7" path="res://Resources/InUse/TamagotchiCustomAssets/grainbackground.png" id="2_mjd7v"]
 [ext_resource type="Texture2D" uid="uid://cp3trgw5n2mge" path="res://Resources/PixelPack copy/Terrain/Terrain (16x16).png" id="2_sbdrl"]
 [ext_resource type="PackedScene" uid="uid://7s5fj1hnj2b1" path="res://scenes/grain_ui.tscn" id="4_4jhex"]
 [ext_resource type="FontFile" uid="uid://dyibl4resr8wn" path="res://Resources/font/augiepixel.ttf" id="5_4jhex"]
@@ -217,8 +218,10 @@ script = ExtResource("1_4jhex")
 position = Vector2(579, 324)
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=533232292]
+modulate = Color(0.20152658, 0.20152658, 0.20152658, 1)
 offset_right = 40.0
 offset_bottom = 40.0
+texture = ExtResource("2_mjd7v")
 
 [node name="CharacterBody2D" parent="." unique_id=288225890 instance=ExtResource("1_gxq67")]
 position = Vector2(590, 487)

@@ -18,6 +18,7 @@
 [ext_resource type="Texture2D" uid="uid://cipqnn24ybwx3" path="res://Resources/InUse/TamagotchiCustomAssets/pets/Outlines/questionmark.png" id="11_cg3yn"]
 [ext_resource type="Texture2D" uid="uid://pf78d14ebxut" path="res://Resources/InUse/TamagotchiCustomAssets/pets/Outlines/pumpin-shadow.png" id="16_tinwy"]
 [ext_resource type="Texture2D" uid="uid://b64t62s47vcjg" path="res://Resources/InUse/TamagotchiCustomAssets/pets/spider.png" id="17_acxwf"]
+[ext_resource type="AudioStream" uid="uid://cahjsp5m7psuu" path="res://songs/betterhatchapetmenu.wav" id="19_acxwf"]
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_e7wif"]
 specular_color = Color(0.95686275, 0.95686275, 0.95686275, 1)
@@ -435,3 +436,7 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_acxwf")
 theme_override_styles/hover = SubResource("StyleBoxFlat_abrlc")
 text = "Back"
 script = ExtResource("10_xbeds")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1162672179]
+stream = ExtResource("19_acxwf")
+autoplay = true
