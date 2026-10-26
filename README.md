@@ -55,11 +55,11 @@ One aspect of game development we both learned from the first project is keeping
 
 This time, we have folders in folders... (wow it took us 4 weeks to figure that out). Hopefully everything stays organized and easy to manage!
 
-One thing we NEED to learn is Object Orientated Programming. We are planning a gacha system for our pets and currently... it looks like a pain to code. We need to define what pets are in an inventory system, then create a way to define common, rare, legendary, etc.... and also make the rates.... D: 
+One thing we NEED to learn is Object Orientated Programming. We are planning a gacha system for our pets and currently... it looks like a pain to code. We need to define what pets are in a proper inventory system, then create a way to define common, rare, legendary, etc.... and also make the rates.... D: 
 
 If we don't... adding a new pet would be terrible. We would have to change all the hardcoded numbers and everything...
 
-As of now, we don't even have an inventory system - so we need to work a lot to get everything going...
+As of now, our inventory system is hardcoded too - so we need to work a lot to get everything going...
 
 I'm not entirely sure how to define everything properly, so we don't have to go through 10000000 hard coded lines of if statements. 
 
