@@ -1,12 +1,12 @@
 # hatchapet!
 
-Our Godot Tamagotchi game! This is our 2nd submission to [Hack Club Third Space](https://thirdspace.hackclub.com) where you spend 10 hours a week for 8 weeks making projects! We are only begginers, so please don't judge us too harshly. Something that might seem like it could've taken only half an hour might take us hours including debugging, fixing stuff, cleaning up scripts, customisation, and more.
+Our Godot Tamagotchi game! This is our 2nd submission to [Hack Club Third Space](https://thirdspace.hackclub.com) where you spend 10 hours a week for 8 weeks making projects! We are only beginners, so please don't judge us too harshly. Something that might seem like it could've taken only half an hour might take us hours including debugging, fixing stuff, cleaning up scripts, customisation, and more.
 
 What is a Tamagotchi game you might ask? It's basically like a virtual pet you need to look out and care for! You're meant to feed it, water it, and do tasks to raise it.
 
 Made with ❤️ by [Smallz](https://github.com/smallzdev) and [Vick-St3r](https://github.com/Vick-St3r)
 
-***Play the latest release [here!](https://vick-st3r.itch.io/hatchapet-week-one)***
+***Play the latest release [here!](https://vick-st3r.itch.io/hatchapet-week-two)***
 
 # Credits
 This game was made by Victoria and Smallz. We may of reused some of the assets from our old game, or used free assets from a free public domain [Pixel Pack](https://pixelfrog-assets.itch.io/pixel-adventure-1) made by [Pixel Frog](https://pixelfrog-assets.itch.io/). Of course, we also made our own art specially for this game too.
@@ -14,7 +14,7 @@ This game was made by Victoria and Smallz. We may of reused some of the assets f
 The font is from [jame gam made by augie!](https://jamegam.hackclub.com/)
 
 # Weeks
-Every week we write another section in the readme explaining what we've done that week. Just note, it starts at week one but it's actually week 5 of thirdspace due to us doing a different project in the first half of Third Space.
+Every week we write another section in the README explaining what we've done that week. Just note, it starts at week one but it's actually week 5 of third space due to us doing a different project in the first half of Third Space.
 
 # AI Declaration
 Both of us only used AI to debug a bit of our code and to ask it a few general questions about GoDot. Please note that we are still both very new to game development and Godot! This is our second game :D
@@ -88,3 +88,64 @@ TL;DR We need to be more organized + learn how to write good code outside of if 
 - Levels (?)
 </details>
 
+# Week 2: Best Friend 
+<details open>
+<summary></summary>
+
+Week two release [here!](https://vick-st3r.itch.io/hatchapet-week-two)
+
+Our this week was best friend! Therefore, we decided to add a golden retriever, "Goldie" in our game. A man's best friend.
+
+![image](https://github.com/smallzdev/Tomagotchi-game/blob/main/screenshots/week6doggy.PNG)
+
+Please note Goldie is only in the files of the game. She will become playable soon!
+
+![image](https://github.com/smallzdev/Tomagotchi-game/blob/main/screenshots/week6grain.PNG)
+
+Collect the grains! These grains are used to feed your pet. 
+
+![image](https://github.com/smallzdev/Tomagotchi-game/blob/main/screenshots/week6hardcore.PNG)
+
+A hardcore mode?!?!?!
+
+![image](https://github.com/smallzdev/Tomagotchi-game/blob/main/screenshots/week6maingame.PNG)
+
+Here's how our home screen looks. A few things have changed!
+
+![image](https://github.com/smallzdev/Tomagotchi-game/blob/main/Resources/InUse/TamagotchiCustomAssets/grainbackground.PNG)
+
+A lovely drawing from MS Paint. This is a sketch of approximately what I want the background to look like. We probably won't get to a full drawing....
+
+## What we learned
+
+As I started my weekend grind, I was hit with a merge conflict. Due to my OS being windows and Smallz's OS being MacOS we were bound to face this problem. Smallz named one of his files ?.png and that caused an `error: invalid path` on my end. So, I made a codespace of the repository and changed ?.png -> questionmark.png.
+
+I also thought we had to learn oop. Turns out we can if statement everything! :D (Although.. after third spaces, I hope that I never have to edit the code in this game ever again :'))
+
+One thing about this - you need to make sure everythings commented. I was looking through some code and I got super confused!
+
+## Notes on compositon 
+
+I couldn't come up with anything good this week. I was trying to compose the main menu track, however nothing came to mind. I still tried to come up with a track, however nothing seemed to hit. I tried making it the main menu song, but it kinda sucked, so I moved it to a smaller part of the game (catadex). I want the main menu song to be super upbeat.
+
+## Feature list
+
+1. Inventory works
+2. Gacha actually works!
+3. Grain minigame 
+4. Hardcore mode
+5. Spider pet
+6. Grains as a currency 
+7. Rarity labels
+8. Stats can decrease
+9. Lots of UI changes
+
+## Future plans 
+
+1. Add power ups to grain minigame? 
+    - Speed up, 2x grain?
+2. Friction to basket
+3. Naming your pets
+4. Farm -> Shop, hangout with your pet, energy minigame?
+
+</details>
