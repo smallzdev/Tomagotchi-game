@@ -112,7 +112,7 @@ A hardcore mode?!?!?!
 
 Here's how our home screen looks. A few things have changed!
 
-![image](https://github.com/smallzdev/Tomagotchi-game/blob/main/Resources/InUse/TamagotchiCustomAssets/grainbackground.PNG)
+![image](https://github.com/smallzdev/Tomagotchi-game/blob/main/Resources/InUse/TamagotchiCustomAssets/grainbackground.png)
 
 A lovely drawing from MS Paint. This is a sketch of approximately what I want the background to look like. We probably won't get to a full drawing....
 
