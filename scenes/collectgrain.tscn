@@ -219,8 +219,10 @@ position = Vector2(579, 324)
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=533232292]
 modulate = Color(0.20152658, 0.20152658, 0.20152658, 1)
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = -3.0
+offset_top = -20.0
+offset_right = 1149.0
+offset_bottom = 628.0
 texture = ExtResource("2_mjd7v")
 
 [node name="CharacterBody2D" parent="." unique_id=288225890 instance=ExtResource("1_gxq67")]
@@ -238,10 +240,10 @@ layer_0/tile_data = PackedInt32Array(2621440, 393216, 4, 589824, 393216, 4, 5898
 [node name="Timer" type="Timer" parent="." unique_id=1590058882]
 
 [node name="backbutton" type="Button" parent="." unique_id=2045750543]
-offset_left = 843.0
-offset_top = 46.0
-offset_right = 1105.0
-offset_bottom = 117.0
+offset_left = 859.0
+offset_top = 62.0
+offset_right = 1121.0
+offset_bottom = 133.0
 theme_override_colors/font_color = Color(0.30588236, 0.28627452, 0.2784314, 1)
 theme_override_fonts/font = ExtResource("5_4jhex")
 theme_override_font_sizes/font_size = 50

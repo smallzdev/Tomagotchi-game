@@ -62,7 +62,6 @@ func _ready():
 func foodButton_pressed():
 	if Global.grains <10: 
 		errorpanel.visible = true
-		%foodButton.disabled = true
 	Global.grains -=5
 	if Global.food <= 90:
 		print("Food is less than 100, at " + str(Global.food))
@@ -287,3 +286,7 @@ func spriteAnimation():
 
 func _on_errorbutton_pressed() -> void:
 	errorpanel.visible = false
+
+func _process(delta: float) -> void:
+	if Global.grains <10: 
+		%foodButton.disabled = true
