@@ -12,6 +12,7 @@ func _ready() -> void:
 	hardcoreButton.pressed.connect(hardcore_button_pressed)
 	
 func play_button_pressed():
+	Global.hardcore = false
 	if Global.hatched == false:
 		get_tree().call_deferred("change_scene_to_file", "res://scenes/gacha.tscn")
 	else: 
@@ -25,4 +26,7 @@ func settings_button_pressed():
 	
 func hardcore_button_pressed():
 	Global.hardcore = true
-	get_tree().call_deferred("change_scene_to_file", "res://scenes/gacha.tscn")
+	if Global.hatched == false:
+		get_tree().call_deferred("change_scene_to_file", "res://scenes/gacha.tscn")
+	else:
+		get_tree().call_deferred("change_scene_to_file", "res://scenes/menus/main_game_scene.tscn")

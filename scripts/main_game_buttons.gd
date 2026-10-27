@@ -260,11 +260,12 @@ func _on_hardcore_timer_timeout() -> void:
 			Global.energy -= 5
 		
 		if Global.food >= 0 or Global.water >= 0 or Global.energy >= 0 or Global.love >= 0:
-			if Global.hardcoreTimer > Global.hardcoreHighScore:
-				Global.hardcoreHighScore = Global.hardcoreTimer
-			get_tree().call_deferred("change_scene_to_file", "res://scenes/menus/hardcore_gameover.tscn")
-		statUpdate()
-		spriteAnimation()
+			if Global.hardcoreTimer > 5:
+				if Global.hardcoreTimer > Global.hardcoreHighScore:
+					Global.hardcoreHighScore = Global.hardcoreTimer
+				get_tree().call_deferred("change_scene_to_file", "res://scenes/menus/hardcore_gameover.tscn")
+				statUpdate()
+				spriteAnimation()
 
 	
 # WARNING: This function also appears in pet_sprite.gd

@@ -89,9 +89,9 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_4doys")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_3bekm")
 theme_override_styles/hover = SubResource("StyleBoxFlat_jhi4d")
 text = "menu"
-script = ExtResource("2_nfs5h")
+script = ExtResource("3_jrs8y")
 
-[node name="menuButton3" type="Button" parent="." unique_id=745562849]
+[node name="replayButton" type="Button" parent="." unique_id=745562849]
 unique_name_in_owner = true
 offset_left = 571.0
 offset_top = 485.0
@@ -107,6 +107,7 @@ text = "replay"
 script = ExtResource("2_nfs5h")
 
 [node name="scoreLabel" type="Label" parent="." unique_id=127619922]
+unique_name_in_owner = true
 offset_left = 28.0
 offset_top = 570.0
 offset_right = 206.0
@@ -116,4 +117,3 @@ theme_override_fonts/font = ExtResource("1_kvcsj")
 theme_override_font_sizes/font_size = 29
 text = "Score: N/A
 Highscore: N/A"
-script = ExtResource("3_jrs8y")
