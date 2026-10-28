@@ -435,20 +435,29 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_stm8k"]
-size = Vector2(20, 6.166667)
+size = Vector2(30.333332, 13.124999)
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_stm8k"]
-radius = 4.583332
-height = 9.166664
+radius = 4.166666
+height = 9.666668
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_udkci"]
-size = Vector2(22, 10.166668)
+size = Vector2(22.833336, 6.0416665)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_j3pc0"]
-size = Vector2(9.583336, 10.75)
+size = Vector2(14.90143, 30.16534)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ypnfv"]
-size = Vector2(9.208332, 7.041668)
+size = Vector2(10.005208, 9.588543)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_s53av"]
+size = Vector2(24.5, 6.291666)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e6624"]
+size = Vector2(16.500002, 8.916668)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vddhp"]
+size = Vector2(15.416668, 12.25)
 
 [node name="Node2D" type="Node2D" unique_id=1085035746]
 
@@ -465,6 +474,7 @@ script = ExtResource("1_e6624")
 
 [node name="PetSprite" type="AnimatedSprite2D" parent="catArea" unique_id=1567652939]
 unique_name_in_owner = true
+visible = false
 texture_filter = 1
 position = Vector2(3.5833335, -0.4166667)
 scale = Vector2(2, 2)
@@ -472,28 +482,163 @@ sprite_frames = SubResource("SpriteFrames_wao47")
 animation = &"grey cat"
 
 [node name="earsCollision" type="CollisionShape2D" parent="catArea" unique_id=524916894]
+visible = false
 position = Vector2(4.833336, -15.5)
 shape = SubResource("RectangleShape2D_stm8k")
 
 [node name="mouthCollision" type="CollisionShape2D" parent="catArea" unique_id=828334349]
+visible = false
 position = Vector2(4.25, -1.25)
 shape = SubResource("CapsuleShape2D_stm8k")
 
 [node name="feetCollision" type="CollisionShape2D" parent="catArea" unique_id=1294014489]
+visible = false
 position = Vector2(4.583336, 18.666666)
 shape = SubResource("RectangleShape2D_udkci")
 
 [node name="tailCollision" type="CollisionShape2D" parent="catArea" unique_id=424625465]
+visible = false
 position = Vector2(-16.208332, 12.791666)
 shape = SubResource("RectangleShape2D_j3pc0")
 
 [node name="whiskerCollision" type="CollisionShape2D" parent="catArea" unique_id=339754971]
+visible = false
 position = Vector2(-8.479164, -5.4375)
 shape = SubResource("RectangleShape2D_ypnfv")
 
 [node name="whiskerCollision2" type="CollisionShape2D" parent="catArea" unique_id=1773595170]
+visible = false
 position = Vector2(18.250004, -5.9166665)
 shape = SubResource("RectangleShape2D_ypnfv")
+
+[node name="goldfishArea" type="Area2D" parent="." unique_id=1602063771]
+position = Vector2(516, 334)
+scale = Vector2(12, 12)
+script = ExtResource("1_e6624")
+
+[node name="PetSprite" type="AnimatedSprite2D" parent="goldfishArea" unique_id=1889907257]
+texture_filter = 1
+position = Vector2(3.5833335, -0.4166667)
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_wao47")
+animation = &"goldfish"
+
+[node name="earsCollision" type="CollisionShape2D" parent="goldfishArea" unique_id=868161909]
+position = Vector2(-0.41666412, 1.145834)
+shape = SubResource("RectangleShape2D_stm8k")
+
+[node name="mouthCollision" type="CollisionShape2D" parent="goldfishArea" unique_id=79952460]
+position = Vector2(-19.916668, 2.5000002)
+shape = SubResource("CapsuleShape2D_stm8k")
+
+[node name="feetCollision" type="CollisionShape2D" parent="goldfishArea" unique_id=1445337410]
+position = Vector2(-3.7499924, 10.437502)
+shape = SubResource("RectangleShape2D_udkci")
+
+[node name="tailCollision" type="CollisionShape2D" parent="goldfishArea" unique_id=214845211]
+position = Vector2(22.117386, 0.6660023)
+shape = SubResource("RectangleShape2D_j3pc0")
+
+[node name="whiskerCollision" type="CollisionShape2D" parent="goldfishArea" unique_id=367868867]
+position = Vector2(-10.916667, -14.333334)
+shape = SubResource("RectangleShape2D_ypnfv")
+
+[node name="whiskerCollision2" type="CollisionShape2D" parent="goldfishArea" unique_id=835425591]
+position = Vector2(-21.083336, -12.25)
+shape = SubResource("RectangleShape2D_ypnfv")
+
+[node name="pumpkinArea" type="Area2D" parent="." unique_id=1680887459]
+position = Vector2(516, 334)
+scale = Vector2(12, 12)
+script = ExtResource("1_e6624")
+
+[node name="PetSprite" type="AnimatedSprite2D" parent="pumpkinArea" unique_id=773034758]
+visible = false
+texture_filter = 1
+position = Vector2(3.5833335, -0.4166667)
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_wao47")
+animation = &"pumpkin"
+
+[node name="stemCollision" type="CollisionShape2D" parent="pumpkinArea" unique_id=168949282]
+visible = false
+position = Vector2(3.4583359, -15.541667)
+shape = SubResource("RectangleShape2D_stm8k")
+
+[node name="mouthCollision" type="CollisionShape2D" parent="pumpkinArea" unique_id=1028586108]
+visible = false
+position = Vector2(3.416668, 8.729166)
+shape = SubResource("RectangleShape2D_s53av")
+
+[node name="feetCollision" type="CollisionShape2D" parent="pumpkinArea" unique_id=1568392256]
+visible = false
+position = Vector2(3.5833359, 17.875002)
+shape = SubResource("RectangleShape2D_udkci")
+
+[node name="sidesCollision2" type="CollisionShape2D" parent="pumpkinArea" unique_id=1834431027]
+visible = false
+position = Vector2(22.18444, 3.663824)
+rotation = -0.0030400974
+shape = SubResource("RectangleShape2D_j3pc0")
+
+[node name="sidesCollision" type="CollisionShape2D" parent="pumpkinArea" unique_id=1758683283]
+visible = false
+position = Vector2(-15, 4.7500005)
+rotation = -0.0030400974
+shape = SubResource("RectangleShape2D_j3pc0")
+
+[node name="eyeCollision" type="CollisionShape2D" parent="pumpkinArea" unique_id=1931350455]
+visible = false
+position = Vector2(-3.25, 0.5833335)
+shape = SubResource("RectangleShape2D_ypnfv")
+
+[node name="eyeCollision2" type="CollisionShape2D" parent="pumpkinArea" unique_id=1590871395]
+visible = false
+position = Vector2(12.4140625, 0.58854103)
+shape = SubResource("RectangleShape2D_ypnfv")
+
+[node name="penguinArea" type="Area2D" parent="." unique_id=1243086964]
+position = Vector2(516, 334)
+scale = Vector2(12, 12)
+script = ExtResource("1_e6624")
+
+[node name="PetSprite" type="AnimatedSprite2D" parent="penguinArea" unique_id=2013291588]
+visible = false
+texture_filter = 1
+position = Vector2(3.5833335, -0.4166667)
+scale = Vector2(1.5, 1.5)
+sprite_frames = SubResource("SpriteFrames_wao47")
+animation = &"penguin"
+
+[node name="headCollision" type="CollisionShape2D" parent="penguinArea" unique_id=1854650942]
+visible = false
+position = Vector2(3.2500024, -16.916666)
+shape = SubResource("RectangleShape2D_stm8k")
+
+[node name="mouthCollision" type="CollisionShape2D" parent="penguinArea" unique_id=1646653711]
+visible = false
+position = Vector2(-6, -3.4166672)
+shape = SubResource("RectangleShape2D_e6624")
+
+[node name="feetCollision" type="CollisionShape2D" parent="penguinArea" unique_id=1060576811]
+visible = false
+position = Vector2(4.583336, 18.666666)
+shape = SubResource("RectangleShape2D_udkci")
+
+[node name="flipperCollision" type="CollisionShape2D" parent="penguinArea" unique_id=1697462712]
+visible = false
+position = Vector2(17.145836, 4.900179)
+shape = SubResource("RectangleShape2D_j3pc0")
+
+[node name="flipperCollision2" type="CollisionShape2D" parent="penguinArea" unique_id=2094944317]
+visible = false
+position = Vector2(-9.739582, 5.739584)
+shape = SubResource("RectangleShape2D_ypnfv")
+
+[node name="bellyCollision" type="CollisionShape2D" parent="penguinArea" unique_id=884107978]
+visible = false
+position = Vector2(2.125, 6.958334)
+shape = SubResource("RectangleShape2D_vddhp")
 
 [node name="petSpotLabel" type="Label" parent="." unique_id=1572947373]
 offset_left = 73.0
@@ -502,7 +647,60 @@ offset_right = 596.0
 offset_bottom = 92.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("11_n6nv3")
-theme_override_font_sizes/font_size = 82
+theme_override_font_sizes/font_size = 88
 text = "Pet: N/a"
 
+[node name="babychickenArea" type="Area2D" parent="." unique_id=330102658]
+position = Vector2(516, 334)
+scale = Vector2(12, 12)
+script = ExtResource("1_e6624")
+
+[node name="PetSprite" type="AnimatedSprite2D" parent="babychickenArea" unique_id=4553514]
+visible = false
+texture_filter = 1
+position = Vector2(4.416667, 5.2500005)
+scale = Vector2(1.5, 1.5)
+sprite_frames = SubResource("SpriteFrames_wao47")
+animation = &"baby chicken"
+
+[node name="headCollision" type="CollisionShape2D" parent="babychickenArea" unique_id=134251889]
+visible = false
+position = Vector2(5.6666694, -9.833333)
+scale = Vector2(1.5, 1.5)
+shape = SubResource("RectangleShape2D_stm8k")
+
+[node name="mouthCollision" type="CollisionShape2D" parent="babychickenArea" unique_id=165926008]
+visible = false
+position = Vector2(4.3333335, -1.75)
+scale = Vector2(1.5, 1.5)
+shape = SubResource("CapsuleShape2D_stm8k")
+
+[node name="feetCollision" type="CollisionShape2D" parent="babychickenArea" unique_id=269437097]
+visible = false
+position = Vector2(5.4166694, 24.333332)
+scale = Vector2(1.5, 1.5)
+shape = SubResource("RectangleShape2D_udkci")
+
+[node name="bottomCollision" type="CollisionShape2D" parent="babychickenArea" unique_id=962447696]
+visible = false
+position = Vector2(4.6666665, 10.333333)
+scale = Vector2(1.5, 1.5)
+shape = SubResource("RectangleShape2D_j3pc0")
+
+[node name="cheekCollision" type="CollisionShape2D" parent="babychickenArea" unique_id=1101443702]
+visible = false
+position = Vector2(-8.166666, 0.25000033)
+scale = Vector2(1.5, 1.5)
+shape = SubResource("RectangleShape2D_ypnfv")
+
+[node name="cheekCollision2" type="CollisionShape2D" parent="babychickenArea" unique_id=1622353878]
+visible = false
+position = Vector2(17.249998, 0.08333382)
+scale = Vector2(1.5, 1.5)
+shape = SubResource("RectangleShape2D_ypnfv")
+
 [connection signal="input_event" from="catArea" to="catArea" method="petting_love"]
+[connection signal="input_event" from="goldfishArea" to="goldfishArea" method="petting_love"]
+[connection signal="input_event" from="pumpkinArea" to="pumpkinArea" method="petting_love"]
+[connection signal="input_event" from="penguinArea" to="penguinArea" method="petting_love"]
+[connection signal="input_event" from="babychickenArea" to="babychickenArea" method="petting_love"]

@@ -263,6 +263,10 @@ func _on_hardcore_timer_timeout() -> void:
 			if Global.hardcoreTimer > 5:
 				if Global.hardcoreTimer > Global.hardcoreHighScore:
 					Global.hardcoreHighScore = Global.hardcoreTimer
+				Global.food = 0
+				Global.love = 0
+				Global.energy = 0
+				Global.water = 0
 				get_tree().call_deferred("change_scene_to_file", "res://scenes/menus/hardcore_gameover.tscn")
 				statUpdate()
 				spriteAnimation()
