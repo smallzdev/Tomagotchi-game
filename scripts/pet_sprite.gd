@@ -77,6 +77,13 @@ func loadEquippedPet():
 # only fits the cat rn :D
 func petting_love(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
+		get_tree().call_deferred("change_scene_to_file", "res://scenes/menus/smallz_says.tscn")
+
+# all of the following yellow code is ignored, and
+# doesn't do anything (hopefully)
+"""
+func petting_love(viewport: Node, event: InputEvent, shape_idx: int) -> void:
+	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
 
 # if less than or equals 90, it adds the default love ammount.
 		if Global.love <= 90:
@@ -210,3 +217,4 @@ func spriteAnimation():
 		
 # ughghghg im mathed out. If you edit make sure to test
 # because the slightest mistake breaks it.
+"""

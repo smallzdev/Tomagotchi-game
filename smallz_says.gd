@@ -15,6 +15,7 @@ func _ready() -> void:
 @onready var penguinArea = %penguinArea
 @onready var babyChickenArea = %babychickenArea
 @onready var spiderArea = %spiderArea
+@onready var ghostArea = %ghostArea
 
 # Updates the correct sprite to view.
 func smallzSaysSprite():
@@ -32,8 +33,7 @@ func smallzSaysSprite():
 	elif Global.pet == 4:
 		goldfishArea.visible = true
 	elif Global.pet == 5:
-		pass
-		# (need to add the ghost sprite still ;-;)
+		ghostArea.visible = true
 	elif Global.pet == 6:
 		pumpkinArea.visible = true
 	elif Global.pet == 7:
@@ -53,3 +53,21 @@ func disableOldAreas():
 	penguinArea.visible = false
 	babyChickenArea.visible = false
 	spiderArea.visible = false
+	ghostArea.visible = false
+	
+func smallzSays():
+	var collisionShapes = [1, 2, 3, 4, 5]
+	var collisionShapeRNG = collisionShapes.pick_random()
+	if collisionShapeRNG == 1:
+		pass
+	elif collisionShapeRNG == 2:
+		pass
+	elif collisionShapeRNG == 3:
+		pass
+	elif collisionShapeRNG == 4:
+		pass
+	elif collisionShapeRNG == 5:
+		pass
+	else:
+		print("Error, RNG picked a collisionshape number that doesn't exist")
+# ^^ thanks vic for introducing this to me, this is wayyy better - smallz
