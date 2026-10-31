@@ -280,3 +280,40 @@ func _on_timer_timeout() -> void:
 		# ^^ 6 because it will instantly deduct 1
 	smallzSaysTime -= 1
 	smallzsaysTimerLabel.text = str(smallzSaysTime)
+	
+
+func _on_cat_smallzsays_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
+	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
+		var collision_shape = null #(i still needa figure this part out)
+		if collision_shape:
+			match collision_shape.name:
+				"Collision1":
+					pass
+				"Collision2":
+					pass
+				"Collision3":
+					pass
+
+func _on_goldfish_smallzsays_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
+	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
+		pass
+
+func _on_pumpkin_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
+	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
+		pass
+
+func _on_penguin_smallzsays_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
+	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
+		pass
+
+func _on_babychicken_smallzsays_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
+	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
+		pass
+
+func _on_spider_smallzsays_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
+	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
+		pass
+
+func _on_ghost_smallzsays_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
+	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
+		pass

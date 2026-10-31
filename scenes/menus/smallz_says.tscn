@@ -642,6 +642,7 @@ unique_name_in_owner = true
 visible = false
 position = Vector2(516, 334)
 scale = Vector2(5, 5)
+script = ExtResource("2_dx6wl")
 
 [node name="fishbowlSprite" type="Sprite2D" parent="goldfishArea" unique_id=1018275277]
 modulate = Color(0.6156863, 0.627451, 0.64705884, 1)
@@ -681,6 +682,7 @@ unique_name_in_owner = true
 visible = false
 position = Vector2(516, 334)
 scale = Vector2(6, 6)
+script = ExtResource("2_dx6wl")
 
 [node name="PetSprite" type="AnimatedSprite2D" parent="pumpkinArea" unique_id=773034758]
 texture_filter = 1
@@ -724,6 +726,7 @@ unique_name_in_owner = true
 visible = false
 position = Vector2(516, 334)
 scale = Vector2(7, 7)
+script = ExtResource("2_dx6wl")
 
 [node name="PetSprite" type="AnimatedSprite2D" parent="penguinArea" unique_id=2013291588]
 texture_filter = 1
@@ -784,6 +787,7 @@ unique_name_in_owner = true
 visible = false
 position = Vector2(516, 334)
 scale = Vector2(7, 7)
+script = ExtResource("2_dx6wl")
 
 [node name="PetSprite" type="AnimatedSprite2D" parent="babychickenArea" unique_id=4553514]
 texture_filter = 1
@@ -827,6 +831,7 @@ unique_name_in_owner = true
 visible = false
 position = Vector2(516, 334)
 scale = Vector2(5, 5)
+script = ExtResource("2_dx6wl")
 
 [node name="PetSprite" type="AnimatedSprite2D" parent="spiderArea" unique_id=1600904351]
 texture_filter = 1
@@ -869,6 +874,7 @@ shape = SubResource("RectangleShape2D_tx53i")
 unique_name_in_owner = true
 position = Vector2(516, 334)
 scale = Vector2(7, 7)
+script = ExtResource("2_dx6wl")
 
 [node name="PetSprite" type="AnimatedSprite2D" parent="ghostArea" unique_id=1920279023]
 texture_filter = 1
@@ -939,11 +945,11 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_iyc7w")
 theme_override_styles/hover = SubResource("StyleBoxFlat_jfa5a")
 text = "Skip"
 
-[connection signal="input_event" from="catArea" to="catArea" method="petting_love"]
-[connection signal="input_event" from="goldfishArea" to="goldfishArea" method="petting_love"]
-[connection signal="input_event" from="pumpkinArea" to="pumpkinArea" method="petting_love"]
-[connection signal="input_event" from="penguinArea" to="penguinArea" method="petting_love"]
-[connection signal="input_event" from="babychickenArea" to="babychickenArea" method="petting_love"]
-[connection signal="input_event" from="spiderArea" to="spiderArea" method="petting_love"]
-[connection signal="input_event" from="ghostArea" to="ghostArea" method="petting_love"]
+[connection signal="input_event" from="catArea" to="catArea" method="_on_cat_smallzsays_event"]
+[connection signal="input_event" from="goldfishArea" to="goldfishArea" method="_on_goldfish_smallzsays_event"]
+[connection signal="input_event" from="pumpkinArea" to="pumpkinArea" method="_on_pumpkin_event"]
+[connection signal="input_event" from="penguinArea" to="penguinArea" method="_on_penguin_smallzsays_event"]
+[connection signal="input_event" from="babychickenArea" to="babychickenArea" method="_on_babychicken_smallzsays_event"]
+[connection signal="input_event" from="spiderArea" to="spiderArea" method="_on_spider_smallzsays_event"]
+[connection signal="input_event" from="ghostArea" to="ghostArea" method="_on_ghost_smallzsays_event"]
 [connection signal="timeout" from="Timer" to="catArea" method="_on_timer_timeout"]
