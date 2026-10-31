@@ -2,6 +2,8 @@ extends Area2D
 # Smallz says minigame. Basically simon says but with
 # me (Smallz).
 
+var smallzSaysTime = 5
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	disableOldAreas()
@@ -17,6 +19,10 @@ func _ready() -> void:
 @onready var babyChickenArea = %babychickenArea
 @onready var spiderArea = %spiderArea
 @onready var ghostArea = %ghostArea
+
+# labels
+@onready var smallzsaysText = %smallzsaysLabel
+@onready var smallzsaysTimerLabel = %smallzsaysTimerLabel
 
 # Updates the correct sprite to view.
 func smallzSaysSprite():
@@ -56,14 +62,17 @@ func disableOldAreas():
 	spiderArea.visible = false
 	ghostArea.visible = false
 	
-@onready var smallzsaysText = %smallzsaysLabel
 
+# UHGHGHGHGHGH SOOO MUCH IF STATEMENTSSSS ;-;
 # holds the random smallz says stuff
 func smallzSays():
 	var randomSelection = [1, 2, 3, 4, 5]
 	var smallzSays = [1, 2, 3, 4, 5]
+	# picks the random numbers above
 	var collisionShapeRNG = randomSelection.pick_random()
 	var smallzSaysRNG = smallzSays.pick_random()
+# ^^ thanks vic for introducing this to me, this is wayyy better - smallz
+# if rolled 1:
 	if collisionShapeRNG == 1:
 		if catArea.visible == true:
 			if smallzSaysRNG == 1:
@@ -102,7 +111,8 @@ func smallzSays():
 				smallzsaysText.text = "Smallz Says: Pet the head."
 	
 # -----------------------------------------------------
-	if collisionShapeRNG == 2:
+# if rolled 2:
+	elif collisionShapeRNG == 2:
 		if catArea.visible == true:
 			if smallzSaysRNG == 1:
 				smallzsaysText.text = "Smallj Says: Pet the tail."
@@ -140,8 +150,8 @@ func smallzSays():
 				smallzsaysText.text = "Smallz Says: Pet the mouth."
 
 # -----------------------------------------------------		
-	# not updated for correct text
-	if collisionShapeRNG == 3:
+# if rolled 3:
+	elif collisionShapeRNG == 3:
 		if catArea.visible == true:
 			if smallzSaysRNG == 1:
 				smallzsaysText.text = "Small Says: Pet the mouth."
@@ -179,84 +189,94 @@ func smallzSays():
 				smallzsaysText.text = "Smallz Says: Pet the very bottom of the body."
 				
 # -----------------------------------------------------
-	# not updated for correct text
-	# not updated for correct text past this point
-	if collisionShapeRNG == 4:
+# if rolled 4:
+	elif collisionShapeRNG == 4:
 		if catArea.visible == true:
 			if smallzSaysRNG == 1:
-				smallzsaysText.text = "Small Says: Pet the feet."
+				smallzsaysText.text = "Small Says: Pet the ears."
 			else:
-				smallzsaysText.text = "Smallz Says: Pet the feet"
+				smallzsaysText.text = "Smallz Says: Pet the ears"
 		if goldfishArea.visible == true:
 			if smallzSaysRNG == 1:
-				smallzsaysText.text = "Vic Says: Pet the mouth."
+				smallzsaysText.text = "Vic Says: Pet the very bottom of the body."
 			else:
-				smallzsaysText.text = "Smallz Says: Pet the mouth."
+				smallzsaysText.text = "Smallz Says: Pet the very bottom of the body."
 		if pumpkinArea.visible == true:
 			if smallzSaysRNG == 1:
-				smallzsaysText.text = "Smallz Said: Pet the bottum of the pumpkin."
+				smallzsaysText.text = "Smallz Said: Pet the aiys of the pumpkin."
 			else:
-				smallzsaysText.text = "Smallz Says: Pet the bottom of the pumpkin."
+				smallzsaysText.text = "Smallz Says: Pet the eyes of the pumpkin."
 		if penguinArea.visible == true:
 			if smallzSaysRNG == 1:
-				smallzsaysText.text = "Smallz Says: Click the skip button."
+				smallzsaysText.text = "Smallz Says: anwfjwkgekkigo."
 			else:
-				smallzsaysText.text = "Smallz Says: Pet the head."
+				smallzsaysText.text = "Smallz Says: Pet the feet."
 		if babyChickenArea.visible == true:
 			if smallzSaysRNG == 1:
-				smallzsaysText.text = "Simon says: Pet the head."
+				smallzsaysText.text = "Simon says: Pet the bottom."
 			else:
-				smallzsaysText.text = "Smallz says: Pet the head."
+				smallzsaysText.text = "Smallz says: Pet the bottom."
 		if spiderArea.visible == true:
 			if smallzSaysRNG == 1:
-				smallzsaysText.text = "Smallz Says: Pet the had."
+				smallzsaysText.text = "Smallz Says: Pet the fft."
 			else:
-				smallzsaysText.text = "Smallz Says: Pet the head."
+				smallzsaysText.text = "Smallz Says: Pet the feet."
 		if ghostArea.visible == true:
 			if smallzSaysRNG == 1:
-				smallzsaysText.text = "Smsallhgzhbc: Pet the head."
+				smallzsaysText.text = "Smsallhgzhbc: Pet just under the mouth."
 			else:
-				smallzsaysText.text = "Smallz Says: Pet the head."
+				smallzsaysText.text = "Smallz Says: Pet just under the mouth."
 				
 # -----------------------------------------------------			
-	# not updated for correct text
-	if collisionShapeRNG == 5:
+
+# if rolled 5:
+	elif collisionShapeRNG == 5:
 		if catArea.visible == true:
 			if smallzSaysRNG == 1:
-				smallzsaysText.text = "Small Says: Pet the feet."
+				smallzsaysText.text = "Small Says: Pet the whiskers."
 			else:
-				smallzsaysText.text = "Smallz Says: Pet the feet"
+				smallzsaysText.text = "Smallz Says: Pet the whiskers"
 		if goldfishArea.visible == true:
 			if smallzSaysRNG == 1:
-				smallzsaysText.text = "Vic Says: Pet the mouth."
+				smallzsaysText.text = "Vic Says: Pet the very top of the body."
 			else:
-				smallzsaysText.text = "Smallz Says: Pet the mouth."
+				smallzsaysText.text = "Smallz Says: Pet the very top of the body."
 		if pumpkinArea.visible == true:
 			if smallzSaysRNG == 1:
-				smallzsaysText.text = "Smallz Said: Pet the bottum of the pumpkin."
+				smallzsaysText.text = "Smallz Said: Pet the sidz of the pumpkin."
 			else:
-				smallzsaysText.text = "Smallz Says: Pet the bottom of the pumpkin."
+				smallzsaysText.text = "Smallz Says: Pet the sides of the pumpkin."
 		if penguinArea.visible == true:
 			if smallzSaysRNG == 1:
-				smallzsaysText.text = "Smallz Says: Click the skip button."
+				smallzsaysText.text = "Smallz Says: jnbgvfgcdsfadsdcfgv."
 			else:
-				smallzsaysText.text = "Smallz Says: Pet the head."
+				smallzsaysText.text = "Smallz Says: Pet the flippers."
 		if babyChickenArea.visible == true:
 			if smallzSaysRNG == 1:
-				smallzsaysText.text = "Simon says: Pet the head."
+				smallzsaysText.text = "Simon says: Pet the cheeks."
 			else:
-				smallzsaysText.text = "Smallz says: Pet the head."
+				smallzsaysText.text = "Smallz says: Pet the cheeks."
 		if spiderArea.visible == true:
 			if smallzSaysRNG == 1:
-				smallzsaysText.text = "Smallz Says: Pet the had."
+				smallzsaysText.text = "Smallz Says: Pet the cheks."
 			else:
-				smallzsaysText.text = "Smallz Says: Pet the head."
+				smallzsaysText.text = "Smallz Says: Pet the cheeks."
 		if ghostArea.visible == true:
 			if smallzSaysRNG == 1:
-				smallzsaysText.text = "Smsallhgzhbc: Pet the head."
+				smallzsaysText.text = "Smsallhgzhbc: Pet the cheeks."
 			else:
-				smallzsaysText.text = "Smallz Says: Pet the head."
+				smallzsaysText.text = "Smallz Says: Pet the cheeks."
+				
 # -----------------------------------------------------
 	else:
+		# only really for debugging. shouldnt print.
 		print("Error, RNG picked a collisionshape number that doesn't exist")
-# ^^ thanks vic for introducing this to me, this is wayyy better - smallz
+
+# 1s timer, autostarts:
+func _on_timer_timeout() -> void:
+	if smallzSaysTime == 0:
+		smallzSaysTime = 6
+		smallzSays()
+		# ^^ 6 because it will instantly deduct 1
+	smallzSaysTime -= 1
+	smallzsaysTimerLabel.text = str(smallzSaysTime)

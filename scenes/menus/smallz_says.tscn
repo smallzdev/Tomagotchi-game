@@ -613,7 +613,7 @@ position = Vector2(2.3333335, 10.333334)
 sprite_frames = SubResource("SpriteFrames_wao47")
 animation = &"grey cat"
 
-[node name="earsCollision" type="CollisionShape2D" parent="catArea" unique_id=524916894]
+[node name="Collision4" type="CollisionShape2D" parent="catArea" unique_id=524916894]
 position = Vector2(2.8333359, 2.916666)
 shape = SubResource("RectangleShape2D_s53av")
 
@@ -629,11 +629,11 @@ shape = SubResource("RectangleShape2D_jfa5a")
 position = Vector2(-7.666664, 16.833338)
 shape = SubResource("RectangleShape2D_tbla7")
 
-[node name="whiskerCollision" type="CollisionShape2D" parent="catArea" unique_id=339754971]
+[node name="Collision5" type="CollisionShape2D" parent="catArea" unique_id=339754971]
 position = Vector2(-3.6249924, 7.8619785)
 shape = SubResource("RectangleShape2D_jqcfn")
 
-[node name="whiskerCollision2" type="CollisionShape2D" parent="catArea" unique_id=1773595170]
+[node name="Collision5_2" type="CollisionShape2D" parent="catArea" unique_id=1773595170]
 position = Vector2(9.333335, 7.8333344)
 shape = SubResource("RectangleShape2D_jqcfn")
 
@@ -664,7 +664,7 @@ shape = SubResource("RectangleShape2D_5hn5m")
 position = Vector2(-17.550003, 29.860416)
 shape = SubResource("RectangleShape2D_n6nv3")
 
-[node name="feetCollision" type="CollisionShape2D" parent="goldfishArea" unique_id=1445337410]
+[node name="Collision4" type="CollisionShape2D" parent="goldfishArea" unique_id=1445337410]
 position = Vector2(-0.8833375, 39.57917)
 shape = SubResource("RectangleShape2D_wao47")
 
@@ -672,7 +672,7 @@ shape = SubResource("RectangleShape2D_wao47")
 position = Vector2(23.783335, 29.683332)
 shape = SubResource("RectangleShape2D_hi6i2")
 
-[node name="whiskerCollision" type="CollisionShape2D" parent="goldfishArea" unique_id=367868867]
+[node name="Collision5" type="CollisionShape2D" parent="goldfishArea" unique_id=367868867]
 position = Vector2(-0.6333375, 19.88125)
 shape = SubResource("RectangleShape2D_kkn6p")
 
@@ -701,21 +701,21 @@ shape = SubResource("RectangleShape2D_mllpx")
 position = Vector2(5.166667, 34.927086)
 shape = SubResource("RectangleShape2D_svy1b")
 
-[node name="sidesCollision2" type="CollisionShape2D" parent="pumpkinArea" unique_id=1834431027]
+[node name="Collision5_2" type="CollisionShape2D" parent="pumpkinArea" unique_id=1834431027]
 position = Vector2(22.917353, 23.388567)
 rotation = -0.0030400974
 shape = SubResource("RectangleShape2D_q0w48")
 
-[node name="sidesCollision" type="CollisionShape2D" parent="pumpkinArea" unique_id=1758683283]
+[node name="Collision5" type="CollisionShape2D" parent="pumpkinArea" unique_id=1758683283]
 position = Vector2(-12.169509, 21.974659)
 rotation = -0.0030400974
 shape = SubResource("RectangleShape2D_swwen")
 
-[node name="eyeCollision" type="CollisionShape2D" parent="pumpkinArea" unique_id=1931350455]
+[node name="Collision4" type="CollisionShape2D" parent="pumpkinArea" unique_id=1931350455]
 position = Vector2(-2.0416653, 19.947918)
 shape = SubResource("RectangleShape2D_308xx")
 
-[node name="eyeCollision2" type="CollisionShape2D" parent="pumpkinArea" unique_id=1590871395]
+[node name="Collision4_2" type="CollisionShape2D" parent="pumpkinArea" unique_id=1590871395]
 position = Vector2(13.958335, 19.989584)
 shape = SubResource("RectangleShape2D_k0t3w")
 
@@ -741,15 +741,15 @@ position = Vector2(-8.285713, 9.142857)
 scale = Vector2(0.99999994, 0.99999994)
 shape = SubResource("RectangleShape2D_eu7rw")
 
-[node name="feetCollision" type="CollisionShape2D" parent="penguinArea" unique_id=1060576811]
+[node name="Collision4" type="CollisionShape2D" parent="penguinArea" unique_id=1060576811]
 position = Vector2(1.5952411, 29.392857)
 shape = SubResource("RectangleShape2D_e1i00")
 
-[node name="flipperCollision" type="CollisionShape2D" parent="penguinArea" unique_id=1697462712]
+[node name="Collision5" type="CollisionShape2D" parent="penguinArea" unique_id=1697462712]
 position = Vector2(14.220242, 15.976188)
 shape = SubResource("RectangleShape2D_gxf24")
 
-[node name="flipperCollision2" type="CollisionShape2D" parent="penguinArea" unique_id=2094944317]
+[node name="Collision5_2" type="CollisionShape2D" parent="penguinArea" unique_id=2094944317]
 position = Vector2(-12.071423, 18.194939)
 shape = SubResource("RectangleShape2D_e6624")
 
@@ -767,6 +767,17 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("12_nn4bs")
 theme_override_font_sizes/font_size = 71
 text = "Smallz says:"
+
+[node name="smallzsaysTimerLabel" type="Label" parent="." unique_id=1177425997]
+unique_name_in_owner = true
+offset_left = 984.0
+offset_top = 42.0
+offset_right = 1138.0
+offset_bottom = 127.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("12_nn4bs")
+theme_override_font_sizes/font_size = 71
+text = "5"
 
 [node name="babychickenArea" type="Area2D" parent="." unique_id=330102658]
 unique_name_in_owner = true
@@ -796,17 +807,17 @@ position = Vector2(2.380952, 30.24405)
 scale = Vector2(1.5, 1.5)
 shape = SubResource("RectangleShape2D_w6880")
 
-[node name="bottomCollision" type="CollisionShape2D" parent="babychickenArea" unique_id=962447696]
+[node name="Collision4" type="CollisionShape2D" parent="babychickenArea" unique_id=962447696]
 position = Vector2(2.797616, 22.030506)
 scale = Vector2(1.5, 1.5)
 shape = SubResource("RectangleShape2D_d8osa")
 
-[node name="cheekCollision" type="CollisionShape2D" parent="babychickenArea" unique_id=1101443702]
+[node name="Collision5" type="CollisionShape2D" parent="babychickenArea" unique_id=1101443702]
 position = Vector2(-7.452384, 10.915924)
 scale = Vector2(1.5, 1.5)
 shape = SubResource("RectangleShape2D_wkpb7")
 
-[node name="cheekCollision2" type="CollisionShape2D" parent="babychickenArea" unique_id=1622353878]
+[node name="Collision5_2" type="CollisionShape2D" parent="babychickenArea" unique_id=1622353878]
 position = Vector2(11.797616, 10.949778)
 scale = Vector2(1.5, 1.5)
 shape = SubResource("RectangleShape2D_8fn28")
@@ -834,7 +845,7 @@ position = Vector2(-2.0666625, 28.360939)
 scale = Vector2(1.5, 1.5)
 shape = SubResource("RectangleShape2D_p1cki")
 
-[node name="feetCollision" type="CollisionShape2D" parent="spiderArea" unique_id=1727718069]
+[node name="Collision4" type="CollisionShape2D" parent="spiderArea" unique_id=1727718069]
 position = Vector2(2.1416733, 44.066666)
 scale = Vector2(1.5, 1.5)
 shape = SubResource("RectangleShape2D_3xmsp")
@@ -844,19 +855,18 @@ position = Vector2(1.0166733, 34.397392)
 scale = Vector2(1.5, 1.5)
 shape = SubResource("RectangleShape2D_fhdpm")
 
-[node name="cheekCollision" type="CollisionShape2D" parent="spiderArea" unique_id=1999210874]
+[node name="Collision5" type="CollisionShape2D" parent="spiderArea" unique_id=1999210874]
 position = Vector2(-12.899996, 26.15)
 scale = Vector2(1.5, 1.5)
 shape = SubResource("RectangleShape2D_tx53i")
 
-[node name="cheekCollision2" type="CollisionShape2D" parent="spiderArea" unique_id=1262953475]
+[node name="Collision5_2" type="CollisionShape2D" parent="spiderArea" unique_id=1262953475]
 position = Vector2(12.704173, 26.150002)
 scale = Vector2(1.5, 1.5)
 shape = SubResource("RectangleShape2D_tx53i")
 
 [node name="ghostArea" type="Area2D" parent="." unique_id=695602725]
 unique_name_in_owner = true
-visible = false
 position = Vector2(516, 334)
 scale = Vector2(7, 7)
 
@@ -882,23 +892,23 @@ position = Vector2(2.333332, 28.845234)
 scale = Vector2(1.5, 1.5)
 shape = SubResource("RectangleShape2D_br0tn")
 
-[node name="bottomCollision" type="CollisionShape2D" parent="ghostArea" unique_id=294458011]
+[node name="Collision4" type="CollisionShape2D" parent="ghostArea" unique_id=294458011]
 position = Vector2(2.1666684, 21.30487)
 scale = Vector2(1.5, 1.5)
 shape = SubResource("RectangleShape2D_lde4j")
 
-[node name="cheekCollision" type="CollisionShape2D" parent="ghostArea" unique_id=252855351]
+[node name="Collision5" type="CollisionShape2D" parent="ghostArea" unique_id=252855351]
 position = Vector2(-7.864581, 13.261903)
 scale = Vector2(1.5, 1.5)
 shape = SubResource("RectangleShape2D_tja7i")
 
-[node name="cheekCollision2" type="CollisionShape2D" parent="ghostArea" unique_id=405937368]
+[node name="Collision5_2" type="CollisionShape2D" parent="ghostArea" unique_id=405937368]
 position = Vector2(12.489587, 13.261903)
 scale = Vector2(1.5, 1.5)
 shape = SubResource("RectangleShape2D_ybynw")
 
 [node name="Timer" type="Timer" parent="." unique_id=1818087114]
-wait_time = 3.0
+autostart = true
 
 [node name="backButton" type="Button" parent="." unique_id=1212087628]
 unique_name_in_owner = true
@@ -936,3 +946,4 @@ text = "Skip"
 [connection signal="input_event" from="babychickenArea" to="babychickenArea" method="petting_love"]
 [connection signal="input_event" from="spiderArea" to="spiderArea" method="petting_love"]
 [connection signal="input_event" from="ghostArea" to="ghostArea" method="petting_love"]
+[connection signal="timeout" from="Timer" to="catArea" method="_on_timer_timeout"]
