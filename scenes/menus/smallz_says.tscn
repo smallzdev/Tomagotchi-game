@@ -14,6 +14,8 @@
 [ext_resource type="Texture2D" uid="uid://dg165buwhjncd" path="res://Resources/InUse/TamagotchiCustomAssets/fishbowl.png" id="12_dx6wl"]
 [ext_resource type="FontFile" uid="uid://dyibl4resr8wn" path="res://Resources/font/augiepixel.ttf" id="12_nn4bs"]
 [ext_resource type="Script" uid="uid://b7ptc850pmdcq" path="res://scripts/catadex_buttons.gd" id="13_e2b13"]
+[ext_resource type="Texture2D" uid="uid://b5bij2gwarxla" path="res://Resources/InUse/TamagotchiCustomAssets/tick.png" id="15_uxxkm"]
+[ext_resource type="Texture2D" uid="uid://bdvisr33y26fe" path="res://Resources/InUse/TamagotchiCustomAssets/x.png" id="16_lu7fq"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ntfif"]
 atlas = ExtResource("3_nsv43")
@@ -449,47 +451,50 @@ size = Vector2(4.333335, 5.1666555)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jqcfn"]
 size = Vector2(4.083335, 3.0572932)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_5hn5m"]
-size = Vector2(28.916666, 13.8125)
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_n6nv3"]
 size = Vector2(7.916668, 10.812503)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_wao47"]
-size = Vector2(30.333332, 6.041666)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hi6i2"]
 size = Vector2(17.166666, 30)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5hn5m"]
+size = Vector2(28.916666, 13.8125)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wao47"]
+size = Vector2(30.333332, 6.041666)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kkn6p"]
 size = Vector2(30.333332, 6.2291656)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_6afv3"]
-size = Vector2(16.166668, 11.989583)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_mllpx"]
-size = Vector2(24.083332, 6.000002)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_svy1b"]
 size = Vector2(30.333332, 7.9791675)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_q0w48"]
-size = Vector2(8.166621, 15.082985)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mllpx"]
+size = Vector2(24.083332, 6.000002)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_swwen"]
-size = Vector2(10.161587, 18.144766)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6afv3"]
+size = Vector2(16.166668, 11.989583)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_308xx"]
 size = Vector2(10.249998, 6.0624995)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_swwen"]
+size = Vector2(10.161587, 18.144766)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_k0t3w"]
 size = Vector2(10.08333, 6.3124995)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_q0w48"]
+size = Vector2(8.166621, 15.082985)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_m3gqp"]
 size = Vector2(18.166666, 6.479165)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_eu7rw"]
 size = Vector2(16.57142, 9)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f7qnv"]
+size = Vector2(15.166667, 12.0625)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_e1i00"]
 size = Vector2(21.333334, 7.5624995)
@@ -499,9 +504,6 @@ size = Vector2(13.249997, 16.500002)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_e6624"]
 size = Vector2(5.833331, 8.729168)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_f7qnv"]
-size = Vector2(15.166667, 12.0625)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mkdd2"]
 size = Vector2(14.500001, 4.0590277)
@@ -590,6 +592,20 @@ corner_radius_bottom_right = 5
 corner_radius_bottom_left = 5
 corner_detail = 1
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_stm8k"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("15_uxxkm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_lu7fq")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
 [node name="Node2D" type="Node2D" unique_id=1085035746]
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=624683012]
@@ -657,21 +673,23 @@ scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_wao47")
 animation = &"goldfish"
 
+[node name="Collision1" type="CollisionShape2D" parent="goldfishArea" unique_id=79952460]
+position = Vector2(-17.550003, 29.860413)
+scale = Vector2(0.99999994, 0.99999994)
+shape = SubResource("RectangleShape2D_n6nv3")
+
+[node name="Collision2" type="CollisionShape2D" parent="goldfishArea" unique_id=214845211]
+position = Vector2(23.783333, 29.683327)
+scale = Vector2(0.99999994, 0.99999994)
+shape = SubResource("RectangleShape2D_hi6i2")
+
 [node name="Collision3" type="CollisionShape2D" parent="goldfishArea" unique_id=868161909]
 position = Vector2(0.7416625, 30.016666)
 shape = SubResource("RectangleShape2D_5hn5m")
 
-[node name="Collision1" type="CollisionShape2D" parent="goldfishArea" unique_id=79952460]
-position = Vector2(-17.550003, 29.860416)
-shape = SubResource("RectangleShape2D_n6nv3")
-
 [node name="Collision4" type="CollisionShape2D" parent="goldfishArea" unique_id=1445337410]
 position = Vector2(-0.8833375, 39.57917)
 shape = SubResource("RectangleShape2D_wao47")
-
-[node name="Collision2" type="CollisionShape2D" parent="goldfishArea" unique_id=214845211]
-position = Vector2(23.783335, 29.683332)
-shape = SubResource("RectangleShape2D_hi6i2")
 
 [node name="Collision5" type="CollisionShape2D" parent="goldfishArea" unique_id=367868867]
 position = Vector2(-0.6333375, 19.88125)
@@ -691,35 +709,35 @@ scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_wao47")
 animation = &"pumpkin"
 
+[node name="Collision1" type="CollisionShape2D" parent="pumpkinArea" unique_id=1568392256]
+position = Vector2(5.1666718, 34.927082)
+shape = SubResource("RectangleShape2D_svy1b")
+
+[node name="Collision2" type="CollisionShape2D" parent="pumpkinArea" unique_id=1028586108]
+position = Vector2(5.0416718, 28.000004)
+shape = SubResource("RectangleShape2D_mllpx")
+
 [node name="Collision3" type="CollisionShape2D" parent="pumpkinArea" unique_id=168949282]
 position = Vector2(5.000003, 4.994793)
 shape = SubResource("RectangleShape2D_6afv3")
 
-[node name="Collision2" type="CollisionShape2D" parent="pumpkinArea" unique_id=1028586108]
-position = Vector2(5.041667, 28.000006)
-shape = SubResource("RectangleShape2D_mllpx")
-
-[node name="Collision1" type="CollisionShape2D" parent="pumpkinArea" unique_id=1568392256]
-position = Vector2(5.166667, 34.927086)
-shape = SubResource("RectangleShape2D_svy1b")
-
-[node name="Collision5_2" type="CollisionShape2D" parent="pumpkinArea" unique_id=1834431027]
-position = Vector2(22.917353, 23.388567)
-rotation = -0.0030400974
-shape = SubResource("RectangleShape2D_q0w48")
+[node name="Collision4" type="CollisionShape2D" parent="pumpkinArea" unique_id=1931350455]
+position = Vector2(-2.0416641, 19.947918)
+shape = SubResource("RectangleShape2D_308xx")
 
 [node name="Collision5" type="CollisionShape2D" parent="pumpkinArea" unique_id=1758683283]
 position = Vector2(-12.169509, 21.974659)
 rotation = -0.0030400974
 shape = SubResource("RectangleShape2D_swwen")
 
-[node name="Collision4" type="CollisionShape2D" parent="pumpkinArea" unique_id=1931350455]
-position = Vector2(-2.0416653, 19.947918)
-shape = SubResource("RectangleShape2D_308xx")
-
 [node name="Collision4_2" type="CollisionShape2D" parent="pumpkinArea" unique_id=1590871395]
 position = Vector2(13.958335, 19.989584)
 shape = SubResource("RectangleShape2D_k0t3w")
+
+[node name="Collision5_2" type="CollisionShape2D" parent="pumpkinArea" unique_id=1834431027]
+position = Vector2(22.917358, 23.388569)
+rotation = -0.0030400974
+shape = SubResource("RectangleShape2D_q0w48")
 
 [node name="penguinArea" type="Area2D" parent="." unique_id=1243086964]
 unique_name_in_owner = true
@@ -744,6 +762,11 @@ position = Vector2(-8.285713, 9.142857)
 scale = Vector2(0.99999994, 0.99999994)
 shape = SubResource("RectangleShape2D_eu7rw")
 
+[node name="Collision3" type="CollisionShape2D" parent="penguinArea" unique_id=884107978]
+position = Vector2(-0.07141876, 19.674107)
+scale = Vector2(0.99999994, 0.99999994)
+shape = SubResource("RectangleShape2D_f7qnv")
+
 [node name="Collision4" type="CollisionShape2D" parent="penguinArea" unique_id=1060576811]
 position = Vector2(1.5952411, 29.392857)
 shape = SubResource("RectangleShape2D_e1i00")
@@ -756,19 +779,15 @@ shape = SubResource("RectangleShape2D_gxf24")
 position = Vector2(-12.071423, 18.194939)
 shape = SubResource("RectangleShape2D_e6624")
 
-[node name="Collision3" type="CollisionShape2D" parent="penguinArea" unique_id=884107978]
-position = Vector2(-0.071423054, 19.674107)
-shape = SubResource("RectangleShape2D_f7qnv")
-
 [node name="smallzsaysLabel" type="Label" parent="." unique_id=1572947373]
 unique_name_in_owner = true
-offset_left = 13.0
-offset_top = 103.0
-offset_right = 536.0
-offset_bottom = 188.0
+offset_left = 6.0
+offset_top = 109.0
+offset_right = 1128.0
+offset_bottom = 252.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("12_nn4bs")
-theme_override_font_sizes/font_size = 71
+theme_override_font_sizes/font_size = 60
 text = "Smallz says:"
 
 [node name="smallzsaysTimerLabel" type="Label" parent="." unique_id=1177425997]
@@ -872,6 +891,7 @@ shape = SubResource("RectangleShape2D_tx53i")
 
 [node name="ghostArea" type="Area2D" parent="." unique_id=695602725]
 unique_name_in_owner = true
+visible = false
 position = Vector2(516, 334)
 scale = Vector2(7, 7)
 script = ExtResource("2_dx6wl")
@@ -944,6 +964,23 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_d8osa")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_iyc7w")
 theme_override_styles/hover = SubResource("StyleBoxFlat_jfa5a")
 text = "Skip"
+
+[node name="rewards_display_area" type="Area2D" parent="." unique_id=1964044105]
+unique_name_in_owner = true
+
+[node name="Tick_x" type="AnimatedSprite2D" parent="rewards_display_area" unique_id=1225126892]
+position = Vector2(840, 222)
+scale = Vector2(0.2, 0.2)
+sprite_frames = SubResource("SpriteFrames_stm8k")
+
+[node name="rewardsLabel" type="Label" parent="rewards_display_area" unique_id=1756429833]
+unique_name_in_owner = true
+offset_left = 636.0
+offset_top = 206.0
+offset_right = 792.0
+offset_bottom = 257.0
+theme_override_font_sizes/font_size = 37
+text = "+10 Love"
 
 [connection signal="input_event" from="catArea" to="catArea" method="_on_cat_smallzsays_event"]
 [connection signal="input_event" from="goldfishArea" to="goldfishArea" method="_on_goldfish_smallzsays_event"]
