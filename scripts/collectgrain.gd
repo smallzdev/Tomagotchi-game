@@ -2,10 +2,12 @@ extends Node
 
 const grain = preload("res://scenes/grain.tscn")
 
+@onready var graintimer = $graintimer
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	$Timer.timeout.connect(onTimeout)
-	$Timer.start()
+	graintimer.timeout.connect(onTimeout)
+	graintimer.start()
 	var backButton = $backbutton
 	backButton.pressed.connect(back_button_pressed)
 

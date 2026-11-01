@@ -22,6 +22,58 @@
 [sub_resource type="CanvasTexture" id="CanvasTexture_rkuql"]
 specular_color = Color(0.95686275, 0.95686275, 0.95686275, 1)
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_osa6t"]
+bg_color = Color(0.38431373, 0.38431373, 0.38431373, 0)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.30588236, 0.28627452, 0.2784314, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+corner_detail = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_55311"]
+bg_color = Color(0.16818258, 0.15563756, 0.15061828, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.16862746, 0.15686275, 0.14901961, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+corner_detail = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ffm36"]
+bg_color = Color(0.30588236, 0.28627452, 0.2784314, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.30588236, 0.28627452, 0.2784314, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+corner_detail = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nh0jh"]
+bg_color = Color(0.38431373, 0.38431373, 0.38431373, 0)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(0.30588236, 0.28627452, 0.2784314, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+corner_detail = 1
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_82277"]
 atlas = ExtResource("3_hgu4i")
 region = Rect2(0, 0, 32, 32)
@@ -202,14 +254,52 @@ offset_right = 1157.0
 offset_bottom = 652.0
 texture = SubResource("CanvasTexture_rkuql")
 
+[node name="Label" type="Label" parent="." unique_id=799426517]
+offset_left = 287.0
+offset_top = 142.0
+offset_right = 964.0
+offset_bottom = 179.0
+theme_override_colors/font_color = Color(0.30588236, 0.28627452, 0.2784314, 1)
+theme_override_fonts/font = ExtResource("2_qtxby")
+theme_override_font_sizes/font_size = 38
+text = "Click on a Pet to Equip"
+
+[node name="Button" type="Button" parent="." unique_id=797801535]
+offset_left = 722.0
+offset_top = 503.0
+offset_right = 895.0
+offset_bottom = 550.0
+theme_override_colors/font_color = Color(0.30588236, 0.28627452, 0.2784314, 1)
+theme_override_fonts/font = ExtResource("2_qtxby")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_osa6t")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_55311")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ffm36")
+text = "Next Page >"
+
+[node name="Button2" type="Button" parent="." unique_id=1298449307]
+offset_left = 297.0
+offset_top = 502.0
+offset_right = 488.0
+offset_bottom = 549.0
+theme_override_colors/font_color = Color(0.30588236, 0.28627452, 0.2784314, 1)
+theme_override_fonts/font = ExtResource("2_qtxby")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_osa6t")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_55311")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ffm36")
+text = "< Previous Page"
+
 [node name="Panel" type="Panel" parent="." unique_id=1786754777]
 offset_left = 270.0
 offset_top = 127.0
 offset_right = 923.0
 offset_bottom = 575.0
 mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_nh0jh")
 
 [node name="Area2D" type="Area2D" parent="Panel" unique_id=849678404]
+position = Vector2(6, 1)
 script = ExtResource("1_y4cg6")
 
 [node name="PetLabel1" type="Label" parent="Panel/Area2D" unique_id=747393168]
@@ -218,10 +308,12 @@ offset_left = 11.0
 offset_top = 143.0
 offset_right = 99.0
 offset_bottom = 166.0
+theme_override_colors/font_color = Color(0.30588236, 0.28627452, 0.2784314, 1)
 theme_override_fonts/font = ExtResource("2_qtxby")
 theme_override_font_sizes/font_size = 18
 text = "Ginger Cat"
 horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
 
 [node name="PetSprite1" type="AnimatedSprite2D" parent="Panel/Area2D" unique_id=1871318336]
 unique_name_in_owner = true
@@ -236,6 +328,7 @@ position = Vector2(54, 99)
 shape = SubResource("RectangleShape2D_stm8k")
 
 [node name="Area2D2" type="Area2D" parent="Panel" unique_id=696430025]
+position = Vector2(6, 1)
 script = ExtResource("1_y4cg6")
 
 [node name="PetLabel2" type="Label" parent="Panel/Area2D2" unique_id=1842924606]
@@ -244,10 +337,12 @@ offset_left = 99.0
 offset_top = 144.0
 offset_right = 186.0
 offset_bottom = 167.0
+theme_override_colors/font_color = Color(0.30588236, 0.28627452, 0.2784314, 1)
 theme_override_fonts/font = ExtResource("2_qtxby")
 theme_override_font_sizes/font_size = 18
 text = "Grey Cat"
 horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
 
 [node name="PetSprite2" type="AnimatedSprite2D" parent="Panel/Area2D2" unique_id=1063083016]
 unique_name_in_owner = true
@@ -261,33 +356,8 @@ animation = &"grey cat"
 position = Vector2(142.75, 99)
 shape = SubResource("RectangleShape2D_stm8k")
 
-[node name="Label" type="Label" parent="Panel" unique_id=799426517]
-layout_mode = 0
-offset_left = 15.0
-offset_top = 10.0
-offset_right = 663.0
-offset_bottom = 47.0
-theme_override_fonts/font = ExtResource("2_qtxby")
-theme_override_font_sizes/font_size = 38
-text = "Click on a Pet to Equip"
-
-[node name="Button" type="Button" parent="Panel" unique_id=797801535]
-layout_mode = 0
-offset_left = 536.0
-offset_top = 407.0
-offset_right = 636.0
-offset_bottom = 438.0
-text = "Next Page >"
-
-[node name="Button2" type="Button" parent="Panel" unique_id=1298449307]
-layout_mode = 0
-offset_left = 16.0
-offset_top = 404.0
-offset_right = 146.0
-offset_bottom = 435.0
-text = "< Previous Page"
-
 [node name="Area2D3" type="Area2D" parent="Panel" unique_id=639546250]
+position = Vector2(6, 1)
 script = ExtResource("1_y4cg6")
 
 [node name="PetLabel3" type="Label" parent="Panel/Area2D3" unique_id=922007463]
@@ -296,10 +366,12 @@ offset_left = 185.0
 offset_top = 144.0
 offset_right = 274.0
 offset_bottom = 167.0
+theme_override_colors/font_color = Color(0.30588236, 0.28627452, 0.2784314, 1)
 theme_override_fonts/font = ExtResource("2_qtxby")
 theme_override_font_sizes/font_size = 18
 text = "Cat 3"
 horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
 
 [node name="PetSprite3" type="AnimatedSprite2D" parent="Panel/Area2D3" unique_id=335745622]
 unique_name_in_owner = true
@@ -314,6 +386,7 @@ position = Vector2(229, 100)
 shape = SubResource("RectangleShape2D_stm8k")
 
 [node name="Area2D4" type="Area2D" parent="Panel" unique_id=681257340]
+position = Vector2(6, 1)
 script = ExtResource("1_y4cg6")
 
 [node name="PetLabel4" type="Label" parent="Panel/Area2D4" unique_id=1508876455]
@@ -322,10 +395,12 @@ offset_left = 272.0
 offset_top = 144.0
 offset_right = 361.0
 offset_bottom = 167.0
+theme_override_colors/font_color = Color(0.30588236, 0.28627452, 0.2784314, 1)
 theme_override_fonts/font = ExtResource("2_qtxby")
 theme_override_font_sizes/font_size = 18
 text = "Goldfish"
 horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
 
 [node name="PetSprite4" type="AnimatedSprite2D" parent="Panel/Area2D4" unique_id=476041715]
 unique_name_in_owner = true
@@ -340,6 +415,7 @@ position = Vector2(317, 100)
 shape = SubResource("RectangleShape2D_stm8k")
 
 [node name="Area2D5" type="Area2D" parent="Panel" unique_id=1393599030]
+position = Vector2(6, 1)
 script = ExtResource("1_y4cg6")
 
 [node name="PetSprite5" type="AnimatedSprite2D" parent="Panel/Area2D5" unique_id=1706576864]
@@ -356,16 +432,19 @@ offset_left = 361.0
 offset_top = 144.0
 offset_right = 450.0
 offset_bottom = 167.0
+theme_override_colors/font_color = Color(0.30588236, 0.28627452, 0.2784314, 1)
 theme_override_fonts/font = ExtResource("2_qtxby")
 theme_override_font_sizes/font_size = 18
 text = "Ghost"
 horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Panel/Area2D5" unique_id=1224499592]
 position = Vector2(404, 100)
 shape = SubResource("RectangleShape2D_stm8k")
 
 [node name="Area2D6" type="Area2D" parent="Panel" unique_id=6458623]
+position = Vector2(6, 1)
 script = ExtResource("1_y4cg6")
 
 [node name="PetLabel6" type="Label" parent="Panel/Area2D6" unique_id=107814899]
@@ -374,10 +453,12 @@ offset_left = 448.0
 offset_top = 143.0
 offset_right = 537.0
 offset_bottom = 166.0
+theme_override_colors/font_color = Color(0.30588236, 0.28627452, 0.2784314, 1)
 theme_override_fonts/font = ExtResource("2_qtxby")
 theme_override_font_sizes/font_size = 18
 text = "Pumpkin"
 horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
 
 [node name="PetSprite6" type="AnimatedSprite2D" parent="Panel/Area2D6" unique_id=2103811036]
 unique_name_in_owner = true
@@ -392,6 +473,7 @@ position = Vector2(491, 100)
 shape = SubResource("RectangleShape2D_stm8k")
 
 [node name="Area2D7" type="Area2D" parent="Panel" unique_id=858898978]
+position = Vector2(6, 1)
 script = ExtResource("1_y4cg6")
 
 [node name="PetLabel7" type="Label" parent="Panel/Area2D7" unique_id=874156790]
@@ -400,10 +482,12 @@ offset_left = 535.0
 offset_top = 144.0
 offset_right = 623.0
 offset_bottom = 167.0
+theme_override_colors/font_color = Color(0.30588236, 0.28627452, 0.2784314, 1)
 theme_override_fonts/font = ExtResource("2_qtxby")
 theme_override_font_sizes/font_size = 18
 text = "Penguin"
 horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
 
 [node name="PetSprite7" type="AnimatedSprite2D" parent="Panel/Area2D7" unique_id=1738622637]
 unique_name_in_owner = true
@@ -418,6 +502,7 @@ position = Vector2(579, 100)
 shape = SubResource("RectangleShape2D_stm8k")
 
 [node name="Area2D8" type="Area2D" parent="Panel" unique_id=795091390]
+position = Vector2(6, 1)
 script = ExtResource("1_y4cg6")
 
 [node name="PetLabel8" type="Label" parent="Panel/Area2D8" unique_id=1003969453]
@@ -426,10 +511,12 @@ offset_left = 8.0
 offset_top = 254.0
 offset_right = 105.0
 offset_bottom = 277.0
+theme_override_colors/font_color = Color(0.30588236, 0.28627452, 0.2784314, 1)
 theme_override_fonts/font = ExtResource("2_qtxby")
 theme_override_font_sizes/font_size = 18
 text = "Baby Chicken"
 horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
 
 [node name="PetSprite8" type="AnimatedSprite2D" parent="Panel/Area2D8" unique_id=510877782]
 unique_name_in_owner = true
@@ -444,6 +531,7 @@ position = Vector2(56, 210)
 shape = SubResource("RectangleShape2D_stm8k")
 
 [node name="Area2D9" type="Area2D" parent="Panel" unique_id=412371742]
+position = Vector2(6, 1)
 script = ExtResource("1_y4cg6")
 
 [node name="PetSprite9" type="AnimatedSprite2D" parent="Panel/Area2D9" unique_id=1794594538]
@@ -460,15 +548,18 @@ offset_left = 103.0
 offset_top = 254.0
 offset_right = 187.0
 offset_bottom = 277.0
+theme_override_colors/font_color = Color(0.30588236, 0.28627452, 0.2784314, 1)
 theme_override_fonts/font = ExtResource("2_qtxby")
 text = "Spider"
 horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Panel/Area2D9" unique_id=1820965029]
 position = Vector2(143, 210)
 shape = SubResource("RectangleShape2D_stm8k")
 
 [node name="Area2D10" type="Area2D" parent="Panel" unique_id=1099495560]
+position = Vector2(6, 1)
 script = ExtResource("1_y4cg6")
 
 [node name="PetSprite10" type="AnimatedSprite2D" parent="Panel/Area2D10" unique_id=2137895432]
@@ -484,12 +575,14 @@ offset_top = 254.0
 offset_right = 244.0
 offset_bottom = 277.0
 horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Panel/Area2D10" unique_id=1433536580]
 position = Vector2(230, 210)
 shape = SubResource("RectangleShape2D_stm8k")
 
 [node name="Area2D11" type="Area2D" parent="Panel" unique_id=257555061]
+position = Vector2(6, 1)
 script = ExtResource("1_y4cg6")
 
 [node name="PetSprite11" type="AnimatedSprite2D" parent="Panel/Area2D11" unique_id=777718581]
@@ -505,12 +598,14 @@ offset_top = 254.0
 offset_right = 331.0
 offset_bottom = 277.0
 horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Panel/Area2D11" unique_id=711325267]
 position = Vector2(317, 210)
 shape = SubResource("RectangleShape2D_stm8k")
 
 [node name="Area2D12" type="Area2D" parent="Panel" unique_id=955258604]
+position = Vector2(6, 1)
 script = ExtResource("1_y4cg6")
 
 [node name="PetSprite12" type="AnimatedSprite2D" parent="Panel/Area2D12" unique_id=730127818]
@@ -526,12 +621,14 @@ offset_top = 254.0
 offset_right = 418.0
 offset_bottom = 277.0
 horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Panel/Area2D12" unique_id=396726999]
 position = Vector2(404, 210)
 shape = SubResource("RectangleShape2D_stm8k")
 
 [node name="Area2D13" type="Area2D" parent="Panel" unique_id=568110576]
+position = Vector2(6, 1)
 script = ExtResource("1_y4cg6")
 
 [node name="PetSprite13" type="AnimatedSprite2D" parent="Panel/Area2D13" unique_id=1346626467]
@@ -547,12 +644,14 @@ offset_top = 254.0
 offset_right = 505.0
 offset_bottom = 277.0
 horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Panel/Area2D13" unique_id=1298275341]
 position = Vector2(491, 210)
 shape = SubResource("RectangleShape2D_stm8k")
 
 [node name="Area2D14" type="Area2D" parent="Panel" unique_id=1706588338]
+position = Vector2(6, 1)
 script = ExtResource("1_y4cg6")
 
 [node name="PetSprite14" type="AnimatedSprite2D" parent="Panel/Area2D14" unique_id=539687702]
@@ -568,12 +667,14 @@ offset_top = 254.0
 offset_right = 593.0001
 offset_bottom = 277.0
 horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Panel/Area2D14" unique_id=928729734]
 position = Vector2(579, 210)
 shape = SubResource("RectangleShape2D_stm8k")
 
 [node name="Area2D15" type="Area2D" parent="Panel" unique_id=1470557483]
+position = Vector2(6, 1)
 script = ExtResource("1_y4cg6")
 
 [node name="PetSprite15" type="AnimatedSprite2D" parent="Panel/Area2D15" unique_id=2062850526]
@@ -589,12 +690,14 @@ offset_top = 364.00003
 offset_right = 70.0
 offset_bottom = 387.00003
 horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Panel/Area2D15" unique_id=554839183]
 position = Vector2(56, 320)
 shape = SubResource("RectangleShape2D_stm8k")
 
 [node name="Area2D16" type="Area2D" parent="Panel" unique_id=284185274]
+position = Vector2(6, 1)
 script = ExtResource("1_y4cg6")
 
 [node name="PetSprite16" type="AnimatedSprite2D" parent="Panel/Area2D16" unique_id=493273246]
@@ -610,12 +713,14 @@ offset_top = 364.00003
 offset_right = 157.0
 offset_bottom = 387.00003
 horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Panel/Area2D16" unique_id=134134060]
 position = Vector2(143, 320)
 shape = SubResource("RectangleShape2D_stm8k")
 
 [node name="Area2D17" type="Area2D" parent="Panel" unique_id=1041511128]
+position = Vector2(6, 1)
 script = ExtResource("1_y4cg6")
 
 [node name="PetSprite17" type="AnimatedSprite2D" parent="Panel/Area2D17" unique_id=1573401041]
@@ -631,12 +736,14 @@ offset_top = 364.00003
 offset_right = 244.0
 offset_bottom = 387.00003
 horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Panel/Area2D17" unique_id=238403496]
 position = Vector2(230, 320)
 shape = SubResource("RectangleShape2D_stm8k")
 
 [node name="Area2D18" type="Area2D" parent="Panel" unique_id=737182961]
+position = Vector2(6, 1)
 script = ExtResource("1_y4cg6")
 
 [node name="PetLabel18" type="Label" parent="Panel/Area2D18" unique_id=5384068]
@@ -645,6 +752,7 @@ offset_top = 364.00003
 offset_right = 331.0
 offset_bottom = 387.00003
 horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
 
 [node name="PetSprite18" type="AnimatedSprite2D" parent="Panel/Area2D18" unique_id=616283986]
 texture_filter = 1
@@ -658,6 +766,7 @@ position = Vector2(317, 320)
 shape = SubResource("RectangleShape2D_stm8k")
 
 [node name="Area2D19" type="Area2D" parent="Panel" unique_id=1245438390]
+position = Vector2(6, 1)
 script = ExtResource("1_y4cg6")
 
 [node name="PetSprite19" type="AnimatedSprite2D" parent="Panel/Area2D19" unique_id=886134173]
@@ -673,12 +782,14 @@ offset_top = 364.00003
 offset_right = 418.0
 offset_bottom = 387.00003
 horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Panel/Area2D19" unique_id=49884588]
 position = Vector2(404, 320)
 shape = SubResource("RectangleShape2D_stm8k")
 
 [node name="Area2D20" type="Area2D" parent="Panel" unique_id=1782287803]
+position = Vector2(6, 1)
 script = ExtResource("1_y4cg6")
 
 [node name="PetSprite20" type="AnimatedSprite2D" parent="Panel/Area2D20" unique_id=874963585]
@@ -694,12 +805,14 @@ offset_top = 364.00003
 offset_right = 505.0
 offset_bottom = 387.00003
 horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Panel/Area2D20" unique_id=1734053274]
 position = Vector2(491, 320)
 shape = SubResource("RectangleShape2D_stm8k")
 
 [node name="Area2D21" type="Area2D" parent="Panel" unique_id=1272708034]
+position = Vector2(6, 1)
 script = ExtResource("1_y4cg6")
 
 [node name="PetSprite21" type="AnimatedSprite2D" parent="Panel/Area2D21" unique_id=838752106]
@@ -715,6 +828,7 @@ offset_top = 364.00003
 offset_right = 593.0001
 offset_bottom = 387.00003
 horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Panel/Area2D21" unique_id=432187308]
 position = Vector2(579, 320)
@@ -776,8 +890,8 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_nnuhk")
 text = "Back"
 script = ExtResource("18_nh0jh")
 
-[connection signal="input_event" from="Panel/Area2D" to="Panel/Area2D" method="_on_petsprite2_equipped"]
 [connection signal="input_event" from="Panel/Area2D" to="Panel/Area2D" method="_on_petsprite1_equip_event"]
+[connection signal="input_event" from="Panel/Area2D" to="Panel/Area2D" method="_on_petsprite2_equipped"]
 [connection signal="input_event" from="Panel/Area2D2" to="Panel/Area2D2" method="_on_spritepet2_equipped"]
 [connection signal="input_event" from="Panel/Area2D3" to="Panel/Area2D" method="_on_petsprite3_equipped"]
 [connection signal="input_event" from="Panel/Area2D4" to="Panel/Area2D" method="_on_pet4_equipped"]

@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cruya8oy0jnwt"]
 
-[ext_resource type="Script" uid="uid://1pxvxf3n6oxo" path="res://scenes/collectgrain.gd" id="1_4jhex"]
+[ext_resource type="Script" uid="uid://1pxvxf3n6oxo" path="res://scripts/collectgrain.gd" id="1_4jhex"]
 [ext_resource type="PackedScene" uid="uid://bkhit85bmmlor" path="res://scenes/basket.tscn" id="1_gxq67"]
 [ext_resource type="Texture2D" uid="uid://ddgdw33smj2q7" path="res://Resources/InUse/TamagotchiCustomAssets/grainbackground.png" id="2_mjd7v"]
 [ext_resource type="Texture2D" uid="uid://cp3trgw5n2mge" path="res://Resources/PixelPack copy/Terrain/Terrain (16x16).png" id="2_sbdrl"]
@@ -237,7 +237,7 @@ layer_0/tile_data = PackedInt32Array(2621440, 393216, 4, 589824, 393216, 4, 5898
 
 [node name="grain_ui" parent="." unique_id=1734086535 instance=ExtResource("4_4jhex")]
 
-[node name="Timer" type="Timer" parent="." unique_id=1590058882]
+[node name="graintimer" type="Timer" parent="." unique_id=1590058882]
 
 [node name="backbutton" type="Button" parent="." unique_id=2045750543]
 offset_left = 859.0
