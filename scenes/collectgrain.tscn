@@ -238,6 +238,7 @@ layer_0/tile_data = PackedInt32Array(2621440, 393216, 4, 589824, 393216, 4, 5898
 [node name="grain_ui" parent="." unique_id=1734086535 instance=ExtResource("4_4jhex")]
 
 [node name="graintimer" type="Timer" parent="." unique_id=1590058882]
+wait_time = 0.2
 
 [node name="backbutton" type="Button" parent="." unique_id=2045750543]
 offset_left = 859.0

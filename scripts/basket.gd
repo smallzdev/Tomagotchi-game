@@ -1,8 +1,15 @@
 extends CharacterBody2D
 
 
-const SPEED = 725.0
+const SPEED = 900
 const JUMP_VELOCITY = -400.0
+
+#lower num = less movement
+#higher num = more movement
+var acceleration = 150000
+#lower num = more slide
+#higher num = less slide
+var friction = 900
 
 
 func _physics_process(delta: float) -> void:
@@ -17,9 +24,13 @@ func _physics_process(delta: float) -> void:
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
 	var direction := Input.get_axis("left", "right")
-	if direction:
-		velocity.x = direction * SPEED
+	if direction !=0:
+		#when ur pressing the buttons
+		#accelerate towards max speed
+		velocity.x = move_toward(velocity.x, direction * SPEED, acceleration * delta)
 	else:
-		velocity.x = move_toward(velocity.x, 0, SPEED)
+		#when ur not pressing the buttons
+		#apply friction
+		velocity.x = move_toward(velocity.x, 0, friction * delta)
 
 	move_and_slide()
