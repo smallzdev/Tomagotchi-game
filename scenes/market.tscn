@@ -2,13 +2,11 @@
 
 [ext_resource type="FontFile" uid="uid://dyibl4resr8wn" path="res://Resources/font/augiepixel.ttf" id="1_iks0y"]
 [ext_resource type="Script" uid="uid://c2lfrowvp8ull" path="res://scripts/market.gd" id="1_k70a0"]
+[ext_resource type="Texture2D" uid="uid://dkfht7kyrneyi" path="res://Resources/InUse/TamagotchiCustomAssets/shop.png" id="2_7bpo7"]
 [ext_resource type="PackedScene" uid="uid://7s5fj1hnj2b1" path="res://scenes/grain_ui.tscn" id="2_k70a0"]
 
-[sub_resource type="CanvasTexture" id="CanvasTexture_jmmcw"]
-specular_color = Color(0.95686275, 0.95686275, 0.95686275, 1)
-
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7bpo7"]
-bg_color = Color(0.38431373, 0.38431373, 0.38431373, 0)
+bg_color = Color(1, 1, 1, 1)
 border_width_left = 8
 border_width_top = 8
 border_width_right = 8
@@ -91,13 +89,13 @@ script = ExtResource("1_k70a0")
 [node name="TextureRect" type="TextureRect" parent="." unique_id=2113248103]
 offset_right = 1152.0
 offset_bottom = 652.0
-texture = SubResource("CanvasTexture_jmmcw")
+texture = ExtResource("2_7bpo7")
 
 [node name="buybutton1" type="Button" parent="." unique_id=493203860]
-offset_left = 429.0
-offset_top = 198.0
-offset_right = 765.0
-offset_bottom = 318.0
+offset_left = 824.0
+offset_top = 176.0
+offset_right = 1043.0
+offset_bottom = 252.0
 theme_override_colors/font_color = Color(0.30588236, 0.28627452, 0.2784314, 1)
 theme_override_fonts/font = ExtResource("1_iks0y")
 theme_override_font_sizes/font_size = 50
@@ -107,16 +105,16 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_ygeob")
 text = "buy!!!!!!!!!!"
 
 [node name="grain_ui" parent="." unique_id=1734086535 instance=ExtResource("2_k70a0")]
-offset_left = 486.0
-offset_top = 53.0
-offset_right = 486.0
-offset_bottom = 53.0
+offset_left = 412.0
+offset_top = 256.0
+offset_right = 412.0
+offset_bottom = 256.0
 
 [node name="backbutton" type="Button" parent="." unique_id=355484081]
-offset_left = 859.0
-offset_top = 62.0
-offset_right = 1121.0
-offset_bottom = 133.0
+offset_left = 851.0
+offset_top = 33.0
+offset_right = 1113.0
+offset_bottom = 104.0
 theme_override_colors/font_color = Color(0.30588236, 0.28627452, 0.2784314, 1)
 theme_override_fonts/font = ExtResource("1_iks0y")
 theme_override_font_sizes/font_size = 50
