@@ -147,5 +147,14 @@ I couldn't come up with anything good this week. I was trying to compose the mai
 2. Friction to basket
 3. Naming your pets
 4. Farm -> Shop, hangout with your pet, energy minigame?
-
 </details>
+
+# Week 3: Best Friend 
+<details open>
+<summary></summary>
+
+Smallz Says:
+(vic feel free to edit this to format it, or change wording)
+In week 3, I (smallz) made a minigame called "Smallz Says" which is based off simon says. If you click on the pet to pat it, you will be changed onto the minigame. This took a long time, and I struggled a bit but I'm proud of what I achieved.
+
+If you don't know what simon says is, you basically just have to follow the instructions when it says "Smallz Says: (instructions)". If the spelling is wrong in the name or the instruction, you don't listen to the instruction and instead click the "skip" button. If it says someone else other than Smallz, for example "Simon", you also click skip.

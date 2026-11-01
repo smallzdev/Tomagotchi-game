@@ -969,6 +969,7 @@ text = "Skip"
 unique_name_in_owner = true
 
 [node name="Tick_x" type="AnimatedSprite2D" parent="rewards_display_area" unique_id=1225126892]
+unique_name_in_owner = true
 position = Vector2(840, 222)
 scale = Vector2(0.2, 0.2)
 sprite_frames = SubResource("SpriteFrames_stm8k")

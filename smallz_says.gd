@@ -22,11 +22,12 @@ func _ready() -> void:
 
 # area 2d for rewards display
 @onready var rewardsDisplayArea = %rewards_display_area
+@onready var rewardsLabel = %rewardsLabel
+@onready var rewardsTickSprite = %Tick_x
 
 # labels
 @onready var smallzsaysText = %smallzsaysLabel
 @onready var smallzsaysTimerLabel = %smallzsaysTimerLabel
-@onready var rewardsLabel = %rewardsLabel
 
 # Updates the correct sprite to view.
 func smallzSaysSprite():
@@ -58,6 +59,7 @@ func smallzSaysSprite():
 
 # disables every area 2d's visibility.
 func disableOldAreas():
+	# pets:
 	catArea.visible = false
 	goldfishArea.visible = false
 	pumpkinArea.visible = false
@@ -65,6 +67,8 @@ func disableOldAreas():
 	babyChickenArea.visible = false
 	spiderArea.visible = false
 	ghostArea.visible = false
+	# other:
+	rewardsDisplayArea.visible = false
 	
 
 # UHGHGHGHGHGH SOOO MUCH IF STATEMENTSSSS ;-;
@@ -253,7 +257,7 @@ func smallzSays():
 			else:
 				smallzsaysText.text = "Smallz Says: Pet the sides of the pumpkin."
 		if penguinArea.visible == true:
-			if Global.smallzSaysRNG == 1:
+			if smallzSaysRNG == 1:
 				smallzsaysText.text = "Smallz Says: jnbgvfgcdsfadsdcfgv."
 			else:
 				smallzsaysText.text = "Smallz Says: Pet the flippers."
@@ -268,7 +272,7 @@ func smallzSays():
 			else:
 				smallzsaysText.text = "Smallz Says: Pet the cheeks."
 		if ghostArea.visible == true:
-			if Global.smallzSaysRNG == 1:
+			if smallzSaysRNG == 1:
 				smallzsaysText.text = "Smsallhgzhbc: Pet the cheeks."
 			else:
 				smallzsaysText.text = "Smallz Says: Pet the cheeks."
@@ -286,36 +290,41 @@ func _on_timer_timeout() -> void:
 		# ^^ 6 because it will instantly deduct 1
 	smallzSaysTime -= 1
 	smallzsaysTimerLabel.text = str(smallzSaysTime)
-	
 
+# start of clickable collision shapes:
+# Note: shape_idx starts at 0, so the shape_idx is
+# always 1 less than the collisionShapeRNG value.
+# excludes the cat section because I coded that differently.
 func _on_cat_smallzsays_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
 		if shape_idx == 0:
 			if not smallzSaysRNG == 1 and collisionShapeRNG == 4:
-				Global.love += 5
+				increaseLove()
 			else:
-				Global.love += 5
+				decreaseLove()
 
 		if shape_idx == 1:
 			if not smallzSaysRNG == 1 and collisionShapeRNG == 3:
-				Global.love += 5
+				increaseLove()
 			else:
-				Global.love -= 5
+				decreaseLove()
 		
 		# pet cat - feet
 		if shape_idx == 2:
 			if not smallzSaysRNG == 1 and collisionShapeRNG == 1:
-				Global.love += 5
+				increaseLove()
 			else:
-				Global.love -= 5
+				decreaseLove()
 		if shape_idx == 3:
 			if not smallzSaysRNG == 1 and collisionShapeRNG == 2:
-				Global.love += 5
+				increaseLove()
 			else:
-				Global.love -= 5
+				decreaseLove()
 		if shape_idx == 4 or shape_idx == 5:
 			if not smallzSaysRNG == 1 and collisionShapeRNG == 5:
-				Global.love += 5
+				increaseLove()
+			else:
+				decreaseLove()
 		print(shape_idx)
 		smallzSaysTime = 5
 func _on_goldfish_smallzsays_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
@@ -323,29 +332,31 @@ func _on_goldfish_smallzsays_event(viewport: Node, event: InputEvent, shape_idx:
 		# needs rewriting past this point
 		if shape_idx == 0:
 			if not smallzSaysRNG == 1 and collisionShapeRNG == 1:
-				Global.love += 5
+				increaseLove()
 			else:
-				Global.love += 5
+				decreaseLove()
 
 		if shape_idx == 1:
 			if not smallzSaysRNG == 1 and collisionShapeRNG == 2:
-				Global.love += 5
+				increaseLove()
 			else:
-				Global.love -= 5
+				decreaseLove()
 		
 		if shape_idx == 2:
 			if not smallzSaysRNG == 1 and collisionShapeRNG == 3:
-				Global.love += 5
+				increaseLove()
 			else:
-				Global.love -= 5
+				decreaseLove()
 		if shape_idx == 3:
 			if not smallzSaysRNG == 1 and collisionShapeRNG == 4:
-				Global.love += 5
+				increaseLove()
 			else:
-				Global.love -= 5
+				decreaseLove()
 		if shape_idx == 4:
 			if not smallzSaysRNG == 1 and collisionShapeRNG == 5:
-				Global.love += 5
+				increaseLove()
+			else:
+				decreaseLove()
 		print(shape_idx)
 		smallzSaysTime = 5
 
@@ -353,29 +364,31 @@ func _on_pumpkin_event(viewport: Node, event: InputEvent, shape_idx: int) -> voi
 	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
 		if shape_idx == 0:
 			if not smallzSaysRNG == 1 and collisionShapeRNG == 1:
-				Global.love += 5
+				increaseLove()
 			else:
-				Global.love += 5
+				decreaseLove()
 
 		if shape_idx == 1:
 			if not smallzSaysRNG == 1 and collisionShapeRNG == 2:
-				Global.love += 5
+				increaseLove()
 			else:
-				Global.love -= 5
+				decreaseLove()
 		
 		if shape_idx == 2:
 			if not smallzSaysRNG == 1 and collisionShapeRNG == 3:
-				Global.love += 5
+				increaseLove()
 			else:
-				Global.love -= 5
+				decreaseLove()
 		if shape_idx == 3 or shape_idx == 5:
 			if not smallzSaysRNG == 1 and collisionShapeRNG == 4:
-				Global.love += 5
+				increaseLove()
 			else:
-				Global.love -= 5
+				decreaseLove()
 		if shape_idx == 4 or shape_idx == 6:
 			if not smallzSaysRNG == 1 and collisionShapeRNG == 5:
-				Global.love += 5
+				increaseLove()
+			else:
+				decreaseLove()
 		print(shape_idx)
 		smallzSaysTime = 5
 
@@ -383,29 +396,31 @@ func _on_penguin_smallzsays_event(viewport: Node, event: InputEvent, shape_idx: 
 	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
 		if shape_idx == 0:
 			if not smallzSaysRNG == 1 and collisionShapeRNG == 1:
-				Global.love += 5
+				increaseLove()
 			else:
-				Global.love += 5
+				decreaseLove()
 
 		if shape_idx == 1:
 			if not smallzSaysRNG == 1 and collisionShapeRNG == 2:
-				Global.love += 5
+				increaseLove()
 			else:
-				Global.love -= 5
+				decreaseLove()
 		
 		if shape_idx == 2:
 			if not smallzSaysRNG == 1 and collisionShapeRNG == 3:
-				Global.love += 5
+				increaseLove()
 			else:
-				Global.love -= 5
+				decreaseLove()
 		if shape_idx == 3:
 			if not smallzSaysRNG == 1 and collisionShapeRNG == 4:
-				Global.love += 5
+				increaseLove()
 			else:
-				Global.love -= 5
+				decreaseLove()
 		if shape_idx == 4 or shape_idx == 5:
 			if not smallzSaysRNG == 1 and collisionShapeRNG == 5:
-				Global.love += 5
+				increaseLove()
+			else:
+				decreaseLove()
 		print(shape_idx)
 		smallzSaysTime = 5
 
@@ -413,29 +428,31 @@ func _on_babychicken_smallzsays_event(viewport: Node, event: InputEvent, shape_i
 	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
 		if shape_idx == 0:
 			if not smallzSaysRNG == 1 and collisionShapeRNG == 1:
-				Global.love += 5
+				increaseLove()
 			else:
-				Global.love += 5
+				decreaseLove()
 
 		if shape_idx == 1:
 			if not smallzSaysRNG == 1 and collisionShapeRNG == 2:
-				Global.love += 5
+				increaseLove()
 			else:
-				Global.love -= 5
+				decreaseLove()
 		
 		if shape_idx == 2:
 			if not smallzSaysRNG == 1 and collisionShapeRNG == 3:
-				Global.love += 5
+				increaseLove()
 			else:
-				Global.love -= 5
+				decreaseLove()
 		if shape_idx == 3:
 			if not smallzSaysRNG == 1 and collisionShapeRNG == 4:
-				Global.love += 5
+				increaseLove()
 			else:
-				Global.love -= 5
+				decreaseLove()
 		if shape_idx == 4 or shape_idx == 5:
 			if not smallzSaysRNG == 1 and collisionShapeRNG == 5:
-				Global.love += 5
+				increaseLove()
+			else:
+				decreaseLove()
 		print(shape_idx)
 		smallzSaysTime = 5
 
@@ -443,29 +460,31 @@ func _on_spider_smallzsays_event(viewport: Node, event: InputEvent, shape_idx: i
 	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
 		if shape_idx == 0:
 			if not smallzSaysRNG == 1 and collisionShapeRNG == 1:
-				Global.love += 5
+				increaseLove()
 			else:
-				Global.love += 5
+				decreaseLove()
 
 		if shape_idx == 1:
 			if not smallzSaysRNG == 1 and collisionShapeRNG == 2:
-				Global.love += 5
+				increaseLove()
 			else:
-				Global.love -= 5
+				decreaseLove()
 		
 		if shape_idx == 2:
 			if not smallzSaysRNG == 1 and collisionShapeRNG == 3:
-				Global.love += 5
+				increaseLove()
 			else:
-				Global.love -= 5
+				decreaseLove()
 		if shape_idx == 3:
 			if not smallzSaysRNG == 1 and collisionShapeRNG == 4:
-				Global.love += 5
+				increaseLove()
 			else:
-				Global.love -= 5
+				decreaseLove()
 		if shape_idx == 4 or shape_idx == 5:
 			if not smallzSaysRNG == 1 and collisionShapeRNG == 5:
-				Global.love += 5
+				increaseLove()
+			else:
+				decreaseLove()
 		print(shape_idx)
 		smallzSaysTime = 5
 
@@ -473,34 +492,50 @@ func _on_ghost_smallzsays_event(viewport: Node, event: InputEvent, shape_idx: in
 	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
 		if shape_idx == 0:
 			if not smallzSaysRNG == 1 and collisionShapeRNG == 1:
-				Global.love += 5
+				increaseLove()
 			else:
-				Global.love += 5
+				decreaseLove()
 
 		if shape_idx == 1:
 			if not smallzSaysRNG == 1 and collisionShapeRNG == 2:
-				Global.love += 5
+				increaseLove()
 			else:
-				Global.love -= 5
+				decreaseLove()
 		
 		if shape_idx == 2:
 			if not smallzSaysRNG == 1 and collisionShapeRNG == 3:
-				Global.love += 5
+				increaseLove()
 			else:
 				decreaseLove()
 		if shape_idx == 3:
 			if not smallzSaysRNG == 1 and collisionShapeRNG == 4:
-				Global.love += 5
+				increaseLove()
 			else:
-				Global.love -= 5
+				decreaseLove()
 		if shape_idx == 4 or shape_idx == 5:
 			if not smallzSaysRNG == 1 and collisionShapeRNG == 5:
-				Global.love += 5
+				increaseLove()
+			else:
+				decreaseLove()
 		print(shape_idx)
 		smallzSaysTime = 5
+# end of clickable collision shapes.
 
+
+# increases love by 5, displays it on screen
 func increaseLove():
 	Global.love += 5
+	rewardsDisplayArea.visible = true
+	rewardsLabel.text = "+5 Love"
+	rewardsTickSprite.frame = 0
+	await get_tree().create_timer(2).timeout
+	rewardsDisplayArea.visible = false
 	
+# decreases love by 5, displays it on screen.
 func decreaseLove():
 	Global.love -= 5
+	rewardsDisplayArea.visible = true
+	rewardsLabel.text = "-5 Love"
+	rewardsTickSprite.frame = 1
+	await get_tree().create_timer(2).timeout
+	
