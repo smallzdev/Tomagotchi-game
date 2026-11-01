@@ -29,6 +29,9 @@ func _ready() -> void:
 @onready var smallzsaysText = %smallzsaysLabel
 @onready var smallzsaysTimerLabel = %smallzsaysTimerLabel
 
+#preloads
+var heartexplosion = preload("res://scenes/heartexplosion.tscn")
+
 # Updates the correct sprite to view.
 func smallzSaysSprite():
 	if Global.pet == 1 or Global.pet == 2 or Global.pet == 3:
@@ -524,6 +527,14 @@ func _on_ghost_smallzsays_event(viewport: Node, event: InputEvent, shape_idx: in
 
 # increases love by 5, displays it on screen
 func increaseLove():
+	# when accessing sibling nodes - put "" around file location
+	#remember to start it like: ../
+	var explosion = heartexplosion.instantiate()
+	get_tree().current_scene.add_child(explosion)
+	explosion.global_position = get_global_mouse_position()
+	print(get_global_mouse_position())
+	explosion.get_node("CPUParticles2D").emitting = true
+	print("hearts")
 	Global.love += 5
 	rewardsDisplayArea.visible = true
 	rewardsLabel.text = "+5 Love"
