@@ -6,8 +6,9 @@ func _ready() -> void:
 	var scoreLabel = %scoreLabel
 	var replay_button = %replayButton
 	var menuButton = %menuButton
-	scoreLabel.text = "Score: " + str(Global.hardcoreTimer) + "
-	High Score: " + str(Global.hardcoreHighScore)
+	var highscore = %highscorelabel
+	scoreLabel.text = "Score: " + str(Global.hardcoreTimer)
+	highscore.text = "High Score: " + str(Global.hardcoreHighScore)
 	replay_button.pressed.connect(_replay_button_pressed)
 	menuButton.pressed.connect(_menu_button_pressed)
 	
