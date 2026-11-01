@@ -20,6 +20,7 @@
 [ext_resource type="Texture2D" uid="uid://c16y87a2pkbsg" path="res://Resources/InUse/TamagotchiCustomAssets/pets/cat3-animated.png" id="11_ahvjs"]
 [ext_resource type="Texture2D" uid="uid://dfer5a36n2qsn" path="res://Resources/InUse/TamagotchiCustomAssets/pets/pumpin.png" id="13_36xus"]
 [ext_resource type="Texture2D" uid="uid://bwoqi4m63v3xe" path="res://Resources/InUse/TamagotchiCustomAssets/pets/ginger-cat-animated.png" id="13_r20aw"]
+[ext_resource type="Texture2D" uid="uid://dxwurxafqnprg" path="res://Resources/InUse/TamagotchiCustomAssets/pets/goldenretriver.png" id="13_wpq41"]
 [ext_resource type="Texture2D" uid="uid://bwnu12weboyh4" path="res://Resources/InUse/TamagotchiCustomAssets/pets/penguin.png" id="15_krc6o"]
 [ext_resource type="Texture2D" uid="uid://ceymqu0dyfx4y" path="res://Resources/InUse/TamagotchiCustomAssets/pets/grey-animated-cat.png" id="15_xgfuv"]
 [ext_resource type="Texture2D" uid="uid://b64t62s47vcjg" path="res://Resources/InUse/TamagotchiCustomAssets/pets/spider.png" id="18_r20aw"]
@@ -220,6 +221,30 @@ region = Rect2(0, 64, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_o0wps"]
 atlas = ExtResource("11_ahvjs")
+region = Rect2(32, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a3r26"]
+atlas = ExtResource("13_wpq41")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kkywt"]
+atlas = ExtResource("13_wpq41")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ttvm3"]
+atlas = ExtResource("13_wpq41")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yy381"]
+atlas = ExtResource("13_wpq41")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j6q8k"]
+atlas = ExtResource("13_wpq41")
+region = Rect2(0, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6psnr"]
+atlas = ExtResource("13_wpq41")
 region = Rect2(32, 64, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_rl3m3"]
@@ -432,6 +457,29 @@ animations = [{
 }],
 "loop": 1,
 "name": &"cat3",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a3r26")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kkywt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ttvm3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yy381")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j6q8k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6psnr")
+}],
+"loop": 1,
+"name": &"dog",
 "speed": 5.0
 }, {
 "frames": [{
@@ -879,10 +927,10 @@ border_width_top = 12
 border_width_right = 12
 border_width_bottom = 12
 border_color = Color(0.30588236, 0.28627452, 0.2784314, 1)
-corner_radius_top_left = 5
-corner_radius_top_right = 5
-corner_radius_bottom_right = 5
-corner_radius_bottom_left = 5
+corner_radius_top_left = 35
+corner_radius_top_right = 35
+corner_radius_bottom_right = 35
+corner_radius_bottom_left = 35
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4f8iy"]
 bg_color = Color(0.38431373, 0.38431373, 0.38431373, 0)
@@ -1066,7 +1114,7 @@ unique_name_in_owner = true
 texture_filter = 1
 position = Vector2(3.5833335, -0.4166667)
 sprite_frames = SubResource("SpriteFrames_stm8k")
-animation = &"grey cat"
+animation = &"dog"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=853786905]
 position = Vector2(2.2083335, 0.74999934)
@@ -1329,8 +1377,60 @@ theme_override_font_sizes/font_size = 32
 text = "You do not have enough grains to 
 feed your pet. Go farm more grains!"
 
+[node name="tutorialpanel" type="Panel" parent="." unique_id=319057744]
+offset_left = 244.0
+offset_top = 63.0
+offset_right = 944.0
+offset_bottom = 569.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_njqwk")
+
+[node name="tutoriallabel" type="Label" parent="tutorialpanel" unique_id=58790545]
+layout_mode = 0
+offset_left = 92.0
+offset_top = 28.0
+offset_right = 569.0
+offset_bottom = 76.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_ymjn7")
+theme_override_font_sizes/font_size = 50
+text = "welcome to hatchapet"
+
+[node name="tutorialdesc" type="Label" parent="tutorialpanel" unique_id=857702374]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 80.0
+offset_right = 650.0
+offset_bottom = 188.0
+theme_override_colors/font_color = Color(0.30588236, 0.28627452, 0.2784314, 1)
+theme_override_fonts/font = ExtResource("4_ymjn7")
+theme_override_font_sizes/font_size = 35
+text = "you live on a farm with a few different 
+animals. your goal is to expand your farm
+and make it the best farm ever! 
+
+play with your pets and show them off, 
+farm grains, trade with other vendors, 
+collect more pets - the world is endless!
+
+become the best farmer ever!!!"
+
+[node name="tutorialbutton" type="Button" parent="tutorialpanel" unique_id=707095385]
+layout_mode = 0
+offset_left = 264.0
+offset_top = 421.0
+offset_right = 428.0
+offset_bottom = 477.0
+theme_override_colors/font_color = Color(0.30588236, 0.28627452, 0.2784314, 1)
+theme_override_fonts/font = ExtResource("4_ymjn7")
+theme_override_font_sizes/font_size = 38
+theme_override_styles/normal = SubResource("StyleBoxFlat_4f8iy")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_iwkmd")
+theme_override_styles/hover = SubResource("StyleBoxFlat_bomb8")
+text = "Got it!"
+
 [connection signal="timeout" from="HardcoreScoreTimer" to="petsButton" method="harcore_score_timer"]
 [connection signal="input_event" from="Area2D" to="Area2D" method="petting_love"]
 [connection signal="timeout" from="Timer" to="petsButton" method="_on_5s_timer_timeout"]
 [connection signal="timeout" from="HardcoreTimer" to="petsButton" method="_on_hardcore_timer_timeout"]
 [connection signal="pressed" from="errorpanel/errorbutton" to="petsButton" method="_on_errorbutton_pressed"]
+[connection signal="pressed" from="tutorialpanel/tutorialbutton" to="petsButton" method="_on_tutorialbutton_pressed"]

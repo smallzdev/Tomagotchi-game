@@ -24,6 +24,9 @@ extends Button
 #error panel stuff
 @onready var errorpanel = $"../errorpanel"
 
+#tutorial panel
+@onready var tutorialpanel = $"../tutorialpanel"
+
 func petsButton_pressed():
 	get_tree().call_deferred("change_scene_to_file", "res://scenes/menus/pets.tscn")
 
@@ -298,3 +301,6 @@ func _on_errorbutton_pressed() -> void:
 func _process(delta: float) -> void:
 	if Global.grains < 10: 
 		%foodButton.disabled = true
+
+func _on_tutorialbutton_pressed() -> void:
+	tutorialpanel.visible = false
