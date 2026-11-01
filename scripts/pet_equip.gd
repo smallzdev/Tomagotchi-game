@@ -170,6 +170,8 @@ func loadEquippedPet():
 @onready var petSprite8Name = %PetLabel8
 @onready var petSprite9 = %PetSprite9
 @onready var petSprite9Label = %PetLabel9
+@onready var petSprite10 = %PetSprite10
+@onready var petSprite10Name = %PetLabel10
 
 func showOwned():
 	# falses
@@ -200,6 +202,9 @@ func showOwned():
 	if Global.pet9owned == false:
 		petSprite9.frame = 1
 		petSprite9Label.text = "????"
+	if Global.pet10owned == false:
+		petSprite10.frame = 1
+		petSprite10Name.text = "????"
 	
 	# trues
 	if Global.pet1owned == true:
@@ -229,3 +234,6 @@ func showOwned():
 	if Global.pet9owned == true:
 		petSprite9.frame = 0
 		petSprite9Label.text = "Spider"
+	if Global.pet10owned == true:
+		petSprite10.frame = 0
+		petSprite10Name.text = "Golden Retriever"

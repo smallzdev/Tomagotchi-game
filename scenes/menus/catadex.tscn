@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://cver2k8bbuv20" path="res://Resources/InUse/TamagotchiCustomAssets/pets/Outlines/babychicken-outline.png" id="4_k6lqr"]
 [ext_resource type="Texture2D" uid="uid://c880qnqb8oj84" path="res://Resources/InUse/TamagotchiCustomAssets/pets/Outlines/cat-outline.png" id="6_cjw6g"]
 [ext_resource type="Texture2D" uid="uid://bwnu12weboyh4" path="res://Resources/InUse/TamagotchiCustomAssets/pets/penguin.png" id="6_xbeds"]
+[ext_resource type="Texture2D" uid="uid://dxwurxafqnprg" path="res://Resources/InUse/TamagotchiCustomAssets/pets/goldenretriver.png" id="7_abrlc"]
 [ext_resource type="Texture2D" uid="uid://dfer5a36n2qsn" path="res://Resources/InUse/TamagotchiCustomAssets/pets/pumpin.png" id="7_w7v3h"]
 [ext_resource type="Texture2D" uid="uid://mnyatgeexis1" path="res://Resources/InUse/TamagotchiCustomAssets/pets/Outlines/ghost-outline.png" id="8_acxwf"]
 [ext_resource type="Script" uid="uid://b7ptc850pmdcq" path="res://scripts/catadex_buttons.gd" id="10_xbeds"]
@@ -38,6 +39,10 @@ corner_detail = 1
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_cjw6g"]
 atlas = ExtResource("3_raeda")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e7a1q"]
+atlas = ExtResource("7_abrlc")
 region = Rect2(0, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_uld33"]
@@ -107,6 +112,17 @@ animations = [{
 }],
 "loop": 1,
 "name": &"cat3",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e7a1q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_cg3yn")
+}],
+"loop": 1,
+"name": &"dog",
 "speed": 5.0
 }, {
 "frames": [{
@@ -238,7 +254,7 @@ corner_radius_bottom_right = 5
 corner_radius_bottom_left = 5
 corner_detail = 1
 
-[node name="Node2D" type="Node2D" unique_id=293050761]
+[node name="Node2D2" type="Node2D" unique_id=293050761]
 script = ExtResource("3_u7asp")
 
 [node name="backgroundGradient" type="TextureRect" parent="." unique_id=817769923]
@@ -443,6 +459,25 @@ theme_override_colors/font_color = Color(0.30588236, 0.28627452, 0.2784314, 1)
 theme_override_fonts/font = ExtResource("2_w7v3h")
 theme_override_font_sizes/font_size = 18
 text = "Spider"
+horizontal_alignment = 1
+
+[node name="CatadexItem10" type="AnimatedSprite2D" parent="Panel" unique_id=1380439451]
+texture_filter = 1
+position = Vector2(65.00012, 164)
+scale = Vector2(2.5, 2.5)
+sprite_frames = SubResource("SpriteFrames_cgke2")
+animation = &"dog"
+
+[node name="CatadexItem10Label" type="Label" parent="Panel" unique_id=983045565]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 206.8
+offset_right = 129.0
+offset_bottom = 230.00002
+theme_override_colors/font_color = Color(0.30588236, 0.28627452, 0.2784314, 1)
+theme_override_fonts/font = ExtResource("2_w7v3h")
+theme_override_font_sizes/font_size = 18
+text = "Golden retriever"
 horizontal_alignment = 1
 
 [node name="backButton" type="Button" parent="." unique_id=1054623189]

@@ -22,7 +22,8 @@ var pet5owned = true # Pet 5 - "Ghost"
 var pet6owned = true # Pet 6 - "Pumpkin"
 var pet7owned = true # Pet 7 - "Penguin"
 var pet8owned = false # Pet 8 - "Baby Chicken"
-var pet9owned = true
+var pet9owned = true # Pet 9 - "Spider"
+var pet10owned = true # Pet 10 - "Golden Retriever"
 
 #hardcore variables
 # hardcore mode toggle
@@ -35,6 +36,8 @@ var hatched = false
 var gachadonce = false
 
 var grains = 20
+
+var smallzSaysRNGtemp = null
 
 func add_grains(amount: int) -> void:
 	grains+=amount

@@ -84,6 +84,7 @@ func smallzSays():
 	# picks the random numbers above
 	collisionShapeRNG = randomSelection.pick_random()
 	smallzSaysRNG = smallzSays.pick_random()
+	Global.smallzSaysRNGtemp = smallzSaysRNG
 # ^^ thanks vic for introducing this to me, this is wayyy better - smallz
 # if rolled 1:
 	if collisionShapeRNG == 1:
