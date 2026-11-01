@@ -1,0 +1,126 @@
+[gd_scene format=3 uid="uid://bfrllbpo0r6gx"]
+
+[ext_resource type="FontFile" uid="uid://dyibl4resr8wn" path="res://Resources/font/augiepixel.ttf" id="1_iks0y"]
+[ext_resource type="Script" uid="uid://c2lfrowvp8ull" path="res://scripts/market.gd" id="1_k70a0"]
+[ext_resource type="PackedScene" uid="uid://7s5fj1hnj2b1" path="res://scenes/grain_ui.tscn" id="2_k70a0"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_jmmcw"]
+specular_color = Color(0.95686275, 0.95686275, 0.95686275, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7bpo7"]
+bg_color = Color(0.38431373, 0.38431373, 0.38431373, 0)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(0.30588236, 0.28627452, 0.2784314, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+corner_detail = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d6tgm"]
+bg_color = Color(0.16818258, 0.15563756, 0.15061828, 1)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(0.16862746, 0.15686275, 0.14901961, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+corner_detail = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ygeob"]
+bg_color = Color(0.30588236, 0.28627452, 0.2784314, 1)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(0.30588236, 0.28627452, 0.2784314, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+corner_detail = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_k70a0"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(0.30588236, 0.28627452, 0.2784314, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+corner_detail = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_co8of"]
+bg_color = Color(0.16818258, 0.15563756, 0.15061828, 1)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(0.16862746, 0.15686275, 0.14901961, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+corner_detail = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ennqm"]
+bg_color = Color(0.30588236, 0.28627452, 0.2784314, 1)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(0.30588236, 0.28627452, 0.2784314, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+corner_detail = 1
+
+[node name="market" type="Node2D" unique_id=906231383]
+script = ExtResource("1_k70a0")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=2113248103]
+offset_right = 1152.0
+offset_bottom = 652.0
+texture = SubResource("CanvasTexture_jmmcw")
+
+[node name="buybutton1" type="Button" parent="." unique_id=493203860]
+offset_left = 429.0
+offset_top = 198.0
+offset_right = 765.0
+offset_bottom = 318.0
+theme_override_colors/font_color = Color(0.30588236, 0.28627452, 0.2784314, 1)
+theme_override_fonts/font = ExtResource("1_iks0y")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_7bpo7")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_d6tgm")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ygeob")
+text = "buy!!!!!!!!!!"
+
+[node name="grain_ui" parent="." unique_id=1734086535 instance=ExtResource("2_k70a0")]
+offset_left = 486.0
+offset_top = 53.0
+offset_right = 486.0
+offset_bottom = 53.0
+
+[node name="backbutton" type="Button" parent="." unique_id=355484081]
+offset_left = 859.0
+offset_top = 62.0
+offset_right = 1121.0
+offset_bottom = 133.0
+theme_override_colors/font_color = Color(0.30588236, 0.28627452, 0.2784314, 1)
+theme_override_fonts/font = ExtResource("1_iks0y")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_k70a0")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_co8of")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ennqm")
+text = "main game"
