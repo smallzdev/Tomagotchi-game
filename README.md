@@ -183,7 +183,7 @@ An actual legit score for hardcore mode.
 
 ![image](https://github.com/smallzdev/Tomagotchi-game/blob/main/Resources/InUse/TamagotchiCustomAssets/smallz_says_background.png)
 
-A full screen version of a background made in Canvas <3
+A full screen version of a background made in Canva <3
 
 ## What we learned
 
