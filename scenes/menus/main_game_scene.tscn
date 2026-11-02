@@ -1378,6 +1378,7 @@ text = "You do not have enough grains to
 feed your pet. Go farm more grains!"
 
 [node name="tutorialpanel" type="Panel" parent="." unique_id=319057744]
+visible = false
 offset_left = 244.0
 offset_top = 63.0
 offset_right = 944.0

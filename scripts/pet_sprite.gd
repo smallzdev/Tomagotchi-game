@@ -20,6 +20,7 @@ func _ready() -> void:
 	randomize()
 	if Global.gachadonce == false: 
 		var gacha = randi_range(1, 100)
+		$"../tutorialpanel".visible = true
 		Global.gachadonce = true
 		if gacha <= 75:
 			print("common")
