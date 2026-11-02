@@ -6,7 +6,7 @@ What is a Tamagotchi game you might ask? It's basically like a virtual pet you n
 
 Made with ❤️ by [Smallz](https://github.com/smallzdev) and [Vick-St3r](https://github.com/Vick-St3r)
 
-***Play the latest release [here!](https://vick-st3r.itch.io/hatchapet-week-two)***
+***Play the latest release [here!](https://vick-st3r.itch.io/hatchapet-week-three)***
 
 # Credits
 This game was made by Victoria and Smallz. We may of reused some of the assets from our old game, or used free assets from a free public domain [Pixel Pack](https://pixelfrog-assets.itch.io/pixel-adventure-1) made by [Pixel Frog](https://pixelfrog-assets.itch.io/). Of course, we also made our own art specially for this game too.
@@ -149,12 +149,70 @@ I couldn't come up with anything good this week. I was trying to compose the mai
 4. Farm -> Shop, hangout with your pet, energy minigame?
 </details>
 
-# Week 3: Best Friend 
+# Week 3: Changes
 <details open>
 <summary></summary>
 
-Smallz Says:
-(vic feel free to edit this to format it, or change wording)
-In week 3, I (smallz) made a minigame called "Smallz Says" which is based off simon says. If you click on the pet to pat it, you will be changed onto the minigame. This took a long time, and I struggled a bit but I'm proud of what I achieved.
+Week three release [here!](https://vick-st3r.itch.io/hatchapet-week-three)
 
-If you don't know what simon says is, you basically just have to follow the instructions when it says "Smallz Says: (instructions)". If the spelling is wrong in the name or the instruction, you don't listen to the instruction and instead click the "skip" button. If it says someone else other than Smallz, for example "Simon", you also click skip.
+This week's theme is changes. So, I decided to add power ups and debuffs in the basket mini game that change the player! 
+
+![image](https://github.com/smallzdev/Tomagotchi-game/blob/main/screenshots/week7events.PNG)
+
+In the image above you can see a power up and a debuff. By claiming the rainbow one you get a frenzy! A bunch of grains spawn in 5 seconds and you get a lot of grains :D 
+
+The purple grain is an evil grain >:( when you touch this grain it deducts 5 grains from you..
+
+![image](https://github.com/smallzdev/Tomagotchi-game/blob/main/screenshots/week7smallzsays.PNG)
+
+Smallz says! A minigame to increase love for your pet. In week 3, I (Smallz) made a minigame called "Smallz Says" which is based off Simon says. If you click on the pet to pat it, you will be changed onto the minigame. This took a long time, and I struggled a bit but I'm proud of what I achieved.
+
+If you don't know what Simon says is, you basically just have to follow the instructions when it says "Smallz Says: (instructions)". If the spelling is wrong in the name or the instruction, you don't listen to the instruction and instead click the "skip" button. If it says someone else other than Smallz, for example "Simon", you also click skip.
+
+![image](https://github.com/smallzdev/Tomagotchi-game/blob/main/screenshots/week7shop.PNG)
+
+I also added a bare bones shop! Currently, when you click the button to buy something it just deducts grains from you. I made the background with <3 MS Paint. 
+
+![image](https://github.com/smallzdev/Tomagotchi-game/blob/main/screenshots/week7tutorial.PNG)
+
+Tutorial panel!
+
+![image](https://github.com/smallzdev/Tomagotchi-game/blob/main/screenshots/week7hardcoregameover.PNG)
+
+An actual legit score for hardcore mode. 
+
+![image](https://github.com/smallzdev/Tomagotchi-game/blob/main/Resources/InUse/TamagotchiCustomAssets/smallz_says_background.png)
+
+A full screen version of a background made in Canvas <3
+
+## What we learned
+
+Git merge + random integrated CoPilot for scenes (.tscn files) do not work. This is something I learned (Smallz learnt this weeks ago), because I unfortunately give him all the merge conflicts. I was trying to open the file in VSCode and try to edit it myself and for some reason it fixed itself? The game still compiled, so I thought it fixed itself. I was very wrong. 
+
+After shipping my game on itch, I sent it to a friend and he told me that the hardcore mode was unplayable. I was then super confused, because the hardcore mode worked fine when I was playing it. Maybe HTML5 export broke that gamemode? I was going to try the web version for myself and indeed it was broken. I was super confused, because it worked fine a while ago? A few moments later, I realized it was because of the merge conflict :/ 
+
+I also found out there are two different ways to destroy a node. `self.queue_free()` and `queue_free()`. I was using `self.queue_free()`, because of a video I watched when I first started. 
+
+When I was troubleshooting the frenzy power up, I found that `queue_free()` also existed! The main difference between the two is that `queue_free()` is the "preferred" way to use it. There is no technical reason to write **self** `queue_free()` other than to specify that the node is going to destroy itself. 
+
+## Feature list
+1. Hardcore mode is fixed
+2. Love mini game is added 
+3. Added friction and acceleration to basket
+4. Power ups and debuffs added to grain mini game
+    - Frenzy
+    - Evil grains
+    - 2x grain collection
+    - Freeze
+5. Basic functionality of a shop
+6. Tutorial panel
+7. Goldie added
+
+## Future plans 
+1. Finish love mini game (Smallz says)
+2. Add actual shop stuff
+3. Levels 
+4. Finish adding power ups + debuffs 
+5. Add something to indicate a powerup or debuff is active
+
+</details>
