@@ -254,4 +254,4 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_1mml5")
 text = "main game"
 
 [node name="frenzytimer" type="Timer" parent="." unique_id=1486814399]
-wait_time = 5.0
+wait_time = 20.0

@@ -26,5 +26,10 @@ func frenzytimeout() -> void:
 	add_child(frenzyclone)
 	frenzyclone.position.x = randi_range(0,1152)
 
+#connects w frenzy code and runs this
+func start_frenzy() -> void:
+	graintimer.wait_time = 0.05
+	get_tree().create_timer(5.0).timeout.connect(func(): graintimer.wait_time = 0.2)
+
 func back_button_pressed():
 	get_tree().change_scene_to_file("res://scenes/menus/main_game_scene.tscn")
