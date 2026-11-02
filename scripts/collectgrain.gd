@@ -4,7 +4,7 @@ const grain = preload("res://scenes/grain.tscn")
 const frenzy = preload("res://scenes/frenzy.tscn")
 
 @onready var graintimer = $graintimer
-@onready var frenzytimer = $graintimer
+@onready var frenzytimer = $frenzytimer
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
