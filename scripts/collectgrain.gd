@@ -4,11 +4,15 @@ const grain = preload("res://scenes/grain.tscn")
 const frenzy = preload("res://scenes/frenzy.tscn")
 const evilgrain = preload("res://scenes/evilgrain.tscn")
 const doublecollection = preload("res://scenes/doublecollection.tscn")
+const freeze = preload("res://scenes/freeze.tscn")
 
 @onready var graintimer = $graintimer
 @onready var frenzytimer = $frenzytimer
 @onready var evilgraintimer = $evilgraintimer
 @onready var dblecltntimer = $doublecollectiontimer
+@onready var freezetimer = $freezetimer
+
+@onready var player = $CharacterBody2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -23,7 +27,8 @@ func _ready() -> void:
 	evilgraintimer.start()
 	dblecltntimer.timeout.connect(dblecltntimeout)
 	dblecltntimer.start()
-
+	freezetimer.timeout.connect(freezetimeout)
+	freezetimer.start()
 #----------------spawn functions-------------------------
 
 func onTimeout() -> void:
@@ -46,6 +51,11 @@ func dblecltntimeout() -> void:
 	add_child(doublecollectionclone)
 	doublecollectionclone.position.x = randi_range(0,1152)
 
+func freezetimeout() -> void:
+	var freezeclone: Node = freeze.instantiate()
+	add_child(freezeclone)
+	freezeclone.position.x = randi_range(0,1152)
+
 #----------------random event timers + effects-------------------------
 
 #connects w frenzy code and runs this
@@ -55,6 +65,16 @@ func start_frenzy() -> void:
 
 func start_doublecol() -> void:
 	get_tree().create_timer(5.0).timeout.connect(func(): Global.doublecollection = false)
+
+func start_freeze() -> void:
+	player.set_process_input(false)
+	player.set_physics_process(false)
+	player.set_process_unhandled_input(false)
+	
+	get_tree().create_timer(1.5).timeout.connect(func():
+		player.set_process_input(true)
+		player.set_physics_process(true)
+		player.set_process_unhandled_input(true))
 
 #--------------------button---------------------------------
 func back_button_pressed():

@@ -261,3 +261,6 @@ wait_time = 3.0
 
 [node name="doublecollectiontimer" type="Timer" parent="." unique_id=2134768191]
 wait_time = 25.0
+
+[node name="freezetimer" type="Timer" parent="." unique_id=1578152457]
+wait_time = 3.0

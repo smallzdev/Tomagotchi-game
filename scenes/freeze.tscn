@@ -1,11 +1,13 @@
 [gd_scene format=3 uid="uid://b8ww31otgkfxn"]
 
 [ext_resource type="Texture2D" uid="uid://bkgfbvirxarqc" path="res://Resources/InUse/TamagotchiCustomAssets/freeze.png" id="1_g2jp4"]
+[ext_resource type="Script" uid="uid://dop72yptcghyk" path="res://scripts/freeze.gd" id="1_wicxs"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xrivr"]
 size = Vector2(84, 88)
 
 [node name="freeze" type="Node2D" unique_id=107373048]
+script = ExtResource("1_wicxs")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=128993260]
 texture_filter = 1
@@ -17,3 +19,5 @@ texture = ExtResource("1_g2jp4")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=705209306]
 position = Vector2(-2, 5)
 shape = SubResource("RectangleShape2D_xrivr")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
