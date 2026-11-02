@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://bdaigxahjukft"]
+
+[ext_resource type="Script" uid="uid://1c7vvp7x2lt8" path="res://scripts/doublecollection.gd" id="1_r4p48"]
+[ext_resource type="Texture2D" uid="uid://r70qjemi5q3r" path="res://Resources/InUse/TamagotchiCustomAssets/2xcollection.png" id="2_1fj4s"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xrivr"]
+radius = 44.38468
+
+[node name="doublecollection" type="Node2D" unique_id=849991572]
+script = ExtResource("1_r4p48")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2123875617]
+texture_filter = 1
+scale = Vector2(3, 3)
+texture = ExtResource("2_1fj4s")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1793987621]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=221493772]
+position = Vector2(-2, 1)
+shape = SubResource("CircleShape2D_xrivr")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

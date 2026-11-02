@@ -19,6 +19,9 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 			get_parent().start_frenzy()
 		queue_free()
 
+#before the self.queue_free() destroyed the frenzy node
+# so like frenzylast thing died too
+
 #func lasting() -> void:
 	#back to normal graintimer wait time
 	#hard coded for now :cursed_cry:

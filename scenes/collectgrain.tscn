@@ -255,3 +255,6 @@ text = "main game"
 
 [node name="frenzytimer" type="Timer" parent="." unique_id=1486814399]
 wait_time = 20.0
+
+[node name="evilgraintimer" type="Timer" parent="." unique_id=879335154]
+wait_time = 3.0

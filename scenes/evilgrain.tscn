@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://c68isx28ic11i"]
+
+[ext_resource type="Script" uid="uid://5oxexetfpnv8" path="res://scripts/evilgrain.gd" id="1_cgsq2"]
+[ext_resource type="Texture2D" uid="uid://dprkf1p8t61p2" path="res://Resources/InUse/TamagotchiCustomAssets/evilgrain.png" id="2_jmf7k"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xrivr"]
+size = Vector2(76, 78)
+
+[node name="evilgrain" type="Node2D" unique_id=2078499411]
+script = ExtResource("1_cgsq2")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2007923047]
+texture_filter = 1
+scale = Vector2(3, 3)
+texture = ExtResource("2_jmf7k")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=37235213]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=344834061]
+position = Vector2(0, -1)
+shape = SubResource("RectangleShape2D_xrivr")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
