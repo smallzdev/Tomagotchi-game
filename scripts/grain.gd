@@ -9,6 +9,9 @@ extends Node2D
 #global.gd: +1 grain, 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body is CharacterBody2D: 
+		if Global.doublecollection == true:
+			Global.add_grains(amount*2)
+			self.queue_free()
 		Global.add_grains(amount)
 		self.queue_free()
 

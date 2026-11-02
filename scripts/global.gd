@@ -39,6 +39,8 @@ var grains = 20
 
 var smallzSaysRNGtemp = null
 
+var doublecollection = false
+
 func add_grains(amount: int) -> void:
 	grains+=amount
 	print("# grains: ", grains)

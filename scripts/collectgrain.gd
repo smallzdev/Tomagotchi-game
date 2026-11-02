@@ -3,7 +3,7 @@ extends Node
 const grain = preload("res://scenes/grain.tscn")
 const frenzy = preload("res://scenes/frenzy.tscn")
 const evilgrain = preload("res://scenes/evilgrain.tscn")
-const 
+const doublecollection = preload("res://scenes/doublecollection.tscn")
 
 @onready var graintimer = $graintimer
 @onready var frenzytimer = $frenzytimer
@@ -21,6 +21,8 @@ func _ready() -> void:
 	frenzytimer.start()
 	evilgraintimer.timeout.connect(evilgraintimeout)
 	evilgraintimer.start()
+	dblecltntimer.timeout.connect(dblecltntimeout)
+	dblecltntimer.start()
 
 #----------------spawn functions-------------------------
 
@@ -39,12 +41,20 @@ func evilgraintimeout() -> void:
 	add_child(evilgrainclone)
 	evilgrainclone.position.x = randi_range(0,1152)
 
+func dblecltntimeout() -> void:
+	var doublecollectionclone: Node = doublecollection.instantiate()
+	add_child(doublecollectionclone)
+	doublecollectionclone.position.x = randi_range(0,1152)
+
 #----------------random event timers + effects-------------------------
 
 #connects w frenzy code and runs this
 func start_frenzy() -> void:
 	graintimer.wait_time = 0.05
 	get_tree().create_timer(5.0).timeout.connect(func(): graintimer.wait_time = 0.2)
+
+func start_doublecol() -> void:
+	get_tree().create_timer(5.0).timeout.connect(func(): Global.doublecollection = false)
 
 #--------------------button---------------------------------
 func back_button_pressed():

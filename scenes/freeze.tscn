@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://b8ww31otgkfxn"]
+
+[ext_resource type="Texture2D" uid="uid://bkgfbvirxarqc" path="res://Resources/InUse/TamagotchiCustomAssets/freeze.png" id="1_g2jp4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xrivr"]
+size = Vector2(84, 88)
+
+[node name="freeze" type="Node2D" unique_id=107373048]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=128993260]
+texture_filter = 1
+scale = Vector2(3, 3)
+texture = ExtResource("1_g2jp4")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=414047958]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=705209306]
+position = Vector2(-2, 5)
+shape = SubResource("RectangleShape2D_xrivr")

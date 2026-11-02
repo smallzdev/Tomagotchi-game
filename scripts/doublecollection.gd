@@ -13,4 +13,7 @@ func _process(delta: float) -> void:
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body is CharacterBody2D: 
-		pass
+		Global.doublecollection = true
+		if get_parent().has_method("start_doublecol"):
+			get_parent().start_doublecol()
+		queue_free()
