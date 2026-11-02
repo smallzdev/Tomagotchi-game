@@ -19,6 +19,7 @@ func _ready() -> void:
 @onready var babyChickenArea = %babychickenArea
 @onready var spiderArea = %spiderArea
 @onready var ghostArea = %ghostArea
+@onready var dogArea = %dogArea
 
 # area 2d for rewards display
 @onready var rewardsDisplayArea = %rewards_display_area
@@ -57,6 +58,8 @@ func smallzSaysSprite():
 		babyChickenArea.visible = true
 	elif Global.pet == 9:
 		spiderArea.visible = true
+	elif Global.pet == 10:
+		dogArea.visible = true
 		
 		# needa figure out what pet 3 is....
 
@@ -70,6 +73,7 @@ func disableOldAreas():
 	babyChickenArea.visible = false
 	spiderArea.visible = false
 	ghostArea.visible = false
+	dogArea.visible = false
 	# other:
 	rewardsDisplayArea.visible = false
 	
@@ -123,6 +127,11 @@ func smallzSays():
 				smallzsaysText.text = "Smsallhgzhbc: Pet the head."
 			else:
 				smallzsaysText.text = "Smallz Says: Pet the head."
+		if dogArea.visible == true:
+			if smallzSaysRNG == 1:
+				smallzsaysText.text = "SMalladaokn: Pet the nose, eyes or mouth"
+			else:
+				smallzsaysText.text = "Smallz Says: Pet the nose, eyes or mouth."
 	
 # -----------------------------------------------------
 # if rolled 2:
@@ -282,6 +291,7 @@ func smallzSays():
 				smallzsaysText.text = "Smallz Says: Pet the cheeks."
 				
 # -----------------------------------------------------
+
 	else:
 		# only really for debugging. shouldnt print.
 		print("Error, RNG picked a collisionshape number that doesn't exist")
@@ -290,6 +300,7 @@ func smallzSays():
 func _on_timer_timeout() -> void:
 	if smallzSaysTime == 0:
 		smallzSaysTime = 6
+		decreaseLove()
 		smallzSays()
 		# ^^ 6 because it will instantly deduct 1
 	smallzSaysTime -= 1
@@ -331,6 +342,8 @@ func _on_cat_smallzsays_event(viewport: Node, event: InputEvent, shape_idx: int)
 				decreaseLove()
 		print(shape_idx)
 		smallzSaysTime = 5
+		smallzSays()
+		
 func _on_goldfish_smallzsays_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
 		# needs rewriting past this point
@@ -363,6 +376,7 @@ func _on_goldfish_smallzsays_event(viewport: Node, event: InputEvent, shape_idx:
 				decreaseLove()
 		print(shape_idx)
 		smallzSaysTime = 5
+		smallzSays()
 
 func _on_pumpkin_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
@@ -395,6 +409,7 @@ func _on_pumpkin_event(viewport: Node, event: InputEvent, shape_idx: int) -> voi
 				decreaseLove()
 		print(shape_idx)
 		smallzSaysTime = 5
+		smallzSays()
 
 func _on_penguin_smallzsays_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
@@ -427,6 +442,7 @@ func _on_penguin_smallzsays_event(viewport: Node, event: InputEvent, shape_idx: 
 				decreaseLove()
 		print(shape_idx)
 		smallzSaysTime = 5
+		smallzSays()
 
 func _on_babychicken_smallzsays_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
@@ -459,6 +475,7 @@ func _on_babychicken_smallzsays_event(viewport: Node, event: InputEvent, shape_i
 				decreaseLove()
 		print(shape_idx)
 		smallzSaysTime = 5
+		smallzSays()
 
 func _on_spider_smallzsays_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
@@ -491,6 +508,7 @@ func _on_spider_smallzsays_event(viewport: Node, event: InputEvent, shape_idx: i
 				decreaseLove()
 		print(shape_idx)
 		smallzSaysTime = 5
+		smallzSays()
 
 func _on_ghost_smallzsays_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
@@ -523,6 +541,41 @@ func _on_ghost_smallzsays_event(viewport: Node, event: InputEvent, shape_idx: in
 				decreaseLove()
 		print(shape_idx)
 		smallzSaysTime = 5
+		smallzSays()
+
+func _on_dog_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
+	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
+		if shape_idx == 0:
+			if not smallzSaysRNG == 1 and collisionShapeRNG == 1:
+				increaseLove()
+			else:
+				decreaseLove()
+
+		if shape_idx == 1:
+			if not smallzSaysRNG == 1 and collisionShapeRNG == 2:
+				increaseLove()
+			else:
+				decreaseLove()
+		
+		if shape_idx == 2:
+			if not smallzSaysRNG == 1 and collisionShapeRNG == 3:
+				increaseLove()
+			else:
+				decreaseLove()
+		if shape_idx == 3:
+			if not smallzSaysRNG == 1 and collisionShapeRNG == 4:
+				increaseLove()
+			else:
+				decreaseLove()
+		if shape_idx == 4 or shape_idx == 5:
+			if not smallzSaysRNG == 1 and collisionShapeRNG == 5:
+				increaseLove()
+			else:
+				decreaseLove()
+		print(shape_idx)
+		smallzSaysTime = 5
+		smallzSays()
+
 # end of clickable collision shapes.
 
 
@@ -550,4 +603,3 @@ func decreaseLove():
 	rewardsLabel.text = "-5 Love"
 	rewardsTickSprite.frame = 1
 	await get_tree().create_timer(2).timeout
-	

@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://brliyf6hrxhwa" path="res://Resources/InUse/TamagotchiCustomAssets/pets/babychicken.png" id="3_nsv43"]
 [ext_resource type="Texture2D" uid="uid://c16y87a2pkbsg" path="res://Resources/InUse/TamagotchiCustomAssets/pets/cat3-animated.png" id="4_uxxkm"]
 [ext_resource type="Texture2D" uid="uid://b3kknikmix4mx" path="res://Resources/InUse/TamagotchiCustomAssets/pets/Ghost.png" id="5_lu7fq"]
+[ext_resource type="Texture2D" uid="uid://dxwurxafqnprg" path="res://Resources/InUse/TamagotchiCustomAssets/pets/goldenretriver.png" id="5_qp1q5"]
 [ext_resource type="Texture2D" uid="uid://bwoqi4m63v3xe" path="res://Resources/InUse/TamagotchiCustomAssets/pets/ginger-cat-animated.png" id="6_qp1q5"]
 [ext_resource type="Texture2D" uid="uid://bss1sxgy0cdx1" path="res://Resources/InUse/TamagotchiCustomAssets/pets/goldfish.png" id="7_mr2jy"]
 [ext_resource type="Texture2D" uid="uid://ceymqu0dyfx4y" path="res://Resources/InUse/TamagotchiCustomAssets/pets/grey-animated-cat.png" id="8_bbave"]
@@ -65,6 +66,10 @@ region = Rect2(0, 64, 32, 32)
 [sub_resource type="AtlasTexture" id="AtlasTexture_o0wps"]
 atlas = ExtResource("4_uxxkm")
 region = Rect2(32, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mr2jy"]
+atlas = ExtResource("5_qp1q5")
+region = Rect2(0, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_rl3m3"]
 atlas = ExtResource("5_lu7fq")
@@ -276,6 +281,14 @@ animations = [{
 }],
 "loop": 1,
 "name": &"cat3",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mr2jy")
+}],
+"loop": 1,
+"name": &"dog",
 "speed": 5.0
 }, {
 "frames": [{
@@ -525,7 +538,7 @@ size = Vector2(6.555555, 7.618056)
 size = Vector2(5.8888884, 7.6701393)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1db1g"]
-size = Vector2(19.666666, 7.059027)
+size = Vector2(7.3571405, 5.857144)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_p1cki"]
 size = Vector2(7.8888884, 2.2812505)
@@ -540,19 +553,19 @@ size = Vector2(19.222223, 5.781249)
 size = Vector2(6.4722233, 5.1701384)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vo5sg"]
-size = Vector2(5.5, 2.2812505)
+size = Vector2(5.5, 10.473961)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_br0tn"]
-size = Vector2(17.944443, 4.559026)
+size = Vector2(12.972221, 4.559026)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lde4j"]
-size = Vector2(19.222223, 5.612846)
+size = Vector2(16.373016, 14.139755)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tja7i"]
-size = Vector2(5.7361116, 5.1701384)
+size = Vector2(5.7361116, 7.156501)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ybynw"]
-size = Vector2(5.2361116, 5.1701384)
+size = Vector2(5.2361116, 6.7755485)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d8osa"]
 bg_color = Color(0.38431373, 0.38431373, 0.38431373, 0)
@@ -934,6 +947,49 @@ position = Vector2(12.489587, 13.261903)
 scale = Vector2(1.5, 1.5)
 shape = SubResource("RectangleShape2D_ybynw")
 
+[node name="dogArea" type="Area2D" parent="." unique_id=398424546]
+unique_name_in_owner = true
+position = Vector2(516, 334)
+scale = Vector2(7, 7)
+script = ExtResource("2_dx6wl")
+
+[node name="PetSprite" type="AnimatedSprite2D" parent="dogArea" unique_id=2130373293]
+texture_filter = 1
+position = Vector2(2.9999988, 15.428571)
+scale = Vector2(1.2, 1.2)
+sprite_frames = SubResource("SpriteFrames_wao47")
+animation = &"dog"
+
+[node name="Collision1" type="CollisionShape2D" parent="dogArea" unique_id=980940615]
+position = Vector2(7.482147, 8.607143)
+scale = Vector2(1.4999994, 1.4999994)
+shape = SubResource("RectangleShape2D_1db1g")
+
+[node name="Collision2" type="CollisionShape2D" parent="dogArea" unique_id=1743181430]
+position = Vector2(-12.999998, 23.571428)
+scale = Vector2(1.4999999, 1.4999999)
+shape = SubResource("RectangleShape2D_vo5sg")
+
+[node name="Collision3" type="CollisionShape2D" parent="dogArea" unique_id=1105522260]
+position = Vector2(2.8720398, 0.8571434)
+scale = Vector2(1.4999999, 1.4999999)
+shape = SubResource("RectangleShape2D_br0tn")
+
+[node name="Collision4" type="CollisionShape2D" parent="dogArea" unique_id=2083811935]
+position = Vector2(3.1488113, 22.714283)
+scale = Vector2(1.4999998, 1.4999998)
+shape = SubResource("RectangleShape2D_lde4j")
+
+[node name="Collision5" type="CollisionShape2D" parent="dogArea" unique_id=2002141215]
+position = Vector2(-7.714287, 6.3673706)
+scale = Vector2(1.4999998, 1.4999998)
+shape = SubResource("RectangleShape2D_tja7i")
+
+[node name="Collision5_2" type="CollisionShape2D" parent="dogArea" unique_id=659502374]
+position = Vector2(16.428574, 5.653084)
+scale = Vector2(1.4999999, 1.4999999)
+shape = SubResource("RectangleShape2D_ybynw")
+
 [node name="Timer" type="Timer" parent="." unique_id=1818087114]
 autostart = true
 
@@ -992,4 +1048,5 @@ text = "+10 Love"
 [connection signal="input_event" from="babychickenArea" to="babychickenArea" method="_on_babychicken_smallzsays_event"]
 [connection signal="input_event" from="spiderArea" to="spiderArea" method="_on_spider_smallzsays_event"]
 [connection signal="input_event" from="ghostArea" to="ghostArea" method="_on_ghost_smallzsays_event"]
+[connection signal="input_event" from="dogArea" to="dogArea" method="_on_dog_input_event"]
 [connection signal="timeout" from="Timer" to="catArea" method="_on_timer_timeout"]
