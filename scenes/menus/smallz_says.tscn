@@ -15,7 +15,6 @@
 [ext_resource type="Texture2D" uid="uid://dg165buwhjncd" path="res://Resources/InUse/TamagotchiCustomAssets/fishbowl.png" id="12_dx6wl"]
 [ext_resource type="FontFile" uid="uid://dyibl4resr8wn" path="res://Resources/font/augiepixel.ttf" id="12_nn4bs"]
 [ext_resource type="Script" uid="uid://b7ptc850pmdcq" path="res://scripts/catadex_buttons.gd" id="13_e2b13"]
-[ext_resource type="Script" uid="uid://b511v66wbw6sj" path="res://scenes/menus/skip_button.gd" id="15_lu7fq"]
 [ext_resource type="Texture2D" uid="uid://b5bij2gwarxla" path="res://Resources/InUse/TamagotchiCustomAssets/tick.png" id="15_uxxkm"]
 [ext_resource type="Texture2D" uid="uid://bdvisr33y26fe" path="res://Resources/InUse/TamagotchiCustomAssets/x.png" id="16_lu7fq"]
 
@@ -1022,7 +1021,6 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_d8osa")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_iyc7w")
 theme_override_styles/hover = SubResource("StyleBoxFlat_jfa5a")
 text = "Skip"
-script = ExtResource("15_lu7fq")
 
 [node name="rewards_display_area" type="Area2D" parent="." unique_id=1964044105]
 unique_name_in_owner = true

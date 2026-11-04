@@ -9,6 +9,7 @@ func _ready() -> void:
 	disableOldAreas()
 	smallzSaysSprite()
 	smallzSays()
+	%skipButton.pressed.connect(skip_button_pressed)
 
 # All the different Area2D's holding the collisionshapes
 # and sprites.
@@ -603,3 +604,11 @@ func decreaseLove():
 	rewardsLabel.text = "-5 Love"
 	rewardsTickSprite.frame = 1
 	await get_tree().create_timer(2).timeout
+	rewardsDisplayArea.visible = false
+	
+func skip_button_pressed():
+	if Global.smallzSaysRNGtemp == 1:
+		decreaseLove()
+	else:
+		increaseLove()
+	smallzSays()
