@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bdu12m05wfdcv"]
 
 [ext_resource type="Texture2D" uid="uid://36f5r3pve8ba" path="res://Resources/InUse/TamagotchiCustomAssets/smallz_says_background.png" id="1_qwhnm"]
-[ext_resource type="Script" uid="uid://ceicxfylsdniu" path="res://smallz_says.gd" id="2_dx6wl"]
+[ext_resource type="Script" uid="uid://ceicxfylsdniu" path="res://scripts/smallz_says.gd" id="2_dx6wl"]
 [ext_resource type="Texture2D" uid="uid://brliyf6hrxhwa" path="res://Resources/InUse/TamagotchiCustomAssets/pets/babychicken.png" id="3_nsv43"]
 [ext_resource type="Texture2D" uid="uid://c16y87a2pkbsg" path="res://Resources/InUse/TamagotchiCustomAssets/pets/cat3-animated.png" id="4_uxxkm"]
 [ext_resource type="Texture2D" uid="uid://b3kknikmix4mx" path="res://Resources/InUse/TamagotchiCustomAssets/pets/Ghost.png" id="5_lu7fq"]
@@ -949,6 +949,7 @@ shape = SubResource("RectangleShape2D_ybynw")
 
 [node name="dogArea" type="Area2D" parent="." unique_id=398424546]
 unique_name_in_owner = true
+visible = false
 position = Vector2(516, 334)
 scale = Vector2(7, 7)
 script = ExtResource("2_dx6wl")
@@ -1050,3 +1051,4 @@ text = "+10 Love"
 [connection signal="input_event" from="ghostArea" to="ghostArea" method="_on_ghost_smallzsays_event"]
 [connection signal="input_event" from="dogArea" to="dogArea" method="_on_dog_input_event"]
 [connection signal="timeout" from="Timer" to="catArea" method="_on_timer_timeout"]
+[connection signal="pressed" from="skipButton" to="skipButton" method="_on_skip_pressed"]

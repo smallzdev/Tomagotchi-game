@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://bbqta4lgi0mpa"]
+
+[ext_resource type="Texture2D" uid="uid://crwi85mamqcvm" path="res://Resources/InUse/TamagotchiCustomAssets/WaterArt.png" id="1_drr51"]
+
+[node name="Node2D" type="Node2D" unique_id=756229064]
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=456862451]
+offset_right = 1920.0
+offset_bottom = 1080.0
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("1_drr51")

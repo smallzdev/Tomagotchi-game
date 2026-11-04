@@ -51,6 +51,7 @@ func remove_grains(subtract: int) -> void:
 	print("# grains: ", grains)
 	Eventcontroller.emit_signal("grain_removed", grains)
 
+
 # ok i dont think we need this - v 
 # remove tag if we do
 #var raritygacha = [

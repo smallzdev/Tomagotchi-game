@@ -573,8 +573,8 @@ func _on_dog_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> v
 			else:
 				decreaseLove()
 		print(shape_idx)
-		smallzSaysTime = 5
 		smallzSays()
+		smallzSaysTime = 5
 
 # end of clickable collision shapes.
 

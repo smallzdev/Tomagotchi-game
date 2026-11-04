@@ -3,6 +3,8 @@ extends Button
 @onready var rewardsDisplayArea = %rewards_display_area
 @onready var rewardsLabel = %rewardsLabel
 @onready var rewardsTickSprite = %Tick_x
+var SmallzSaysScript = preload("")
+
 func _ready() -> void:
 	var skipButton = %skipButton
 	skipButton.pressed.connect(skip_button_pressed)
@@ -20,6 +22,8 @@ func decreaseLove():
 	rewardsLabel.text = "-5 Love"
 	rewardsTickSprite.frame = 1
 	await get_tree().create_timer(2).timeout
+	smallzSays()
+	rewardsDisplayArea.visible = false
 	
 # increases love by 5, displays it on screen
 func increaseLove():
@@ -27,5 +31,6 @@ func increaseLove():
 	rewardsDisplayArea.visible = true
 	rewardsLabel.text = "+5 Love"
 	rewardsTickSprite.frame = 0
+	smallzSays()
 	await get_tree().create_timer(2).timeout
 	rewardsDisplayArea.visible = false
