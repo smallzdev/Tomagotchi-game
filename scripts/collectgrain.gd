@@ -61,7 +61,19 @@ func freezetimeout() -> void:
 #connects w frenzy code and runs this
 func start_frenzy() -> void:
 	graintimer.wait_time = 0.05
-	get_tree().create_timer(5.0).timeout.connect(func(): graintimer.wait_time = 0.2)
+	
+	#this makes it spawn above the grain layer
+	$frenzytween.z_index = 10
+	
+	var tween = create_tween()
+	tween.set_trans(Tween.TRANS_ELASTIC)
+	tween.set_ease(Tween.EASE_OUT)
+	$frenzytween.text = "[wave amp=120 freq=7][rainbow freq=.6 sat=0.7 val=0.9]frenzy[/rainbow][/wave]"
+	tween.tween_property($frenzytween, "position", Vector2(350.0,46.0), 5.0)
+	tween.tween_property($frenzytween, "position", Vector2(350,-405.0), 5.0)
+	get_tree().create_timer(5.0).timeout.connect(func(): 
+		graintimer.wait_time = 0.2
+		)
 
 func start_doublecol() -> void:
 	get_tree().create_timer(5.0).timeout.connect(func(): Global.doublecollection = false)
