@@ -1,5 +1,8 @@
 extends Button
 
+#preloads
+var popuptext = preload("res://scenes/floatytext.tscn")
+
 # timer
 @onready var HardcoreTimerLabel = $"../HarcoreScoreLabel"
 
