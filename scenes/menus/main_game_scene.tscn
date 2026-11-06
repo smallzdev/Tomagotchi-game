@@ -29,6 +29,7 @@
 [ext_resource type="PackedScene" uid="uid://7s5fj1hnj2b1" path="res://scenes/grain_ui.tscn" id="25_xgfuv"]
 [ext_resource type="Texture2D" uid="uid://oqwl2qoj1ien" path="res://Resources/InUse/TamagotchiCustomAssets/timericon.png" id="27_p82fg"]
 [ext_resource type="PackedScene" uid="uid://cjcie6gqv134y" path="res://scenes/floatytext.tscn" id="29_4f8iy"]
+[ext_resource type="PackedScene" uid="uid://jvwyw3vskks1" path="res://scenes/litre_ui.tscn" id="30_iwkmd"]
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_sy1ir"]
 specular_color = Color(0.95686275, 0.95686275, 0.95686275, 1)
@@ -1137,10 +1138,10 @@ position = Vector2(2.2083335, 0.74999934)
 shape = SubResource("RectangleShape2D_udkci")
 
 [node name="statsPannel" type="Panel" parent="." unique_id=760876519]
-offset_left = 62.0
-offset_top = 182.0
-offset_right = 314.0
-offset_bottom = 483.0
+offset_left = 59.0
+offset_top = 140.0
+offset_right = 311.0
+offset_bottom = 441.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_krc6o")
 
 [node name="statPanelTitle" type="Label" parent="statsPannel" unique_id=1530413468]
@@ -1300,16 +1301,16 @@ autostart = true
 
 [node name="RarityBackground" type="AnimatedSprite2D" parent="." unique_id=82668997]
 texture_filter = 1
-position = Vector2(186, 155)
+position = Vector2(181, 127)
 scale = Vector2(5, 5)
 sprite_frames = SubResource("SpriteFrames_j3pc0")
 script = ExtResource("23_ahvjs")
 
 [node name="RarityLabel" type="Label" parent="." unique_id=1781882753]
-offset_left = 106.0
-offset_top = 114.0
-offset_right = 266.0
-offset_bottom = 154.0
+offset_left = 101.0
+offset_top = 86.0
+offset_right = 261.0
+offset_bottom = 127.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("4_ymjn7")
 theme_override_font_sizes/font_size = 42
@@ -1335,10 +1336,10 @@ theme_override_font_sizes/font_size = 44
 text = "Time: N/a"
 
 [node name="grain_ui" parent="." unique_id=1734086535 instance=ExtResource("25_xgfuv")]
-offset_left = 75.0
-offset_top = 489.0
-offset_right = 75.0
-offset_bottom = 489.0
+offset_left = -5.0
+offset_top = 534.0
+offset_right = -5.0
+offset_bottom = 534.0
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1257897123]
 offset_left = 65.0
@@ -1447,6 +1448,12 @@ text = "Got it!"
 
 [node name="floatytext" parent="." unique_id=1034785363 instance=ExtResource("29_4f8iy")]
 fade_color = Color(0.640611, 0.09057713, 0.3359547, 1)
+
+[node name="litre_ui" parent="." unique_id=1655955305 instance=ExtResource("30_iwkmd")]
+offset_left = -4.0
+offset_top = 447.0
+offset_right = 36.0
+offset_bottom = 487.0
 
 [connection signal="timeout" from="HardcoreScoreTimer" to="petsButton" method="harcore_score_timer"]
 [connection signal="pressed" from="waterMinigameButton" to="waterMinigameButton" method="_on_waterminigamebutton_pressed"]

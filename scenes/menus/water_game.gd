@@ -23,19 +23,27 @@ func waterMinigameCore():
 func _on_sprite1_clicked(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
 		if collisionShapeRNG == waterSprite1:
-			pass
+			Global.litres += 2
+		else:
+			Global.litres -= 5
 		
 func _on_sprite2_clicked(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
 		if collisionShapeRNG == waterSprite2:
-			pass
+			Global.litres += 2
+		else:
+			Global.litres -= 5
 
 func _on_sprite3_clicked(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
 		if collisionShapeRNG == waterSprite3:
-			pass
+			Global.litres += 2
+		else:
+			Global.litres -= 5
 
 func _on_sprite4_clicked(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
 		if collisionShapeRNG == waterSprite4:
-			pass
+			Global.litres += 2
+		else:
+			Global.litres -=5
