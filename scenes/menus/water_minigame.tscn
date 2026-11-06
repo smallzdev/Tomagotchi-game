@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://bglbjo6m1ylc" path="res://Resources/InUse/TamagotchiCustomAssets/waterbar.png" id="5_4nh6g"]
 [ext_resource type="FontFile" uid="uid://dyibl4resr8wn" path="res://Resources/font/augiepixel.ttf" id="6_yr605"]
 [ext_resource type="Texture2D" uid="uid://blrb7rs8qutto" path="res://Resources/InUse/TamagotchiCustomAssets/Water_minigame/dirtywater-glass.png" id="7_e7g1m"]
+[ext_resource type="Script" uid="uid://dw31ppihse6kv" path="res://scenes/menus/water_game.gd" id="7_p0860"]
 [ext_resource type="Texture2D" uid="uid://chf5faivinioo" path="res://Resources/InUse/TamagotchiCustomAssets/Water_minigame/paint-bucket.png" id="8_p0860"]
 [ext_resource type="Texture2D" uid="uid://cyd367uigcci2" path="res://Resources/InUse/TamagotchiCustomAssets/Water_minigame/rusty-bucket.png" id="9_4er4x"]
 [ext_resource type="Texture2D" uid="uid://ddk83ebxvlo4l" path="res://Resources/InUse/TamagotchiCustomAssets/Water_minigame/water-bucket.png" id="10_qlhas"]
@@ -270,22 +271,33 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": ExtResource("9_4er4x")
+}],
+"loop": 1,
+"name": &"bad",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_vx0d0")
 }, {
 "duration": 1.0,
 "texture": ExtResource("10_qlhas")
-}, {
-"duration": 1.0,
-"texture": ExtResource("11_vx0d0")
 }],
 "loop": 1,
-"name": &"default",
+"name": &"good",
 "speed": 5.0
 }]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e7g1m"]
+size = Vector2(1337.501, 1237.5006)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_udkci"]
 size = Vector2(200, 201.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_stm8k"]
+size = Vector2(500.00018, 497.50006)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p0860"]
 size = Vector2(500.00018, 497.50006)
 
 [node name="Node2D" type="Node2D" unique_id=756229064]
@@ -338,29 +350,43 @@ text = "Click to drink, don't drink dangerous looking water. Be careful!"
 [node name="Area2D" type="Area2D" parent="." unique_id=1351043506]
 position = Vector2(678, 267.99997)
 scale = Vector2(0.4, 0.4)
+script = ExtResource("7_p0860")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Area2D" unique_id=587970904]
+[node name="WaterSprite1" type="AnimatedSprite2D" parent="Area2D" unique_id=587970904]
+unique_name_in_owner = true
 position = Vector2(-1132.5, -19.999939)
 scale = Vector2(0.99999994, 0.99999994)
 sprite_frames = SubResource("SpriteFrames_stm8k")
+animation = &"bad"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=226316781]
+position = Vector2(-1127.4999, 15)
+scale = Vector2(0.39999974, 0.39999974)
+shape = SubResource("RectangleShape2D_e7g1m")
 
 [node name="Area2D2" type="Area2D" parent="." unique_id=661610168]
+script = ExtResource("7_p0860")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Area2D2" unique_id=2045202176]
+[node name="WaterSprite2" type="AnimatedSprite2D" parent="Area2D2" unique_id=2045202176]
+unique_name_in_owner = true
 position = Vector2(678, 267.99997)
 scale = Vector2(0.4, 0.4)
 sprite_frames = SubResource("SpriteFrames_stm8k")
+animation = &"bad"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2" unique_id=667486910]
 position = Vector2(676, 271.25)
 shape = SubResource("RectangleShape2D_udkci")
 
 [node name="Area2D3" type="Area2D" parent="." unique_id=1116402216]
+script = ExtResource("7_p0860")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Area2D3" unique_id=1220535436]
+[node name="WaterSprite3" type="AnimatedSprite2D" parent="Area2D3" unique_id=1220535436]
+unique_name_in_owner = true
 position = Vector2(453.00003, 260)
 scale = Vector2(0.4, 0.4)
 sprite_frames = SubResource("SpriteFrames_stm8k")
+animation = &"bad"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D3" unique_id=1867059007]
 position = Vector2(454, 275)
@@ -368,8 +394,21 @@ scale = Vector2(0.39999986, 0.39999986)
 shape = SubResource("RectangleShape2D_stm8k")
 
 [node name="Area2D4" type="Area2D" parent="." unique_id=2114202767]
+script = ExtResource("7_p0860")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Area2D4" unique_id=1618440567]
+[node name="WaterSprite4" type="AnimatedSprite2D" parent="Area2D4" unique_id=1618440567]
+unique_name_in_owner = true
 position = Vector2(906, 267.99997)
 scale = Vector2(0.4, 0.4)
 sprite_frames = SubResource("SpriteFrames_stm8k")
+animation = &"bad"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D4" unique_id=2031973770]
+position = Vector2(909, 277)
+scale = Vector2(0.39999986, 0.39999986)
+shape = SubResource("RectangleShape2D_p0860")
+
+[connection signal="input_event" from="Area2D" to="Area2D" method="_on_sprite1_clicked"]
+[connection signal="input_event" from="Area2D2" to="Area2D2" method="_on_sprite2_clicked"]
+[connection signal="input_event" from="Area2D3" to="Area2D3" method="_on_sprite3_clicked"]
+[connection signal="input_event" from="Area2D4" to="Area2D4" method="_on_sprite4_clicked"]

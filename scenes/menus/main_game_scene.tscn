@@ -1042,6 +1042,21 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_xgfuv")
 text = "farm"
 script = ExtResource("6_iojj0")
 
+[node name="waterMinigameButton" type="Button" parent="." unique_id=1922804518]
+unique_name_in_owner = true
+offset_left = 928.0
+offset_top = 317.0
+offset_right = 1110.0
+offset_bottom = 387.0
+theme_override_colors/font_color = Color(0.30588236, 0.28627452, 0.2784314, 1)
+theme_override_fonts/font = ExtResource("4_ymjn7")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_ahvjs")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_r20aw")
+theme_override_styles/hover = SubResource("StyleBoxFlat_xgfuv")
+text = "Water"
+script = ExtResource("6_iojj0")
+
 [node name="foodButton" type="Button" parent="." unique_id=1158770600]
 unique_name_in_owner = true
 texture_filter = 1
@@ -1434,6 +1449,7 @@ text = "Got it!"
 fade_color = Color(0.640611, 0.09057713, 0.3359547, 1)
 
 [connection signal="timeout" from="HardcoreScoreTimer" to="petsButton" method="harcore_score_timer"]
+[connection signal="pressed" from="waterMinigameButton" to="waterMinigameButton" method="_on_waterminigamebutton_pressed"]
 [connection signal="input_event" from="Area2D" to="Area2D" method="petting_love"]
 [connection signal="timeout" from="Timer" to="petsButton" method="_on_5s_timer_timeout"]
 [connection signal="timeout" from="HardcoreTimer" to="petsButton" method="_on_hardcore_timer_timeout"]
