@@ -70,6 +70,11 @@ func foodButton_pressed():
 	if Global.grains <10: 
 		errorpanel.visible = true
 	Global.grains -=5
+	popuptext.text = "-10 grains"
+	var floatytext = popuptext.instantiate()
+	get_tree().current_scene.add_child(floatytext)
+	floatytext.global_position = get_global_mouse_position()
+	print("poop")
 	if Global.food <= 90:
 		print("Food is less than 100, at " + str(Global.food))
 		Global.food += 10

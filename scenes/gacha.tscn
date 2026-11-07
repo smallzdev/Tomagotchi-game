@@ -14,8 +14,10 @@ font_color = Color(0, 0, 0, 1)
 [node name="gacha" type="Node2D" unique_id=1081423538]
 
 [node name="BackgroundTextureGradient" type="TextureRect" parent="." unique_id=1876431007]
-offset_right = 1157.0
-offset_bottom = 652.0
+offset_left = -166.0
+offset_top = -96.0
+offset_right = 1346.0
+offset_bottom = 802.0
 texture = SubResource("CanvasTexture_7y0v6")
 
 [node name="egg" parent="." unique_id=781582821 instance=ExtResource("1_5ckdq")]
