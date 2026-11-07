@@ -39,6 +39,8 @@ var grains = 20
 
 var litres = 20
 
+var waterDifficulty = null
+
 var smallzSaysRNGtemp = null
 
 var doublecollection = false

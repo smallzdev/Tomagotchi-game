@@ -52,7 +52,7 @@ offset_right = 1152.0
 offset_bottom = 652.0
 texture = SubResource("CanvasTexture_8lky4")
 
-[node name="marketbutton" type="Button" parent="." unique_id=1999057104]
+[node name="hardButton" type="Button" parent="." unique_id=1999057104]
 unique_name_in_owner = true
 offset_left = 423.0
 offset_top = 353.0
@@ -66,7 +66,7 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_hcsw7")
 theme_override_styles/hover = SubResource("StyleBoxFlat_uql7x")
 text = "hard"
 
-[node name="playbutton" type="Button" parent="." unique_id=937137732]
+[node name="mediumButton" type="Button" parent="." unique_id=937137732]
 unique_name_in_owner = true
 offset_left = 422.0
 offset_top = 234.0
@@ -80,7 +80,7 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_hcsw7")
 theme_override_styles/hover = SubResource("StyleBoxFlat_uql7x")
 text = "medium"
 
-[node name="grainbutton" type="Button" parent="." unique_id=653695342]
+[node name="easyButton" type="Button" parent="." unique_id=653695342]
 unique_name_in_owner = true
 offset_left = 419.0
 offset_top = 118.0
