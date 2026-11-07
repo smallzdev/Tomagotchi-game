@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://b8ww31otgkfxn"]
 
 [ext_resource type="Texture2D" uid="uid://bkgfbvirxarqc" path="res://Resources/InUse/TamagotchiCustomAssets/freeze.png" id="1_g2jp4"]
-[ext_resource type="Script" uid="uid://dop72yptcghyk" path="res://scripts/freeze.gd" id="1_wicxs"]
+[ext_resource type="Script" uid="uid://dop72yptcghyk" path="res://scripts/Other/freeze.gd" id="1_wicxs"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xrivr"]
 size = Vector2(84, 88)

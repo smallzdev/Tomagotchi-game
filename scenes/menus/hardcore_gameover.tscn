@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://mynhr4k4kviw"]
 
 [ext_resource type="FontFile" uid="uid://dyibl4resr8wn" path="res://Resources/font/augiepixel.ttf" id="1_kvcsj"]
-[ext_resource type="Script" uid="uid://dhismqn5ngu3j" path="res://scripts/menu_button.gd" id="2_nfs5h"]
-[ext_resource type="Script" uid="uid://c53ien0stsk0v" path="res://scenes/menus/hardcore_game_over.gd" id="3_jrs8y"]
+[ext_resource type="Script" uid="uid://dhismqn5ngu3j" path="res://scripts/Other/menu_button.gd" id="2_nfs5h"]
+[ext_resource type="Script" uid="uid://c53ien0stsk0v" path="res://scripts/Main Game/hardcore_game_over.gd" id="3_jrs8y"]
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_1kjw7"]
 specular_color = Color(0.95686275, 0.95686275, 0.95686275, 1)

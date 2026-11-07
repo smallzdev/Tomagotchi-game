@@ -3,10 +3,11 @@
 [ext_resource type="Texture2D" uid="uid://crwi85mamqcvm" path="res://Resources/InUse/TamagotchiCustomAssets/WaterArt.png" id="1_drr51"]
 [ext_resource type="FontFile" uid="uid://dyibl4resr8wn" path="res://Resources/font/augiepixel.ttf" id="6_yr605"]
 [ext_resource type="Texture2D" uid="uid://blrb7rs8qutto" path="res://Resources/InUse/TamagotchiCustomAssets/Water_minigame/dirtywater-glass.png" id="7_e7g1m"]
-[ext_resource type="Script" uid="uid://dw31ppihse6kv" path="res://scenes/menus/water_game.gd" id="7_p0860"]
+[ext_resource type="Script" uid="uid://dw31ppihse6kv" path="res://scripts/Water Minigame/water_game.gd" id="7_p0860"]
 [ext_resource type="Texture2D" uid="uid://chf5faivinioo" path="res://Resources/InUse/TamagotchiCustomAssets/Water_minigame/paint-bucket.png" id="8_p0860"]
 [ext_resource type="Texture2D" uid="uid://cyd367uigcci2" path="res://Resources/InUse/TamagotchiCustomAssets/Water_minigame/rusty-bucket.png" id="9_4er4x"]
 [ext_resource type="Texture2D" uid="uid://ddk83ebxvlo4l" path="res://Resources/InUse/TamagotchiCustomAssets/Water_minigame/water-bucket.png" id="10_qlhas"]
+[ext_resource type="Script" uid="uid://b7ptc850pmdcq" path="res://scripts/Main Game/catadex_buttons.gd" id="11_e7g1m"]
 [ext_resource type="Texture2D" uid="uid://bxujhuu5wcpsu" path="res://Resources/InUse/TamagotchiCustomAssets/Water_minigame/water-glass.png" id="11_vx0d0"]
 [ext_resource type="Texture2D" uid="uid://b5bij2gwarxla" path="res://Resources/InUse/TamagotchiCustomAssets/tick.png" id="13_qlhas"]
 [ext_resource type="Texture2D" uid="uid://bdvisr33y26fe" path="res://Resources/InUse/TamagotchiCustomAssets/x.png" id="14_vx0d0"]
@@ -67,6 +68,45 @@ animations = [{
 "name": &"default",
 "speed": 5.0
 }]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_p0860"]
+bg_color = Color(0.38431373, 0.38431373, 0.38431373, 0)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+corner_detail = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4er4x"]
+bg_color = Color(0.16818258, 0.15563756, 0.15061828, 1)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(0.16862746, 0.15686275, 0.14901961, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+corner_detail = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qlhas"]
+bg_color = Color(0.30588236, 0.28627452, 0.2784314, 1)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(0.30588236, 0.28627452, 0.2784314, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+corner_detail = 1
 
 [node name="Node2D" type="Node2D" unique_id=756229064]
 
@@ -160,6 +200,7 @@ shape = SubResource("RectangleShape2D_p0860")
 
 [node name="rewards_display_area" type="Area2D" parent="." unique_id=1319485606]
 unique_name_in_owner = true
+visible = false
 
 [node name="Tick_x" type="AnimatedSprite2D" parent="rewards_display_area" unique_id=291029655]
 unique_name_in_owner = true
@@ -175,7 +216,22 @@ offset_right = 635.0
 offset_bottom = 461.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 37
-text = "+5 L"
+text = "+1 L"
+
+[node name="backButton" type="Button" parent="." unique_id=1755841889]
+unique_name_in_owner = true
+offset_left = 989.0
+offset_top = 567.0
+offset_right = 1136.0
+offset_bottom = 631.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("6_yr605")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_p0860")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_4er4x")
+theme_override_styles/hover = SubResource("StyleBoxFlat_qlhas")
+text = "Back"
+script = ExtResource("11_e7g1m")
 
 [connection signal="input_event" from="Area2D" to="Area2D" method="_on_sprite1_clicked"]
 [connection signal="input_event" from="Area2D2" to="Area2D2" method="_on_sprite2_clicked"]

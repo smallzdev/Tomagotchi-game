@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://wq5s6l0n4vas"]
 
-[ext_resource type="Script" uid="uid://buk33ij8ceodc" path="res://scripts/grain.gd" id="1_46e2s"]
+[ext_resource type="Script" uid="uid://buk33ij8ceodc" path="res://scripts/Farm/grain.gd" id="1_46e2s"]
 [ext_resource type="Texture2D" uid="uid://2xynay4l8ney" path="res://Resources/InUse/TamagotchiCustomAssets/grain.png.png" id="2_s5qrr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xrivr"]

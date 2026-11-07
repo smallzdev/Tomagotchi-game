@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://c68isx28ic11i"]
 
-[ext_resource type="Script" uid="uid://5oxexetfpnv8" path="res://scripts/evilgrain.gd" id="1_cgsq2"]
+[ext_resource type="Script" uid="uid://5oxexetfpnv8" path="res://scripts/Farm/evilgrain.gd" id="1_cgsq2"]
 [ext_resource type="Texture2D" uid="uid://dprkf1p8t61p2" path="res://Resources/InUse/TamagotchiCustomAssets/evilgrain.png" id="2_jmf7k"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xrivr"]

@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bkhit85bmmlor"]
 
-[ext_resource type="Script" uid="uid://dyehlt424r4qj" path="res://scripts/basket.gd" id="1_idgsc"]
+[ext_resource type="Script" uid="uid://dyehlt424r4qj" path="res://scripts/Farm/basket.gd" id="1_idgsc"]
 [ext_resource type="Texture2D" uid="uid://bffnkslspw1d4" path="res://Resources/InUse/TamagotchiCustomAssets/basket.png.png" id="2_o74ig"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xrivr"]

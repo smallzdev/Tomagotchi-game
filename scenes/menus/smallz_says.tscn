@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bdu12m05wfdcv"]
 
 [ext_resource type="Texture2D" uid="uid://36f5r3pve8ba" path="res://Resources/InUse/TamagotchiCustomAssets/smallz_says_background.png" id="1_qwhnm"]
-[ext_resource type="Script" uid="uid://ceicxfylsdniu" path="res://scripts/smallz_says.gd" id="2_dx6wl"]
+[ext_resource type="Script" uid="uid://ceicxfylsdniu" path="res://scripts/Smallz says/smallz_says.gd" id="2_dx6wl"]
 [ext_resource type="Texture2D" uid="uid://brliyf6hrxhwa" path="res://Resources/InUse/TamagotchiCustomAssets/pets/babychicken.png" id="3_nsv43"]
 [ext_resource type="Texture2D" uid="uid://c16y87a2pkbsg" path="res://Resources/InUse/TamagotchiCustomAssets/pets/cat3-animated.png" id="4_uxxkm"]
 [ext_resource type="Texture2D" uid="uid://b3kknikmix4mx" path="res://Resources/InUse/TamagotchiCustomAssets/pets/Ghost.png" id="5_lu7fq"]
@@ -14,7 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://b64t62s47vcjg" path="res://Resources/InUse/TamagotchiCustomAssets/pets/spider.png" id="11_sj7wx"]
 [ext_resource type="Texture2D" uid="uid://dg165buwhjncd" path="res://Resources/InUse/TamagotchiCustomAssets/fishbowl.png" id="12_dx6wl"]
 [ext_resource type="FontFile" uid="uid://dyibl4resr8wn" path="res://Resources/font/augiepixel.ttf" id="12_nn4bs"]
-[ext_resource type="Script" uid="uid://b7ptc850pmdcq" path="res://scripts/catadex_buttons.gd" id="13_e2b13"]
+[ext_resource type="Script" uid="uid://b7ptc850pmdcq" path="res://scripts/Main Game/catadex_buttons.gd" id="13_e2b13"]
 [ext_resource type="Texture2D" uid="uid://b5bij2gwarxla" path="res://Resources/InUse/TamagotchiCustomAssets/tick.png" id="15_uxxkm"]
 [ext_resource type="Texture2D" uid="uid://bdvisr33y26fe" path="res://Resources/InUse/TamagotchiCustomAssets/x.png" id="16_lu7fq"]
 

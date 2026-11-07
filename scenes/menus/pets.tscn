@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://886x8xj8qyty"]
 
 [ext_resource type="Texture2D" uid="uid://c4yyj5gwsqovb" path="res://Resources/InUse/ReusedAssets/cat3.png" id="1_cwyod"]
-[ext_resource type="Script" uid="uid://cn5wggncqfifm" path="res://scripts/pet_equip.gd" id="1_y4cg6"]
+[ext_resource type="Script" uid="uid://cn5wggncqfifm" path="res://scripts/Main Game/pet_equip.gd" id="1_y4cg6"]
 [ext_resource type="Texture2D" uid="uid://b3kknikmix4mx" path="res://Resources/InUse/TamagotchiCustomAssets/pets/Ghost.png" id="2_2knbp"]
 [ext_resource type="FontFile" uid="uid://dyibl4resr8wn" path="res://Resources/font/augiepixel.ttf" id="2_qtxby"]
 [ext_resource type="Texture2D" uid="uid://brliyf6hrxhwa" path="res://Resources/InUse/TamagotchiCustomAssets/pets/babychicken.png" id="3_hgu4i"]
@@ -18,7 +18,7 @@
 [ext_resource type="Texture2D" uid="uid://pf78d14ebxut" path="res://Resources/InUse/TamagotchiCustomAssets/pets/Outlines/pumpin-shadow.png" id="12_hgu4i"]
 [ext_resource type="Texture2D" uid="uid://b64t62s47vcjg" path="res://Resources/InUse/TamagotchiCustomAssets/pets/spider.png" id="16_7es7a"]
 [ext_resource type="Texture2D" uid="uid://cipqnn24ybwx3" path="res://Resources/InUse/TamagotchiCustomAssets/pets/Outlines/questionmark.png" id="17_8yq4b"]
-[ext_resource type="Script" uid="uid://b7ptc850pmdcq" path="res://scripts/catadex_buttons.gd" id="18_nh0jh"]
+[ext_resource type="Script" uid="uid://b7ptc850pmdcq" path="res://scripts/Main Game/catadex_buttons.gd" id="18_nh0jh"]
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_rkuql"]
 specular_color = Color(0.95686275, 0.95686275, 0.95686275, 1)

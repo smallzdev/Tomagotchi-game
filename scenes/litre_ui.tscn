@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://jvwyw3vskks1"]
 
-[ext_resource type="Script" uid="uid://s1788wq5cels" path="res://scenes/litre_ui.gd" id="1_5lpse"]
+[ext_resource type="Script" uid="uid://s1788wq5cels" path="res://scripts/Water Minigame/litre_ui.gd" id="1_5lpse"]
 [ext_resource type="Texture2D" uid="uid://ddk83ebxvlo4l" path="res://Resources/InUse/TamagotchiCustomAssets/Water_minigame/water-bucket.png" id="1_btbde"]
 [ext_resource type="FontFile" uid="uid://dyibl4resr8wn" path="res://Resources/font/augiepixel.ttf" id="2_5lpse"]
 

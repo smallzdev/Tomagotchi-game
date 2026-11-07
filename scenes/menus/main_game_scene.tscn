@@ -1,15 +1,15 @@
 [gd_scene format=3 uid="uid://bki82bxn7t1sh"]
 
 [ext_resource type="Texture2D" uid="uid://chddrjeae3fxo" path="res://Resources/InUse/TamagotchiCustomAssets/pinkpaw.png" id="1_sy1ir"]
-[ext_resource type="Script" uid="uid://dhismqn5ngu3j" path="res://scripts/menu_button.gd" id="2_ttbmu"]
-[ext_resource type="Script" uid="uid://dfum1py7ro6qt" path="res://scripts/main_game_buttons.gd" id="3_2yd1b"]
+[ext_resource type="Script" uid="uid://dhismqn5ngu3j" path="res://scripts/Other/menu_button.gd" id="2_ttbmu"]
+[ext_resource type="Script" uid="uid://dfum1py7ro6qt" path="res://scripts/Main Game/main_game_buttons.gd" id="3_2yd1b"]
 [ext_resource type="Texture2D" uid="uid://dwb4yjhxf0cu4" path="res://Resources/InUse/TamagotchiCustomAssets/food.png" id="4_3qooa"]
 [ext_resource type="FontFile" uid="uid://dyibl4resr8wn" path="res://Resources/font/augiepixel.ttf" id="4_ymjn7"]
 [ext_resource type="Texture2D" uid="uid://dw61i515yloun" path="res://Resources/InUse/TamagotchiCustomAssets/water.png" id="5_06yng"]
 [ext_resource type="Script" uid="uid://dmqw6rtj7oams" path="res://scripts/pet_sprite.gd" id="5_qmn8o"]
 [ext_resource type="Texture2D" uid="uid://b03x77etxhbg6" path="res://Resources/InUse/TamagotchiCustomAssets/catadex.png" id="5_sy1ir"]
 [ext_resource type="Texture2D" uid="uid://bgp28b4ho7xhv" path="res://Resources/InUse/TamagotchiCustomAssets/energy.png" id="6_36xus"]
-[ext_resource type="Script" uid="uid://dheldim1ase75" path="res://scripts/farmbutton.gd" id="6_iojj0"]
+[ext_resource type="Script" uid="uid://dheldim1ase75" path="res://scripts/Farm/farmbutton.gd" id="6_iojj0"]
 [ext_resource type="Texture2D" uid="uid://b3kknikmix4mx" path="res://Resources/InUse/TamagotchiCustomAssets/pets/Ghost.png" id="6_j57ku"]
 [ext_resource type="Texture2D" uid="uid://bglbjo6m1ylc" path="res://Resources/InUse/TamagotchiCustomAssets/waterbar.png" id="6_m1d2h"]
 [ext_resource type="Texture2D" uid="uid://cym1hx6fs3wcd" path="res://Resources/InUse/TamagotchiCustomAssets/energybar.png" id="6_qh74j"]
@@ -25,7 +25,7 @@
 [ext_resource type="Texture2D" uid="uid://ceymqu0dyfx4y" path="res://Resources/InUse/TamagotchiCustomAssets/pets/grey-animated-cat.png" id="15_xgfuv"]
 [ext_resource type="Texture2D" uid="uid://b64t62s47vcjg" path="res://Resources/InUse/TamagotchiCustomAssets/pets/spider.png" id="18_r20aw"]
 [ext_resource type="Texture2D" uid="uid://ctjk7wurvnlqb" path="res://Resources/InUse/TamagotchiCustomAssets/colouredtitles.png" id="22_51xs6"]
-[ext_resource type="Script" uid="uid://vkw0s1vjtplq" path="res://scenes/menus/rarity.gd" id="23_ahvjs"]
+[ext_resource type="Script" uid="uid://vkw0s1vjtplq" path="res://scripts/Main Game/rarity.gd" id="23_ahvjs"]
 [ext_resource type="PackedScene" uid="uid://7s5fj1hnj2b1" path="res://scenes/grain_ui.tscn" id="25_xgfuv"]
 [ext_resource type="Texture2D" uid="uid://oqwl2qoj1ien" path="res://Resources/InUse/TamagotchiCustomAssets/timericon.png" id="27_p82fg"]
 [ext_resource type="PackedScene" uid="uid://cjcie6gqv134y" path="res://scenes/floatytext.tscn" id="29_4f8iy"]
@@ -1335,12 +1335,6 @@ theme_override_fonts/font = ExtResource("4_ymjn7")
 theme_override_font_sizes/font_size = 44
 text = "Time: N/a"
 
-[node name="grain_ui" parent="." unique_id=1734086535 instance=ExtResource("25_xgfuv")]
-offset_left = -5.0
-offset_top = 534.0
-offset_right = -5.0
-offset_bottom = 534.0
-
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1257897123]
 offset_left = 65.0
 offset_top = 30.0
@@ -1448,6 +1442,12 @@ text = "Got it!"
 
 [node name="floatytext" parent="." unique_id=1034785363 instance=ExtResource("29_4f8iy")]
 fade_color = Color(0.640611, 0.09057713, 0.3359547, 1)
+
+[node name="grain_ui" parent="." unique_id=1734086535 instance=ExtResource("25_xgfuv")]
+offset_left = -5.0
+offset_top = 534.0
+offset_right = -5.0
+offset_bottom = 534.0
 
 [node name="litre_ui" parent="." unique_id=1655955305 instance=ExtResource("30_iwkmd")]
 offset_left = -4.0

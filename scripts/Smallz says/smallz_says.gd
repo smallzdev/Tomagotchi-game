@@ -130,7 +130,7 @@ func smallzSays():
 				smallzsaysText.text = "Smallz Says: Pet the head."
 		if dogArea.visible == true:
 			if smallzSaysRNG == 1:
-				smallzsaysText.text = "SMalladaokn: Pet the nose, eyes or mouth"
+				smallzsaysText.text = "SMalladaokn: Pet the nose, eyes or mouth."
 			else:
 				smallzsaysText.text = "Smallz Says: Pet the nose, eyes or mouth."
 	
@@ -574,8 +574,8 @@ func _on_dog_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> v
 			else:
 				decreaseLove()
 		print(shape_idx)
-		smallzSays()
 		smallzSaysTime = 5
+		smallzSays()
 
 # end of clickable collision shapes.
 

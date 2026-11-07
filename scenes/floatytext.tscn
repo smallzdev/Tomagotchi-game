@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cjcie6gqv134y"]
 
-[ext_resource type="Script" uid="uid://dicncxqr1bgfn" path="res://scripts/floatytext.gd" id="1_i4g6w"]
+[ext_resource type="Script" uid="uid://dicncxqr1bgfn" path="res://scripts/Other/floatytext.gd" id="1_i4g6w"]
 
 [node name="floatytext" type="Control" unique_id=1034785363]
 layout_mode = 3

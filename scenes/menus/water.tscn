@@ -1,0 +1,108 @@
+[gd_scene format=3 uid="uid://ddgitvs3jvuko"]
+
+[ext_resource type="FontFile" uid="uid://dyibl4resr8wn" path="res://Resources/font/augiepixel.ttf" id="1_wdvlc"]
+[ext_resource type="Script" uid="uid://dsp57gnk5b703" path="res://scripts/watermenubutton.gd" id="2_wdvlc"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_8lky4"]
+specular_color = Color(0.95686275, 0.95686275, 0.95686275, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dgurf"]
+bg_color = Color(0.38431373, 0.38431373, 0.38431373, 0)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(0.30588236, 0.28627452, 0.2784314, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+corner_detail = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hcsw7"]
+bg_color = Color(0.16818258, 0.15563756, 0.15061828, 1)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(0.16862746, 0.15686275, 0.14901961, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+corner_detail = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uql7x"]
+bg_color = Color(0.30588236, 0.28627452, 0.2784314, 1)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(0.30588236, 0.28627452, 0.2784314, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+corner_detail = 1
+
+[node name="Node2D" type="Node2D" unique_id=281328261]
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=199462375]
+offset_right = 1152.0
+offset_bottom = 652.0
+texture = SubResource("CanvasTexture_8lky4")
+
+[node name="marketbutton" type="Button" parent="." unique_id=1999057104]
+unique_name_in_owner = true
+offset_left = 423.0
+offset_top = 353.0
+offset_right = 734.0
+offset_bottom = 427.0
+theme_override_colors/font_color = Color(0.30588236, 0.28627452, 0.2784314, 1)
+theme_override_fonts/font = ExtResource("1_wdvlc")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_dgurf")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_hcsw7")
+theme_override_styles/hover = SubResource("StyleBoxFlat_uql7x")
+text = "hard"
+
+[node name="playbutton" type="Button" parent="." unique_id=937137732]
+unique_name_in_owner = true
+offset_left = 422.0
+offset_top = 234.0
+offset_right = 732.0
+offset_bottom = 309.0
+theme_override_colors/font_color = Color(0.30588236, 0.28627452, 0.2784314, 1)
+theme_override_fonts/font = ExtResource("1_wdvlc")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_dgurf")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_hcsw7")
+theme_override_styles/hover = SubResource("StyleBoxFlat_uql7x")
+text = "medium"
+
+[node name="grainbutton" type="Button" parent="." unique_id=653695342]
+unique_name_in_owner = true
+offset_left = 419.0
+offset_top = 118.0
+offset_right = 729.0
+offset_bottom = 191.0
+theme_override_colors/font_color = Color(0.30588236, 0.28627452, 0.2784314, 1)
+theme_override_fonts/font = ExtResource("1_wdvlc")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_dgurf")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_hcsw7")
+theme_override_styles/hover = SubResource("StyleBoxFlat_uql7x")
+text = "Easy"
+script = ExtResource("2_wdvlc")
+
+[node name="Label" type="Label" parent="." unique_id=1998792984]
+offset_left = 2.0
+offset_top = 504.0
+offset_right = 1152.0
+offset_bottom = 603.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_wdvlc")
+theme_override_font_sizes/font_size = 50
+text = "Note: The higher the level, the quicker you may be able
+ to get more litres."
+horizontal_alignment = 1

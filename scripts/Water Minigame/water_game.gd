@@ -83,9 +83,9 @@ func updateLitreStat():
 @onready var rewardsIcon = %Tick_x
 
 func increaseLitres():
-	Global.litres += 2
+	Global.litres += 1
 	rewardsIcon.frame = 0
-	rewardsLabel.text = "+2L"
+	rewardsLabel.text = "+1L"
 	rewardsArea.visible = true
 	await get_tree().create_timer(2).timeout
 	rewardsArea.visible = false

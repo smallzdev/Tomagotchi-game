@@ -21,8 +21,9 @@ var popuptext = preload("res://scenes/floatytext.tscn")
 @onready var petSprite = %PetSprite
 @onready var petSpriteNameText = %petSpriteTitle
 
-#grain label 
+#grain and litre label 
 @onready var grainlabel = $"../grain_ui/Label"
+@onready var litrelabel = $"../litre_ui/Label"
 
 #error panel stuff
 @onready var errorpanel = $"../errorpanel"
@@ -89,12 +90,25 @@ func foodButton_pressed():
 	spriteAnimation()
 	
 func waterButton_pressed():
+	if Global.litres <10: 
+		errorpanel.visible = true
+	Global.litres -=5
 	if Global.water <= 90:
+		print("Water is less than 100, at " + str(Global.water))
 		Global.water += 10
-	elif Global.water > 90 and Global.water < 100:
+	elif Global.water > 90 and Global.water <= 100:
 		Global.water = 100
 	elif Global.water >= 100:
+		print("water is more than 100")
 		Global.water = 100
+		
+	# ill update to look cleaner later.
+	## if Global.pet == 4:
+		## petSprite.frame = 2
+		## await get_tree().create_timer(2).timeout
+		## petSprite.frame = 4
+		## await get_tree().create_timer(1).timeout
+		## petSprite.frame = 0
 	statUpdate()
 	spriteAnimation()
 
@@ -103,8 +117,8 @@ func energyButton_pressed():
 		Global.energy += 10
 	elif Global.energy > 90 and Global.energy < 100:
 		Global.energy = 100
-	elif Global.water >= 100:
-		Global.water = 100
+	elif Global.energy >= 100:
+		Global.energy = 100
 	statUpdate()
 	spriteAnimation()
 		
@@ -147,6 +161,8 @@ func petDetection():
 # as it uses this same function
 func statUpdate():
 	grainlabel.text = str(Global.grains)
+	litrelabel.text = str(Global.litres)
+	
 	statText.text = "Food: " + str(Global.food) + "
 	Water: " + str(Global.water) + "
 	Energy: " + str(Global.energy) + "
@@ -304,6 +320,8 @@ func _on_errorbutton_pressed() -> void:
 func _process(delta: float) -> void:
 	if Global.grains < 10: 
 		%foodButton.disabled = true
+	if Global.litres < 10:
+		%waterButton.disabled = true
 
 func _on_tutorialbutton_pressed() -> void:
 	tutorialpanel.visible = false
