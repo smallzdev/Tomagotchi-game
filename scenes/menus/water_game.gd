@@ -4,6 +4,7 @@ extends Area2D
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	waterMinigameCore()
+	updateLitreStat()
 
 # all the water sprites.
 @onready var waterSprite1 = %WaterSprite1
@@ -15,35 +16,85 @@ var collisionShapeRNG = null
 func waterMinigameCore():
 	# this is for chosing the good water
 	var randomSelection = [waterSprite1, waterSprite2, waterSprite3, waterSprite4]
+	var spriteAppearances = [0, 1, 2]
 	# picks the random numbers above
 	collisionShapeRNG = randomSelection.pick_random()
-	waterSprite1.animation = "good"
+	waterSprite1.animation = "bad"
+	waterSprite2.animation = "bad"
+	waterSprite3.animation = "bad"
+	waterSprite4.animation = "bad"
+	collisionShapeRNG.animation = "good"
+	var appearanceOfSprite = spriteAppearances.pick_random()
+	waterSprite1.frame = appearanceOfSprite
+	appearanceOfSprite = spriteAppearances.pick_random()
+	waterSprite2.frame = appearanceOfSprite
+	appearanceOfSprite = spriteAppearances.pick_random()
+	waterSprite3.frame = appearanceOfSprite
+	appearanceOfSprite = spriteAppearances.pick_random()
+	waterSprite4.frame = appearanceOfSprite
 
 # Sprites and input clicks
 func _on_sprite1_clicked(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
-		if collisionShapeRNG == waterSprite1:
-			Global.litres += 2
+		if waterSprite1.animation == "good":
+			increaseLitres()
 		else:
-			Global.litres -= 5
+			decreaseLitres()
+		updateLitreStat()
+		waterMinigameCore()
 		
 func _on_sprite2_clicked(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
-		if collisionShapeRNG == waterSprite2:
-			Global.litres += 2
+		if waterSprite2.animation == "good":
+			increaseLitres()
 		else:
-			Global.litres -= 5
+			decreaseLitres()
+		updateLitreStat()
+		waterMinigameCore()
 
 func _on_sprite3_clicked(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
-		if collisionShapeRNG == waterSprite3:
-			Global.litres += 2
+		if waterSprite3.animation == "good":
+			increaseLitres()
 		else:
-			Global.litres -= 5
+			decreaseLitres()
+		updateLitreStat()
+		waterMinigameCore()
 
 func _on_sprite4_clicked(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
-		if collisionShapeRNG == waterSprite4:
-			Global.litres += 2
+		if waterSprite4.animation == "good":
+			increaseLitres()
 		else:
-			Global.litres -=5
+			decreaseLitres()
+		updateLitreStat()
+		waterMinigameCore()
+		
+func updateLitreStat():
+	if Global.litres > 0:
+		%waterStatText.text = "Litres: " + str(Global.litres)
+	else:
+		Global.litres = 0
+		%waterStatText.text = "Litres: " + str(Global.litres)
+
+# increase and decrease stuff
+@onready var rewardsArea = %rewards_display_area
+@onready var rewardsLabel = %rewardsLabel
+@onready var rewardsIcon = %Tick_x
+
+func increaseLitres():
+	Global.litres += 2
+	rewardsIcon.frame = 0
+	rewardsLabel.text = "+2L"
+	rewardsArea.visible = true
+	await get_tree().create_timer(2).timeout
+	rewardsArea.visible = false
+	
+
+func decreaseLitres():
+	Global.litres -= 5
+	rewardsIcon.frame = 1
+	rewardsLabel.text = "-5L"
+	rewardsArea.visible = true
+	await get_tree().create_timer(2).timeout
+	rewardsArea.visible = false
