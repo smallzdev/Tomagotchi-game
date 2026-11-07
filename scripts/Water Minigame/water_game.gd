@@ -1,10 +1,16 @@
 extends Area2D
 
+var timeVar = 5
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	waterMinigameCore()
 	updateLitreStat()
+	if Global.waterDifficulty == 2:
+		timeVar = 3
+	elif Global.waterDifficulty == 3:
+		timeVar = 1
+	timerlabel.text = str(timeVar)
 
 # all the water sprites.
 @onready var waterSprite1 = %WaterSprite1
@@ -81,20 +87,55 @@ func updateLitreStat():
 @onready var rewardsArea = %rewards_display_area
 @onready var rewardsLabel = %rewardsLabel
 @onready var rewardsIcon = %Tick_x
+@onready var timerlabel = %TimerLabel
 
 func increaseLitres():
-	Global.litres += 1
+	if Global.waterDifficulty == 1:
+		Global.litres += 1
+		rewardsLabel.text = "+1L"
+	elif Global.waterDifficulty == 2:
+		Global.litres += 2
+		rewardsLabel.text = "+2L"
+		timeVar = 3
+	elif Global.waterDifficulty == 3:
+		Global.litres += 5
+		rewardsLabel.text = "+5L"
+		timeVar = 1
 	rewardsIcon.frame = 0
-	rewardsLabel.text = "+1L"
 	rewardsArea.visible = true
 	await get_tree().create_timer(2).timeout
 	rewardsArea.visible = false
 	
+	
 
 func decreaseLitres():
-	Global.litres -= 5
+	if Global.waterDifficulty == 1:
+		Global.litres -= 5
+		rewardsLabel.text = "-5L"
+	elif Global.waterDifficulty == 2:
+		Global.litres -= 4
+		rewardsLabel.text = "-4L"
+		timeVar = 3
+	elif Global.waterDifficulty == 3:
+		Global.litres -= 3
+		rewardsLabel.text = "-3L"
+		timeVar = 1
 	rewardsIcon.frame = 1
-	rewardsLabel.text = "-5L"
 	rewardsArea.visible = true
 	await get_tree().create_timer(2).timeout
 	rewardsArea.visible = false
+
+func _on_hard_timer_timeout() -> void:
+	if timeVar > 0:
+		timeVar -= 1
+	else:
+		if Global.waterDifficulty == 2:
+			timeVar = 3
+		elif Global.waterDifficulty == 3:
+			timeVar = 1
+		decreaseLitres()
+		updateLitreStat()
+		waterMinigameCore()
+	timerlabel.text = str(timeVar)
+	
+	
