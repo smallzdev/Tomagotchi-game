@@ -8,7 +8,7 @@ font = ExtResource("2_a3gys")
 font_size = 50
 font_color = Color(0.46922517, 0.08453443, 0.5836205, 1)
 outline_size = 10
-outline_color = Color(0, 0, 0, 1)
+outline_color = Color(0.827285, 0.47002655, 0.8904947, 1)
 
 [node name="floatytext" type="Control" unique_id=1034785363]
 layout_mode = 3

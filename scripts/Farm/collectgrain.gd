@@ -16,6 +16,7 @@ const freeze = preload("res://scenes/freeze.tscn")
 
 @onready var frenzytext = $frenzytween
 @onready var freezetween = $floatytext
+@onready var doubletween = $floatytext2
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -78,6 +79,9 @@ func start_frenzy() -> void:
 		)
 
 func start_doublecol() -> void:
+	get_tree().current_scene.add_child(doubletween)
+	doubletween.floating_label("2x Grain Collection", player.global_position)
+	
 	get_tree().create_timer(5.0).timeout.connect(func(): Global.doublecollection = false)
 
 func start_freeze() -> void:
