@@ -17,6 +17,7 @@ func _ready() -> void:
 @onready var waterSprite2 = %WaterSprite2
 @onready var waterSprite3 = %WaterSprite3
 @onready var waterSprite4 = %WaterSprite4
+@onready var waterSprite5 = %WaterSprite5
 
 var collisionShapeRNG = null
 
@@ -25,7 +26,7 @@ var collisionShapeRNG = null
 # the appearances.
 func waterMinigameCore():
 	# this is for chosing the good water
-	var randomSelection = [waterSprite1, waterSprite2, waterSprite3, waterSprite4]
+	var randomSelection = [waterSprite1, waterSprite2, waterSprite3, waterSprite4, waterSprite5]
 	var spriteAppearances = [0, 1, 2]
 	# picks the random numbers above
 	collisionShapeRNG = randomSelection.pick_random()
@@ -33,6 +34,7 @@ func waterMinigameCore():
 	waterSprite2.animation = "bad"
 	waterSprite3.animation = "bad"
 	waterSprite4.animation = "bad"
+	waterSprite5.animation = "bad"
 	collisionShapeRNG.animation = "good"
 	var appearanceOfSprite = spriteAppearances.pick_random()
 	waterSprite1.frame = appearanceOfSprite
@@ -42,6 +44,8 @@ func waterMinigameCore():
 	waterSprite3.frame = appearanceOfSprite
 	appearanceOfSprite = spriteAppearances.pick_random()
 	waterSprite4.frame = appearanceOfSprite
+	appearanceOfSprite = spriteAppearances.pick_random()
+	waterSprite5.frame = appearanceOfSprite
 
 # Sprites and input clicks
 
@@ -87,6 +91,17 @@ func _on_sprite4_clicked(viewport: Node, event: InputEvent, shape_idx: int) -> v
 			decreaseLitres()
 		updateLitreStat()
 		waterMinigameCore()
+		
+func _on_sprite5_clicked(viewport: Node, event: InputEvent, shape_idx: int) -> void:
+	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
+		if waterSprite5.animation == "good":
+			increaseLitres()
+		else:
+			decreaseLitres()
+		updateLitreStat()
+		waterMinigameCore()
+		
+
 
 # updates the visual appearance and display of the litre
 # stat.
@@ -157,4 +172,3 @@ func _on_hard_timer_timeout() -> void:
 		waterMinigameCore()
 	timerlabel.text = str(timeVar)
 	# ^^ updates gui timer label text
-	

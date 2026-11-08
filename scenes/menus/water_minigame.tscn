@@ -56,6 +56,9 @@ size = Vector2(500.00018, 497.50006)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_p0860"]
 size = Vector2(500.00018, 497.50006)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4er4x"]
+size = Vector2(500.00018, 497.50006)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_kbxvk"]
 animations = [{
 "frames": [{
@@ -148,7 +151,7 @@ theme_override_font_sizes/font_size = 40
 text = "Click to drink, don't drink dangerous looking water. Be careful!"
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1351043506]
-position = Vector2(678, 267.99997)
+position = Vector2(574, 270.99997)
 scale = Vector2(0.4, 0.4)
 script = ExtResource("7_p0860")
 
@@ -165,6 +168,7 @@ scale = Vector2(0.39999974, 0.39999974)
 shape = SubResource("RectangleShape2D_e7g1m")
 
 [node name="Area2D2" type="Area2D" parent="." unique_id=661610168]
+position = Vector2(-104, 3)
 script = ExtResource("7_p0860")
 
 [node name="WaterSprite2" type="AnimatedSprite2D" parent="Area2D2" unique_id=2045202176]
@@ -179,6 +183,7 @@ position = Vector2(676, 271.25)
 shape = SubResource("RectangleShape2D_udkci")
 
 [node name="Area2D3" type="Area2D" parent="." unique_id=1116402216]
+position = Vector2(-104, 3)
 script = ExtResource("7_p0860")
 
 [node name="WaterSprite3" type="AnimatedSprite2D" parent="Area2D3" unique_id=1220535436]
@@ -194,6 +199,7 @@ scale = Vector2(0.39999986, 0.39999986)
 shape = SubResource("RectangleShape2D_stm8k")
 
 [node name="Area2D4" type="Area2D" parent="." unique_id=2114202767]
+position = Vector2(-104, 3)
 script = ExtResource("7_p0860")
 
 [node name="WaterSprite4" type="AnimatedSprite2D" parent="Area2D4" unique_id=1618440567]
@@ -207,6 +213,22 @@ animation = &"bad"
 position = Vector2(909, 277)
 scale = Vector2(0.39999986, 0.39999986)
 shape = SubResource("RectangleShape2D_p0860")
+
+[node name="Area2D5" type="Area2D" parent="." unique_id=1552133210]
+position = Vector2(121, 7)
+script = ExtResource("7_p0860")
+
+[node name="WaterSprite5" type="AnimatedSprite2D" parent="Area2D5" unique_id=944047000]
+unique_name_in_owner = true
+position = Vector2(906, 267.99997)
+scale = Vector2(0.4, 0.4)
+sprite_frames = SubResource("SpriteFrames_stm8k")
+animation = &"bad"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D5" unique_id=1554085413]
+position = Vector2(909, 277)
+scale = Vector2(0.39999986, 0.39999986)
+shape = SubResource("RectangleShape2D_4er4x")
 
 [node name="rewards_display_area" type="Area2D" parent="." unique_id=1319485606]
 unique_name_in_owner = true
@@ -230,10 +252,10 @@ text = "+1 L"
 
 [node name="backButton" type="Button" parent="." unique_id=1755841889]
 unique_name_in_owner = true
-offset_left = 989.0
-offset_top = 567.0
-offset_right = 1136.0
-offset_bottom = 631.0
+offset_left = 984.0
+offset_top = 563.0
+offset_right = 1131.0
+offset_bottom = 627.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("6_yr605")
 theme_override_font_sizes/font_size = 50
@@ -261,4 +283,5 @@ text = "3"
 [connection signal="input_event" from="Area2D2" to="Area2D2" method="_on_sprite2_clicked"]
 [connection signal="input_event" from="Area2D3" to="Area2D3" method="_on_sprite3_clicked"]
 [connection signal="input_event" from="Area2D4" to="Area2D4" method="_on_sprite4_clicked"]
+[connection signal="input_event" from="Area2D5" to="Area2D5" method="_on_sprite5_clicked"]
 [connection signal="timeout" from="1sTimer" to="Area2D" method="_on_hard_timer_timeout"]

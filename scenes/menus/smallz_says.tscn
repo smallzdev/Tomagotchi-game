@@ -1024,6 +1024,7 @@ text = "Skip"
 
 [node name="rewards_display_area" type="Area2D" parent="." unique_id=1964044105]
 unique_name_in_owner = true
+visible = false
 
 [node name="Tick_x" type="AnimatedSprite2D" parent="rewards_display_area" unique_id=1225126892]
 unique_name_in_owner = true
