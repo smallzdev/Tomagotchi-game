@@ -5,7 +5,6 @@ extends Control
 var tween: Tween
 
 func floating_label(text: String, spawn_position: Vector2):
-	
 	#create + set up label
 	var label = Label.new()
 	label.text = text 

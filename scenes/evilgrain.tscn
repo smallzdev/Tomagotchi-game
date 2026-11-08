@@ -2,12 +2,22 @@
 
 [ext_resource type="Script" uid="uid://5oxexetfpnv8" path="res://scripts/Farm/evilgrain.gd" id="1_cgsq2"]
 [ext_resource type="Texture2D" uid="uid://dprkf1p8t61p2" path="res://Resources/InUse/TamagotchiCustomAssets/evilgrain.png" id="2_jmf7k"]
+[ext_resource type="PackedScene" uid="uid://cjcie6gqv134y" path="res://scenes/floatytext.tscn" id="3_25t0b"]
+[ext_resource type="FontFile" uid="uid://dyibl4resr8wn" path="res://Resources/font/augiepixel.ttf" id="4_dl0jf"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xrivr"]
 size = Vector2(76, 78)
 
+[sub_resource type="LabelSettings" id="LabelSettings_qrdtd"]
+font = ExtResource("4_dl0jf")
+font_size = 50
+font_color = Color(0.3495522, 0.060684167, 0.41439566, 1)
+outline_size = 10
+outline_color = Color(0, 0, 0, 1)
+
 [node name="evilgrain" type="Node2D" unique_id=2078499411]
 script = ExtResource("1_cgsq2")
+floatytext_scene = ExtResource("3_25t0b")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=2007923047]
 texture_filter = 1
@@ -19,5 +29,8 @@ texture = ExtResource("2_jmf7k")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=344834061]
 position = Vector2(0, -1)
 shape = SubResource("RectangleShape2D_xrivr")
+
+[node name="floatytext" parent="." unique_id=1034785363 instance=ExtResource("3_25t0b")]
+label_settings = SubResource("LabelSettings_qrdtd")
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

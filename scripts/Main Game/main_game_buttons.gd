@@ -1,7 +1,7 @@
 extends Button
 
 #preloads
-var popuptext = preload("res://scenes/floatytext.tscn")
+@onready var floatytext = $"../floatytext"
 
 # timer
 @onready var HardcoreTimerLabel = $"../HarcoreScoreLabel"
@@ -69,7 +69,6 @@ func _on_food_button_pressed() -> void:
 	if Global.grains <5: 
 		errorpanel.visible = true
 	Global.grains -=5
-	var floatytext = popuptext.instantiate()
 	get_tree().current_scene.add_child(floatytext)
 	floatytext.floating_label("-5 grains", get_global_mouse_position())
 	if Global.food <= 90:

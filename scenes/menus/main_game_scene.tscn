@@ -977,6 +977,12 @@ corner_radius_bottom_right = 5
 corner_radius_bottom_left = 5
 corner_detail = 1
 
+[sub_resource type="LabelSettings" id="LabelSettings_ntqx0"]
+font = ExtResource("4_ymjn7")
+font_size = 50
+outline_size = 10
+outline_color = Color(0, 0, 0, 1)
+
 [node name="Node2D" type="Node2D" unique_id=111207536]
 
 [node name="HardcoreScoreTimer" type="Timer" parent="." unique_id=19282952]
@@ -1522,7 +1528,7 @@ clear_button_enabled = true
 script = ExtResource("28_bomb8")
 
 [node name="floatytext" parent="." unique_id=1034785363 instance=ExtResource("29_4f8iy")]
-fade_color = Color(0.640611, 0.09057713, 0.3359547, 1)
+label_settings = SubResource("LabelSettings_ntqx0")
 
 [node name="grain_ui" parent="." unique_id=1734086535 instance=ExtResource("25_xgfuv")]
 offset_left = -5.0

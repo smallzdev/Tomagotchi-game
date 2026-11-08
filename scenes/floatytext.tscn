@@ -6,6 +6,7 @@
 [sub_resource type="LabelSettings" id="LabelSettings_i4g6w"]
 font = ExtResource("2_a3gys")
 font_size = 50
+font_color = Color(0.46922517, 0.08453443, 0.5836205, 1)
 outline_size = 10
 outline_color = Color(0, 0, 0, 1)
 
