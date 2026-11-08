@@ -921,3 +921,4 @@ script = ExtResource("18_nh0jh")
 [connection signal="input_event" from="Panel/Area2D7" to="Panel/Area2D" method="_on_pet7_equipped"]
 [connection signal="input_event" from="Panel/Area2D8" to="Panel/Area2D" method="_on_pet8_equipped"]
 [connection signal="input_event" from="Panel/Area2D9" to="Panel/Area2D" method="_on_pet9_equipped"]
+[connection signal="input_event" from="Panel/Area2D10" to="Panel/Area2D" method="_on_area_2d_10_input_event"]

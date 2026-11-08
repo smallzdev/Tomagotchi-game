@@ -103,6 +103,14 @@ func _on_pet9_equipped(viewport: Node, event: InputEvent, shape_idx: int) -> voi
 		else:
 			print("Error, pet 9 is not owned.")
 
+func _on_area_2d_10_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
+	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
+		if Global.pet10owned == true:
+			Global.pet = 10
+			loadEquippedPet()
+			print("Pet " + str(Global.pet) + " equipped!")
+		else:
+			print("Error, pet 10 is not owned.")
 # end of click to equip pet detection
 
 # loads and displays the current equipped pet
@@ -142,6 +150,9 @@ func loadEquippedPet():
 	if Global.pet == 9:
 		equippedPetName.text = "Spider"
 		equippedPetSprite.animation = "spider"
+	if Global.pet == 10:
+		equippedPetName.text = "Dog"
+		equippedPetSprite.animation = "dog"
 	equippedPetSprite.frame = 0
 # when adding more pets, remember to update this code + pet_sprite.gd....
 
@@ -186,7 +197,7 @@ func showOwned():
 		petSprite3Name.text = "????"
 	if Global.pet4owned == false:
 		petSprite4.frame = 1
-		petSprite4Name.text == "????"
+		petSprite4Name.text = "????"
 	if Global.pet5owned == false:
 		petSprite5.frame = 1
 		petSprite5Name.text = "????"

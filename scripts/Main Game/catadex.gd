@@ -96,4 +96,3 @@ func catadexUpdate():
 	if Global.pet10owned == false:
 		pet10Label.text = "????"
 		pet10Sprite.frame = 1
-		

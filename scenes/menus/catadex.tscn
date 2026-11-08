@@ -363,7 +363,8 @@ offset_bottom = 123.0
 theme_override_colors/font_color = Color(0.30588236, 0.28627452, 0.2784314, 1)
 theme_override_fonts/font = ExtResource("2_w7v3h")
 theme_override_font_sizes/font_size = 18
-text = "????"
+text = "Goldfish
+"
 horizontal_alignment = 1
 
 [node name="CatadexItem5" type="AnimatedSprite2D" parent="Panel" unique_id=350038360]
