@@ -172,6 +172,11 @@ func smallzSays():
 				smallzsaysText.text = "Smsallhgzhbc: Pet the mouth."
 			else:
 				smallzsaysText.text = "Smallz Says: Pet the mouth."
+		if dogArea.visible == true:
+			if smallzSaysRNG == 1:
+				smallzsaysText.text = "smallz says: click anyhwere."
+			else:
+				smallzsaysText.text = "Smallz Says: Pet the tail."
 
 # -----------------------------------------------------		
 # if rolled 3:
@@ -211,6 +216,11 @@ func smallzSays():
 				smallzsaysText.text = "Smsallhgzhbc: Pet the very bututm of the body."
 			else:
 				smallzsaysText.text = "Smallz Says: Pet the very bottom of the body."
+		if dogArea.visible == true:
+			if smallzSaysRNG == 1:
+				smallzsaysText.text = "Smalljz Says: Pet the top of the head."
+			else:
+				smallzsaysText.text = "Smallz Says: Pet the top of the head."
 				
 # -----------------------------------------------------
 # if rolled 4:
@@ -250,6 +260,11 @@ func smallzSays():
 				smallzsaysText.text = "Smsallhgzhbc: Pet just under the mouth."
 			else:
 				smallzsaysText.text = "Smallz Says: Pet just under the mouth."
+		if dogArea.visible == true:
+			if smallzSaysRNG == 1:
+				smallzsaysText.text = "Simon Says: Pet the body."
+			else:
+				smallzsaysText.text = "Smallz Says: Pet the body."
 				
 # -----------------------------------------------------			
 
@@ -290,6 +305,14 @@ func smallzSays():
 				smallzsaysText.text = "Smsallhgzhbc: Pet the cheeks."
 			else:
 				smallzsaysText.text = "Smallz Says: Pet the cheeks."
+		if dogArea.visible == true:
+			# incase anyone thinks this is an error, it
+			# says "Smallz said", as in the past, and
+			# not "smallz says"
+			if smallzSaysRNG == 1:
+				smallzsaysText.text = "Smallz Said: Pet the ears."
+			else:
+				smallzsaysText.text = "Smallz Says: Pet the ears."
 				
 # -----------------------------------------------------
 
@@ -616,6 +639,10 @@ func decreaseLove():
 	await get_tree().create_timer(2).timeout
 	rewardsDisplayArea.visible = false
 	
+# this function runs when the skip button is clicked,
+# then it detects if it was correct to skip or not.
+# If it is correct, it runs the increaselove, overwise
+# it decreases the love stat.
 func skip_button_pressed():
 	if Global.smallzSaysRNGtemp == 1:
 		decreaseLove()

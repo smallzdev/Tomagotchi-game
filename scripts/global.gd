@@ -18,16 +18,16 @@ var nickname = null
 # pets and if they're owned
 # currently, they're all true except for a few 
 # for testing purposes.
-var pet1owned = true # Pet 1 - "Ginger Cat"
-var pet2owned = true # Pet 2 - "Grey Cat"
+var pet1owned = false # Pet 1 - "Ginger Cat"
+var pet2owned = false # Pet 2 - "Grey Cat"
 var pet3owned = false # Pet 3 - "Cat3" (this is like the one with a brown face)
-var pet4owned = true # Pet 4 - "Goldfish"
-var pet5owned = true # Pet 5 - "Ghost"
-var pet6owned = true # Pet 6 - "Pumpkin"
-var pet7owned = true # Pet 7 - "Penguin"
+var pet4owned = false # Pet 4 - "Goldfish"
+var pet5owned = false # Pet 5 - "Ghost"
+var pet6owned = false # Pet 6 - "Pumpkin"
+var pet7owned = false # Pet 7 - "Penguin"
 var pet8owned = false # Pet 8 - "Baby Chicken"
-var pet9owned = true # Pet 9 - "Spider"
-var pet10owned = true # Pet 10 - "Golden Retriever"
+var pet9owned = false # Pet 9 - "Spider"
+var pet10owned = false # Pet 10 - "Golden Retriever"
 
 #hardcore variables
 # hardcore mode toggle
