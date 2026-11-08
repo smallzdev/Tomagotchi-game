@@ -18,6 +18,10 @@ func _process(delta: float) -> void:
 # nickname, updates the text label, and then hides the
 # pannel
 func _on_renamebutton_pressed() -> void:
-	Global.nickname = Global.renameTextDraft
-	petNameLabel.text = str(Global.nickname)
 	renamePannel.visible = false
+	if Global.nickname == "":
+		Global.nickname = null
+	else:
+		Global.nickname = Global.renameTextDraft
+		print("Global nickname: " + str(Global.nickname))
+		petNameLabel.text = str(Global.nickname)

@@ -986,7 +986,7 @@ outline_color = Color(0, 0, 0, 1)
 [node name="Node2D" type="Node2D" unique_id=111207536]
 
 [node name="HardcoreScoreTimer" type="Timer" parent="." unique_id=19282952]
-autostart = true
+unique_name_in_owner = true
 
 [node name="backgroundGradient" type="TextureRect" parent="." unique_id=732252075]
 offset_right = 1157.0
@@ -1553,4 +1553,4 @@ offset_bottom = 487.0
 [connection signal="pressed" from="errorpanel/errorbutton" to="petsButton" method="_on_errorbutton_pressed"]
 [connection signal="pressed" from="tutorialpanel/tutorialbutton" to="petsButton" method="_on_tutorialbutton_pressed"]
 [connection signal="pressed" from="renamePannel/renamebutton" to="renamePannel/renamebutton" method="_on_renamebutton_pressed"]
-[connection signal="text_submitted" from="renamePannel/LineEdit" to="renamePannel/LineEdit" method="_on_text_submitted"]
+[connection signal="text_changed" from="renamePannel/LineEdit" to="renamePannel/LineEdit" method="_on_text_changed"]

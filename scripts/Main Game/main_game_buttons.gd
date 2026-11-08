@@ -31,6 +31,9 @@ extends Button
 #tutorial panel
 @onready var tutorialpanel = $"../tutorialpanel"
 
+# timer
+@onready var gameTimer = %HardcoreScoreTimer
+
 func petsButton_pressed():
 	get_tree().call_deferred("change_scene_to_file", "res://scenes/menus/pets.tscn")
 
@@ -157,6 +160,9 @@ func petDetection():
 	elif Global.pet == 10:
 		petSprite.animation = "dog"
 		petSpriteNameText.text = "dog"
+	
+	if not Global.nickname == null:
+		petSpriteNameText.text = Global.nickname
 
 # when updating, make sure to also update pet_sprite.gd
 # as it uses this same function
@@ -172,6 +178,7 @@ func statUpdate():
 	energyStatText.text = str(Global.energy)
 	foodStatText.text = str(Global.food)
 	loveStatText.text = str(Global.love)
+	
 	
 	# progress bar things
 	# don't worry, ill try and clean it up soon
@@ -326,3 +333,5 @@ func _process(delta: float) -> void:
 
 func _on_tutorialbutton_pressed() -> void:
 	tutorialpanel.visible = false
+	gameTimer.start()
+	

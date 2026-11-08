@@ -590,7 +590,12 @@ func increaseLove():
 	print(get_global_mouse_position())
 	explosion.get_node("CPUParticles2D").emitting = true
 	print("hearts")
-	Global.love += 5
+	if Global.love <= 95:
+		Global.love += 5
+	elif Global.love < 100 and Global.love > 95:
+		Global.love = 100
+	else:
+		pass
 	rewardsDisplayArea.visible = true
 	rewardsLabel.text = "+5 Love"
 	rewardsTickSprite.frame = 0
@@ -599,7 +604,12 @@ func increaseLove():
 	
 # decreases love by 5, displays it on screen.
 func decreaseLove():
-	Global.love -= 5
+	if Global.love > 5:
+		Global.love -= 5
+	elif Global.love < 5 and Global.love > 0:
+		Global.love = 0
+	else:
+		pass
 	rewardsDisplayArea.visible = true
 	rewardsLabel.text = "-5 Love"
 	rewardsTickSprite.frame = 1
