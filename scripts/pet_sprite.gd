@@ -22,24 +22,26 @@ func _ready() -> void:
 		var gacha = randi_range(1, 100)
 		$"../tutorialpanel".visible = true
 		Global.gachadonce = true
-		if gacha <= 60:
-			print("common")
-			Global.pet = [1, 2, 3, 4, 6]
-			var commonrandom = Global.pet.pick_random()
-			Global.pet = commonrandom
-		elif gacha >= 61:
-			print(gacha)
-			print("rare")
-			Global.pet = [10]
-			var rarerandom = Global.pet.pick_random()
-			Global.pet = rarerandom
-		elif gacha >= 90:
+		if gacha >= 90:
 			print("legendary")
 			Global.pet = [5, 7, 9]
 			var legendaryrandom = Global.pet.pick_random()
 			Global.pet = legendaryrandom
+		elif gacha >= 61:
+			print("rare")
+			Global.pet = [10]
+			var rarerandom = Global.pet.pick_random()
+			Global.pet = rarerandom
+		else:
+			print("common")
+			Global.pet = [1, 2, 3, 4, 6]
+			var commonrandom = Global.pet.pick_random()
+			Global.pet = commonrandom
 		loadEquippedPet()
+		print(gacha)
 		print(Global.pet)
+		Global.set("pet" + str(Global.pet) + "owned", true)
+		##var pet1owned
 
 func loadEquippedPet():
 # Pet 1 - Ginger Cat

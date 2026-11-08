@@ -41,6 +41,7 @@ specular_color = Color(0.95686275, 0.95686275, 0.95686275, 1)
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_ntqx0"]
 shader = ExtResource("1_6f6hx")
+shader_parameter/is_white = false
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_iojj0"]
 bg_color = Color(0.38431373, 0.38431373, 0.38431373, 0)
@@ -1498,7 +1499,7 @@ theme_override_colors/font_color = Color(0.30588236, 0.28627452, 0.2784314, 1)
 theme_override_fonts/font = ExtResource("4_ymjn7")
 theme_override_font_sizes/font_size = 35
 text = "Rename your pet to whatever you want!
-Just enter the name, and click \"change\".
+enter the name, and click \"change\".
 Note: max char 10"
 horizontal_alignment = 1
 
@@ -1554,6 +1555,8 @@ offset_bottom = 487.0
 [connection signal="pressed" from="farmbutton" to="farmbutton" method="_on_pressed"]
 [connection signal="pressed" from="waterMinigameButton" to="waterMinigameButton" method="_on_waterminigamebutton_pressed"]
 [connection signal="pressed" from="foodButton" to="petsButton" method="_on_food_button_pressed"]
+[connection signal="pressed" from="waterButton" to="petsButton" method="_on_water_button_pressed"]
+[connection signal="pressed" from="energyButton" to="petsButton" method="_on_energy_button_pressed"]
 [connection signal="input_event" from="Area2D" to="Area2D" method="petting_love"]
 [connection signal="timeout" from="Timer" to="petsButton" method="_on_5s_timer_timeout"]
 [connection signal="timeout" from="HardcoreTimer" to="petsButton" method="_on_hardcore_timer_timeout"]

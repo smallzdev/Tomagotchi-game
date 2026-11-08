@@ -168,7 +168,7 @@ theme_override_colors/default_color = Color(0.30588236, 0.28627452, 0.2784314, 1
 theme_override_fonts/normal_font = ExtResource("1_b2mra")
 theme_override_font_sizes/normal_font_size = 56
 bbcode_enabled = true
-text = "Icons: Pixel Adventure by Pixel Frog"
+text = "tilemap: Pixel Adventure by Pixel Frog"
 horizontal_alignment = 1
 script = ExtResource("7_wr0bx")
 

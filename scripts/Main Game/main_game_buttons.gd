@@ -27,6 +27,8 @@ extends Button
 
 #error panel stuff
 @onready var errorpanel = $"../errorpanel"
+@onready var errortitle = $"../errorpanel/errortitle"
+@onready var errordesc = $"../errorpanel/errordescription"
 
 #tutorial panel
 @onready var tutorialpanel = $"../tutorialpanel"
@@ -55,8 +57,6 @@ func _ready():
 	# when clicked it runs the functions
 	petsButton.pressed.connect(petsButton_pressed)
 	catadexButton.pressed.connect(catadexButton_pressed)
-	waterButton.pressed.connect(waterButton_pressed)
-	energyButton.pressed.connect(energyButton_pressed)
 	print(petSpriteNameText)
 	statUpdate()
 	petDetection()
@@ -69,7 +69,10 @@ func _ready():
 # Note: this might be a bit confusing, check
 # pet_sprite.gd file for comments on how it all works.
 func _on_food_button_pressed() -> void:
-	if Global.grains <5: 
+	if Global.grains < 6: 
+		errortitle.text ="Insufficient Grains"
+		errordesc.text ="You do not have enough grains to 
+feed your pet. Go farm more grains!"
 		errorpanel.visible = true
 	Global.grains -=5
 	get_tree().current_scene.add_child(floatytext)
@@ -93,10 +96,15 @@ func _on_food_button_pressed() -> void:
 	statUpdate()
 	spriteAnimation()
 
-func waterButton_pressed():
+func _on_water_button_pressed() -> void:
 	if Global.litres <10: 
+		errortitle.text ="Insufficient Water"
+		errordesc.text ="You do not have enough water to 
+feed your pet. Go get more water!"
 		errorpanel.visible = true
 	Global.litres -=5
+	get_tree().current_scene.add_child(floatytext)
+	floatytext.floating_label("-5 liters", get_global_mouse_position())
 	if Global.water <= 90:
 		print("Water is less than 100, at " + str(Global.water))
 		Global.water += 10
@@ -116,7 +124,9 @@ func waterButton_pressed():
 	statUpdate()
 	spriteAnimation()
 
-func energyButton_pressed():
+func _on_energy_button_pressed() -> void:
+	get_tree().current_scene.add_child(floatytext)
+	floatytext.floating_label("+5 energy", get_global_mouse_position())
 	if Global.energy <= 90:
 		Global.energy += 10
 	elif Global.energy > 90 and Global.energy < 100:
@@ -328,10 +338,9 @@ func _on_errorbutton_pressed() -> void:
 func _process(delta: float) -> void:
 	if Global.grains < 5: 
 		%foodButton.disabled = true
-	if Global.litres < 10:
+	if Global.litres < 5:
 		%waterButton.disabled = true
 
 func _on_tutorialbutton_pressed() -> void:
 	tutorialpanel.visible = false
 	gameTimer.start()
-	
