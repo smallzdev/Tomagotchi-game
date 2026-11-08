@@ -52,7 +52,6 @@ func _ready():
 	# when clicked it runs the functions
 	petsButton.pressed.connect(petsButton_pressed)
 	catadexButton.pressed.connect(catadexButton_pressed)
-	foodButton.pressed.connect(foodButton_pressed)
 	waterButton.pressed.connect(waterButton_pressed)
 	energyButton.pressed.connect(energyButton_pressed)
 	print(petSpriteNameText)
@@ -66,15 +65,13 @@ func _ready():
 
 # Note: this might be a bit confusing, check
 # pet_sprite.gd file for comments on how it all works.
-func foodButton_pressed():
-	if Global.grains <10: 
+func _on_food_button_pressed() -> void:
+	if Global.grains <5: 
 		errorpanel.visible = true
 	Global.grains -=5
-	popuptext.text = "-10 grains"
 	var floatytext = popuptext.instantiate()
 	get_tree().current_scene.add_child(floatytext)
-	floatytext.global_position = get_global_mouse_position()
-	print("poop")
+	floatytext.floating_label("-5 grains", get_global_mouse_position())
 	if Global.food <= 90:
 		print("Food is less than 100, at " + str(Global.food))
 		Global.food += 10
@@ -93,7 +90,7 @@ func foodButton_pressed():
 		## petSprite.frame = 0
 	statUpdate()
 	spriteAnimation()
-	
+
 func waterButton_pressed():
 	if Global.litres <10: 
 		errorpanel.visible = true
@@ -323,7 +320,7 @@ func _on_errorbutton_pressed() -> void:
 	errorpanel.visible = false
 
 func _process(delta: float) -> void:
-	if Global.grains < 10: 
+	if Global.grains < 5: 
 		%foodButton.disabled = true
 	if Global.litres < 10:
 		%waterButton.disabled = true

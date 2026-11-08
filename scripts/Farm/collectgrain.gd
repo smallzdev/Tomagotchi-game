@@ -15,6 +15,7 @@ const freeze = preload("res://scenes/freeze.tscn")
 @onready var player = $CharacterBody2D
 
 @onready var frenzytext = $frenzytween
+@onready var freezetween = $floatytext
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -80,6 +81,9 @@ func start_doublecol() -> void:
 	get_tree().create_timer(5.0).timeout.connect(func(): Global.doublecollection = false)
 
 func start_freeze() -> void:
+	get_tree().current_scene.add_child(freezetween)
+	freezetween.floating_label("freeze", player.global_position)
+	
 	player.set_process_input(false)
 	player.set_physics_process(false)
 	player.set_process_unhandled_input(false)
