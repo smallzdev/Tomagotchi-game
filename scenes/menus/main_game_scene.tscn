@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bki82bxn7t1sh"]
 
 [ext_resource type="Texture2D" uid="uid://chddrjeae3fxo" path="res://Resources/InUse/TamagotchiCustomAssets/pinkpaw.png" id="1_sy1ir"]
+[ext_resource type="Script" uid="uid://cemkvs7x61gcx" path="res://scenes/menus/rename_menu_open_button.gd" id="2_ntqx0"]
 [ext_resource type="Script" uid="uid://dhismqn5ngu3j" path="res://scripts/Other/menu_button.gd" id="2_ttbmu"]
 [ext_resource type="Script" uid="uid://dfum1py7ro6qt" path="res://scripts/Main Game/main_game_buttons.gd" id="3_2yd1b"]
 [ext_resource type="Texture2D" uid="uid://dwb4yjhxf0cu4" path="res://Resources/InUse/TamagotchiCustomAssets/food.png" id="4_3qooa"]
@@ -28,8 +29,11 @@
 [ext_resource type="Script" uid="uid://vkw0s1vjtplq" path="res://scripts/Main Game/rarity.gd" id="23_ahvjs"]
 [ext_resource type="PackedScene" uid="uid://7s5fj1hnj2b1" path="res://scenes/grain_ui.tscn" id="25_xgfuv"]
 [ext_resource type="Texture2D" uid="uid://oqwl2qoj1ien" path="res://Resources/InUse/TamagotchiCustomAssets/timericon.png" id="27_p82fg"]
+[ext_resource type="Script" uid="uid://dtydxlpsq03s2" path="res://scenes/menus/rename.gd" id="28_bomb8"]
 [ext_resource type="PackedScene" uid="uid://cjcie6gqv134y" path="res://scenes/floatytext.tscn" id="29_4f8iy"]
+[ext_resource type="Script" uid="uid://tyiphkg8a32j" path="res://scenes/menus/renamebutton.gd" id="29_fe6cc"]
 [ext_resource type="PackedScene" uid="uid://jvwyw3vskks1" path="res://scenes/litre_ui.tscn" id="30_iwkmd"]
+[ext_resource type="Texture2D" uid="uid://cdw4pessyvuts" path="res://Resources/InUse/TamagotchiCustomAssets/pencil.png" id="32_bqhk7"]
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_sy1ir"]
 specular_color = Color(0.95686275, 0.95686275, 0.95686275, 1)
@@ -983,6 +987,18 @@ offset_right = 1157.0
 offset_bottom = 652.0
 texture = SubResource("CanvasTexture_sy1ir")
 
+[node name="renameMenuOpenButton" type="TextureButton" parent="." unique_id=891321396]
+unique_name_in_owner = true
+texture_filter = 1
+offset_left = 821.0
+offset_top = 62.00003
+offset_right = 861.0
+offset_bottom = 102.00003
+rotation = 0.6161012
+scale = Vector2(2.5, 2.5)
+texture_normal = ExtResource("32_bqhk7")
+script = ExtResource("2_ntqx0")
+
 [node name="petsButton" type="Button" parent="." unique_id=639940516]
 unique_name_in_owner = true
 texture_filter = 1
@@ -1440,6 +1456,71 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_iwkmd")
 theme_override_styles/hover = SubResource("StyleBoxFlat_bomb8")
 text = "Got it!"
 
+[node name="renamePannel" type="Panel" parent="." unique_id=1770477152]
+unique_name_in_owner = true
+visible = false
+offset_left = 253.0
+offset_top = 109.0
+offset_right = 953.0
+offset_bottom = 547.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_njqwk")
+
+[node name="tutoriallabel" type="Label" parent="renamePannel" unique_id=1397141851]
+layout_mode = 0
+offset_left = 12.0
+offset_top = 28.0
+offset_right = 688.0
+offset_bottom = 76.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_ymjn7")
+theme_override_font_sizes/font_size = 50
+text = "Rename pet"
+horizontal_alignment = 1
+
+[node name="tutorialdesc" type="Label" parent="renamePannel" unique_id=455142336]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 80.0
+offset_right = 650.0
+offset_bottom = 188.0
+theme_override_colors/font_color = Color(0.30588236, 0.28627452, 0.2784314, 1)
+theme_override_fonts/font = ExtResource("4_ymjn7")
+theme_override_font_sizes/font_size = 35
+text = "Rename your pet to whatever you want!
+Just enter the name, and click \"change\".
+Note: max char 10"
+horizontal_alignment = 1
+
+[node name="renamebutton" type="Button" parent="renamePannel" unique_id=1477518489]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 275.0
+offset_top = 343.0
+offset_right = 439.0
+offset_bottom = 399.0
+theme_override_colors/font_color = Color(0.30588236, 0.28627452, 0.2784314, 1)
+theme_override_fonts/font = ExtResource("4_ymjn7")
+theme_override_font_sizes/font_size = 38
+theme_override_styles/normal = SubResource("StyleBoxFlat_4f8iy")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_iwkmd")
+theme_override_styles/hover = SubResource("StyleBoxFlat_bomb8")
+text = "Change"
+script = ExtResource("29_fe6cc")
+
+[node name="LineEdit" type="LineEdit" parent="renamePannel" unique_id=1762630205]
+layout_mode = 0
+offset_left = 146.0
+offset_top = 225.0
+offset_right = 563.0
+offset_bottom = 298.0
+theme_override_fonts/font = ExtResource("4_ymjn7")
+theme_override_font_sizes/font_size = 38
+placeholder_text = "Enter Name"
+alignment = 1
+max_length = 10
+clear_button_enabled = true
+script = ExtResource("28_bomb8")
+
 [node name="floatytext" parent="." unique_id=1034785363 instance=ExtResource("29_4f8iy")]
 fade_color = Color(0.640611, 0.09057713, 0.3359547, 1)
 
@@ -1456,6 +1537,7 @@ offset_right = 36.0
 offset_bottom = 487.0
 
 [connection signal="timeout" from="HardcoreScoreTimer" to="petsButton" method="harcore_score_timer"]
+[connection signal="pressed" from="renameMenuOpenButton" to="renameMenuOpenButton" method="_on_renamemenubutton_pressed"]
 [connection signal="pressed" from="farmbutton" to="farmbutton" method="_on_pressed"]
 [connection signal="pressed" from="waterMinigameButton" to="waterMinigameButton" method="_on_waterminigamebutton_pressed"]
 [connection signal="input_event" from="Area2D" to="Area2D" method="petting_love"]
@@ -1463,3 +1545,5 @@ offset_bottom = 487.0
 [connection signal="timeout" from="HardcoreTimer" to="petsButton" method="_on_hardcore_timer_timeout"]
 [connection signal="pressed" from="errorpanel/errorbutton" to="petsButton" method="_on_errorbutton_pressed"]
 [connection signal="pressed" from="tutorialpanel/tutorialbutton" to="petsButton" method="_on_tutorialbutton_pressed"]
+[connection signal="pressed" from="renamePannel/renamebutton" to="renamePannel/renamebutton" method="_on_renamebutton_pressed"]
+[connection signal="text_submitted" from="renamePannel/LineEdit" to="renamePannel/LineEdit" method="_on_text_submitted"]

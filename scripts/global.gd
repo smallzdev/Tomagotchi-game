@@ -11,6 +11,10 @@ var love = 0
 # equipped pet number.
 var pet = 2
 
+# naming system.
+var renameTextDraft = null
+var nickname = null
+
 # pets and if they're owned
 # currently, they're all true except for a few 
 # for testing purposes.
