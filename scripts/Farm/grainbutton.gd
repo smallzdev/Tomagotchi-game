@@ -1,5 +1,7 @@
 extends Button
 
+const grain = preload("res://scenes/collectgrain.tscn")
+
 func _ready() -> void:
 	var grainbutton = %grainbutton
 	var marketbutton = %marketbutton
@@ -8,7 +10,7 @@ func _ready() -> void:
 	marketbutton.pressed.connect(market_button_pressed)
 
 func grain_button_pressed():
-	get_tree().change_scene_to_file("res://scenes/collectgrain.tscn")
+	get_tree().change_scene_to_packed(grain)
 
 func market_button_pressed():
 	get_tree().change_scene_to_file("res://scenes/market.tscn")

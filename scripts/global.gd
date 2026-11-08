@@ -9,7 +9,7 @@ var water = 0
 var love = 0
 
 # equipped pet number.
-var pet = 2
+var pet = 1
 
 # naming system.
 var renameTextDraft = null

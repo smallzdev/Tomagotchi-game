@@ -74,9 +74,14 @@ func loadEquippedPet():
 	if Global.pet == 8:
 		petName.text = "Baby Chicken"
 		petSprite.animation = "baby chicken"
+# Pet 9 - Spider
 	if Global.pet == 9:
 		petName.text = "Spider"
 		petSprite.animation = "spider"
+# Pet 10 - Golden Retriever
+	if Global.pet == 10:
+		petName.text = "Goldie"
+		petSprite.animation = "dog"
 	petSprite.frame = 0
 
 # petting function, so when you click on the cat this runs
