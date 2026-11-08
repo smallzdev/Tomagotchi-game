@@ -1,7 +1,5 @@
 extends CharacterBody2D
 
-
-const SPEED = 900
 const JUMP_VELOCITY = -400.0
 
 #lower num = less movement
@@ -27,7 +25,7 @@ func _physics_process(delta: float) -> void:
 	if direction !=0:
 		#when ur pressing the buttons
 		#accelerate towards max speed
-		velocity.x = move_toward(velocity.x, direction * SPEED, acceleration * delta)
+		velocity.x = move_toward(velocity.x, direction * Global.SPEED, acceleration * delta)
 	else:
 		#when ur not pressing the buttons
 		#apply friction

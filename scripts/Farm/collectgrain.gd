@@ -5,12 +5,14 @@ const frenzy = preload("res://scenes/frenzy.tscn")
 const evilgrain = preload("res://scenes/evilgrain.tscn")
 const doublecollection = preload("res://scenes/doublecollection.tscn")
 const freeze = preload("res://scenes/freeze.tscn")
+const speed = preload("res://scenes/speed.tscn")
 
 @onready var graintimer = $graintimer
 @onready var frenzytimer = $frenzytimer
 @onready var evilgraintimer = $evilgraintimer
 @onready var dblecltntimer = $doublecollectiontimer
 @onready var freezetimer = $freezetimer
+@onready var speedtimer = $speedtimer
 
 @onready var player = $CharacterBody2D
 
@@ -35,6 +37,8 @@ func _ready() -> void:
 	dblecltntimer.start()
 	freezetimer.timeout.connect(freezetimeout)
 	freezetimer.start()
+	speedtimer.timeout.connect(speedtimeout)
+	speedtimer.start()
 #----------------spawn functions-------------------------
 
 func onTimeout() -> void:
@@ -61,6 +65,11 @@ func freezetimeout() -> void:
 	var freezeclone: Node = freeze.instantiate()
 	add_child(freezeclone)
 	freezeclone.position.x = randi_range(0,1152)
+
+func speedtimeout() -> void:
+	var speedclone: Node = speed.instantiate()
+	add_child(speedclone)
+	speedclone.position.x = randi_range(0,1152)
 
 #----------------random event timers + effects-------------------------
 
@@ -96,6 +105,13 @@ func start_freeze() -> void:
 		player.set_process_input(true)
 		player.set_physics_process(true)
 		player.set_process_unhandled_input(true))
+
+func start_speed() -> void:
+	Global.SPEED +=500
+	print("fastfastfast")
+	get_tree().create_timer(3.5).timeout.connect(func():
+		print("backtpnormal")
+		Global.SPEED =900)
 
 #--------------------button---------------------------------
 func back_button_pressed():

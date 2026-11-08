@@ -1565,3 +1565,6 @@ label_settings = SubResource("LabelSettings_1mml5")
 [node name="floatytext2" parent="." unique_id=522211170 instance=ExtResource("7_38dey")]
 unique_name_in_owner = true
 label_settings = SubResource("LabelSettings_7xtk6")
+
+[node name="speedtimer" type="Timer" parent="." unique_id=1151683527]
+wait_time = 6.7
