@@ -3,9 +3,9 @@ extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	catadexUpdate()
 	var backButton = %backButton
 	backButton.pressed.connect(back_button_pressed)
-	catadexUpdate()
 	
 func back_button_pressed():
 	get_tree().change_scene_to_file("res://scenes/menus/main_game_scene.tscn")
@@ -34,6 +34,7 @@ func back_button_pressed():
 
 # catadex updating variable
 # SooOOOOosoOOoo messy :/
+## next time i think you can use a loop and array to do this :`)
 func catadexUpdate():
 	if Global.pet1owned == true:
 		pet1Label.text = "Ginger Cat"
@@ -90,9 +91,9 @@ func catadexUpdate():
 		pet9Label.text = "????"
 		pet9Sprite.frame = 1
 	if Global.pet10owned == true:
-		pet10Label.text == "Golden Retriever"
+		pet10Label.text = "Goldie"
 		pet10Sprite.frame = 0
 	if Global.pet10owned == false:
-		pet10Label.text == "????"
+		pet10Label.text = "????"
 		pet10Sprite.frame = 1
 		

@@ -363,7 +363,7 @@ offset_bottom = 123.0
 theme_override_colors/font_color = Color(0.30588236, 0.28627452, 0.2784314, 1)
 theme_override_fonts/font = ExtResource("2_w7v3h")
 theme_override_font_sizes/font_size = 18
-text = "Goldfish"
+text = "????"
 horizontal_alignment = 1
 
 [node name="CatadexItem5" type="AnimatedSprite2D" parent="Panel" unique_id=350038360]
@@ -477,7 +477,7 @@ offset_bottom = 230.00002
 theme_override_colors/font_color = Color(0.30588236, 0.28627452, 0.2784314, 1)
 theme_override_fonts/font = ExtResource("2_w7v3h")
 theme_override_font_sizes/font_size = 18
-text = "Golden retriever"
+text = "Goldie"
 horizontal_alignment = 1
 
 [node name="backButton" type="Button" parent="." unique_id=1054623189]
