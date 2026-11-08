@@ -54,6 +54,9 @@ func _ready():
 	var waterButton = %waterButton
 	var energyButton = %energyButton
 	
+	var tutorialTitle = $"../tutorialpanel/tutoriallabel"
+	var tutorialDesc = $"../tutorialpanel/tutorialdesc"
+	
 	# when clicked it runs the functions
 	petsButton.pressed.connect(petsButton_pressed)
 	catadexButton.pressed.connect(catadexButton_pressed)
@@ -61,6 +64,31 @@ func _ready():
 	statUpdate()
 	petDetection()
 	spriteAnimation()
+	
+	# couldnt find the script that activates it after
+	# some searching, so i just put it here.
+	
+	# Changes the tutorial title and desc
+	if Global.hardcore == true:
+		tutorialTitle.text = "Hardcore Mode"
+		tutorialDesc.text = "This is if you want to have more of a 
+		challenge. The goal is to NEVER let any of 
+		the stats reach 0 otherwise game over. 
+		
+		This is hard.
+		
+		Good luck, you may need it!"
+	else:
+		tutorialTitle.text = "welcome to hatchapet"
+		tutorialDesc.text = "you live on a farm with a few different 
+animals. your goal is to expand your farm
+and make it the best farm ever! 
+
+play with your pets and show them off, 
+farm grains, trade with other vendors, 
+collect more pets - the world is endless!
+
+become the best farmer ever!!!"
 
 # Food, water, and energy
 # got the if statements written, now just needa fill it
