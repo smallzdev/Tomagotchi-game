@@ -14,6 +14,5 @@ func _process(delta: float) -> void:
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body is CharacterBody2D:
 		if get_parent().has_method("start_speed"):
-			print("pee")
 			get_parent().start_speed()
 		queue_free()

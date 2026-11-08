@@ -19,6 +19,7 @@ const speed = preload("res://scenes/speed.tscn")
 @onready var frenzytext = $frenzytween
 @onready var freezetween = $floatytext
 @onready var doubletween = $floatytext2
+@onready var speedtween = $floatytext3
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -107,10 +108,10 @@ func start_freeze() -> void:
 		player.set_process_unhandled_input(true))
 
 func start_speed() -> void:
+	get_tree().current_scene.add_child(speedtween)
+	speedtween.floating_label("speed boost", player.global_position)
 	Global.SPEED +=500
-	print("fastfastfast")
-	get_tree().create_timer(3.5).timeout.connect(func():
-		print("backtpnormal")
+	get_tree().create_timer(2.3).timeout.connect(func():
 		Global.SPEED =900)
 
 #--------------------button---------------------------------
