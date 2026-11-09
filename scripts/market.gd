@@ -1,15 +1,19 @@
 extends Node2D
 
 const normaleggcost = 250
+const commoneggcost = 300
 
 @onready var buybutton1 = $buybutton1
 @onready var backbutton = $backbutton
 @onready var errorpanel = $errorpanel
+@onready var pricelabel = $priceboard/price
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	buybutton1.pressed.connect(buybutton1_button_pressed)
 	backbutton.pressed.connect(backbutton_button_pressed)
+	
+	pricelabel.text = str(normaleggcost)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -43,6 +47,12 @@ func buybutton1_button_pressed():
 		Global.set("pet" + str(Global.pet) + "owned", true)
 		get_tree().change_scene_to_file("res://scenes/gacha.tscn")
 	else: 
+		errorpanel.visible = true
+
+func _on_buybutton_2_pressed() -> void:
+	if Global.grains >= commoneggcost:
+		Global.remove_grains(commoneggcost)
+	else:
 		errorpanel.visible = true
 
 func backbutton_button_pressed():

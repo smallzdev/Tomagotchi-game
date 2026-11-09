@@ -176,7 +176,7 @@ func petDetection():
 		petSprite.animation = "grey cat"
 	elif Global.pet == 3:
 		petSprite.animation = "cat3"
-		petSpriteNameText.text = "I forget the breed cat"
+		petSpriteNameText.text = "cat3"
 	elif Global.pet == 4:
 		petSprite.animation = "goldfish"
 		petSpriteNameText.text = "Goldfish"
