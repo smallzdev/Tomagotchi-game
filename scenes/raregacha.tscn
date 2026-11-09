@@ -1,0 +1,49 @@
+[gd_scene format=3 uid="uid://bgoc3ghlvqhu"]
+
+[ext_resource type="PackedScene" uid="uid://dg4np5ufw1tqc" path="res://scenes/rareegg.tscn" id="1_3q2kr"]
+[ext_resource type="FontFile" uid="uid://dyibl4resr8wn" path="res://Resources/font/augiepixel.ttf" id="2_axmpt"]
+[ext_resource type="PackedScene" uid="uid://dvt8savpbwuri" path="res://scenes/camera_2d.tscn" id="3_mnsti"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_5ncos"]
+specular_color = Color(0.95686275, 0.95686275, 0.95686275, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_w6lax"]
+font_size = 120
+font_color = Color(0, 0, 0, 1)
+
+[node name="raregacha" type="Node2D" unique_id=1593749160]
+
+[node name="BackgroundTextureGradient" type="TextureRect" parent="." unique_id=1220882836]
+offset_left = -166.0
+offset_top = -96.0
+offset_right = 1346.0
+offset_bottom = 802.0
+texture = SubResource("CanvasTexture_5ncos")
+
+[node name="rareegg" parent="." unique_id=288178897 instance=ExtResource("1_3q2kr")]
+position = Vector2(546, 433)
+
+[node name="Label" type="Label" parent="." unique_id=824682107]
+offset_left = 203.0
+offset_top = 64.0
+offset_right = 936.0
+offset_bottom = 299.0
+theme_override_fonts/font = ExtResource("2_axmpt")
+text = "hold [e] for 5 
+secs to hatch!"
+label_settings = SubResource("LabelSettings_w6lax")
+
+[node name="Camera2D" parent="." unique_id=545306824 instance=ExtResource("3_mnsti")]
+position = Vector2(583, 323)
+
+[node name="timer" type="Label" parent="." unique_id=226451896]
+unique_name_in_owner = true
+offset_left = 628.0
+offset_top = 290.0
+offset_right = 925.0
+offset_bottom = 338.0
+theme_override_colors/font_color = Color(0.30588236, 0.28627452, 0.2784314, 1)
+theme_override_fonts/font = ExtResource("2_axmpt")
+theme_override_font_sizes/font_size = 50
+text = "5 seconds left!"
+horizontal_alignment = 1

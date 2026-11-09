@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://bndnnlpw0uvnj"]
+
+[ext_resource type="Script" uid="uid://ctoimvfj6vq0d" path="res://scripts/Other/commonegg.gd" id="1_pjt1p"]
+[ext_resource type="Texture2D" uid="uid://bhnsnqawxw0w2" path="res://Resources/InUse/commonegg.png" id="1_vnk0n"]
+[ext_resource type="Texture2D" uid="uid://b0lxgdx65jp3y" path="res://Resources/InUse/crackedcommonegg.png" id="2_k7ijx"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xrivr"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_k7ijx")
+}],
+"loop": 1,
+"name": &"cracked",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_vnk0n")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="commonegg" type="Node2D" unique_id=488695383]
+script = ExtResource("1_pjt1p")
+
+[node name="commonsprite" type="AnimatedSprite2D" parent="." unique_id=1441917583]
+unique_name_in_owner = true
+sprite_frames = SubResource("SpriteFrames_xrivr")

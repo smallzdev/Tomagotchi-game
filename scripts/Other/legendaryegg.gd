@@ -1,0 +1,27 @@
+extends Node2D
+
+var holdsec = 0
+#var randomint 
+@onready var eggsprite = %legendarysprite
+@onready var maingame = preload("res://scenes/menus/main_game_scene.tscn")
+@onready var camerashake = $"../Camera2D"
+@onready var eggtimer = $"../timer"
+
+func _ready() -> void:
+	eggsprite.play("default")
+	# generates random seed
+
+func _process(delta) -> void:
+	if Input.is_action_pressed("interact") and not Global.hatched:
+		holdsec += delta
+		eggtimer.text = str(snapped((5-holdsec), 0.1)) + " seconds left!" 
+		camerashake.screen_shake(5, 0.5)
+		#delta is seconds measured with frames
+		#+=1 doesnt work: 60 fps holdsec increase 60 per second
+		if holdsec >= 5:
+			Global.hatched = true 
+			eggsprite.play("cracked")
+			await get_tree().create_timer(2.0).timeout
+			get_tree().change_scene_to_packed(maingame)
+	else:
+		holdsec=0

@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://dg4np5ufw1tqc"]
+
+[ext_resource type="Script" uid="uid://dgigje1volsgv" path="res://scripts/Other/rareegg.gd" id="1_m6coi"]
+[ext_resource type="Texture2D" uid="uid://d1f1g2ria744j" path="res://Resources/InUse/crackedrareegg.png" id="2_pkpyc"]
+[ext_resource type="Texture2D" uid="uid://sdxk5p5i7l1l" path="res://Resources/InUse/rareegg.png" id="3_qig0v"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xrivr"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_pkpyc")
+}],
+"loop": 1,
+"name": &"cracked",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_qig0v")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="rareegg" type="Node2D" unique_id=288178897]
+script = ExtResource("1_m6coi")
+
+[node name="raresprite" type="AnimatedSprite2D" parent="." unique_id=74062469]
+unique_name_in_owner = true
+sprite_frames = SubResource("SpriteFrames_xrivr")
