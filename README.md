@@ -6,7 +6,7 @@ What is a Tamagotchi game you might ask? It's basically like a virtual pet you n
 
 Made with ❤️ by [Smallz](https://github.com/smallzdev) and [Vick-St3r](https://github.com/Vick-St3r)
 
-***Play the latest release [here!](https://vick-st3r.itch.io/hatchapet-week-three)***
+***Play the latest release [here!](https://vick-st3r.itch.io/hatchapet)***
 
 # Credits
 This game was made by Victoria and Smallz. We may of reused some of the assets from our old game, or used free assets from a free public domain [Pixel Pack](https://pixelfrog-assets.itch.io/pixel-adventure-1) made by [Pixel Frog](https://pixelfrog-assets.itch.io/). Of course, we also made our own art specially for this game too.
@@ -214,5 +214,54 @@ When I was troubleshooting the frenzy power up, I found that `queue_free()` also
 3. Levels 
 4. Finish adding power ups + debuffs 
 5. Add something to indicate a powerup or debuff is active
+
+</details>
+
+# Week 4: Ends
+<details open>
+<summary></summary>
+
+Week four release [here!](https://vick-st3r.itch.io/hatchapet)
+
+This is the last week of Third Space.. :') so I decided to polish up the game and finish the main game loop. 
+
+![image](https://github.com/smallzdev/Tomagotchi-game/blob/main/screenshots/week8gacha.PNG)
+
+Here is the finished shop! You can buy the normal egg or a common/rare... egg which gives you the chance to only unlock that rarity. 
+
+![image](https://github.com/smallzdev/Tomagotchi-game/blob/main/screenshots/week8water.PNG)
+
+Here is the water mini game! Select the safe body of water to drink from to increase the liters of water you have. 
+
+![image](https://github.com/smallzdev/Tomagotchi-game/blob/main/screenshots/week8frenzy.PNG)
+
+This week I worked on a lot of text tweening. The biggest example of this is the frenzy tween! When you get a frenzy in the grain mini game, rainbow text comes down. I also added some minor tweens like freeze tweens, speed boost tween, -5 grain tween.. etc
+
+![image](https://github.com/smallzdev/Tomagotchi-game/blob/main/screenshots/week8rename.PNG)
+
+Rename your pets! I believe this is a feature we wanted since week 1 and we finally implemented it. 
+
+## Reflection
+
+Everyone says this, but these 8 weeks have past much faster than expected. My weekends are finally free from programming! Although, after third spacee I feel like I want to code even more. It's nice seeing us go from knowing nothing about game development to somewhat finishing our first two games. I can't wait for my tech upgrade. 
+
+This week I learned a lot about tweening. In my next games, I look forward to adding more tweens to make my game look squishy and smooth. My favourite tween is the floating label one - it's just so clean. 
+
+## Feature list
+
+1. Frenzy tween
+2. Water mini game/mechanic
+3. Floating label tween - used for a lot of buttons/effects
+4. HEAPS of POLISH
+5. Speed boost power up 
+6. Rename feature
+7. Finished shop
+
+## Future plans
+
+1. Levels
+2. Energy mini game 
+3. Reversed controls debuff?
+4. Sound effects
 
 </details>
